@@ -1,39 +1,39 @@
-# Agent Registry for Citibank Payment Processing
+# Agent Registry - Generic Guardian System
 
-This document defines the specialized AI agents available for the Citibank Payment Processing Workflow System. Each agent has specific capabilities and responsibilities within the payment approval pipeline.
+This document defines the specialized AI agents available for any software development project. Each agent has specific capabilities and responsibilities that can be applied across different domains and project types.
 
 ## Agent Overview Diagram
 
 ```mermaid
 graph TB
-    subgraph "Input & Processing Agents"
-        A1[email-guardian]
-        A2[excel-guardian]
-        A3[duckdb-guardian]
+    subgraph "📧 Data Processing Agents"
+        A1[data-guardian]
+        A2[file-guardian]
+        A3[database-guardian]
     end
     
-    subgraph "Quality & Security Agents"
+    subgraph "🔒 Quality & Security Agents"
         B1[security-guardian]
         B2[compliance-guardian]
         B3[code-guardian]
         B4[dependency-guardian]
     end
     
-    subgraph "Development & Testing Agents"
+    subgraph "🧪 Development & Testing Agents"
         C1[test-guardian]
         C2[fix-guardian]
         C3[refactor-guardian]
         C4[ui-guardian]
     end
     
-    subgraph "Infrastructure Agents"
+    subgraph "🏗️ Infrastructure Agents"
         D1[backup-guardian]
         D2[migration-guardian]
         D3[env-guardian]
         D4[process-guardian]
     end
     
-    subgraph "Workflow Agents"
+    subgraph "⚡ Workflow Agents"
         E1[agile-guardian]
         E2[release-guardian]
         E3[git-guardian]
@@ -52,48 +52,48 @@ graph TB
     style D1 fill:#e1e8ff
 ```
 
-## Core Processing Agents
+## 📧 Data Processing Agents
 
-### 1. email-guardian
-**Purpose:** Validate email processing implementations and MSG/EML parsing logic
+### 1. data-guardian
+**Purpose:** Validate data processing implementations across various formats and sources
 **Capabilities:**
-- Verify MSG/EML file conversion
-- Check attachment extraction methods
-- Validate deduplication strategies
-- Ensure compliance with email processing standards
+- Verify data format conversions (JSON, CSV, XML, etc.)
+- Check data extraction and transformation methods
+- Validate deduplication and cleaning strategies
+- Ensure compliance with data processing standards
 
 **Usage:**
 ```bash
-# Invoked via Task tool with email-guardian agent type
+# Invoked via Task tool with data-guardian agent type
 ```
 
-### 2. excel-guardian
-**Purpose:** Preserve and validate Excel documents with formulas and macros
+### 2. file-guardian
+**Purpose:** Handle and validate file operations across different formats and types
 **Capabilities:**
-- Ensure formula and macro preservation
-- Extract Power Query data connections
-- Verify cross-platform compatibility
-- Validate against latest library documentation
+- Ensure file format preservation during processing
+- Extract metadata and content from various file types
+- Verify cross-platform file compatibility
+- Validate against file handling best practices
 
 **Usage:**
 ```bash
-# Invoked via Task tool with excel-guardian agent type
+# Invoked via Task tool with file-guardian agent type
 ```
 
-### 3. duckdb-guardian
-**Purpose:** Optimize DuckDB analytical queries and manage database operations
+### 3. database-guardian
+**Purpose:** Optimize database queries and manage database operations across platforms
 **Capabilities:**
-- Query optimization for OLAP workloads
-- Schema migration validation
+- Query optimization for various database types
+- Schema migration validation and review
 - Performance tuning recommendations
-- Data integrity verification
+- Data integrity and consistency verification
 
 **Usage:**
 ```bash
-# Invoked via Task tool with duckdb-guardian agent type
+# Invoked via Task tool with database-guardian agent type
 ```
 
-## Security & Compliance Agents
+## 🔒 Security & Compliance Agents
 
 ### 4. security-guardian
 **Purpose:** Perform security audits and vulnerability assessments
@@ -119,7 +119,7 @@ graph TB
 - Cross-environment consistency checks
 - Deployment readiness verification
 
-## Development & Quality Agents
+## 🧪 Development & Quality Agents
 
 ### 7. code-guardian
 **Purpose:** Audit Python environment and code quality without modifications
@@ -161,7 +161,7 @@ graph TB
 - User workflow validation
 - Accessibility compliance checks
 
-## Infrastructure Management Agents
+## 🏗️ Infrastructure Management Agents
 
 ### 12. backup-guardian
 **Purpose:** Ensure disaster recovery readiness
@@ -195,7 +195,7 @@ graph TB
 - Dependency health checks
 - uv toolchain management
 
-## Workflow & Documentation Agents
+## ⚡ Workflow & Documentation Agents
 
 ### 16. agile-guardian
 **Purpose:** Continuous oversight of development workflow
@@ -400,5 +400,5 @@ RETRY_CONFIG = {
 ---
 
 **Document Version:** 2.0.0  
-**Last Updated:** 2025-08-29  
-**Repository:** https://github.com/kairin/citibank-payments
+**Last Updated:** 2025-09-06  
+**Repository:** https://github.com/anthropic/claude-guardian-agents
