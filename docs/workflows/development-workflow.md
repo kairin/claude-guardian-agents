@@ -1,6 +1,6 @@
 # 🧪 Development Agents Workflow
 
-This document shows exactly how Development & Testing Agents work step-by-step.
+This document shows how Development & Testing Agents work with **verified Claude Code subagent chaining** support.
 
 ## Agent Overview
 

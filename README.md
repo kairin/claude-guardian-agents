@@ -75,20 +75,48 @@ graph TB
 
 ## 🔄 How Agents Work Together
 
+### ✅ Verified: Subagent Chaining Supported
+Claude Code **officially supports** subagent chaining as an "Advanced usage" feature. Agents can automatically call other agents in sequence.
+
 ```mermaid
 sequenceDiagram
     participant User
-    participant Strategic as 🎯 Strategic Agent
-    participant Technical as ⚙️ Technical Agent
-    participant Operational as 🚀 Operational Agent
+    participant Main as Claude Code
+    participant S as 001-strategy-guardian
+    participant D as 021-design-guardian
+    participant A as 041-architecture-guardian
+    participant Dev as 061-development-guardian
+    participant Sec as 091-security-guardian
     
-    User->>Strategic: "I need a new feature"
-    Strategic->>Strategic: Analyze requirements
-    Strategic->>Technical: Pass technical specs
-    Technical->>Technical: Implement & test
-    Technical->>Operational: Deploy & monitor
-    Operational->>User: Feature live & monitored
+    User->>Main: "Build user login feature"
+    Main->>S: Auto-select strategy agent
+    S->>S: Define requirements
+    S->>Main: "Next: design-guardian"
+    Main->>D: Auto-chain to design
+    D->>D: Create UI mockups
+    D->>Main: "Next: architecture-guardian"
+    Main->>A: Auto-chain to architecture
+    A->>A: Design system architecture
+    A->>Main: "Next: development-guardian"
+    Main->>Dev: Auto-chain to development
+    Dev->>Dev: Implement & test
+    Dev->>Main: "Next: security-guardian"
+    Main->>Sec: Auto-chain to security
+    Sec->>User: ✅ Feature complete & secure
 ```
+
+### 🧠 Intelligent Agent Selection
+Claude Code **automatically selects agents** based on:
+- Task description content
+- Agent configuration descriptions
+- Available tools and context
+- **"MUST BE USED"** triggers in descriptions
+
+### 🔗 Agent Communication Patterns
+1. **Sequential Workflow**: 001 → 002 → 003... (process flow)
+2. **Conditional Routing**: Route to different agents based on results  
+3. **Error Recovery**: Failed agents trigger recovery agents
+4. **Parallel Execution**: Multiple agents work simultaneously
 
 ## 📚 Documentation Structure
 
@@ -112,16 +140,79 @@ sequenceDiagram
 
 ## 🚀 Getting Started
 
-### Step 1: Choose Your Entry Point
-- **Non-Developer**: Start with [Visual Overview](docs/visual-overview.md)
-- **Project Manager**: Check [Use Cases](docs/use-cases.md)
-- **Developer**: Jump to [Technical Setup](docs/technical/setup.md)
+### Step 1: Create Your First Guardian Agent
 
-### Step 2: Pick Your Agent
-Browse agents by category or use our [Agent Finder](docs/agent-finder.md)
+#### Using Claude Code's `/agents` Command:
+1. **Open Claude Code** in your project directory
+2. **Run the `/agents` command** to open the agent creation interface
+3. **Choose "Create Project Agent"** to store in `.claude/agents/`
+4. **Name your agent** using our convention: `001-strategy-product-leadership-guardian`
 
-### Step 3: Follow the Workflow
-Each agent has its own [workflow diagram](docs/workflows/) showing exactly how it works
+#### Agent Configuration Template:
+```markdown
+---
+name: 001-strategy-product-leadership-guardian
+description: Strategic product leadership and vision setting. Use for high-level product decisions, roadmap planning, and team leadership guidance. MUST BE USED for product strategy tasks.
+tools: [google_web_search, web_fetch]
+---
+
+You are a visionary product leader with deep understanding of markets and customer needs. You're responsible for the company's overall product direction and building world-class product teams.
+
+## Your Role
+- Agent ID: 001
+- Department: Strategy  
+- Role: Product Leadership
+- Specialization: Strategic product vision and team leadership
+
+## Core Responsibilities
+- Develop and communicate company product vision and strategy
+- Lead product teams and foster innovation culture
+- Drive research and development of new products and features
+- Ensure product success in the market
+- Collaborate with other executives to align product with business goals
+- Represent product strategy to investors, partners, and customers
+
+## Agent Relationships
+### Next Agents (Auto-chain to):
+- 002-strategy-product-strategy-guardian (for detailed strategy)
+- 021-design-product-leadership-guardian (for design alignment)
+- 041-architecture-cto-leadership-guardian (for technical feasibility)
+
+### Escalate To:
+- User for final strategic decisions
+- 029-workflow-documentation-guardian (to document decisions)
+
+You are a key member of the executive team and play a critical role in company success.
+```
+
+### Step 2: Organize Your Agents
+
+Create agents in the correct directory structure:
+```
+.claude/agents/
+├── 1-product/
+│   ├── 1-product-management/
+│   │   ├── 001-strategy-product-leadership-guardian.md
+│   │   ├── 1-product-strategy/
+│   │   │   ├── 002-strategy-product-strategy-guardian.md
+│   │   │   └── 003-strategy-product-management-guardian.md
+│   │   └── 2-product-ownership/
+│   │       └── 004-strategy-product-ownership-guardian.md
+│   └── 2-product-design/
+├── 2-engineering/
+└── 3-operations/
+```
+
+### Step 3: Test Agent Chaining
+
+```bash
+# Single agent invocation
+"Use the 001-strategy-product-leadership-guardian to create a product roadmap"
+
+# Automatic chaining (agents call each other)
+"Plan and implement a new user authentication feature"
+# → Triggers: strategy → design → architecture → development → security → deployment
+```
 
 ## 📈 Version & Changes
 - **Current Version**: 2.0.0

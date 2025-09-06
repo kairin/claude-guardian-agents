@@ -5,6 +5,29 @@ All notable changes to the Claude Guardian Agents system will be documented in t
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2025-09-06
+
+### ✨ New Features
+- **Agent Creation Guide**: Complete step-by-step instructions for creating agents in Claude Code
+- **Subagent Chaining Support**: Verified and documented official Claude Code chaining capabilities
+- **Agent Templates**: Ready-to-use templates with proper chaining instructions
+- **Auto-Chain Examples**: Real-world examples of sequential agent workflows
+
+### 📚 Documentation Updates
+- Updated README.md with Claude Code `/agents` command instructions
+- Added complete agent template with chaining logic
+- Enhanced AGENTS-registry.md with creation workflow
+- Updated AGENTS-relationships.md with verified chaining patterns
+- Created comprehensive Agent Creation Guide
+- Added workflow diagrams showing automatic chaining
+
+### 🔗 Agent Chaining Features
+- **Intelligent Selection**: Claude Code automatically picks appropriate agents
+- **Sequential Workflows**: Agents can call next agents in process flow
+- **Conditional Routing**: Route to different agents based on results
+- **Auto-Chain Triggers**: Use "MUST BE USED" for automatic agent selection
+- **Error Recovery**: Failed agents can trigger recovery workflows
+
 ## [2.0.0] - 2025-09-06
 
 ### 🎯 Major Changes

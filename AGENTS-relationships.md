@@ -1,41 +1,68 @@
-# Agent Relationships for Citibank Payment Processing
+# Agent Relationships - Guardian System Chaining
 
-This document defines how agents interact and collaborate within the Citibank Payment Processing Workflow System.
+This document defines how Guardian Agents interact and automatically chain together using Claude Code's verified subagent chaining capabilities.
 
-## Agent Communication Flow
+## ✅ Verified: Claude Code Subagent Chaining
+
+Claude Code **officially supports** automatic agent chaining as an "Advanced usage" feature. Agents can intelligently call other agents based on context and task requirements.
+
+## Guardian Agent Communication Flow
 
 ```mermaid
 sequenceDiagram
     participant User
-    participant TUI as TUI Entry Point
-    participant EG as email-guardian
-    participant XG as excel-guardian
-    participant DG as duckdb-guardian
-    participant SG as security-guardian
-    participant CG as compliance-guardian
-    participant TG as test-guardian
-    participant RG as release-guardian
-    participant BG as backup-guardian
+    participant Claude as Claude Code
+    participant S as 001-strategy-guardian
+    participant D as 021-design-guardian
+    participant A as 041-architecture-guardian
+    participant Dev as 061-development-guardian
+    participant Sec as 092-security-guardian
+    participant Ops as 082-infrastructure-guardian
     
-    User->>TUI: Launch citibank
-    TUI->>User: Display menu options
-    User->>TUI: Process payments
-    
-    TUI->>EG: Validate email processing
-    EG->>DG: Store email metadata
-    EG->>XG: Pass Excel attachments
-    
-    XG->>DG: Store Excel data
-    XG->>SG: Security validation
-    
-    SG->>CG: Compliance check
-    CG->>TG: Generate tests
-    
-    TG->>RG: Prepare release
-    RG->>BG: Create backup
-    
-    BG->>TUI: Return status
-    TUI->>User: Display results
+    User->>Claude: "Build user authentication system"
+    Claude->>S: Auto-select strategy agent
+    S->>S: Define requirements & user stories
+    S->>Claude: "Hand off to design-guardian for UX"
+    Claude->>D: Auto-chain to design agent
+    D->>D: Create wireframes & user flows
+    D->>Claude: "Need architecture-guardian for system design"
+    Claude->>A: Auto-chain to architecture
+    A->>A: Design system & API architecture
+    A->>Claude: "Ready for development-guardian"
+    Claude->>Dev: Auto-chain to development
+    Dev->>Dev: Implement & test features
+    Dev->>Claude: "Need security-guardian review"
+    Claude->>Sec: Auto-chain to security
+    Sec->>Sec: Security audit & vulnerability scan
+    Sec->>Claude: "Deploy with infrastructure-guardian"
+    Claude->>Ops: Auto-chain to operations
+    Ops->>User: ✅ System deployed & monitored
+```
+
+## How Auto-Chaining Works
+
+### 1. **Intelligent Agent Selection**
+Claude Code automatically selects agents based on:
+- **Task description** keywords and context
+- **Agent descriptions** with "MUST BE USED" triggers  
+- **Available tools** and required capabilities
+- **Previous agent** recommendations
+
+### 2. **Chain Trigger Mechanisms**
+Agents can trigger the next agent using:
+```markdown
+"Now I'll hand this off to the 021-design-guardian for UI/UX work"
+"This requires the 092-security-guardian for vulnerability assessment"
+"Use the 061-development-guardian to implement this feature"
+```
+
+### 3. **Conditional Routing**
+Agents can route to different agents based on results:
+```markdown
+- If security issues found → 092-security-guardian
+- If performance problems → 082-infrastructure-guardian  
+- If UI/UX needed → 021-design-guardian
+- If testing required → 072-development-quality-senior-guardian
 ```
 
 ## Agent Dependency Graph
