@@ -10,6 +10,12 @@ Guardian Agents are specialized Claude subagents, each with specific expertise a
 
 ```mermaid
 graph TB
+    subgraph "🧠 Think-Tank Layer"
+        T1[First Principles]
+        T2[Human Patterns]
+        T3[Creative Lateral]
+    end
+    
     subgraph "🎯 Strategic Layer"
         A1[Product Guardians]
         A2[Executive Guardians]
@@ -27,6 +33,10 @@ graph TB
         C3[Workflow Guardians]
     end
     
+    T1 -.->|unstick| A1
+    T2 -.->|unstick| B1
+    T3 -.->|unstick| C1
+    
     A1 --> B1
     A2 --> C2
     B1 --> B2
@@ -34,6 +44,7 @@ graph TB
     B3 --> C1
     C1 --> C3
     
+    style T1 fill:#fff2e1
     style A1 fill:#e1f5e1
     style B2 fill:#ffe1e1
     style C1 fill:#e1e8ff
@@ -72,6 +83,14 @@ graph TB
 - **Process Guardians**: Workflow automation, CI/CD, orchestration
 - **Workflow Guardians**: Documentation, release management, compliance
 - [📁 View All Operational Agents](3-operations/)
+
+### 4. 🧠 Think-Tank Agents (NEW)
+**Purpose**: Break reasoning deadlocks through diverse parallel thinking
+- **First Principles Guardians**: Strip problems to fundamental truths
+- **Human Pattern Guardians**: Apply anthropological and cultural insights
+- **Creative Guardians**: Lateral thinking and rule-breaking innovation
+- **Simplicity Guardians**: Child-like questioning to cut through complexity
+- [📁 View All Think-Tank Agents](4-think-tank/)
 
 ## 🔄 How Agents Work Together
 
