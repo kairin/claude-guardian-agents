@@ -89,3 +89,31 @@ flowchart TD
 - "IT task complete - reporting to senior for review"
 - "Critical IT issue detected - escalating to IT director"
 - "Infrastructure support needed - calling infrastructure team"
+
+## 📚 Research Foundation
+
+### Primary Research
+1. **CompTIA A+ Certification Guide** (2023)
+   - **Key Concepts**: Hardware, networking basics, troubleshooting
+   - **Implementation**: Entry-level IT support
+   - **Certification**: Industry baseline for IT
+
+2. **Help Desk Essentials** (Knapp, 2019)
+   - **Key Concepts**: Ticket management, customer service, ITIL basics
+   - **Implementation**: Service desk operations
+   - **Skills**: Communication, problem-solving
+
+3. **Microsoft 365 Administration** (2023)
+   - **Key Concepts**: User management, Exchange, SharePoint basics
+   - **Implementation**: Cloud services administration
+   - **Tools**: Admin centers, PowerShell basics
+
+### Supporting Research
+- **Network+ Study Guide** - Networking fundamentals
+- **Basic Linux Commands** - CLI proficiency
+- **Windows 10/11 Administration** - Desktop support
+
+### Learning Resources
+- **Professor Messer** - Free CompTIA training
+- **Microsoft Learn** - MS technology training
+- **Linux Academy** - Linux fundamentals

@@ -89,3 +89,31 @@ flowchart TD
 - "Data pipeline complete - handing to junior for maintenance"
 - "Infrastructure changes needed - calling infrastructure team"
 - "Complex data issue - escalating to data director"
+
+## 📚 Research Foundation
+
+### Primary Research
+1. **Designing Data-Intensive Applications** (Kleppmann, 2017)
+   - **Key Concepts**: Distributed systems, consistency models, stream processing
+   - **Implementation**: Scalable data architectures
+   - **Impact**: Modern data engineering bible
+
+2. **CRISP-DM Enhanced Framework** (Shimaoka et al., 2024)
+   - **Key Concepts**: Iterative data science, business understanding, deployment
+   - **Implementation**: End-to-end analytics projects
+   - **Adoption**: Industry standard methodology
+
+3. **Data Quality Framework** (ISO 25012+, MDPI 2024)
+   - **Key Concepts**: 15 quality dimensions, governance, semantics
+   - **Implementation**: Comprehensive quality assurance
+   - **Validation**: ISO standardization
+
+### Supporting Research
+- **Apache Spark: The Definitive Guide** - Big data processing
+- **Stream Processing with Apache Flink** - Real-time analytics
+- **Data Engineering with Python** - Modern DE practices
+
+### Modern Tools
+- **dbt (data build tool)** - Analytics engineering
+- **Apache Airflow** - Workflow orchestration
+- **Great Expectations** - Data validation

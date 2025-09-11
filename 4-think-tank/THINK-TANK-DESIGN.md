@@ -1,8 +1,20 @@
 # 🧠 Think-Tank Guardian Agents Design
 
+## 📚 Research Foundation
+
+**Primary Research Paper**: [ParaThinker: Breaking Tunnel Vision through Parallel Reasoning Paths](https://www.arxiv.org/abs/2509.04475)
+- **Published**: September 2024
+- **Key Finding**: Parallel reasoning paths achieve 12.3% accuracy improvement over sequential reasoning
+- **Core Innovation**: Multiple diverse reasoning paths synthesized into superior solutions
+
+**Supporting Research**:
+- **Lateral Thinking** (de Bono, 1970) - Creative problem-solving techniques
+- **The Wisdom of Crowds** (Surowiecki, 2004) - Diverse perspectives improve decisions
+- **Society of Mind** (Minsky, 1986) - Multiple specialized agents create intelligence
+
 ## Concept Overview
 
-Based on the ParaThinker research (arxiv:2509.04475), these agents implement **parallel reasoning paths** to overcome "tunnel vision" in LLM reasoning. Each agent provides a unique perspective to help unstick blocked reasoning and find creative solutions.
+Based on the ParaThinker research, these agents implement **parallel reasoning paths** to overcome "tunnel vision" in LLM reasoning. Each agent provides a unique perspective to help unstick blocked reasoning and find creative solutions.
 
 ## Core Philosophy
 

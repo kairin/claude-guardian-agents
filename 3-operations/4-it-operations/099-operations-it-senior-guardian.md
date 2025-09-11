@@ -89,3 +89,31 @@ flowchart TD
 - "IT support complete - handing to junior for follow-up"
 - "Infrastructure changes needed - calling infrastructure team"
 - "Complex IT issue - escalating to IT director"
+
+## 📚 Research Foundation
+
+### Primary Research
+1. **Windows Server Administration** (Microsoft, 2022)
+   - **Key Concepts**: Active Directory, Group Policy, PowerShell automation
+   - **Implementation**: Enterprise Windows management
+   - **Tools**: SCCM, Azure AD, Intune
+
+2. **Linux System Administration** (Nemeth et al., 2017)
+   - **Key Concepts**: System architecture, networking, security
+   - **Implementation**: Enterprise Linux management
+   - **Focus**: RHEL, Ubuntu, automation
+
+3. **VMware vSphere Design** (Forbes & Guthrie, 2022)
+   - **Key Concepts**: Virtualization, clustering, resource management
+   - **Implementation**: Enterprise virtualization platform
+   - **Scale**: Data center operations
+
+### Supporting Research
+- **Network Administration** - Cisco, routing, switching
+- **Storage Area Networks** - SAN/NAS management
+- **Monitoring and Alerting** - Nagios, Zabbix, Prometheus
+
+### Modern Tools
+- **Ansible/Puppet/Chef** - Configuration management
+- **Terraform** - Infrastructure provisioning
+- **ServiceNow** - IT service management
