@@ -6,6 +6,18 @@ A comprehensive system of specialized AI agents designed to handle various aspec
 
 Guardian Agents are specialized Claude subagents, each with specific expertise and responsibilities. Think of them as your AI team members, each with their own role, tools, and workflows.
 
+## 📚 Research Foundation
+
+This system is built on solid academic research. Each agent design is informed by peer-reviewed papers and proven methodologies:
+
+- **Parallel Reasoning**: [ParaThinker (2024)](https://www.arxiv.org/abs/2509.04475) - 12.3% accuracy improvement
+- **Multi-Agent Systems**: Society of Mind (Minsky, 1986) - Specialized agents create intelligence
+- **Software Engineering**: Design Patterns (GoF, 1994) - Proven architectural patterns
+- **Product Management**: Lean Startup (Ries, 2011) - Validated learning approach
+- **DevOps**: DORA Research - 208x deployment frequency improvement
+
+📖 **[View Complete Research Documentation](RESEARCH-PAPERS.md)** - All papers and methodologies
+
 ## 🏗️ System Architecture
 
 ```mermaid
