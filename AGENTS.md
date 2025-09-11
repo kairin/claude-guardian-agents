@@ -89,6 +89,11 @@ graph TD
             sde_do("sde-guardian.md")
             jde_do("jde-guardian.md")
         end
+        subgraph "3-infrastructure"
+            subgraph "4-troubleshooting"
+                mcp("999-operations-mcp-troubleshooting-guardian.md")
+            end
+        end
         subgraph "4-it-operations"
             dio("dio-guardian.md")
             sit("sit-guardian.md")

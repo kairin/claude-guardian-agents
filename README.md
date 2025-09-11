@@ -91,7 +91,7 @@ graph TB
 
 ### 3. 🚀 Operational Agents
 **Purpose**: Infrastructure, deployment, and process management  
-- **Infrastructure Guardians**: Deployment, monitoring, scaling
+- **Infrastructure Guardians**: Deployment, monitoring, scaling, MCP troubleshooting
 - **Process Guardians**: Workflow automation, CI/CD, orchestration
 - **Workflow Guardians**: Documentation, release management, compliance
 - [📁 View All Operational Agents](3-operations/)
@@ -266,7 +266,24 @@ Create agents in the correct directory structure:
 
 # Deploy with operational agent
 /task "Deploy to production" --agent deployment-guardian
+
+# Troubleshoot MCP server issues
+/task "Fix ENOENT error for imagesorcery-mcp" --agent 999-operations-mcp-troubleshooting-guardian
 ```
+
+## 🔧 MCP Server Troubleshooting
+
+Having issues with MCP servers like `imagesorcery-mcp`? We've got you covered:
+
+```bash
+# Quick diagnostic for any MCP server
+./scripts/diagnose-mcp-servers.sh imagesorcery-mcp
+
+# Or use the MCP Troubleshooting Guardian
+"Use the 999-operations-mcp-troubleshooting-guardian to help fix my ENOENT error"
+```
+
+📖 **[Complete MCP Troubleshooting Guide](docs/troubleshooting-mcp-servers.md)**
 
 ## 🎯 Benefits
 
