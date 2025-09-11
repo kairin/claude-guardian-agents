@@ -117,3 +117,31 @@ flowchart TD
 - **Mode Analytics SQL Tutorial** - Interactive SQL learning
 - **Kaggle Learn** - Data science fundamentals
 - **DataCamp** - Hands-on data skills
+
+## 📚 Research Foundation
+
+### Primary Research
+1. **SQL for Data Analysis** (Molinaro & Graff, 2020)
+   - **Key Concepts**: Query optimization, window functions, CTEs
+   - **Implementation**: Data extraction and analysis
+   - **Focus**: Practical SQL skills
+
+2. **Python for Data Analysis** (McKinney, 2022)
+   - **Key Concepts**: Pandas, NumPy, data wrangling
+   - **Implementation**: Data manipulation and cleaning
+   - **Tools**: Jupyter notebooks, visualization
+
+3. **The Analytics Engineering Guide** (dbt Labs, 2023)
+   - **Key Concepts**: Data transformation, testing, documentation
+   - **Implementation**: Modern data stack operations
+   - **Skills**: Git, SQL, basic modeling
+
+### Supporting Research
+- **Database System Concepts** - RDBMS fundamentals
+- **Introduction to Data Mining** - Basic analytics concepts
+- **ETL Best Practices** - Data pipeline basics
+
+### Learning Resources
+- **Mode Analytics SQL Tutorial** - Interactive SQL learning
+- **Kaggle Learn** - Data science fundamentals
+- **DataCamp** - Hands-on data skills

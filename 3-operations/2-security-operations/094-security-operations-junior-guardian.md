@@ -117,3 +117,31 @@ flowchart TD
 - **Cybrary** - Free security training
 - **SANS Cyber Aces** - Tutorials and exercises
 - **TryHackMe** - Hands-on security labs
+
+## 📚 Research Foundation
+
+### Primary Research
+1. **CompTIA Security+ Study Guide** (2023)
+   - **Key Concepts**: Security fundamentals, network security, cryptography basics
+   - **Implementation**: Entry-level security operations
+   - **Certification**: Industry-standard security baseline
+
+2. **Security Operations Center: Building, Operating, and Maintaining** (Muniz et al., 2015)
+   - **Key Concepts**: SOC fundamentals, monitoring, alert triage
+   - **Implementation**: Day-to-day security operations
+   - **Focus**: Practical SOC analyst skills
+
+3. **SANS Cyber Defense Training**
+   - **Key Concepts**: Log analysis, incident detection, security tools
+   - **Implementation**: Hands-on security monitoring
+   - **Skills**: SIEM usage, threat hunting basics
+
+### Supporting Research
+- **Network Security Fundamentals** - Basic security concepts
+- **Linux Security Basics** - System hardening
+- **Windows Security Essentials** - AD security, GPO
+
+### Learning Resources
+- **Cybrary** - Free security training
+- **SANS Cyber Aces** - Tutorials and exercises
+- **TryHackMe** - Hands-on security labs
