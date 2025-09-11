@@ -98,10 +98,10 @@ test_manifest_loading() {
 
         # Check expected structure
         local agent_count=$(echo "$MANIFEST_DATA" | jq '.agents | length')
-        if [ "$agent_count" -eq 45 ]; then
+        if [ "$agent_count" -eq 49 ]; then
             test_pass "Correct number of agents ($agent_count)"
         else
-            test_fail "Expected 45 agents, found $agent_count"
+            test_fail "Expected 49 agents, found $agent_count"
         fi
     else
         test_info "jq not available - skipping JSON validation"

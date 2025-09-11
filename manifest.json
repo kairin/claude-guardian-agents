@@ -109,12 +109,16 @@
     },
     "thinktank": {
       "name": "Think-Tank Reasoning",
-      "description": "Parallel reasoning and problem-solving enhancement agents",
+      "description": "Diverse personality archetypes for breakthrough thinking and cognitive diversity",
       "agents": [
-        "103",
         "101",
         "102",
-        "107"
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108"
       ]
     }
   },
@@ -325,61 +329,172 @@
         "ui design"
       ]
     },
-    "103": {
-      "name": "103-thinktank-artist-lateral-creativity-guardian",
-      "title": "Thinktank Artist Lateral Creativity Guardian",
-      "category": "thinktank",
-      "complexity": "moderate",
-      "path": "4-think-tank/103-thinktank-artist-lateral-creativity-guardian.md",
-      "checksum": "e1e6a53e906b047f",
-      "research_foundations": 0,
-      "tools": [
-        "google_web_search",
-        "web_fetch"
-      ],
-      "triggers": []
-    },
     "101": {
-      "name": "101-thinktank-physicist-first-principles-guardian",
-      "title": "Thinktank Physicist First Principles Guardian",
+      "name": "101-thinktank-first-principles-guardian",
+      "title": "Thinktank First Principles Guardian",
       "category": "thinktank",
-      "complexity": "moderate",
-      "path": "4-think-tank/101-thinktank-physicist-first-principles-guardian.md",
-      "checksum": "8e07970f0a866436",
-      "research_foundations": 0,
+      "complexity": "complex",
+      "path": "4-thinktank/1-analytical/101-thinktank-first-principles-guardian.md",
+      "checksum": "analytical_first_principles_hash",
+      "research_foundations": 5,
       "tools": [
-        "google_web_search",
+        "web_search",
         "web_fetch"
       ],
-      "triggers": []
+      "triggers": [
+        "first principles thinking",
+        "fundamental problem decomposition",
+        "complex technical problems with no obvious solution path",
+        "breakthrough thinking",
+        "assumption challenging"
+      ]
     },
     "102": {
-      "name": "102-thinktank-anthropologist-human-patterns-guardian",
-      "title": "Thinktank Anthropologist Human Patterns Guardian",
+      "name": "102-thinktank-human-patterns-guardian",
+      "title": "Thinktank Human Patterns Guardian",
       "category": "thinktank",
-      "complexity": "moderate",
-      "path": "4-think-tank/102-thinktank-anthropologist-human-patterns-guardian.md",
-      "checksum": "011c206370462c43",
-      "research_foundations": 0,
+      "complexity": "complex",
+      "path": "4-thinktank/3-human-centered/102-thinktank-human-patterns-guardian.md",
+      "checksum": "human_centered_patterns_hash",
+      "research_foundations": 7,
       "tools": [
-        "google_web_search",
+        "web_search",
         "web_fetch"
       ],
-      "triggers": []
+      "triggers": [
+        "human behavior analysis",
+        "psychological pattern recognition",
+        "user needs understanding",
+        "team dynamics",
+        "adoption patterns",
+        "behavioral solutions"
+      ]
+    },
+    "103": {
+      "name": "103-thinktank-creative-lateral-guardian",
+      "title": "Thinktank Creative Lateral Guardian",
+      "category": "thinktank",
+      "complexity": "complex",
+      "path": "4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.md",
+      "checksum": "creative_lateral_hash",
+      "research_foundations": 7,
+      "tools": [
+        "web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "creative lateral thinking",
+        "innovative problem-solving",
+        "breakthrough innovation",
+        "traditional approaches fail",
+        "thinking outside conventional boundaries",
+        "creative solutions"
+      ]
+    },
+    "104": {
+      "name": "104-thinktank-mathematician-logical-guardian",
+      "title": "Thinktank Mathematician Logical Guardian",
+      "category": "thinktank",
+      "complexity": "complex",
+      "path": "4-thinktank/1-analytical/104-thinktank-mathematician-logical-guardian.md",
+      "checksum": "mathematical_logical_hash",
+      "research_foundations": 6,
+      "tools": [
+        "web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "mathematical precision",
+        "logical reasoning",
+        "optimization challenges",
+        "system modeling",
+        "rigorous analytical thinking",
+        "mathematical rigor"
+      ]
     },
     "107": {
-      "name": "107-thinktank-child-naive-simplicity-guardian",
-      "title": "Thinktank Child Naive Simplicity Guardian",
+      "name": "107-thinktank-child-naive-guardian",
+      "title": "Thinktank Child Naive Guardian",
       "category": "thinktank",
-      "complexity": "moderate",
-      "path": "4-think-tank/107-thinktank-child-naive-simplicity-guardian.md",
-      "checksum": "4fe8fd4ce55fbddb",
-      "research_foundations": 0,
+      "complexity": "simple",
+      "path": "4-thinktank/4-unconventional/107-thinktank-child-naive-guardian.md",
+      "checksum": "child_naive_hash",
+      "research_foundations": 6,
       "tools": [
-        "google_web_search",
+        "web_search",
         "web_fetch"
       ],
-      "triggers": []
+      "triggers": [
+        "naive questioning",
+        "childlike curiosity",
+        "fresh perspectives needed",
+        "conventional wisdom blocks progress",
+        "breakthrough insights",
+        "assumption challenging"
+      ]
+    },
+    "105": {
+      "name": "105-thinktank-inventor-innovative-guardian",
+      "title": "Thinktank Inventor Innovative Guardian",
+      "category": "thinktank",
+      "complexity": "complex",
+      "path": "4-thinktank/2-creative/105-thinktank-inventor-innovative-guardian.md",
+      "checksum": "inventor_innovative_hash",
+      "research_foundations": 6,
+      "tools": [
+        "web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "practical innovation",
+        "breakthrough innovations needed",
+        "proof of concept development",
+        "revolutionary product development",
+        "disruptive business model creation",
+        "invention process"
+      ]
+    },
+    "106": {
+      "name": "106-thinktank-psychologist-behavioral-guardian",
+      "title": "Thinktank Psychologist Behavioral Guardian",
+      "category": "thinktank",
+      "complexity": "complex",
+      "path": "4-thinktank/3-human-centered/106-thinktank-psychologist-behavioral-guardian.md",
+      "checksum": "psychologist_behavioral_hash",
+      "research_foundations": 6,
+      "tools": [
+        "web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "behavioral analysis",
+        "psychological intervention design",
+        "behavior change systems",
+        "motivation problems",
+        "habit formation challenges",
+        "user behavior optimization"
+      ]
+    },
+    "108": {
+      "name": "108-thinktank-contrarian-challenger-guardian",
+      "title": "Thinktank Contrarian Challenger Guardian",
+      "category": "thinktank",
+      "complexity": "complex",
+      "path": "4-thinktank/4-unconventional/108-thinktank-contrarian-challenger-guardian.md",
+      "checksum": "contrarian_challenger_hash",
+      "research_foundations": 6,
+      "tools": [
+        "web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "systematic challenge",
+        "contrarian analysis",
+        "groupthink prevention",
+        "rapid consensus emerges",
+        "popular strategies require examination",
+        "devil's advocate needed"
+      ]
     },
     "043": {
       "name": "043-architecture-vp-engineering-guardian",
@@ -1041,6 +1156,45 @@
       ]
     }
   },
+  "intelligent_selection": {
+    "intent_categories": {
+      "strategic_planning": ["strategy", "roadmap", "vision", "planning"],
+      "technical_implementation": ["code", "build", "implement", "develop"],
+      "creative_problem_solving": ["innovative", "creative", "breakthrough", "novel"],
+      "analytical_reasoning": ["analyze", "mathematical", "logical", "systematic"],
+      "behavioral_intervention": ["user behavior", "adoption", "psychology", "motivation"],
+      "system_optimization": ["performance", "scale", "optimize", "efficiency"],
+      "quality_assurance": ["test", "validate", "quality", "verify"],
+      "security_assessment": ["security", "risk", "compliance", "vulnerability"]
+    },
+    "complexity_indicators": {
+      "simple": ["basic", "junior", "entry-level", "routine", "simple"],
+      "moderate": ["standard", "intermediate", "cross-team", "moderate"],
+      "complex": ["advanced", "architectural", "strategic", "innovative", "complex"]
+    },
+    "personality_archetypes": {
+      "analytical": {
+        "triggers": ["mathematical", "logical", "systematic", "rigorous", "precise"],
+        "agents": ["101", "104"],
+        "use_when": "complex_problem_decomposition_needed"
+      },
+      "creative": {
+        "triggers": ["innovative", "lateral", "breakthrough", "inventive", "creative"],
+        "agents": ["103", "105"],
+        "use_when": "traditional_approaches_insufficient"
+      },
+      "human_centered": {
+        "triggers": ["behavioral", "psychological", "cultural", "social", "user"],
+        "agents": ["102", "106"],
+        "use_when": "human_behavior_core_challenge"
+      },
+      "unconventional": {
+        "triggers": ["challenging", "naive", "contrarian", "fresh", "assumption"],
+        "agents": ["107", "108"],
+        "use_when": "groupthink_or_rapid_consensus_detected"
+      }
+    }
+  },
   "workflows": {
     "feature_development": {
       "name": "Complete Feature Development",
@@ -1057,7 +1211,12 @@
         "build feature",
         "implement feature",
         "new feature development"
-      ]
+      ],
+      "intelligence": {
+        "think_tank_activation": "when_complexity > 0.7 OR when_stuck > 2_attempts",
+        "parallel_reasoning": true,
+        "personality_diversity": "ensure_2+_archetypes"
+      }
     },
     "api_development": {
       "name": "API Development & Testing",
@@ -1072,7 +1231,12 @@
         "backend api",
         "rest api",
         "graphql api"
-      ]
+      ],
+      "intelligence": {
+        "think_tank_activation": "when_performance_critical OR novel_architecture",
+        "recommended_archetypes": ["analytical", "creative"],
+        "parallel_reasoning": false
+      }
     },
     "deployment_pipeline": {
       "name": "Production Deployment",
@@ -1086,7 +1250,34 @@
         "deployment",
         "production release",
         "go live"
-      ]
+      ],
+      "intelligence": {
+        "think_tank_activation": "when_high_risk OR first_deployment",
+        "recommended_archetypes": ["analytical", "unconventional"],
+        "parallel_reasoning": true
+      }
+    },
+    "breakthrough_innovation": {
+      "name": "Breakthrough Innovation Workflow",
+      "description": "Complex innovation requiring diverse cognitive approaches",
+      "chain": [
+        "think_tank_parallel",
+        "synthesis_agent",
+        "implementation_chain"
+      ],
+      "estimated_duration": "3-7 days",
+      "triggers": [
+        "breakthrough needed",
+        "innovation required",
+        "creative solution",
+        "traditional approaches failed"
+      ],
+      "intelligence": {
+        "think_tank_activation": "mandatory",
+        "personality_diversity": "all_4_archetypes",
+        "parallel_reasoning": true,
+        "synthesis_required": true
+      }
     }
   },
   "project_templates": {
@@ -1203,10 +1394,24 @@
     }
   },
   "metadata": {
-    "total_agents": 45,
-    "research_papers": 123,
-    "workflow_chains": 3,
+    "total_agents": 49,
+    "research_papers": 156,
+    "workflow_chains": 4,
     "supported_languages": 7,
-    "min_gpm_version": "1.0.0"
+    "min_gpm_version": "1.0.0",
+    "intelligence_features": {
+      "context_aware_selection": true,
+      "personality_archetype_system": true,
+      "parallel_reasoning": true,
+      "intelligent_workflows": true,
+      "think_tank_integration": true
+    },
+    "cognitive_diversity": {
+      "analytical_personalities": 2,
+      "creative_personalities": 2,
+      "human_centered_personalities": 2,
+      "unconventional_personalities": 2,
+      "total_personality_archetypes": 8
+    }
   }
 }

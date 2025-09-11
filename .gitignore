@@ -3,6 +3,42 @@
 .DS_Store
 settings.local.json
 
+# Python virtual environment and build artifacts (uv-managed)
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
 # OS generated files
 Thumbs.db
 *.swp
@@ -12,3 +48,6 @@ Thumbs.db
 # IDE files
 .vscode/
 .idea/
+
+# Temporary test files
+/tmp/test*.log

@@ -82,12 +82,45 @@ validate_installation() {
     python_version=$(python --version)
     echo "Python version: $python_version"
 
-    # Check installed packages
+    # Check installed packages (with retry logic for timing issues)
     echo "Key dependencies:"
-    python -c "import yaml; print(f'  ✅ PyYAML: {yaml.__version__}')" 2>/dev/null || echo "  ❌ PyYAML not found"
-    python -c "import requests; print(f'  ✅ Requests: {requests.__version__}')" 2>/dev/null || echo "  ❌ Requests not found"
-    python -c "import rich; print(f'  ✅ Rich: {rich.__version__}')" 2>/dev/null || echo "  ❌ Rich not found"
-    python -c "import click; print(f'  ✅ Click: {click.__version__}')" 2>/dev/null || echo "  ❌ Click not found"
+
+    # Helper function to test package with retry
+    test_package() {
+        local package=$1
+        local import_name=$2
+
+        for attempt in 1 2; do
+            # Try multiple ways to get version
+            local version_check="
+try:
+    import $import_name
+    try:
+        version = getattr($import_name, '__version__', None)
+        if not version:
+            import importlib.metadata
+            version = importlib.metadata.version('${package,,}')
+    except:
+        version = 'installed'
+    print(f'  ✅ ${package}: {version}')
+except ImportError:
+    exit(1)
+"
+
+            if python -c "$version_check" 2>/dev/null; then
+                return 0
+            fi
+            [ $attempt -eq 1 ] && sleep 0.5  # Brief delay before retry
+        done
+
+        echo "  ❌ ${package} not found"
+        return 1
+    }
+
+    test_package "PyYAML" "yaml"
+    test_package "Requests" "requests"
+    test_package "Rich" "rich"
+    test_package "Click" "click"
 
     # Test scripts
     echo ""

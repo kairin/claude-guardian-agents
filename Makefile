@@ -1,6 +1,9 @@
 # Guardian Agents Development Makefile
 # All Python operations use uv
 
+# Detect Python interpreter (prefer .venv if available)
+PYTHON := $(shell if [ -f .venv/bin/python ]; then echo .venv/bin/python; else echo python; fi)
+
 .PHONY: help install dev-install test lint format check clean reports validate
 
 # Default target
@@ -50,15 +53,15 @@ check: lint test
 
 # Project management targets
 reports:
-	python scripts/generate-reports.py all
+	$(PYTHON) scripts/generate-reports.py all
 
 validate:
-	python scripts/validate-gpm.py
-	python scripts/track-progress.py calculate-completion
+	bash scripts/validate-gpm.sh
+	$(PYTHON) scripts/track-progress.py calculate-completion
 
 track:
-	python scripts/track-progress.py calculate-completion
-	python scripts/generate-reports.py weekly
+	$(PYTHON) scripts/track-progress.py calculate-completion
+	$(PYTHON) scripts/generate-reports.py weekly
 
 # Maintenance targets
 clean:

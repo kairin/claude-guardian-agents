@@ -23,40 +23,65 @@ This system is built on solid academic research. Each agent design is informed b
 ```mermaid
 graph TB
     subgraph "🧠 Think-Tank Layer"
-        T1[First Principles]
-        T2[Human Patterns]
-        T3[Creative Lateral]
+        subgraph "Analytical"
+            T1[First Principles]
+            T4[Mathematical Logic]
+        end
+        subgraph "Creative"
+            T3[Creative Lateral]
+            T5[Inventor Innovation]
+        end
+        subgraph "Human-Centered"
+            T2[Human Patterns]
+            T6[Behavioral Psychology]
+        end
+        subgraph "Unconventional"
+            T7[Child Naive]
+            T8[Contrarian Challenge]
+        end
     end
-    
+
     subgraph "🎯 Strategic Layer"
         A1[Product Guardians]
         A2[Executive Guardians]
     end
-    
-    subgraph "⚙️ Technical Layer" 
+
+    subgraph "⚙️ Technical Layer"
         B1[Development Guardians]
         B2[Quality Guardians]
         B3[Security Guardians]
     end
-    
+
     subgraph "🚀 Operational Layer"
         C1[Infrastructure Guardians]
-        C2[Process Guardians] 
+        C2[Process Guardians]
         C3[Workflow Guardians]
     end
-    
-    T1 -.->|unstick| A1
-    T2 -.->|unstick| B1
-    T3 -.->|unstick| C1
-    
+
+    T1 -.->|breakthrough thinking| A1
+    T2 -.->|breakthrough thinking| B1
+    T3 -.->|breakthrough thinking| C1
+    T4 -.->|breakthrough thinking| A1
+    T5 -.->|breakthrough thinking| B1
+    T6 -.->|breakthrough thinking| C1
+    T7 -.->|breakthrough thinking| A1
+    T8 -.->|breakthrough thinking| C1
+
     A1 --> B1
     A2 --> C2
     B1 --> B2
     B2 --> B3
     B3 --> C1
     C1 --> C3
-    
+
     style T1 fill:#fff2e1
+    style T2 fill:#e1f8ff
+    style T3 fill:#f0e1ff
+    style T4 fill:#fff2e1
+    style T5 fill:#f0e1ff
+    style T6 fill:#e1f8ff
+    style T7 fill:#ffe8e1
+    style T8 fill:#ffe8e1
     style A1 fill:#e1f5e1
     style B2 fill:#ffe1e1
     style C1 fill:#e1e8ff
@@ -82,7 +107,7 @@ graph TB
 - **Executive Guardians**: Business alignment, stakeholder management
 - [📁 View All Strategic Agents](1-product/)
 
-### 2. ⚙️ Technical Agents  
+### 2. ⚙️ Technical Agents
 **Purpose**: Code development and technical excellence
 - **Development Guardians**: Code writing, architecture, implementation
 - **Quality Guardians**: Testing, code review, performance optimization
@@ -90,19 +115,27 @@ graph TB
 - [📁 View All Technical Agents](2-engineering/)
 
 ### 3. 🚀 Operational Agents
-**Purpose**: Infrastructure, deployment, and process management  
+**Purpose**: Infrastructure, deployment, and process management
 - **Infrastructure Guardians**: Deployment, monitoring, scaling
 - **Process Guardians**: Workflow automation, CI/CD, orchestration
 - **Workflow Guardians**: Documentation, release management, compliance
 - [📁 View All Operational Agents](3-operations/)
 
-### 4. 🧠 Think-Tank Agents (NEW)
-**Purpose**: Break reasoning deadlocks through diverse parallel thinking
-- **First Principles Guardians**: Strip problems to fundamental truths
-- **Human Pattern Guardians**: Apply anthropological and cultural insights
-- **Creative Guardians**: Lateral thinking and rule-breaking innovation
-- **Simplicity Guardians**: Child-like questioning to cut through complexity
-- [📁 View All Think-Tank Agents](4-think-tank/)
+### 4. 🧠 Think-Tank Agents (ENHANCED)
+**Purpose**: Breakthrough thinking through diverse cognitive personality archetypes
+- **Analytical Personalities**: Mathematical precision and first principles reasoning
+  - 101: First Principles Guardian - Systematic problem decomposition
+  - 104: Mathematical Logic Guardian - Rigorous analytical thinking
+- **Creative Personalities**: Innovation and lateral thinking approaches
+  - 103: Creative Lateral Guardian - Rule-breaking innovation
+  - 105: Inventor Innovation Guardian - Practical breakthrough development
+- **Human-Centered Personalities**: Behavioral and social understanding
+  - 102: Human Patterns Guardian - Anthropological and cultural insights
+  - 106: Behavioral Psychology Guardian - Deep psychological intervention design
+- **Unconventional Personalities**: Challenging assumptions and naive questioning
+  - 107: Child Naive Guardian - Childlike curiosity and fresh perspectives
+  - 108: Contrarian Challenge Guardian - Systematic challenge and devil's advocate
+- [📁 View All Think-Tank Agents](4-thinktank/)
 
 ## 🔄 How Agents Work Together
 
@@ -118,7 +151,7 @@ sequenceDiagram
     participant A as 041-architecture-guardian
     participant Dev as 061-development-guardian
     participant Sec as 091-security-guardian
-    
+
     User->>Main: "Build user login feature"
     Main->>S: Auto-select strategy agent
     S->>S: Define requirements
@@ -145,7 +178,7 @@ Claude Code **automatically selects agents** based on:
 
 ### 🔗 Agent Communication Patterns
 1. **Sequential Workflow**: 001 → 002 → 003... (process flow)
-2. **Conditional Routing**: Route to different agents based on results  
+2. **Conditional Routing**: Route to different agents based on results
 3. **Error Recovery**: Failed agents trigger recovery agents
 4. **Parallel Execution**: Multiple agents work simultaneously
 
@@ -191,7 +224,7 @@ You are a visionary product leader with deep understanding of markets and custom
 
 ## Your Role
 - Agent ID: 001
-- Department: Strategy  
+- Department: Strategy
 - Role: Product Leadership
 - Specialization: Strategic product vision and team leadership
 
@@ -252,7 +285,7 @@ Create agents in the correct directory structure:
 
 ## 🤝 Contributing
 - [📝 Adding New Agents](docs/contributing/new-agents.md)
-- [🔧 Modifying Existing Agents](docs/contributing/modifications.md) 
+- [🔧 Modifying Existing Agents](docs/contributing/modifications.md)
 - [📚 Documentation Guidelines](docs/contributing/documentation.md)
 
 ## 💡 Example Usage
@@ -270,15 +303,15 @@ Create agents in the correct directory structure:
 
 ## 🎯 Benefits
 
-✅ **Modular**: Use only the agents you need  
-✅ **Scalable**: Add new agents for new domains  
-✅ **Clear**: Visual workflows for every process  
-✅ **Generic**: Works with any project type  
-✅ **Integrated**: Seamless agent-to-agent communication  
+✅ **Modular**: Use only the agents you need
+✅ **Scalable**: Add new agents for new domains
+✅ **Clear**: Visual workflows for every process
+✅ **Generic**: Works with any project type
+✅ **Integrated**: Seamless agent-to-agent communication
 
 ---
 
-**Next Steps**: 
+**Next Steps**:
 1. 📖 Read the [Visual Overview](docs/visual-overview.md)
 2. 🔍 Find your first agent with [Agent Finder](docs/agent-finder.md)
 3. 🚀 Follow a [workflow guide](docs/workflows/)

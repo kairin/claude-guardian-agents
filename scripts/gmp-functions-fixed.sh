@@ -11,6 +11,11 @@ load_manifest() {
 
     # Check if jq is available
     if command -v jq >/dev/null 2>&1; then
+        # Validate JSON format before loading
+        if ! jq empty "$manifest_file" >/dev/null 2>&1; then
+            echo "❌ Invalid JSON format in manifest file: $manifest_file" >&2
+            return 1
+        fi
         export MANIFEST_DATA=$(cat "$manifest_file")
         return 0
     else

@@ -66,7 +66,7 @@ repos:
 
       - id: validate-gpm
         name: Validate GPM implementation
-        entry: python
+        entry: bash
         args: [scripts/validate-gpm.sh]
         language: system
         files: ^(scripts/gmp-functions|manifest\.json|agents/)
@@ -74,7 +74,7 @@ repos:
 
       - id: update-progress
         name: Update project progress
-        entry: python
+        entry: .venv/bin/python
         args: [scripts/track-progress.py, calculate-completion]
         language: system
         files: ^(specs/|tracking/)
