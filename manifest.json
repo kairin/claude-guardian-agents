@@ -109,12 +109,16 @@
     },
     "thinktank": {
       "name": "Think-Tank Reasoning",
-      "description": "Parallel reasoning and problem-solving enhancement agents",
+      "description": "Parallel reasoning and problem-solving enhancement agents with diverse personality archetypes",
       "agents": [
-        "103",
         "101",
         "102",
-        "107"
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108"
       ]
     }
   },
@@ -325,61 +329,149 @@
         "ui design"
       ]
     },
-    "103": {
-      "name": "103-thinktank-artist-lateral-creativity-guardian",
-      "title": "Thinktank Artist Lateral Creativity Guardian",
-      "category": "thinktank",
-      "complexity": "moderate",
-      "path": "4-think-tank/103-thinktank-artist-lateral-creativity-guardian.md",
-      "checksum": "e1e6a53e906b047f",
-      "research_foundations": 0,
-      "tools": [
-        "google_web_search",
-        "web_fetch"
-      ],
-      "triggers": []
-    },
     "101": {
-      "name": "101-thinktank-physicist-first-principles-guardian",
-      "title": "Thinktank Physicist First Principles Guardian",
+      "name": "101-thinktank-first-principles-guardian",
+      "title": "Think Tank First Principles Guardian",
       "category": "thinktank",
       "complexity": "moderate",
-      "path": "4-think-tank/101-thinktank-physicist-first-principles-guardian.md",
+      "path": "4-thinktank/1-analytical/101-thinktank-first-principles-guardian.md",
       "checksum": "8e07970f0a866436",
-      "research_foundations": 0,
+      "research_foundations": 4,
       "tools": [
         "google_web_search",
         "web_fetch"
       ],
-      "triggers": []
+      "triggers": [
+        "first principles thinking",
+        "fundamental problem analysis",
+        "break down complex problems"
+      ]
     },
     "102": {
-      "name": "102-thinktank-anthropologist-human-patterns-guardian",
-      "title": "Thinktank Anthropologist Human Patterns Guardian",
+      "name": "102-thinktank-human-patterns-guardian",
+      "title": "Think Tank Human Patterns Guardian",
       "category": "thinktank",
       "complexity": "moderate",
-      "path": "4-think-tank/102-thinktank-anthropologist-human-patterns-guardian.md",
+      "path": "4-thinktank/3-human-centered/102-thinktank-human-patterns-guardian.md",
       "checksum": "011c206370462c43",
-      "research_foundations": 0,
+      "research_foundations": 5,
       "tools": [
         "google_web_search",
         "web_fetch"
       ],
-      "triggers": []
+      "triggers": [
+        "human behavior analysis",
+        "cultural patterns",
+        "anthropological insights"
+      ]
+    },
+    "103": {
+      "name": "103-thinktank-creative-lateral-guardian",
+      "title": "Think Tank Creative Lateral Guardian",
+      "category": "thinktank",
+      "complexity": "moderate",
+      "path": "4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.md",
+      "checksum": "e1e6a53e906b047f",
+      "research_foundations": 4,
+      "tools": [
+        "google_web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "creative thinking",
+        "lateral thinking",
+        "innovative solutions"
+      ]
+    },
+    "104": {
+      "name": "104-thinktank-mathematician-logical-guardian",
+      "title": "Think Tank Mathematician Logical Guardian",
+      "category": "thinktank",
+      "complexity": "complex",
+      "path": "4-thinktank/1-analytical/104-thinktank-mathematician-logical-guardian.md",
+      "checksum": "a1b2c3d4e5f6g7h8",
+      "research_foundations": 5,
+      "tools": [
+        "google_web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "mathematical analysis",
+        "logical reasoning",
+        "quantitative problem solving"
+      ]
+    },
+    "105": {
+      "name": "105-thinktank-inventor-innovative-guardian",
+      "title": "Think Tank Inventor Innovative Guardian",
+      "category": "thinktank",
+      "complexity": "moderate",
+      "path": "4-thinktank/2-creative/105-thinktank-inventor-innovative-guardian.md",
+      "checksum": "b2c3d4e5f6g7h8i9",
+      "research_foundations": 4,
+      "tools": [
+        "google_web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "practical innovation",
+        "invention methodology",
+        "systematic creativity"
+      ]
+    },
+    "106": {
+      "name": "106-thinktank-psychologist-behavioral-guardian",
+      "title": "Think Tank Psychologist Behavioral Guardian",
+      "category": "thinktank",
+      "complexity": "complex",
+      "path": "4-thinktank/3-human-centered/106-thinktank-psychologist-behavioral-guardian.md",
+      "checksum": "c3d4e5f6g7h8i9j0",
+      "research_foundations": 6,
+      "tools": [
+        "google_web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "behavioral psychology",
+        "cognitive analysis",
+        "psychological insights"
+      ]
     },
     "107": {
-      "name": "107-thinktank-child-naive-simplicity-guardian",
-      "title": "Thinktank Child Naive Simplicity Guardian",
+      "name": "107-thinktank-child-naive-guardian",
+      "title": "Think Tank Child Naive Guardian",
       "category": "thinktank",
-      "complexity": "moderate",
-      "path": "4-think-tank/107-thinktank-child-naive-simplicity-guardian.md",
+      "complexity": "simple",
+      "path": "4-thinktank/4-unconventional/107-thinktank-child-naive-guardian.md",
       "checksum": "4fe8fd4ce55fbddb",
-      "research_foundations": 0,
+      "research_foundations": 3,
       "tools": [
         "google_web_search",
         "web_fetch"
       ],
-      "triggers": []
+      "triggers": [
+        "naive questioning",
+        "childlike curiosity",
+        "simplification approach"
+      ]
+    },
+    "108": {
+      "name": "108-thinktank-contrarian-challenger-guardian",
+      "title": "Think Tank Contrarian Challenger Guardian",
+      "category": "thinktank",
+      "complexity": "complex",
+      "path": "4-thinktank/4-unconventional/108-thinktank-contrarian-challenger-guardian.md",
+      "checksum": "d4e5f6g7h8i9j0k1",
+      "research_foundations": 5,
+      "tools": [
+        "google_web_search",
+        "web_fetch"
+      ],
+      "triggers": [
+        "devil's advocate",
+        "challenge assumptions",
+        "contrarian analysis"
+      ]
     },
     "043": {
       "name": "043-architecture-vp-engineering-guardian",
@@ -1203,7 +1295,7 @@
     }
   },
   "metadata": {
-    "total_agents": 45,
+    "total_agents": 49,
     "research_papers": 123,
     "workflow_chains": 3,
     "supported_languages": 7,
