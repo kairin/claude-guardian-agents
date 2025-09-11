@@ -1,0 +1,87 @@
+# Guardian Agents Development Makefile
+# All Python operations use uv
+
+.PHONY: help install dev-install test lint format check clean reports validate
+
+# Default target
+help:
+	@echo "Guardian Agents Development Commands (using uv)"
+	@echo ""
+	@echo "Setup:"
+	@echo "  install     Install project dependencies"
+	@echo "  dev-install Install with development dependencies"
+	@echo ""
+	@echo "Development:"
+	@echo "  test        Run test suite"
+	@echo "  lint        Run linting checks"
+	@echo "  format      Format code"
+	@echo "  check       Run all quality checks"
+	@echo ""
+	@echo "Project Management:"
+	@echo "  reports     Generate all project reports"
+	@echo "  validate    Run project validation"
+	@echo "  track       Update progress tracking"
+	@echo ""
+	@echo "Maintenance:"
+	@echo "  clean       Clean build artifacts"
+	@echo "  update-deps Update dependencies"
+
+# Installation targets
+install:
+	uv pip install -e .
+
+dev-install:
+	uv pip install -e ".[dev,docs,validation]"
+
+# Development targets
+test:
+	pytest tests/ -v --cov=src --cov-report=term-missing
+
+lint:
+	ruff check src/ scripts/ tests/
+	mypy src/ scripts/
+
+format:
+	black src/ scripts/ tests/
+	ruff check --fix src/ scripts/ tests/
+
+check: lint test
+	@echo "All quality checks passed!"
+
+# Project management targets
+reports:
+	python scripts/generate-reports.py all
+
+validate:
+	python scripts/validate-gpm.py
+	python scripts/track-progress.py calculate-completion
+
+track:
+	python scripts/track-progress.py calculate-completion
+	python scripts/generate-reports.py weekly
+
+# Maintenance targets
+clean:
+	rm -rf build/
+	rm -rf dist/
+	rm -rf *.egg-info/
+	rm -rf .pytest_cache/
+	rm -rf .coverage
+	rm -rf htmlcov/
+	find . -type d -name __pycache__ -delete
+	find . -type f -name "*.pyc" -delete
+
+update-deps:
+	uv pip install --upgrade -e ".[dev,docs,validation]"
+
+# Environment management
+env-create:
+	uv venv .venv --python 3.11
+
+env-activate:
+	@echo "Run: source .venv/bin/activate"
+
+env-reset: clean
+	rm -rf .venv
+	$(MAKE) env-create
+	uv pip install -e ".[dev,docs,validation]"
