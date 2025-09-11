@@ -207,7 +207,7 @@ For each core assumption:
 
 **Assumption Audit**:
 - Premium customers will pay for unproven brand
-- Product quality justifies premium pricing  
+- Product quality justifies premium pricing
 - Marketing can reach premium segment effectively
 - Competition won't respond aggressively
 - Premium market is large enough for profitable scale
