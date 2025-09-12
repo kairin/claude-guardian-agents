@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="220px" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="background-color: #0a0a0a;">
+  <title>Mathematician Logical Guardian</title>
+  <desc>Mathematical precision and logical reasoning</desc>
+  <defs>
+    <linearGradient id="math-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E7D32;" />
+      <stop offset="100%" style="stop-color:#1B5E20;" />
+    </linearGradient>
+    <linearGradient id="math-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64B5F6;" />
+      <stop offset="100%" style="stop-color:#1976D2;" />
+    </linearGradient>
+    <pattern id="grid-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L0,0 L0,20" fill="none" stroke="#2E7D32" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Grid background -->
+  <rect x="0" y="0" width="400" height="220" fill="url(#grid-pattern)"/>
+  
+  <!-- Golden ratio spiral -->
+  <path d="M200,110 Q230,110 230,80 Q230,50 200,50 Q140,50 140,110 Q140,200 230,200" 
+        fill="none" stroke="url(#math-grad)" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Central infinity symbol -->
+  <g transform="translate(200,110)">
+    <path d="M-30,0 Q-30,-20 -10,-20 Q10,-20 10,0 Q10,20 -10,20 Q-30,20 -30,0 
+             M30,0 Q30,20 10,20 Q-10,20 -10,0 Q-10,-20 10,-20 Q30,-20 30,0 Z" 
+          fill="url(#math-grad)" stroke="#000" stroke-width="2"/>
+  </g>
+  
+  <!-- Mathematical symbols floating around -->
+  <text x="120" y="70" fill="url(#math-accent)" font-family="serif" font-size="20" font-style="italic">∫</text>
+  <text x="280" y="70" fill="url(#math-accent)" font-family="serif" font-size="20">∑</text>
+  <text x="120" y="150" fill="url(#math-accent)" font-family="serif" font-size="20">π</text>
+  <text x="280" y="150" fill="url(#math-accent)" font-family="serif" font-size="20">∂</text>
+  
+  <!-- Logic gates -->
+  <g transform="translate(150,110)">
+    <path d="M0,-10 L-15,-10 L-15,10 L0,10 Q10,0 0,-10 Z" fill="none" stroke="url(#math-accent)" stroke-width="1"/>
+    <text x="-10" y="4" fill="url(#math-accent)" font-family="monospace" font-size="8">AND</text>
+  </g>
+  
+  <g transform="translate(250,110)">
+    <path d="M0,-10 L-15,-10 L-15,10 L0,10 Q10,0 0,-10 Z" fill="none" stroke="url(#math-accent)" stroke-width="1"/>
+    <circle cx="12" cy="0" r="3" fill="none" stroke="url(#math-accent)" stroke-width="1"/>
+    <text x="-10" y="4" fill="url(#math-accent)" font-family="monospace" font-size="8">NOT</text>
+  </g>
+  
+  <!-- Formula -->
+  <text x="200" y="185" text-anchor="middle" fill="url(#math-grad)" font-family="serif" font-size="12" font-style="italic">
+    ∀x ∈ ℝ : x² ≥ 0
+  </text>
+</svg>

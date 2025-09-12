@@ -1,4 +1,4 @@
-![Agent Image](../../../assets/1-product/021-design-product-leadership-guardian.svg)
+![Agent Image](../../assets/1-product/2-product-design/021-design-product-leadership-guardian.svg)
 
 ---
 name: 021-design-product-leadership-guardian

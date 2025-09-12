@@ -1,4 +1,4 @@
-![Agent Image](../../../../assets/1-product/025-design-ui-junior-guardian.svg)
+![Agent Image](../../../assets/1-product/2-product-design/2-ui-design/025-design-ui-junior-guardian.svg)
 
 ---
 name: 025-design-ui-junior-guardian

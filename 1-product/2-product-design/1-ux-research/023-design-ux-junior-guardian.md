@@ -1,4 +1,4 @@
-![Agent Image](../../../../assets/1-product/023-design-ux-junior-guardian.svg)
+![Agent Image](../../../assets/1-product/2-product-design/1-ux-research/023-design-ux-junior-guardian.svg)
 
 ---
 name: 023-design-ux-junior-guardian

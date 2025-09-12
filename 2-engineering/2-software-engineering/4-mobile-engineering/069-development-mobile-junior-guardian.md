@@ -1,4 +1,4 @@
-![Agent Image](../../../../../assets/2-engineering/069-development-mobile-junior-guardian.svg)
+![Agent Image](../../../assets/2-engineering/2-software-engineering/4-mobile-engineering/069-development-mobile-junior-guardian.svg)
 
 ---
 name: 069-development-mobile-junior-guardian

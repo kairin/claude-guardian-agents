@@ -1,4 +1,4 @@
-![Agent Image](../../../assets/2-engineering/043-architecture-vp-engineering-guardian.svg)
+![Agent Image](../../assets/2-engineering/2-software-engineering/043-architecture-vp-engineering-guardian.svg)
 
 ---
 name: 043-architecture-vp-engineering-guardian

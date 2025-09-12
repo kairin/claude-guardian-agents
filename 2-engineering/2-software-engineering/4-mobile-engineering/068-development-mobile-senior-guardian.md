@@ -1,4 +1,4 @@
-![Agent Image](../../../../../assets/2-engineering/068-development-mobile-senior-guardian.svg)
+![Agent Image](../../../assets/2-engineering/2-software-engineering/4-mobile-engineering/068-development-mobile-senior-guardian.svg)
 
 ---
 name: 068-development-mobile-senior-guardian

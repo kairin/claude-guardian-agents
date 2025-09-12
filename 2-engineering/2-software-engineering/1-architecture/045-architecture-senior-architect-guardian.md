@@ -1,4 +1,4 @@
-![Agent Image](../../../../../assets/2-engineering/045-architecture-senior-architect-guardian.svg)
+![Agent Image](../../../assets/2-engineering/2-software-engineering/1-architecture/045-architecture-senior-architect-guardian.svg)
 
 ---
 name: 045-architecture-senior-architect-guardian

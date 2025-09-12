@@ -1,4 +1,4 @@
-![Agent Image](../../../assets/2-engineering/071-development-quality-director-guardian.svg)
+![Agent Image](../../assets/2-engineering/3-quality-engineering/071-development-quality-director-guardian.svg)
 
 ---
 name: 071-development-quality-director-guardian

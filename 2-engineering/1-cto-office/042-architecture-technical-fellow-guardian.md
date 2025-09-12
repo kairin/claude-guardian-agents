@@ -1,4 +1,4 @@
-![Agent Image](../../../assets/2-engineering/042-architecture-technical-fellow-guardian.svg)
+![Agent Image](../../assets/2-engineering/1-cto-office/042-architecture-technical-fellow-guardian.svg)
 
 ---
 name: 042-architecture-technical-fellow-guardian

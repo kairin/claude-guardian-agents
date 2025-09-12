@@ -1,4 +1,4 @@
-![Agent Image](../../../../../assets/2-engineering/066-development-frontend-junior-guardian.svg)
+![Agent Image](../../../assets/2-engineering/2-software-engineering/3-frontend-engineering/066-development-frontend-junior-guardian.svg)
 
 ---
 name: 066-development-frontend-junior-guardian

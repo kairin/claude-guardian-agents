@@ -1,4 +1,4 @@
-![Agent Image](../../../../assets/1-product/022-design-ux-research-guardian.svg)
+![Agent Image](../../../assets/1-product/2-product-design/1-ux-research/022-design-ux-research-guardian.svg)
 
 ---
 name: 022-design-ux-research-guardian

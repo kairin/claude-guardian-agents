@@ -1,4 +1,4 @@
-![Agent Image](../../../assets/2-engineering/081-infrastructure-devops-director-guardian.svg)
+![Agent Image](../../assets/2-engineering/4-devops-engineering/081-infrastructure-devops-director-guardian.svg)
 
 ---
 name: 081-infrastructure-devops-director-guardian

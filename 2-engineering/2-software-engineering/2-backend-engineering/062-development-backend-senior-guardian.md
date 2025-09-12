@@ -1,4 +1,4 @@
-![Agent Image](../../../../../assets/2-engineering/062-development-backend-senior-guardian.svg)
+![Agent Image](../../../assets/2-engineering/2-software-engineering/2-backend-engineering/062-development-backend-senior-guardian.svg)
 
 ---
 name: 062-development-backend-senior-guardian

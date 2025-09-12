@@ -1,4 +1,4 @@
-![Agent Image](../../../../../assets/2-engineering/067-development-mobile-director-guardian.svg)
+![Agent Image](../../../assets/2-engineering/2-software-engineering/4-mobile-engineering/067-development-mobile-director-guardian.svg)
 
 ---
 name: 067-development-mobile-director-guardian

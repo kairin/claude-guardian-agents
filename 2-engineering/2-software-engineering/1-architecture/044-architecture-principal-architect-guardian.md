@@ -1,4 +1,4 @@
-![Agent Image](../../../../../assets/2-engineering/044-architecture-principal-architect-guardian.svg)
+![Agent Image](../../../assets/2-engineering/2-software-engineering/1-architecture/044-architecture-principal-architect-guardian.svg)
 
 ---
 name: 044-architecture-principal-architect-guardian
