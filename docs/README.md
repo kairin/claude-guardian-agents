@@ -8,6 +8,7 @@
 ### **🚀 Getting Started**
 - [Quick Start Guide](getting-started/quick-start.md) - Get up and running in 5 minutes
 - [Installation Guide](getting-started/installation.md) - Complete setup instructions
+- [GPM Installation](getting-started/gpm-installation.md) - Guardian Package Manager setup
 - [First Steps Tutorial](getting-started/first-steps.md) - Your first Guardian Agents workflow
 
 ### **💼 Project Management System**

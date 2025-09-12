@@ -1,14 +1,4 @@
-<svg width="100%" height="220px" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="background-color: #0a0a0a;">
-  <defs>
-    <linearGradient id="eng-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#50E3C2;" /><stop offset="100%" style="stop-color:#00664E;" /></linearGradient>
-    <linearGradient id="eng-accent-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#BDC3C7;" /><stop offset="100%" style="stop-color:#95A5A6;" /></linearGradient>
-    <radialGradient id="eng-glow"><stop offset="0%" stop-color="#BDC3C7" stop-opacity="0.7"/><stop offset="100%" stop-color="#BDC3C7" stop-opacity="0"/></radialGradient>
-    <linearGradient id="eng-glass-bg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#D8F3E4;" /><stop offset="100%" style="stop-color:#B1DCCB;" /></linearGradient>
-    <linearGradient id="eng-glass-bg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#C4E8D9;" /><stop offset="100%" style="stop-color:#99C7B8;" /></linearGradient>
-  </defs>
-  <polygon points="0,0 150,0 120,80 30,50" fill="url(#eng-glass-bg1)" stroke="#000" stroke-width="2.5"/><polygon points="150,0 250,0 280,80 120,80" fill="url(#eng-glass-bg2)" stroke="#000" stroke-width="2.5"/><polygon points="250,0 400,0 370,50 280,80" fill="url(#eng-glass-bg1)" stroke="#000" stroke-width="2.5"/><polygon points="0,220 150,220 180,140 30,170" fill="url(#eng-glass-bg1)" stroke="#000" stroke-width="2.5"/><polygon points="150,220 250,220 220,140 180,140" fill="url(#eng-glass-bg2)" stroke="#000" stroke-width="2.5"/><polygon points="250,220 400,220 370,170 220,140" fill="url(#eng-glass-bg1)" stroke="#000" stroke-width="2.5"/><polygon points="0,0 30,50 30,170 0,220" fill="url(#eng-glass-bg2)" stroke="#000" stroke-width="2.5"/><polygon points="400,0 370,50 370,170 400,220" fill="url(#eng-glass-bg2)" stroke="#000" stroke-width="2.5"/><polygon points="30,50 120,80 30,170" fill="#B1DCCB" stroke="#000" stroke-width="2.5"/><polygon points="370,50 280,80 370,170" fill="#B1DCCB" stroke="#000" stroke-width="2.5"/><polygon points="120,80 280,80 220,140 180,140" fill="#99C7B8" stroke="#000" stroke-width="2.5"/>
-  <rect x="170" y="80" width="60" height="60" fill="url(#eng-grad)" stroke="#000" stroke-width="3"/><circle cx="200" cy="110" r="10" fill="url(#eng-accent-grad)" stroke="#000" stroke-width="1.5"/>
-</svg>
+![Agent Image](../../../../../assets/2-engineering/configuration-management-agent.svg)
 
 ---
 name: configuration-management-agent
