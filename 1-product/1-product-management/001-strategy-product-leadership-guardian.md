@@ -1,3 +1,5 @@
+![Agent Image](../../assets/1-product/001-strategy-product-leadership-guardian.svg)
+
 ---
 name: 001-strategy-product-leadership-guardian
 description: Strategic product leadership and vision setting. Use for high-level product decisions, roadmap planning, and team leadership guidance. MUST BE USED for product strategy tasks.

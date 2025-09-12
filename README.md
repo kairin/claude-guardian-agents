@@ -16,7 +16,7 @@ This system is built on solid academic research. Each agent design is informed b
 - **Product Management**: Lean Startup (Ries, 2011) - Validated learning approach
 - **DevOps**: DORA Research - 208x deployment frequency improvement
 
-📖 **[View Complete Research Documentation](RESEARCH-PAPERS.md)** - All papers and methodologies
+📖 **[View Complete Research Documentation](docs/RESEARCH-PAPERS.md)** - All papers and methodologies
 
 ## 🏗️ System Architecture
 
@@ -102,7 +102,7 @@ graph TB
 - **Human Pattern Guardians**: Apply anthropological and cultural insights
 - **Creative Guardians**: Lateral thinking and rule-breaking innovation
 - **Simplicity Guardians**: Child-like questioning to cut through complexity
-- [📁 View All Think-Tank Agents](4-think-tank/)
+- [📁 View All Think-Tank Agents](4-thinktank/)
 
 ## 🔄 How Agents Work Together
 

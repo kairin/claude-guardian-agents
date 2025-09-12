@@ -1,13 +1,4 @@
-<svg width="100%" height="220px" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="background-color: #0a0a0a;">
-  <defs>
-    <linearGradient id="product-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#4A90E2;" /><stop offset="100%" style="stop-color:#00408B;" /></linearGradient>
-    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#F8E71C;" /><stop offset="100%" style="stop-color:#F5A623;" /></linearGradient>
-    <linearGradient id="glass-bg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#D4E1F2;" /><stop offset="100%" style="stop-color:#A9C4E8;" /></linearGradient>
-    <linearGradient id="glass-bg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#B8D0F0;" /><stop offset="100%" style="stop-color:#88A8D0;" /></linearGradient>
-  </defs>
-  <polygon points="0,0 150,0 120,80 30,50" fill="url(#glass-bg1)" stroke="#000" stroke-width="2.5"/><polygon points="150,0 250,0 280,80 120,80" fill="url(#glass-bg2)" stroke="#000" stroke-width="2.5"/><polygon points="250,0 400,0 370,50 280,80" fill="url(#glass-bg1)" stroke="#000" stroke-width="2.5"/><polygon points="0,220 150,220 180,140 30,170" fill="url(#glass-bg1)" stroke="#000" stroke-width="2.5"/><polygon points="150,220 250,220 220,140 180,140" fill="url(#glass-bg2)" stroke="#000" stroke-width="2.5"/><polygon points="250,220 400,220 370,170 220,140" fill="url(#glass-bg1)" stroke="#000" stroke-width="2.5"/><polygon points="0,0 30,50 30,170 0,220" fill="url(#glass-bg2)" stroke="#000" stroke-width="2.5"/><polygon points="400,0 370,50 370,170 400,220" fill="url(#glass-bg2)" stroke="#000" stroke-width="2.5"/><polygon points="30,50 120,80 30,170" fill="#A9C4E8" stroke="#000" stroke-width="2.5"/><polygon points="370,50 280,80 370,170" fill="#A9C4E8" stroke="#000" stroke-width="2.5"/><polygon points="120,80 280,80 220,140 180,140" fill="#88A8D0" stroke="#000" stroke-width="2.5"/>
-  <rect x="170" y="80" width="60" height="60" fill="url(#product-grad)" stroke="#000" stroke-width="3"/><circle cx="200" cy="110" r="10" fill="url(#accent-grad)" stroke="#000" stroke-width="1.5"/>
-</svg>
+![Agent Image](../../../../assets/1-product/024-design-ui-interface-guardian.svg)
 
 ---
 name: 024-design-ui-interface-guardian

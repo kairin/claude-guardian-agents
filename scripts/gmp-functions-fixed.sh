@@ -9,12 +9,18 @@ load_manifest() {
         return 1
     fi
 
-    # Check if jq is available
+    # Check if jq is available and validate JSON
     if command -v jq >/dev/null 2>&1; then
-        export MANIFEST_DATA=$(cat "$manifest_file")
-        return 0
+        # Validate JSON syntax first
+        if jq empty "$manifest_file" >/dev/null 2>&1; then
+            export MANIFEST_DATA=$(cat "$manifest_file")
+            return 0
+        else
+            echo "❌ Invalid JSON format in manifest file: $manifest_file" >&2
+            return 1
+        fi
     else
-        echo "⚠️ jq not found - using basic parsing" >&2
+        echo "⚠️ jq not found - using basic parsing without validation" >&2
         export MANIFEST_DATA=$(cat "$manifest_file")
         return 0
     fi
