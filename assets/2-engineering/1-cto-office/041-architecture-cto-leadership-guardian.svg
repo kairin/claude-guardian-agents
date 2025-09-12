@@ -1,60 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="100%" height="220px" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="background-color: #0a0a0a;">
+<svg width="100%" height="100%" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; display: block; margin: 0 auto; background-color: #0a0a0a;">
   <title>CTO Leadership Guardian</title>
   <desc>Technology vision and engineering leadership</desc>
   <defs>
     <linearGradient id="cto-tech-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#00D4FF;" />
+      <animate attributeName="stop-color" values="#00D4FF;#FFFFFF;#00D4FF" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="stop-opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
       <stop offset="50%" style="stop-color:#0099FF;" />
       <stop offset="100%" style="stop-color:#0066CC;" />
     </linearGradient>
     <linearGradient id="cto-accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#FFD700;" />
+      <animate attributeName="stop-opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
       <stop offset="100%" style="stop-color:#FFA500;" />
     </linearGradient>
     <radialGradient id="cto-glow">
       <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.8"/>
+      <animate attributeName="stop-opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
       <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="circuit-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M10,10 L30,10 M20,10 L20,30 M10,30 L30,30" stroke="#0099FF" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <pattern id="circuit-pattern" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path d="M10,10 L30,10 M20,10 L20,30 M10,30 L30,30" stroke="#0099FF" stroke-width="1" fill="none" opacity="0.3"/ stroke-dasharray="5,5"/>
+    <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
       <circle cx="10" cy="10" r="2" fill="#00D4FF" opacity="0.5"/>
       <circle cx="30" cy="30" r="2" fill="#00D4FF" opacity="0.5"/>
     </pattern>
   </defs>
   
   <!-- Background circuit board pattern -->
-  <rect x="0" y="0" width="400" height="220" fill="url(#circuit-pattern)"/>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#circuit-pattern)"/>
   
   <!-- Central glow effect -->
   <circle cx="200" cy="110" r="80" fill="url(#cto-glow)" />
   
   <!-- Leadership crown/peak symbol -->
   <path d="M150,110 L170,70 L185,90 L200,60 L215,90 L230,70 L250,110 Z" 
-        fill="url(#cto-tech-grad)" stroke="#00D4FF" stroke-width="2" opacity="0.9"/>
+        fill="url(#cto-tech-grad)" stroke="#00D4FF" stroke-width="1" opacity="0.9"/>
   
   <!-- Technology core hexagon -->
   <polygon points="200,70 240,90 240,130 200,150 160,130 160,90" 
-           fill="none" stroke="url(#cto-tech-grad)" stroke-width="3"/>
+           fill="none" stroke="url(#cto-tech-grad)" stroke-width="1"/>
   
   <!-- Inner technology symbol -->
   <g transform="translate(200,110)">
     <!-- Central processor -->
-    <rect x="-20" y="-20" width="40" height="40" fill="url(#cto-tech-grad)" stroke="#000" stroke-width="2"/>
+    <rect x="-20" y="-20" width="100%" height="100%" fill="url(#cto-tech-grad)" stroke="#000" stroke-width="1"/>
     <!-- Connection nodes -->
     <circle cx="-30" cy="0" r="5" fill="url(#cto-accent-grad)"/>
     <circle cx="30" cy="0" r="5" fill="url(#cto-accent-grad)"/>
     <circle cx="0" cy="-30" r="5" fill="url(#cto-accent-grad)"/>
     <circle cx="0" cy="30" r="5" fill="url(#cto-accent-grad)"/>
     <!-- Connection lines -->
-    <line x1="-20" y1="0" x2="-25" y2="0" stroke="#FFD700" stroke-width="2"/>
-    <line x1="20" y1="0" x2="25" y2="0" stroke="#FFD700" stroke-width="2"/>
-    <line x1="0" y1="-20" x2="0" y2="-25" stroke="#FFD700" stroke-width="2"/>
-    <line x1="0" y1="20" x2="0" y2="25" stroke="#FFD700" stroke-width="2"/>
+    <line x1="-20" y1="0" x2="-25" y2="0" stroke="#FFD700" stroke-width="1"/>
+    <line x1="20" y1="0" x2="25" y2="0" stroke="#FFD700" stroke-width="1"/>
+    <line x1="0" y1="-20" x2="0" y2="-25" stroke="#FFD700" stroke-width="1"/>
+    <line x1="0" y1="20" x2="0" y2="25" stroke="#FFD700" stroke-width="1"/>
   </g>
   
   <!-- Binary code decoration -->
   <text x="200" y="180" text-anchor="middle" fill="#0099FF" font-family="monospace" font-size="10" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="4s" repeatCount="indefinite"/>
     01100011 01110100 01101111
   </text>
 </svg>
