@@ -1,140 +1,179 @@
 # AGENTS.md
 
-This repository is structured to reflect a top-tier tech company. All agent profiles are located in the numbered directories, organized by their function and seniority.
+> **Instructions for AI coding agents working on the Guardian Agents system**
 
-## Agent Naming Convention
+## 🎯 Project Overview
 
-All agent profiles are named using the `[3-letter-short-form]-guardian.md` schema. For example, the Chief Product Officer agent is named `cpo-guardian.md`.
+Guardian Agents is a comprehensive AI agent orchestration system with 49 specialized agents across 4 cognitive layers. This project follows spec-driven development with extensive research foundations.
 
-## Company Hierarchy
+## 🛠️ Development Environment Setup
 
-```mermaid
-graph TD
-    subgraph "1-product"
-        subgraph "1-product-management"
-            cpo("cpo-guardian.md")
-            subgraph "1-product-strategy"
-                pds("pds-guardian.md")
-                psm("psm-guardian.md")
-            end
-            subgraph "2-product-ownership"
-                ppo("ppo-guardian.md")
-                spo("spo-guardian.md")
-                apo("apo-guardian.md")
-            end
-        end
-        subgraph "2-product-design"
-            cpd("cpd-guardian.md")
-            subgraph "1-ux-research"
-                uxr("uxr-guardian.md")
-                jur("jur-guardian.md")
-            end
-            subgraph "2-ui-design"
-                uid("uid-guardian.md")
-                jui("jui-guardian.md")
-            end
-        end
-    end
+### **Dependencies & Installation**
+```bash
+# Setup Python environment (uses uv exclusively)
+./scripts/setup-python-env.sh
 
-    subgraph "2-engineering"
-        subgraph "1-cto-office"
-            cto("cto-guardian.md")
-            tfe("tfe-guardian.md")
-        end
-        subgraph "2-software-engineering"
-            vps("vps-guardian.md")
-            subgraph "1-architecture"
-                par("par-guardian.md")
-                sar("sar-guardian.md")
-            end
-            subgraph "2-backend-engineering"
-                dbe("dbe-guardian.md")
-                sbe("sbe-guardian.md")
-                jbe("jbe-guardian.md")
-            end
-            subgraph "3-frontend-engineering"
-                dfe("dfe-guardian.md")
-                sfe("sfe-guardian.md")
-                jfe("jfe-guardian.md")
-            end
-            subgraph "4-mobile-engineering"
-                dme("dme-guardian.md")
-                sme("sme-guardian.md")
-                jme("jme-guardian.md")
-            end
-        end
-        subgraph "3-quality-engineering"
-            dqe("dqe-guardian.md")
-            sqe("sqe-guardian.md")
-            jqe("jqe-guardian.md")
-        end
-        subgraph "4-devops-engineering"
-            dde("dde-guardian.md")
-            sde("sde-guardian.md")
-            jde("jde-guardian.md")
-        end
-    end
+# Activate environment
+source .venv/bin/activate
 
-    subgraph "3-operations"
-        subgraph "1-coo-office"
-            coo("coo-guardian.md")
-        end
-        subgraph "2-security-operations"
-            dso("dso-guardian.md")
-            sse("sse-guardian.md")
-            jse("jse-guardian.md")
-        end
-        subgraph "3-data-operations"
-            ddo("ddo-guardian.md")
-            sde_do("sde-guardian.md")
-            jde_do("jde-guardian.md")
-        end
-        subgraph "4-it-operations"
-            dio("dio-guardian.md")
-            sit("sit-guardian.md")
-            jit("jit-guardian.md")
-        end
-    end
-
-    cpo --> pds
-    pds --> psm
-    cpo --> ppo
-    ppo --> spo
-    spo --> apo
-    cpd --> uxr
-    uxr --> jur
-    cpd --> uid
-    uid --> jui
-    cto --> tfe
-    cto --> vps
-    vps --> par
-    par --> sar
-    vps --> dbe
-    dbe --> sbe
-    sbe --> jbe
-    vps --> dfe
-    dfe --> sfe
-    sfe --> jfe
-    vps --> dme
-    dme --> sme
-    sme --> jme
-    vps --> dqe
-    dqe --> sqe
-    sqe --> jqe
-    vps --> dde
-    dde --> sde
-    sde --> jde
-    coo --> dso
-    dso --> sse
-    sse --> jse
-    coo --> ddo
-    ddo --> sde_do
-    sde_do --> jde_do
-    coo --> dio
-    dio --> sit
-    sit --> jit
+# Verify installation  
+make validate
 ```
 
-## How to Use
+### **Key Commands**
+```bash
+# Run validation suite (target: 100% pass rate)
+./scripts/validate-gpm.sh
 
-When you need to perform a task, first identify the appropriate agent by reviewing the folder structure and agent profiles. The directory structure reflects the hierarchy of a top-tier tech company, with senior roles in higher-level directories and junior roles in lower-level directories. Then, follow the instructions in the agent's profile to complete the task.
+# Generate progress reports
+make reports
+
+# Track implementation progress
+make track
+
+# Run quality checks
+make check
+```
+
+## 📝 Code Style & Standards
+
+### **Agent File Structure**
+All agent files must follow this exact format:
+```markdown
+---
+name: [ID]-[department]-[role]-[specialization]-guardian
+description: Clear description with "MUST BE USED" triggers for auto-selection
+tools: [google_web_search, web_fetch]
+---
+
+You are a [role] specialist in the [department] layer...
+
+## Your Role
+- Agent ID: [ID]
+- Department: [Department]
+- Specialization: [Specific expertise]
+
+## Core Responsibilities
+[List of key responsibilities]
+
+## Agent Relationships
+### Next Agents (Auto-chain to):
+- [List of agents this can call]
+
+### Escalate To:
+- [When to escalate to human or other agents]
+```
+
+### **Naming Conventions**
+- **Agent IDs**: 3-digit sequential (001, 002, etc.)
+- **File Names**: `[ID]-[department]-[role]-[specialization]-guardian.md`
+- **Directories**: Numbered by layer (1-product/, 2-engineering/, 3-operations/, 4-thinktank/)
+
+### **Research Integration Requirements**
+Each agent must integrate **4-6 academic research papers** with:
+- Citation format: `**Paper Title** (Author, Year)`
+- Implementation section showing how research applies
+- Methodology descriptions with practical applications
+
+## 🧪 Testing & Validation
+
+### **Required Tests**
+All changes must pass:
+```bash
+# GPM validation (target: 43/43 tests passing)
+./scripts/validate-gpm.sh
+
+# Agent discovery and classification
+# URL accessibility validation  
+# JSON structure validation
+# Manifest integrity checks
+```
+
+### **Quality Gates**
+- **Agent Count**: Must maintain 49 total agents
+- **Think-Tank**: Must have 8 personality archetypes
+- **Research Papers**: 35+ integrated across system
+- **Validation Rate**: 100% (43/43 tests passing)
+
+## 🚀 Agent System Workflow
+
+### **Agent Categories & Structure**
+```
+4-Layer Architecture:
+├── 1-product/ (11 agents)     - Strategic & Product
+├── 2-engineering/ (20 agents) - Technical Development  
+├── 3-operations/ (10 agents)  - Infrastructure & Operations
+└── 4-thinktank/ (8 agents)    - Cognitive Diversity
+```
+
+### **Auto-Chaining Patterns**
+Agents automatically chain based on:
+- Task description content analysis
+- "MUST BE USED" triggers in descriptions
+- Agent relationship definitions
+- Context-aware intelligent routing
+
+## 📚 Key Documentation
+
+### **Agent System Docs**
+- **[Agent Registry](docs/agents/registry.md)** - Complete agent catalog
+- **[Agent Relationships](docs/agents/relationships.md)** - Chaining patterns
+- **[Agent Templates](docs/agents/templates.md)** - Creation templates
+
+### **Development Guides**
+- **[Research Papers](docs/RESEARCH-PAPERS.md)** - Academic foundations
+- **[Progress Documentation](docs/COMPLETE-PROGRESS-DOCUMENTATION.md)** - Project status
+- **[Think-Tank System](docs/THINK-TANK-COMPLETION-SUMMARY.md)** - Cognitive diversity
+
+## ⚠️ Critical Requirements
+
+### **DO NOT**
+- Modify the 4-layer architecture without approval
+- Reduce agent count below 49 total
+- Break the 8-agent think-tank personality system
+- Remove research paper integrations
+- Change agent ID numbering system
+
+### **ALWAYS**
+- Run validation tests before committing
+- Maintain 100% GPM test pass rate
+- Follow semantic versioning for releases
+- Include research foundations in new agents
+- Test agent auto-chaining functionality
+
+## 🔧 Commit Guidelines
+
+### **Commit Message Format**
+```
+type: brief description
+
+- Detailed changes
+- Impact on agent system
+- Validation results
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+### **Pre-commit Checks**
+- GPM validation passing (43/43 tests)
+- JSON structure validation
+- Agent discovery verification
+- Link integrity checks
+
+## 📊 Success Metrics
+
+| Metric | Target | Current |
+|--------|--------|---------|
+| Agent Count | 49+ | 49 ✅ |
+| Validation Rate | 100% | 100% ✅ |
+| Think-Tank Agents | 8 | 8 ✅ |
+| Research Papers | 35+ | 35+ ✅ |
+
+---
+
+**Version**: 2.1.0  
+**Last Updated**: September 12, 2025  
+**Status**: 100% Validation Success
+
+*This file follows the [agents.md](https://agents.md/) standard for AI coding agent instructions.*

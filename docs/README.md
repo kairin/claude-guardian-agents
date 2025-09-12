@@ -17,6 +17,13 @@
 - [Report Generation](project-management/report-generation.md) - Automated reporting system
 - [Validation Framework](project-management/validation.md) - Quality gates and validation
 
+### **🤖 Agent System Documentation**
+- [Agent Overview](agents/README.md) - Guardian Agents system overview
+- [Agent Registry](agents/registry.md) - Complete catalog of all 49 agents  
+- [Agent Relationships](agents/relationships.md) - How agents chain and communicate
+- [Agent Templates](agents/templates.md) - Templates for creating new agents
+- [Agent Mapping](agents/mapping.md) - Directory structure and conventions
+
 ### **🔧 Technical Documentation**
 - [System Architecture](technical/system-architecture.md) - Overall system design
 - [Python Environment](technical/python-environment-spec.md) - uv-based Python management
