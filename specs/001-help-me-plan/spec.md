@@ -1,13 +1,13 @@
 # Feature Specification: Guardian Agent Specialization & Documentation Optimization
 
-**Feature Branch**: `001-help-me-plan`  
-**Created**: 2025-09-09  
-**Status**: Draft  
+**Feature Branch**: `001-help-me-plan`
+**Created**: 2025-09-09
+**Status**: Draft
 **Input**: User description: "help me plan and update each of the md files within this repo to reflect each specific agentic behaviour of a subagent to make it highly specialised. take reference from existing documentation with the goal that each subagent specialisation can lead to optimisation in how we develop apps in general."
 
 **Additional Requirements**: Git workflow agent specialization with model optimization:
 - Simple tasks (branch naming, commit formatting) → Haiku models for speed
-- Complex decisions (merge strategies, session management) → Sonnet models for reasoning  
+- Complex decisions (merge strategies, session management) → Sonnet models for reasoning
 - Specialized Git workflow agents (101-112) with automatic chaining capabilities
 
 ## Execution Flow (main)
@@ -89,7 +89,7 @@ A development team uses the Guardian Agent system to optimize their application 
 - **FR-024**: Each agent MUST meet performance SLAs (Haiku <2s, Sonnet <10s) with quantified metrics
 - **FR-025**: Validation reports MUST generate in multiple formats (console, JSON, markdown) for different stakeholders
 - **FR-026**: Universal validation framework MUST apply 10-step validation process to all Guardian agents regardless of domain
-- **FR-027**: Domain-agnostic validation patterns MUST be systematically applied (dependency sequence, shared components, configuration consistency, error handling, integration validation, complexity assessment, best practices, completeness audit, constitutional compliance, go/no-go decision)  
+- **FR-027**: Domain-agnostic validation patterns MUST be systematically applied (dependency sequence, shared components, configuration consistency, error handling, integration validation, complexity assessment, best practices, completeness audit, constitutional compliance, go/no-go decision)
 - **FR-028**: Each Guardian agent MUST pass domain-specific validation prompts adapted from Git workflow STEP 4 methodology
 - **FR-029**: Validation framework MUST detect over-engineering patterns and recommend simplification opportunities
 - **FR-030**: Implementation completeness audit MUST cover functional, integration, operational, and documentation completeness
@@ -121,7 +121,7 @@ A development team uses the Guardian Agent system to optimize their application 
 
 ### Requirement Completeness
 - [x] No [NEEDS CLARIFICATION] markers remain
-- [x] Requirements are testable and unambiguous  
+- [x] Requirements are testable and unambiguous
 - [x] Success criteria are measurable
 - [x] Scope is clearly bounded
 - [x] Dependencies and assumptions identified

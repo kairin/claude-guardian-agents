@@ -6,11 +6,12 @@ ensures that all required fields are present and correctly formatted.
 """
 
 import re
+import sys
+from pathlib import Path
+from typing import Any, Dict, List
+
 import frontmatter
 import yaml
-from pathlib import Path
-import sys
-from typing import List, Dict, Any
 
 # --- Configuration ---
 
@@ -40,7 +41,7 @@ REQUIRED_FIELDS = {
     "version": float,
     "status": str,
     "owner": str,
-    "last_updated": str, # Should be in YYYY-MM-DD format
+    "last_updated": str,  # Should be in YYYY-MM-DD format
     "tags": list,
     "related_docs": list,
 }
@@ -82,9 +83,11 @@ def validate_file(path: Path) -> List[str]:
     # TODO: Add date format validation for 'last_updated'
 
     # Check for embedded SVG
-    svg_pattern = re.compile(r'<svg.*?</svg>', re.DOTALL | re.IGNORECASE)
+    svg_pattern = re.compile(r"<svg.*?</svg>", re.DOTALL | re.IGNORECASE)
     if svg_pattern.search(post.content):
-        errors.append("Embedded SVG found. SVG files should be external and linked via Markdown image syntax.")
+        errors.append(
+            "Embedded SVG found. SVG files should be external and linked via Markdown image syntax."
+        )
 
     return errors
 

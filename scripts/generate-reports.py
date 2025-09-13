@@ -500,7 +500,8 @@ def main():
 
     elif command == "milestone":
         milestone_name = sys.argv[2] if len(sys.argv) > 2 else None
-        report_file = generator.generate_milestone_report(milestone_name)
+        if milestone_name is not None:
+            report_file = generator.generate_milestone_report(milestone_name)
         print(f"Milestone report generated: {report_file}")
 
     elif command == "blockers":

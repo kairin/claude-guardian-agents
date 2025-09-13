@@ -6,7 +6,7 @@ This guide explains what each Guardian Agent does using simple terms and visual 
 
 Think of Guardian Agents as specialized team members, each with their own job:
 - **Security Guardian** = Your security expert who checks for vulnerabilities
-- **Test Guardian** = Your QA tester who makes sure everything works  
+- **Test Guardian** = Your QA tester who makes sure everything works
 - **Deploy Guardian** = Your DevOps engineer who handles releases
 
 ## 🏗️ Agent Categories Explained
@@ -18,13 +18,13 @@ Think of Guardian Agents as specialized team members, each with their own job:
 graph LR
     A[📄 Raw Data] --> B[data-guardian]
     B --> C[✅ Clean Data]
-    
-    D[📁 Files] --> E[file-guardian]  
+
+    D[📁 Files] --> E[file-guardian]
     E --> F[✅ Organized Files]
-    
+
     G[🗄️ Database] --> H[database-guardian]
     H --> I[✅ Optimized DB]
-    
+
     style B fill:#e1f5e1
     style E fill:#e1f5e1
     style H fill:#e1f5e1
@@ -32,22 +32,22 @@ graph LR
 
 **When to use**: When you have data to process, files to organize, or databases to optimize.
 
-### 🔒 Security & Compliance Agents  
+### 🔒 Security & Compliance Agents
 **What they do**: Keep your project secure and compliant with regulations
 
 ```mermaid
 graph LR
     A[🔍 Code Scan] --> B[security-guardian]
     B --> C[🛡️ Security Report]
-    
+
     D[📋 Requirements] --> E[compliance-guardian]
     E --> F[✅ Compliance Check]
-    
+
     G[📦 Dependencies] --> H[dependency-guardian]
     H --> I[⚠️ Vulnerability Report]
-    
+
     style B fill:#ffe1e1
-    style E fill:#ffe1e1  
+    style E fill:#ffe1e1
     style H fill:#ffe1e1
 ```
 
@@ -60,13 +60,13 @@ graph LR
 graph LR
     A[🐛 Bug Report] --> B[fix-guardian]
     B --> C[✅ Fixed Code]
-    
+
     D[📝 New Feature] --> E[test-guardian]
     E --> F[🧪 Test Suite]
-    
+
     G[🎨 UI Changes] --> H[ui-guardian]
     H --> I[✨ Tested Interface]
-    
+
     style B fill:#fff4e1
     style E fill:#fff4e1
     style H fill:#fff4e1
@@ -81,13 +81,13 @@ graph LR
 graph LR
     A[🚀 Deploy Request] --> B[deploy-guardian]
     B --> C[📱 Live Application]
-    
+
     D[💾 Data] --> E[backup-guardian]
     E --> F[🛡️ Safe Backups]
-    
-    G[🔄 Migration] --> H[migration-guardian]  
+
+    G[🔄 Migration] --> H[migration-guardian]
     H --> I[✅ Updated System]
-    
+
     style B fill:#e1e8ff
     style E fill:#e1e8ff
     style H fill:#e1e8ff
@@ -102,13 +102,13 @@ graph LR
 graph LR
     A[📝 Code Changes] --> B[git-guardian]
     B --> C[🔄 Version Control]
-    
+
     D[🎯 Project Plan] --> E[agile-guardian]
     E --> F[📊 Progress Tracking]
-    
+
     G[📚 Updates] --> H[doc-guardian]
     H --> I[📖 Documentation]
-    
+
     style B fill:#f0f8ff
     style E fill:#f0f8ff
     style H fill:#f0f8ff
@@ -124,17 +124,17 @@ graph LR
 sequenceDiagram
     participant PM as 👤 Project Manager
     participant DEV as 🧪 Development Agents
-    participant SEC as 🔒 Security Agents  
+    participant SEC as 🔒 Security Agents
     participant INFRA as 🏗️ Infrastructure Agents
     participant WF as ⚡ Workflow Agents
-    
+
     PM->>DEV: "Build user login feature"
     DEV->>DEV: Write code & tests
     DEV->>SEC: "Please review security"
     SEC->>SEC: Security audit
     SEC->>INFRA: "Ready for deployment"
     INFRA->>INFRA: Deploy to staging
-    INFRA->>WF: "Update documentation" 
+    INFRA->>WF: "Update documentation"
     WF->>PM: "Feature live & documented"
 ```
 
@@ -168,7 +168,7 @@ sequenceDiagram
 - **ui-guardian**: Test shopping cart
 - **deploy-guardian**: Launch new features
 
-### Mobile App  
+### Mobile App
 - **file-guardian**: Handle user uploads
 - **test-guardian**: Test on different devices
 - **backup-guardian**: Backup user data
@@ -182,7 +182,7 @@ sequenceDiagram
 
 ---
 
-**Next Steps**: 
+**Next Steps**:
 - 🔍 [Find Your Agent](../docs/workflows/) - See specific workflows
-- 📚 [Use Cases](use-cases.md) - More detailed examples  
+- 📚 [Use Cases](use-cases.md) - More detailed examples
 - ❓ [FAQ](faq.md) - Common questions

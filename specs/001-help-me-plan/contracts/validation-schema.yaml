@@ -92,7 +92,7 @@ components:
           type: boolean
           default: true
           description: Include performance SLA testing
-          
+
     AgentValidationResponse:
       type: object
       required:
@@ -123,7 +123,7 @@ components:
           items:
             type: string
           description: Improvement recommendations
-          
+
     ValidationResult:
       type: object
       required:
@@ -144,7 +144,7 @@ components:
             $ref: '#/components/schemas/ValidationCheck'
         summary:
           $ref: '#/components/schemas/ValidationSummary'
-          
+
     ValidationCheck:
       type: object
       required:
@@ -184,7 +184,7 @@ components:
         remediation:
           type: string
           description: How to fix failed or incomplete checks
-          
+
     ValidationSummary:
       type: object
       required:
@@ -212,7 +212,7 @@ components:
           items:
             type: string
           description: Issues blocking production readiness
-          
+
     ValidationPerformanceMetrics:
       type: object
       properties:
@@ -255,7 +255,7 @@ components:
               type: number
               minimum: 0.0
               maximum: 1.0
-              
+
     WorkflowValidationRequest:
       type: object
       required:
@@ -283,7 +283,7 @@ components:
             quality_threshold:
               type: number
               description: Minimum workflow quality
-              
+
     WorkflowTestScenario:
       type: object
       required:
@@ -304,7 +304,7 @@ components:
           items:
             type: string
           description: Criteria for successful workflow execution
-          
+
     WorkflowValidationResponse:
       type: object
       required:
@@ -340,7 +340,7 @@ components:
             cost_efficiency:
               type: number
               description: Cost per successful workflow execution
-              
+
     BatchValidationRequest:
       type: object
       required:
@@ -357,7 +357,7 @@ components:
           type: boolean
           default: true
           description: Whether to validate agents in parallel
-          
+
     BatchValidationConfig:
       type: object
       properties:
@@ -375,7 +375,7 @@ components:
           type: string
           enum:
             - surface
-            - standard  
+            - standard
             - comprehensive
           default: standard
         performance_testing:
@@ -389,7 +389,7 @@ components:
             - console
             - all
           default: json
-          
+
     BatchValidationResponse:
       type: object
       required:
@@ -413,7 +413,7 @@ components:
         execution_time:
           type: number
           description: Total batch execution time
-          
+
     BatchSummary:
       type: object
       required:

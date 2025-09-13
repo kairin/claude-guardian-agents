@@ -13,11 +13,11 @@ The Guardian Agents system is built on solid academic research in AI, cognitive 
 #### ParaThinker: Breaking Tunnel Vision (2024)
 - **Paper**: [arxiv:2509.04475](https://www.arxiv.org/abs/2509.04475)
 - **Authors**: [Authors TBD]
-- **Key Concepts**: 
+- **Key Concepts**:
   - Parallel reasoning paths overcome "tunnel vision" in LLM reasoning
   - Multiple diverse perspectives synthesized create superior solutions
   - Width exploration when depth fails
-- **Implementation**: 
+- **Implementation**:
   - `4-think-tank/` - All 20 Think-Tank Guardian agents
   - Agents 101-120 implement diverse parallel reasoning strategies
 - **Impact**: 12.3% accuracy improvement for reasoning tasks

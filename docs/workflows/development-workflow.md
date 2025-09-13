@@ -12,7 +12,7 @@ graph LR
     D --> E[test-guardian]
     E --> F[ui-guardian]
     F --> G[✅ Quality Code]
-    
+
     style B fill:#fff4e1
     style C fill:#fff4e1
     style D fill:#fff4e1
@@ -31,18 +31,18 @@ flowchart TD
     B --> D[🔍 Check Linting Rules]
     B --> E[🔍 Type Safety Check]
     B --> F[🔍 Security Scan]
-    
+
     C --> G{Issues Found?}
     D --> G
-    E --> G  
+    E --> G
     F --> G
-    
+
     G -->|Yes| H[📋 Generate Report]
     G -->|No| I[✅ Code Quality Approved]
-    
+
     H --> J[🚨 Send to fix-guardian]
     I --> K[▶️ Continue Pipeline]
-    
+
     style B fill:#fff4e1
     style G fill:#ffffcc
     style H fill:#ffe1e1
@@ -50,7 +50,7 @@ flowchart TD
 ```
 
 **What you see**:
-- ✅ **Green**: Code passes quality checks  
+- ✅ **Green**: Code passes quality checks
 - 🚨 **Red**: Issues found, needs fixing
 - 📋 **Report**: Detailed list of problems
 
@@ -62,22 +62,22 @@ flowchart TD
 flowchart TD
     A[🚨 Issues from code-guardian] --> B{fix-guardian Action}
     B --> C[🔧 Auto-format Code]
-    B --> D[🔧 Fix Linting Issues] 
+    B --> D[🔧 Fix Linting Issues]
     B --> E[🔧 Standardize Style]
     B --> F[🔧 Fix Simple Bugs]
-    
+
     C --> G[🔍 Verify Fixes]
     D --> G
     E --> G
     F --> G
-    
+
     G --> H{All Fixed?}
     H -->|Yes| I[✅ Code Fixed]
     H -->|No| J[📋 Report Remaining Issues]
-    
+
     I --> K[▶️ Send to refactor-guardian]
     J --> L[👨‍💻 Manual Review Needed]
-    
+
     style B fill:#fff4e1
     style G fill:#ffffcc
     style H fill:#ffffcc
@@ -101,24 +101,24 @@ flowchart TD
     B --> D[🔍 Find Duplicate Code]
     B --> E[🔍 Check Architecture]
     B --> F[🔍 Dependency Analysis]
-    
+
     C --> G{Improvements Needed?}
     D --> G
     E --> G
     F --> G
-    
+
     G -->|Yes| H[🛠️ Suggest Refactoring]
     G -->|No| I[✅ Architecture Approved]
-    
+
     H --> J[📊 Impact Analysis]
     J --> K[👨‍💻 Review Suggestions]
     K --> L{Approve Changes?}
     L -->|Yes| M[🔄 Apply Refactoring]
     L -->|No| I
     M --> I
-    
+
     I --> N[▶️ Send to test-guardian]
-    
+
     style B fill:#fff4e1
     style G fill:#ffffcc
     style L fill:#ffffcc
@@ -141,27 +141,27 @@ flowchart TD
     B --> C[📝 Generate Unit Tests]
     B --> D[📝 Generate Integration Tests]
     B --> E[🔧 Setup Test Environment]
-    
+
     C --> F[🧪 Run Tests]
     D --> F
     E --> F
-    
+
     F --> G{All Tests Pass?}
     G -->|Yes| H[✅ Tests Passed]
     G -->|No| I[❌ Test Failures]
-    
+
     I --> J[📋 Analyze Failures]
     J --> K[🔧 Fix Test Issues]
     K --> F
-    
+
     H --> L[📊 Coverage Report]
     L --> M{Coverage OK?}
     M -->|Yes| N[✅ Testing Complete]
     M -->|No| O[📝 Add More Tests]
     O --> F
-    
+
     N --> P[▶️ Send to ui-guardian]
-    
+
     style B fill:#fff4e1
     style F fill:#ffffcc
     style G fill:#ffffcc
@@ -186,16 +186,16 @@ flowchart TD
     B --> D[📱 Mobile Device Testing]
     B --> E[♿ Accessibility Testing]
     B --> F[👁️ Visual Regression Testing]
-    
+
     C --> G[🔍 Analyze Results]
     D --> G
     E --> G
     F --> G
-    
+
     G --> H{UI Issues Found?}
     H -->|Yes| I[📋 Generate UI Report]
     H -->|No| J[✅ UI Testing Complete]
-    
+
     I --> K[🎨 Flag UI Problems]
     K --> L[👨‍🎨 Designer Review]
     L --> M{Fix UI Issues?}
@@ -203,9 +203,9 @@ flowchart TD
     M -->|No| O[📝 Document Known Issues]
     N --> B
     O --> J
-    
+
     J --> P[🎯 Ready for Security Review]
-    
+
     style B fill:#fff4e1
     style G fill:#ffffcc
     style H fill:#ffffcc
@@ -216,7 +216,7 @@ flowchart TD
 **What it tests**:
 - 🌐 **Browsers**: Chrome, Firefox, Safari, Edge
 - 📱 **Devices**: Mobile, tablet, desktop
-- ♿ **Accessibility**: Screen readers, keyboard navigation  
+- ♿ **Accessibility**: Screen readers, keyboard navigation
 - 👁️ **Visual**: Layout and appearance consistency
 
 ## Complete Development Pipeline
@@ -225,12 +225,12 @@ flowchart TD
 sequenceDiagram
     participant Dev as 👨‍💻 Developer
     participant CG as code-guardian
-    participant FG as fix-guardian  
+    participant FG as fix-guardian
     participant RG as refactor-guardian
     participant TG as test-guardian
     participant UG as ui-guardian
     participant Sec as 🔒 Security Review
-    
+
     Dev->>CG: Submit code
     CG->>CG: Quality audit
     CG->>FG: Issues found

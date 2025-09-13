@@ -26,7 +26,7 @@ We need to integrate research papers from an external Claude artifact into our G
 
 #### Product Management Agents (001-006) Need:
 - **001**: Product Leadership - Needs strategic vision research
-- **002**: Product Strategy - Needs strategy execution research  
+- **002**: Product Strategy - Needs strategy execution research
 - **003**: Product Management - Needs day-to-day PM research
 - **004**: Product Ownership - Needs Agile/Scrum research
 - **005**: Senior Product - Needs advanced PM research
@@ -92,7 +92,7 @@ From our analysis, we need research in these areas:
   - Implementation: [How this agent uses it]
   - Impact: [Measured improvement]
 
-### Supporting Research  
+### Supporting Research
 - **[Framework Name]** - [Specific application]
 - **[Methodology]** - [Implementation approach]
 

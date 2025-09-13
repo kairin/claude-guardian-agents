@@ -7,9 +7,9 @@ Use this template to update all remaining guardian agent pages with consistent f
 ```markdown
 # [Agent Title] Guardian
 
-**Agent ID**: [NUMBER]  
-**Department**: [DEPARTMENT]  
-**Role**: [ROLE]  
+**Agent ID**: [NUMBER]
+**Department**: [DEPARTMENT]
+**Role**: [ROLE]
 **Specialization**: [SPECIALIZATION]
 
 **Task:** [Original task description]
@@ -34,29 +34,29 @@ Use this template to update all remaining guardian agent pages with consistent f
 flowchart TD
     A[📋 Input Source] --> B{[NUMBER]-[department]-[role]-[specialization]-guardian}
     B --> C[🔍 Primary Function 1]
-    B --> D[⚙️ Primary Function 2]  
+    B --> D[⚙️ Primary Function 2]
     B --> E[📊 Primary Function 3]
-    
+
     C --> F[📋 Analysis Result]
     D --> F
     E --> F
-    
+
     F --> G{Next Action?}
     G -->|Condition 1| H[👉 [NEXT-AGENT-1]]
     G -->|Condition 2| I[👉 [NEXT-AGENT-2]]
     G -->|Condition 3| J[👉 [NEXT-AGENT-3]]
     G -->|Complete| K[✅ Final Output]
-    
+
     H --> L[📋 Specialized Work 1]
     I --> M[🎨 Specialized Work 2]
     J --> N[🏗️ Specialized Work 3]
     K --> O[📈 Direct Result]
-    
+
     L --> P[✅ Complete Workflow]
     M --> P
     N --> P
     O --> P
-    
+
     style B fill:#[COLOR]
     style G fill:#ffffcc
     style P fill:#e1ffe1
@@ -93,7 +93,7 @@ flowchart TD
 - **Input**: User requirements, market data
 - **Output**: Strategic decisions, roadmaps
 
-### Design Agents (021-040)  
+### Design Agents (021-040)
 - **Color**: `#ffe1f5` (light pink)
 - **Input**: Strategy decisions, user needs
 - **Output**: Design specifications, prototypes
@@ -118,7 +118,7 @@ flowchart TD
 ### Product Management Chain
 001 → 002 → 003 → 004 → 021 (strategy to design)
 
-### Design Chain  
+### Design Chain
 021 → 022 → 024 → 041 (design to architecture)
 
 ### Architecture Chain
@@ -146,17 +146,17 @@ sed -i 's/old-pattern/new-pattern/g' */*guardian.md
 
 ### Example: Frontend Development Agent
 ```markdown
-**Agent ID**: 065  
-**Department**: Development  
-**Role**: Frontend Senior  
+**Agent ID**: 065
+**Department**: Development
+**Role**: Frontend Senior
 **Specialization**: UI implementation and user interface development
 ```
 
-### Example: Security Operations Agent  
+### Example: Security Operations Agent
 ```markdown
-**Agent ID**: 092  
-**Department**: Security  
-**Role**: Operations Director  
+**Agent ID**: 092
+**Department**: Security
+**Role**: Operations Director
 **Specialization**: Security monitoring and incident response
 ```
 

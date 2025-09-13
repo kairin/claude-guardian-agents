@@ -27,21 +27,21 @@
       <circle cx="30" cy="30" r="2" fill="#00D4FF" opacity="0.5"/>
     </pattern>
   </defs>
-  
+
   <!-- Background circuit board pattern -->
   <rect x="0" y="0" width="100%" height="100%" fill="url(#circuit-pattern)"/>
-  
+
   <!-- Central glow effect -->
   <circle cx="200" cy="110" r="80" fill="url(#cto-glow)" />
-  
+
   <!-- Leadership crown/peak symbol -->
-  <path d="M150,110 L170,70 L185,90 L200,60 L215,90 L230,70 L250,110 Z" 
+  <path d="M150,110 L170,70 L185,90 L200,60 L215,90 L230,70 L250,110 Z"
         fill="url(#cto-tech-grad)" stroke="#00D4FF" stroke-width="1" opacity="0.9"/>
-  
+
   <!-- Technology core hexagon -->
-  <polygon points="200,70 240,90 240,130 200,150 160,130 160,90" 
+  <polygon points="200,70 240,90 240,130 200,150 160,130 160,90"
            fill="none" stroke="url(#cto-tech-grad)" stroke-width="1"/>
-  
+
   <!-- Inner technology symbol -->
   <g transform="translate(200,110)">
     <!-- Central processor -->
@@ -57,7 +57,7 @@
     <line x1="0" y1="-20" x2="0" y2="-25" stroke="#FFD700" stroke-width="1"/>
     <line x1="0" y1="20" x2="0" y2="25" stroke="#FFD700" stroke-width="1"/>
   </g>
-  
+
   <!-- Binary code decoration -->
   <text x="200" y="180" text-anchor="middle" fill="#0099FF" font-family="monospace" font-size="10" opacity="0.6">
     <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="4s" repeatCount="indefinite"/>

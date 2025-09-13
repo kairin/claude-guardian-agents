@@ -27,35 +27,35 @@ graph TB
         T2[Human Patterns]
         T3[Creative Lateral]
     end
-    
+
     subgraph "🎯 Strategic Layer"
         A1[Product Guardians]
         A2[Executive Guardians]
     end
-    
-    subgraph "⚙️ Technical Layer" 
+
+    subgraph "⚙️ Technical Layer"
         B1[Development Guardians]
         B2[Quality Guardians]
         B3[Security Guardians]
     end
-    
+
     subgraph "🚀 Operational Layer"
         C1[Infrastructure Guardians]
-        C2[Process Guardians] 
+        C2[Process Guardians]
         C3[Workflow Guardians]
     end
-    
+
     T1 -.->|unstick| A1
     T2 -.->|unstick| B1
     T3 -.->|unstick| C1
-    
+
     A1 --> B1
     A2 --> C2
     B1 --> B2
     B2 --> B3
     B3 --> C1
     C1 --> C3
-    
+
     style T1 fill:#fff2e1
     style A1 fill:#e1f5e1
     style B2 fill:#ffe1e1
@@ -82,7 +82,7 @@ graph TB
 - **Executive Guardians**: Business alignment, stakeholder management
 - [📁 View All Strategic Agents](1-product/)
 
-### 2. ⚙️ Technical Agents  
+### 2. ⚙️ Technical Agents
 **Purpose**: Code development and technical excellence
 - **Development Guardians**: Code writing, architecture, implementation
 - **Quality Guardians**: Testing, code review, performance optimization
@@ -90,7 +90,7 @@ graph TB
 - [📁 View All Technical Agents](2-engineering/)
 
 ### 3. 🚀 Operational Agents
-**Purpose**: Infrastructure, deployment, and process management  
+**Purpose**: Infrastructure, deployment, and process management
 - **Infrastructure Guardians**: Deployment, monitoring, scaling
 - **Process Guardians**: Workflow automation, CI/CD, orchestration
 - **Workflow Guardians**: Documentation, release management, compliance
@@ -118,7 +118,7 @@ sequenceDiagram
     participant A as 041-architecture-guardian
     participant Dev as 061-development-guardian
     participant Sec as 091-security-guardian
-    
+
     User->>Main: "Build user login feature"
     Main->>S: Auto-select strategy agent
     S->>S: Define requirements
@@ -145,7 +145,7 @@ Claude Code **automatically selects agents** based on:
 
 ### 🔗 Agent Communication Patterns
 1. **Sequential Workflow**: 001 → 002 → 003... (process flow)
-2. **Conditional Routing**: Route to different agents based on results  
+2. **Conditional Routing**: Route to different agents based on results
 3. **Error Recovery**: Failed agents trigger recovery agents
 4. **Parallel Execution**: Multiple agents work simultaneously
 
@@ -191,7 +191,7 @@ You are a visionary product leader with deep understanding of markets and custom
 
 ## Your Role
 - Agent ID: 001
-- Department: Strategy  
+- Department: Strategy
 - Role: Product Leadership
 - Specialization: Strategic product vision and team leadership
 
@@ -252,7 +252,7 @@ Create agents in the correct directory structure:
 
 ## 🤝 Contributing
 - [📝 Adding New Agents](docs/contributing/new-agents.md)
-- [🔧 Modifying Existing Agents](docs/contributing/modifications.md) 
+- [🔧 Modifying Existing Agents](docs/contributing/modifications.md)
 - [📚 Documentation Guidelines](docs/contributing/documentation.md)
 
 ## 💡 Example Usage
@@ -270,15 +270,15 @@ Create agents in the correct directory structure:
 
 ## 🎯 Benefits
 
-✅ **Modular**: Use only the agents you need  
-✅ **Scalable**: Add new agents for new domains  
-✅ **Clear**: Visual workflows for every process  
-✅ **Generic**: Works with any project type  
-✅ **Integrated**: Seamless agent-to-agent communication  
+✅ **Modular**: Use only the agents you need
+✅ **Scalable**: Add new agents for new domains
+✅ **Clear**: Visual workflows for every process
+✅ **Generic**: Works with any project type
+✅ **Integrated**: Seamless agent-to-agent communication
 
 ---
 
-**Next Steps**: 
+**Next Steps**:
 1. 📖 Read the [Visual Overview](docs/visual-overview.md)
 2. 🔍 Find your first agent with [Agent Finder](docs/agent-finder.md)
 3. 🚀 Follow a [workflow guide](docs/workflows/)

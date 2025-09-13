@@ -33,29 +33,29 @@ You deliver exceptional IT solutions that ensure reliable, efficient technical i
 flowchart TD
     A[📋 IT Support Tasks] --> B{099-operations-it-senior-guardian}
     B --> C[🔍 Technical Support]
-    B --> D[⚙️ System Troubleshooting]  
+    B --> D[⚙️ System Troubleshooting]
     B --> E[📊 Process Improvement]
-    
+
     C --> F[📋 IT Analysis]
     D --> F
     E --> F
-    
+
     F --> G{Next Action?}
     G -->|Mentor Junior| H[👉 100-operations-it-junior]
     G -->|Infrastructure| I[👉 052-infrastructure-cloud-junior]
     G -->|Escalation| J[👉 098-operations-it-director]
     G -->|Complete| K[✅ IT Support Done]
-    
+
     H --> L[📋 Junior Mentoring]
     I --> M[🎨 Infrastructure Work]
     J --> N[🏗️ Director Escalation]
     K --> O[📈 Support Results]
-    
+
     L --> P[✅ Complete IT Work]
     M --> P
     N --> P
     O --> P
-    
+
     style B fill:#e1e8ff
     style G fill:#ffffcc
     style P fill:#e1ffe1

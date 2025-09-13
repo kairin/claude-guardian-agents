@@ -12,13 +12,13 @@ tests/
 ```
 
 ## Commands
-# Add commands for 
+# Add commands for
 
 ## Code Style
 : Follow standard conventions
 
 ## Recent Changes
-- 001-help-me-plan: Added  + 
+- 001-help-me-plan: Added  +
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

@@ -28,14 +28,14 @@
 Comprehensive Guardian Agent specialization system with 40+ agents optimized for Claude Code's subagent chaining. Implements model optimization (22 Haiku agents for simple tasks, 28 Sonnet agents for complex reasoning), standardized documentation templates, workflow diagrams, and validation framework. Includes specialized Git workflow agents (101-112) with temporal tracking and performance SLAs.
 
 ## Technical Context
-**Language/Version**: Markdown documentation + YAML agent configuration  
-**Primary Dependencies**: Claude Code subagent system, Mermaid diagrams  
-**Storage**: Markdown files, YAML frontmatter, directory structure  
-**Testing**: Agent validation framework with ✓/☐/~/✗/⚠️ status tracking  
-**Target Platform**: Claude Code environment, cross-platform compatible  
-**Project Type**: Single project (documentation + agent template system)  
-**Performance Goals**: Haiku agents <2s response, Sonnet agents <10s response  
-**Constraints**: Maintain existing directory structure, 40+ agent coverage  
+**Language/Version**: Markdown documentation + YAML agent configuration
+**Primary Dependencies**: Claude Code subagent system, Mermaid diagrams
+**Storage**: Markdown files, YAML frontmatter, directory structure
+**Testing**: Agent validation framework with ✓/☐/~/✗/⚠️ status tracking
+**Target Platform**: Claude Code environment, cross-platform compatible
+**Project Type**: Single project (documentation + agent template system)
+**Performance Goals**: Haiku agents <2s response, Sonnet agents <10s response
+**Constraints**: Maintain existing directory structure, 40+ agent coverage
 **Scale/Scope**: 112 total agents (40 existing + 12 Git workflow + 60 specialized variants)
 
 ## Constitution Check
@@ -118,7 +118,7 @@ docs/                   # Documentation system
 
 ### Unknowns to Research:
 1. **Agent Specialization Patterns**: Best practices for distinguishing 40+ agents without overlap
-2. **Model Optimization Strategies**: Optimal task assignment between Haiku and Sonnet models  
+2. **Model Optimization Strategies**: Optimal task assignment between Haiku and Sonnet models
 3. **Validation Framework Design**: Implementation of ✓/☐/~/✗/⚠️ status tracking system
 4. **Workflow Chain Optimization**: Performance optimization for agent-to-agent communication
 5. **Git Workflow Integration**: Temporal tracking and branch management patterns
@@ -126,7 +126,7 @@ docs/                   # Documentation system
 ### Research Tasks Generated:
 ```
 Task 1: "Research agent specialization patterns for avoiding capability overlap in 40+ AI agents"
-Task 2: "Find best practices for Haiku vs Sonnet model assignment based on task complexity"  
+Task 2: "Find best practices for Haiku vs Sonnet model assignment based on task complexity"
 Task 3: "Research validation framework patterns for multi-perspective testing (development/testing/production)"
 Task 4: "Find workflow optimization patterns for automated agent chaining in Claude Code"
 Task 5: "Research Git workflow automation with timestamp-based branch naming and commit tracking"
@@ -145,7 +145,7 @@ Task 5: "Research Git workflow automation with timestamp-based branch naming and
 
 2. **Generate agent contracts** from functional requirements:
    - Agent YAML schema with validation rules
-   - Workflow chain interface contracts  
+   - Workflow chain interface contracts
    - Model optimization configuration contracts
 
 3. **Generate validation tests** from requirements:
@@ -181,7 +181,7 @@ Based on Phase 1 design artifacts (data-model.md, contracts/*, quickstart.md), t
 **Ordering Strategy** (TDD Constitutional Compliance):
 1. **Foundation First**: Template creation and validation framework (tests before implementation)
 2. **Contract Tests**: Generate failing tests from schema contracts
-3. **Entity Tests**: Create data model validation tests  
+3. **Entity Tests**: Create data model validation tests
 4. **Integration Tests**: User scenario validation from quickstart
 5. **Implementation Tasks**: Make tests pass through agent updates and new agent creation
 6. **Parallel Execution**: Mark [P] for independent agent file updates (no dependencies)
@@ -206,8 +206,8 @@ Based on Phase 1 design artifacts (data-model.md, contracts/*, quickstart.md), t
 ## Phase 3+: Future Implementation
 *These phases are beyond the scope of the /plan command*
 
-**Phase 3**: Task execution (/tasks command creates tasks.md)  
-**Phase 4**: Implementation (execute tasks.md following constitutional principles)  
+**Phase 3**: Task execution (/tasks command creates tasks.md)
+**Phase 4**: Implementation (execute tasks.md following constitutional principles)
 **Phase 5**: Validation (run validation framework, verify agent performance, test workflow chains)
 
 ## Complexity Tracking
@@ -231,7 +231,7 @@ Based on Phase 1 design artifacts (data-model.md, contracts/*, quickstart.md), t
 **Gate Status**:
 - [x] Initial Constitution Check: PASS
 - [x] Post-Design Constitution Check: PASS
-- [x] All NEEDS CLARIFICATION resolved  
+- [x] All NEEDS CLARIFICATION resolved
 - [x] Complexity deviations documented (none required)
 
 ---

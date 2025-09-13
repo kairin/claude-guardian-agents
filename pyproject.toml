@@ -144,7 +144,9 @@ warn_no_return = true
 warn_unreachable = true
 strict_equality = true
 
-[tool.pytest.ini_options]
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]
+skips = ["B101"]
 testpaths = ["tests"]
 python_files = ["test_*.py", "*_test.py"]
 python_classes = ["Test*"]

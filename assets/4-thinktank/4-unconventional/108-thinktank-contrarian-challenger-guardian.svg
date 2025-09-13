@@ -19,36 +19,36 @@
       </feComponentTransfer>
     </filter>
   </defs>
-  
+
   <!-- Opposing force field -->
   <ellipse cx="150" cy="110" rx="50" ry="70" fill="url(#contra-grad1)" opacity="0.3"/>
   <ellipse cx="250" cy="110" rx="50" ry="70" fill="url(#contra-grad2)" opacity="0.3"/>
-  
+
   <!-- Central conflict zone -->
   <g transform="translate(200,110)">
     <!-- Lightning bolt of opposition -->
-    <path d="M-10,-40 L5,-20 L-5,-20 L10,0 L-5,0 L15,20 L0,20 L5,40 L-10,15 L-5,15 L-15,-5 L-5,-5 L-20,-25 L-5,-25 Z" 
+    <path d="M-10,-40 L5,-20 L-5,-20 L10,0 L-5,0 L15,20 L0,20 L5,40 L-10,15 L-5,15 L-15,-5 L-5,-5 L-20,-25 L-5,-25 Z"
           fill="#FFD700" stroke="#000" stroke-width="1" filter="url(#sharp-edges)"/ stroke-dasharray="5,5">
     <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
   </g>
-  
+
   <!-- Opposing arrows -->
   <g transform="translate(200,110)">
     <!-- Left arrow (red) -->
-    <path d="M-60,0 L-30,0 M-30,-10 L-30,10 L-50,0 Z" 
+    <path d="M-60,0 L-30,0 M-30,-10 L-30,10 L-50,0 Z"
           fill="url(#contra-grad1)" stroke="url(#contra-grad1)" stroke-width="1"/>
     <!-- Right arrow (blue) -->
-    <path d="M60,0 L30,0 M30,-10 L30,10 L50,0 Z" 
+    <path d="M60,0 L30,0 M30,-10 L30,10 L50,0 Z"
           fill="url(#contra-grad2)" stroke="url(#contra-grad2)" stroke-width="1"/>
-    
+
     <!-- Up arrow (red) -->
-    <path d="M0,-60 L0,-30 M-10,-30 L10,-30 L0,-50 Z" 
+    <path d="M0,-60 L0,-30 M-10,-30 L10,-30 L0,-50 Z"
           fill="url(#contra-grad1)" stroke="url(#contra-grad1)" stroke-width="1"/>
     <!-- Down arrow (blue) -->
-    <path d="M0,60 L0,30 M-10,30 L10,30 L0,50 Z" 
+    <path d="M0,60 L0,30 M-10,30 L10,30 L0,50 Z"
           fill="url(#contra-grad2)" stroke="url(#contra-grad2)" stroke-width="1"/>
   </g>
-  
+
   <!-- Exclamation and question marks -->
   <text x="120" y="60" fill="url(#contra-grad1)" font-size="28" font-weight="bold">
     <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="4s" repeatCount="indefinite"/>!</text>
@@ -58,7 +58,7 @@
     <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="4s" repeatCount="indefinite"/>?</text>
   <text x="280" y="170" fill="url(#contra-grad1)" font-size="28" font-weight="bold">
     <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="4s" repeatCount="indefinite"/>!</text>
-  
+
   <!-- Chess pieces (opposition strategy) -->
   <g transform="translate(160,180)">
     <path d="M-5,0 L-3,-5 L-3,-8 Q-3,-10 0,-10 Q3,-10 3,-8 L3,-5 L5,0 Z" fill="url(#contra-grad1)" stroke="#000" stroke-width="1"/>
@@ -66,7 +66,7 @@
   <g transform="translate(240,180)">
     <path d="M-5,0 L-3,-5 L-3,-8 Q-3,-10 0,-10 Q3,-10 3,-8 L3,-5 L5,0 Z" fill="url(#contra-grad2)" stroke="#000" stroke-width="1"/>
   </g>
-  
+
   <!-- "NO" crossing out symbol -->
   <g transform="translate(200,110)" opacity="0.4">
     <circle r="40" fill="none" stroke="#DC143C" stroke-width="1"/>

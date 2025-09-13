@@ -16,7 +16,7 @@
 
 ### Development Agents (8 remaining)
 - 062-063: Backend Senior/Junior
-- 064-066: Frontend Director/Senior/Junior  
+- 064-066: Frontend Director/Senior/Junior
 - 067-069: Mobile Director/Senior/Junior
 
 ### Quality Engineering (3 agents)

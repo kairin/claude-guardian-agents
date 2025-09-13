@@ -7,7 +7,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
-from typing import Dict, List
+from typing import Any, Dict, List
 
 
 class ManifestGenerator:
@@ -174,7 +174,7 @@ class ManifestGenerator:
                 for chunk in iter(lambda: f.read(4096), b""):
                     sha256_hash.update(chunk)
             return sha256_hash.hexdigest()[:16]  # Shortened for readability
-        except Exception:
+        except OSError:
             return "unknown"
 
     def generate_title(self, name: str) -> str:
@@ -271,7 +271,7 @@ class ManifestGenerator:
                     return max(3, primary_count)  # Minimum 3 if research section exists
                 else:
                     return 0
-        except:
+        except OSError:
             return 0
 
     def generate_workflows(self, agents: Dict) -> Dict:
@@ -441,7 +441,9 @@ class ManifestGenerator:
         print(f"✅ Generated manifest with {len(agents)} agents")
         return manifest
 
-    def save_manifest(self, manifest: Dict, output_path: str = "manifest.json"):
+    def save_manifest(
+        self, manifest: Dict[str, Any], output_path: str = "manifest.json"
+    ) -> None:
         """Save manifest to file"""
         output_file = self.repo_root / output_path
         with open(output_file, "w", encoding="utf-8") as f:
@@ -450,7 +452,7 @@ class ManifestGenerator:
         print(f"💾 Saved manifest to {output_file}")
 
 
-def main():
+def main() -> None:
     """Generate manifest from current repository"""
     generator = ManifestGenerator()
     manifest = generator.generate_manifest()
@@ -464,7 +466,7 @@ def main():
 
     # Show category breakdown
     print("\n📊 Category Breakdown:")
-    for cat_id, cat_info in manifest["categories"].items():
+    for cat_info in manifest["categories"].values():
         print(f"  {cat_info['name']}: {len(cat_info['agents'])} agents")
 
 

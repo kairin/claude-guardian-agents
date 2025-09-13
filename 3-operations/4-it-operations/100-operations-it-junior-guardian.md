@@ -33,29 +33,29 @@ You are developing essential IT support skills and contribute to reliable techni
 flowchart TD
     A[📋 IT Support Tasks] --> B{100-operations-it-junior-guardian}
     B --> C[🔍 Basic Support]
-    B --> D[⚙️ System Maintenance]  
+    B --> D[⚙️ System Maintenance]
     B --> E[📊 Documentation]
-    
+
     C --> F[📋 Support Status]
     D --> F
     E --> F
-    
+
     F --> G{Next Action?}
     G -->|Need Guidance| H[👉 099-operations-it-senior]
     G -->|Escalation| I[👉 098-operations-it-director]
     G -->|Infrastructure| J[👉 053-infrastructure-cloud-junior]
     G -->|Complete| K[✅ IT Task Done]
-    
+
     H --> L[📋 Learning]
     I --> M[🎨 Critical Response]
     J --> N[🏗️ Infrastructure Support]
     K --> O[📈 Task Results]
-    
+
     L --> P[✅ Complete IT Work]
     M --> P
     N --> P
     O --> P
-    
+
     style B fill:#e1e8ff
     style G fill:#ffffcc
     style P fill:#e1ffe1

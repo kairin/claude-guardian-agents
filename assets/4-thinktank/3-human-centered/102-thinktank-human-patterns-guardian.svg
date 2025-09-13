@@ -13,20 +13,20 @@
       <stop offset="100%" style="stop-color:#E65100;" />
     </linearGradient>
   </defs>
-  
+
   <!-- Cultural circle pattern -->
   <circle cx="200" cy="110" r="60" fill="none" stroke="url(#human-grad)" stroke-width="1" opacity="0.6"/>
   <circle cx="200" cy="110" r="45" fill="none" stroke="url(#human-grad)" stroke-width="1" opacity="0.5"/>
   <circle cx="200" cy="110" r="30" fill="none" stroke="url(#human-grad)" stroke-width="1" opacity="0.4"/>
-  
+
   <!-- Human figures in circle formation -->
   <g id="human-figure">
     <circle cx="0" cy="-5" r="4" fill="url(#human-accent)"/>
-    <path d="M0,-1 L0,10 M0,2 L-5,8 M0,2 L5,8 M0,10 L-3,18 M0,10 L3,18" 
+    <path d="M0,-1 L0,10 M0,2 L-5,8 M0,2 L5,8 M0,10 L-3,18 M0,10 L3,18"
           stroke="url(#human-accent)" stroke-width="1" stroke-linecap="round"/ stroke-dasharray="5,5">
     <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
   </g>
-  
+
   <!-- Figures around the circle -->
   <use href="#human-figure" transform="translate(200,60)"/>
   <use href="#human-figure" transform="translate(250,110)"/>
@@ -36,7 +36,7 @@
   <use href="#human-figure" transform="translate(235,145)"/>
   <use href="#human-figure" transform="translate(165,75)"/>
   <use href="#human-figure" transform="translate(165,145)"/>
-  
+
   <!-- Central connection web -->
   <g transform="translate(200,110)" opacity="0.4">
     <line x1="0" y1="-50" x2="50" y2="0" stroke="url(#human-accent)" stroke-width="1"/>
@@ -48,7 +48,7 @@
     <line x1="-35" y1="35" x2="-35" y2="-35" stroke="url(#human-accent)" stroke-width="1"/>
     <line x1="-35" y1="-35" x2="35" y2="-35" stroke="url(#human-accent)" stroke-width="1"/>
   </g>
-  
+
   <!-- Cultural symbols -->
   <text x="200" y="115" text-anchor="middle" fill="url(#human-grad)" font-size="24" font-weight="bold">
     <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="4s" repeatCount="indefinite"/>∞</text>

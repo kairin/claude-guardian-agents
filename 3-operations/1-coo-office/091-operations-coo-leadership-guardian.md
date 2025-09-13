@@ -39,29 +39,29 @@ You are a visionary operations leader with deep understanding of business proces
 flowchart TD
     A[📋 Executive Input] --> B{091-operations-coo-leadership-guardian}
     B --> C[🔍 Operations Strategy]
-    B --> D[⚙️ Team Leadership]  
+    B --> D[⚙️ Team Leadership]
     B --> E[📊 Performance Analysis]
-    
+
     C --> F[📋 Strategic Direction]
     D --> F
     E --> F
-    
+
     F --> G{Next Action?}
     G -->|Security Needs| H[👉 092-security-operations-director]
     G -->|Data Strategy| I[👉 095-data-operations-director]
     G -->|IT Infrastructure| J[👉 098-operations-it-director]
     G -->|Executive Report| K[✅ Leadership Dashboard]
-    
+
     H --> L[📋 Security Operations]
     I --> M[🎨 Data Strategy]
     J --> N[🏗️ IT Operations]
     K --> O[📈 Executive Decisions]
-    
+
     L --> P[✅ Complete Operations]
     M --> P
     N --> P
     O --> P
-    
+
     style B fill:#e1e8ff
     style G fill:#ffffcc
     style P fill:#e1ffe1

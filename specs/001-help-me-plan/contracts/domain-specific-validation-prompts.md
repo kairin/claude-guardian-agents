@@ -1,7 +1,7 @@
 # Domain-Specific Validation Prompts for Guardian Agents
 
-**Based on**: Git Workflow Implementation Plan Validation (STEP 4)  
-**Scope**: All Guardian Agent domains (Strategy, Design, Architecture, Development, Infrastructure, Operations)  
+**Based on**: Git Workflow Implementation Plan Validation (STEP 4)
+**Scope**: All Guardian Agent domains (Strategy, Design, Architecture, Development, Infrastructure, Operations)
 **Purpose**: Systematic validation framework that adapts to each domain's specific requirements
 
 ## **UNIVERSAL VALIDATION FRAMEWORK**
@@ -9,7 +9,7 @@
 ### **Core Validation Categories** (Applied to ALL domains)
 
 1. **Dependency Sequence Validation**
-2. **Shared Components Analysis** 
+2. **Shared Components Analysis**
 3. **Configuration Consistency Check**
 4. **Error Handling Patterns Review**
 5. **Integration Cross-Reference Validation**
@@ -149,7 +149,7 @@ CONFIGURATION LOADING PATTERNS:
 
 DOMAIN-SPECIFIC CONFIGURATIONS:
 For Strategy agents: Market data sources, decision thresholds, stakeholder lists
-For Design agents: Design system tokens, accessibility standards, device breakpoints  
+For Design agents: Design system tokens, accessibility standards, device breakpoints
 For Development agents: Code quality rules, testing frameworks, deployment targets
 For Infrastructure agents: Resource limits, security policies, monitoring configs
 For Operations agents: Alert thresholds, backup schedules, incident escalation rules
@@ -464,7 +464,7 @@ Perform final pre-implementation assessment for [DOMAIN] agents:
 TECHNICAL READINESS:
 Score (1-5): Technical implementation quality
 Score (1-5): Dependency management completeness
-Score (1-5): Error handling robustness  
+Score (1-5): Error handling robustness
 Score (1-5): Performance optimization level
 Score (1-5): Security posture strength
 
@@ -516,7 +516,7 @@ Recommended timeline: [Suggested implementation schedule]
 
 ### **Design Domain Adaptations**
 - Replace "shell script" with "design system component"
-- Replace "git commands" with "design tool APIs"  
+- Replace "git commands" with "design tool APIs"
 - Replace "branch naming" with "design version management"
 - Replace "commit messages" with "design change documentation"
 

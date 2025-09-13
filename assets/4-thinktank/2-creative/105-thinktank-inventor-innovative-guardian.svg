@@ -20,13 +20,13 @@
       <stop offset="100%" stop-color="#FFEB3B" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  
+
   <!-- Glowing lightbulb effect -->
   <circle cx="200" cy="100" r="60" fill="url(#bulb-glow)" />
-  
+
   <!-- Lightbulb -->
   <g transform="translate(200,100)">
-    <path d="M-20,-30 Q-25,-15 -25,0 Q-25,15 -15,25 L15,25 Q25,15 25,0 Q25,-15 20,-30 Q15,-40 0,-40 Q-15,-40 -20,-30 Z" 
+    <path d="M-20,-30 Q-25,-15 -25,0 Q-25,15 -15,25 L15,25 Q25,15 25,0 Q25,-15 20,-30 Q15,-40 0,-40 Q-15,-40 -20,-30 Z"
           fill="url(#invent-grad)" stroke="#000" stroke-width="1"/>
     <!-- Filament -->
     <path d="M-10,0 Q-5,-10 0,-15 Q5,-10 10,0" fill="none" stroke="#FF6F00" stroke-width="1"/>
@@ -35,22 +35,22 @@
     <line x1="-12" y1="28" x2="12" y2="28" stroke="#444" stroke-width="1"/>
     <line x1="-12" y1="31" x2="12" y2="31" stroke="#444" stroke-width="1"/>
   </g>
-  
+
   <!-- Innovation gears -->
   <g transform="translate(150,100)" opacity="0.7">
     <circle r="15" fill="none" stroke="url(#invent-accent)" stroke-width="1"/>
-    <path d="M0,-15 L3,-18 L-3,-18 Z M15,0 L18,3 L18,-3 Z M0,15 L-3,18 L3,18 Z M-15,0 L-18,-3 L-18,3 Z" 
+    <path d="M0,-15 L3,-18 L-3,-18 Z M15,0 L18,3 L18,-3 Z M0,15 L-3,18 L3,18 Z M-15,0 L-18,-3 L-18,3 Z"
           fill="url(#invent-accent)"/>
     <circle r="5" fill="url(#invent-accent)"/>
   </g>
-  
+
   <g transform="translate(250,100)" opacity="0.7">
     <circle r="15" fill="none" stroke="url(#invent-accent)" stroke-width="1"/>
-    <path d="M0,-15 L3,-18 L-3,-18 Z M15,0 L18,3 L18,-3 Z M0,15 L-3,18 L3,18 Z M-15,0 L-18,-3 L-18,3 Z" 
+    <path d="M0,-15 L3,-18 L-3,-18 Z M15,0 L18,3 L18,-3 Z M0,15 L-3,18 L3,18 Z M-15,0 L-18,-3 L-18,3 Z"
           fill="url(#invent-accent)"/>
     <circle r="5" fill="url(#invent-accent)"/>
   </g>
-  
+
   <!-- Blueprint grid lines -->
   <g opacity="0.3">
     <line x1="100" y1="50" x2="300" y2="50" stroke="url(#invent-accent)" stroke-width="1" stroke-dasharray="5,5"/>
@@ -58,10 +58,10 @@
     <line x1="100" y1="50" x2="100" y2="150" stroke="url(#invent-accent)" stroke-width="1" stroke-dasharray="5,5"/>
     <line x1="300" y1="50" x2="300" y2="150" stroke="url(#invent-accent)" stroke-width="1" stroke-dasharray="5,5"/>
   </g>
-  
+
   <!-- Innovation sparks -->
   <g transform="translate(200,100)">
-    <path d="M-35,-35 L-30,-30 M35,-35 L30,-30 M-35,35 L-30,30 M35,35 L30,30" 
+    <path d="M-35,-35 L-30,-30 M35,-35 L30,-30 M-35,35 L-30,30 M35,35 L30,30"
           stroke="url(#invent-grad)" stroke-width="1" stroke-linecap="round"/>
   </g>
 </svg>

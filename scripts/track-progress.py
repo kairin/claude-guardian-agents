@@ -9,19 +9,19 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List
+from typing import Any, Dict, List, Optional
 
 
 class ProgressTracker:
     """Main progress tracking system"""
 
-    def __init__(self, project_root: str = None):
+    def __init__(self, project_root: Optional[str] = None):
         self.project_root = Path(project_root or os.getcwd())
         self.tracking_dir = self.project_root / "tracking"
         self.progress_file = self.tracking_dir / "progress.json"
         self.specs_dir = self.project_root / "specs"
 
-    def load_progress(self) -> Dict:
+    def load_progress(self) -> Dict[str, Any]:
         """Load current progress data"""
         if self.progress_file.exists():
             with open(self.progress_file) as f:
@@ -35,7 +35,7 @@ class ProgressTracker:
             json.dump(progress_data, f, indent=2)
 
     def update_feature_status(
-        self, feature_id: str, status: str, notes: str = None
+        self, feature_id: str, status: str, notes: Optional[str] = None
     ) -> None:
         """Update feature status with timestamp and notes"""
         progress = self.load_progress()
@@ -271,7 +271,9 @@ class ProgressTracker:
             },
         }
 
-    def _calculate_feature_completion(self, progress: Dict, feature_id: str) -> None:
+    def _calculate_feature_completion(
+        self, progress: Dict[str, Any], feature_id: str
+    ) -> None:
         """Calculate feature completion based on implementation checklist"""
         feature = progress["features"][feature_id]
         checklist = feature.get("implementation_checklist", {})
@@ -294,7 +296,7 @@ class ProgressTracker:
         # For now, return False to indicate not yet implemented
         return False
 
-    def _run_feature_tests(self, feature_id: str) -> Dict:
+    def _run_feature_tests(self, feature_id: str) -> Dict[str, Any]:
         """Run tests for a specific feature"""
         # Placeholder implementation
         return {
@@ -314,7 +316,7 @@ class ProgressTracker:
         return dependency_status.get(dependency, False)
 
 
-def main():
+def main() -> None:
     """CLI interface for progress tracking"""
     if len(sys.argv) < 2:
         print("Usage: python track-progress.py <command> [args...]")
@@ -336,7 +338,8 @@ def main():
         feature_id = sys.argv[2]
         status = sys.argv[3]
         notes = sys.argv[4] if len(sys.argv) > 4 else None
-        tracker.update_feature_status(feature_id, status, notes)
+        if notes is not None:
+            tracker.update_feature_status(feature_id, status, notes)
 
     elif command == "complete-task":
         if len(sys.argv) < 4:
@@ -352,6 +355,7 @@ def main():
         print(f"Features: {results['completed_features']}/{results['total_features']}")
         for epic_id, completion in results["epic_completion"].items():
             print(f"Epic {epic_id}: {completion:.1f}%")
+        sys.exit(0)
 
     elif command == "generate-blockers":
         blockers = tracker.generate_blockers_report()

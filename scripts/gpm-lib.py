@@ -117,7 +117,7 @@ class GuardianUpdater:
                     self.remote_manifest = json.load(f)
                 return self.remote_manifest
 
-            raise Exception("Unable to fetch or find cached manifest")
+            raise Exception("Unable to fetch or find cached manifest") from e
 
     def calculate_file_checksum(self, file_path: Path) -> str:
         """Calculate SHA256 checksum of a file"""
@@ -305,10 +305,6 @@ class GuardianUpdater:
             # This is a simplified implementation - real 3-way merge is more complex
 
             if not self._have_conflicting_changes(local_diff, remote_diff):
-                # Apply both sets of changes
-                result = original_lines[:]
-
-                # Apply remote changes first, then local changes
                 # This is simplified - proper merge would be more sophisticated
                 return "".join(remote_lines)
 
@@ -418,7 +414,7 @@ class GuardianUpdater:
             input("Press Enter when finished editing...")
         # Otherwise keep local version (choice == "1" or invalid)
 
-    def _handle_deprecated_agent(self, change: UpdateChange):
+    def _handle_deprecated_agent(self, change: UpdateChange) -> None:
         """Handle deprecated agents"""
         print(f"🗑️ Agent deprecated: {change.agent_id}")
 
@@ -498,7 +494,7 @@ class GuardianUpdater:
             print(f"❌ Update failed: {e}")
             return False
 
-    def _generate_agent_index(self):
+    def _generate_agent_index(self) -> None:
         """Generate agent index for LLM consumption"""
         manifest = self.remote_manifest or self.fetch_remote_manifest()
 
@@ -520,7 +516,7 @@ class GuardianUpdater:
             }
 
         # Add selection hints from agent triggers
-        for agent_id, agent_info in manifest.get("agents", {}).items():
+        for agent_info in manifest.get("agents", {}).values():
             agent_name = agent_info["name"]
             for trigger in agent_info.get("triggers", []):
                 if trigger not in index["selection_hints"]:
@@ -537,7 +533,7 @@ class GuardianUpdater:
         print(f"📋 Generated agent index: {index_path}")
 
 
-def main():
+def main() -> None:
     """Command line interface for GPM library"""
     if len(sys.argv) < 2:
         print("Usage: gpm-lib.py <command>")

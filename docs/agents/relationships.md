@@ -18,7 +18,7 @@ sequenceDiagram
     participant Dev as 061-development-guardian
     participant Sec as 092-security-guardian
     participant Ops as 082-infrastructure-guardian
-    
+
     User->>Claude: "Build user authentication system"
     Claude->>S: Auto-select strategy agent
     S->>S: Define requirements & user stories
@@ -44,7 +44,7 @@ sequenceDiagram
 ### 1. **Intelligent Agent Selection**
 Claude Code automatically selects agents based on:
 - **Task description** keywords and context
-- **Agent descriptions** with "MUST BE USED" triggers  
+- **Agent descriptions** with "MUST BE USED" triggers
 - **Available tools** and required capabilities
 - **Previous agent** recommendations
 
@@ -60,7 +60,7 @@ Agents can trigger the next agent using:
 Agents can route to different agents based on results:
 ```markdown
 - If security issues found → 092-security-guardian
-- If performance problems → 082-infrastructure-guardian  
+- If performance problems → 082-infrastructure-guardian
 - If UI/UX needed → 021-design-guardian
 - If testing required → 072-development-quality-senior-guardian
 ```
@@ -74,69 +74,69 @@ graph TD
         UG[uv-guardian]
         ENG[env-guardian]
     end
-    
+
     subgraph "Layer 2: Input Processing"
         EG[email-guardian]
         XG[excel-guardian]
         FG[fastapi-guardian]
     end
-    
+
     subgraph "Layer 3: Quality & Security"
         SG[security-guardian]
         CG[compliance-guardian]
         CDG[code-guardian]
         DEP[dependency-guardian]
     end
-    
+
     subgraph "Layer 4: Development"
         TG[test-guardian]
         FIX[fix-guardian]
         RFG[refactor-guardian]
         UIG[ui-guardian]
     end
-    
+
     subgraph "Layer 5: Workflow"
         AG[agile-guardian]
         RG[release-guardian]
         GG[git-guardian]
         DOC[doc-guardian]
     end
-    
+
     subgraph "Layer 6: Infrastructure"
         BG[backup-guardian]
         MG[migration-guardian]
         PG[process-guardian]
         DPG[deploy-guardian]
     end
-    
+
     DG --> EG
     DG --> XG
     DG --> MG
-    
+
     UG --> CDG
     UG --> DEP
     UG --> FIX
-    
+
     ENG --> SG
     ENG --> DPG
-    
+
     EG --> SG
     XG --> CG
-    
+
     SG --> TG
     CG --> AG
-    
+
     TG --> FIX
     FIX --> RFG
     RFG --> GG
-    
+
     GG --> RG
     RG --> DOC
     DOC --> DPG
-    
+
     DPG --> BG
     BG --> MG
-    
+
     style DG fill:#e1e8ff
     style SG fill:#ffe1e1
     style RG fill:#fff4e1
@@ -273,7 +273,7 @@ stateDiagram-v2
     Release --> Deploy: release-guardian
     Deploy --> Backup: deploy-guardian
     Backup --> [*]: backup-guardian
-    
+
     Validation --> Failed: Validation error
     Security --> Failed: Security issue
     Compliance --> Failed: Non-compliant
@@ -375,6 +375,6 @@ astro-guardian/deno-guardian → uv-guardian → deploy-guardian
 
 ---
 
-**Document Version:** 2.0.0  
-**Last Updated:** 2025-08-29  
+**Document Version:** 2.0.0
+**Last Updated:** 2025-08-29
 **Repository:** https://github.com/kairin/citibank-payments

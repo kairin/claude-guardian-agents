@@ -1,7 +1,7 @@
 # Domain-Agnostic Validation Patterns for Guardian Agents
 
-**Purpose**: Universal validation patterns that apply across all Guardian Agent domains  
-**Based on**: Git Workflow STEP 4 validation methodology  
+**Purpose**: Universal validation patterns that apply across all Guardian Agent domains
+**Based on**: Git Workflow STEP 4 validation methodology
 **Scope**: Strategy, Design, Architecture, Development, Infrastructure, Operations
 
 ## **PATTERN 1: DEPENDENCY SEQUENCE ANALYSIS**
@@ -31,7 +31,7 @@ PREREQUISITE MAPPING:
 
 VALIDATION CHECKS:
 ☐ Prerequisites are explicitly documented
-☐ Dependency order is enforced programmatically  
+☐ Dependency order is enforced programmatically
 ☐ Missing dependencies trigger clear error messages
 ☐ Circular dependencies are detected and prevented
 ☐ Dependency changes are communicated to affected agents
@@ -95,7 +95,7 @@ For any Guardian Agent domain [X]:
 CONFIGURATION SCHEMA:
 1. Agent Metadata: Identity and capability information
    - Agent name, version, and description
-   - Capability declarations and limitations  
+   - Capability declarations and limitations
    - Performance characteristics and SLAs
    - Contact information and ownership
 

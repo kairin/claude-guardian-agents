@@ -124,19 +124,19 @@ The system will automatically invoke the next agent in the chain.
 ```bash
 User: "Plan and build a user profile feature"
 # Auto-triggers chain:
-# 001-strategy-product-leadership → 
-# 021-design-product-leadership → 
-# 041-architecture-cto-leadership → 
-# 061-development-backend-director → 
+# 001-strategy-product-leadership →
+# 021-design-product-leadership →
+# 041-architecture-cto-leadership →
+# 061-development-backend-director →
 # 092-security-operations-director
 ```
 
-### Example 2: Bug Fix Workflow  
+### Example 2: Bug Fix Workflow
 ```bash
 User: "Fix the login authentication bug"
 # Auto-triggers chain:
-# 073-development-quality-junior → 
-# 082-infrastructure-devops-senior → 
+# 073-development-quality-junior →
+# 082-infrastructure-devops-senior →
 # 092-security-operations-director
 ```
 
@@ -149,13 +149,13 @@ User: "Fix the login authentication bug"
 
 ### 2. Chaining Instructions
 - **Primary flow**: Normal sequence of next agents
-- **Conditional flows**: When to deviate from normal flow  
+- **Conditional flows**: When to deviate from normal flow
 - **Auto-trigger phrases**: Exact wording to trigger next agent
 
 ### 3. Tool Restrictions
 ```yaml
 tools: [google_web_search, web_fetch]  # Strategy agents
-tools: [write_file, read_file, bash]    # Development agents  
+tools: [write_file, read_file, bash]    # Development agents
 tools: []                               # Restricted agents
 ```
 
@@ -189,7 +189,7 @@ tools: []                               # Restricted agents
 ## 📚 Next Steps
 
 1. **Create your first agent** using the template
-2. **Test single agent** invocation  
+2. **Test single agent** invocation
 3. **Add chaining logic** to connect agents
 4. **Test full workflows** with multiple agents
 5. **Refine and optimize** based on results

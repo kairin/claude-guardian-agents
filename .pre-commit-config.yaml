@@ -47,7 +47,7 @@ repos:
     hooks:
       - id: bandit
         args: [-c, pyproject.toml]
-        additional_dependencies: ["bandit[toml]"]
+        additional_dependencies: ["bandit[toml]", "pbr"]
 
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.35.1
@@ -66,17 +66,16 @@ repos:
 
       - id: validate-gpm
         name: Validate GPM implementation
-        entry: python
-        args: [scripts/validate-gpm.sh]
-        language: system
+        entry: scripts/validate-gpm.sh
+        language: script
         files: ^(scripts/gmp-functions|manifest\.json|agents/)
         pass_filenames: false
 
       - id: update-progress
         name: Update project progress
-        entry: python
-        args: [scripts/track-progress.py, calculate-completion]
-        language: system
+        entry: scripts/track-progress.py
+        args: [calculate-completion]
+        language: script
         files: ^(specs/|tracking/)
         pass_filenames: false
 

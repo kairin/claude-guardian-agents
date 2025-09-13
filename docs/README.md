@@ -19,7 +19,7 @@
 
 ### **🤖 Agent System Documentation**
 - [Agent Overview](agents/README.md) - Guardian Agents system overview
-- [Agent Registry](agents/registry.md) - Complete catalog of all 49 agents  
+- [Agent Registry](agents/registry.md) - Complete catalog of all 49 agents
 - [Agent Relationships](agents/relationships.md) - How agents chain and communicate
 - [Agent Templates](agents/templates.md) - Templates for creating new agents
 - [Agent Mapping](agents/mapping.md) - Directory structure and conventions

@@ -41,7 +41,7 @@ components:
             type: string
             enum:
               - web_search
-              - web_fetch  
+              - web_fetch
               - bash
               - read_file
               - edit_file
@@ -61,7 +61,7 @@ components:
           type: string
           enum:
             - Strategy
-            - Design  
+            - Design
             - Architecture
             - Development
             - Infrastructure
@@ -75,7 +75,7 @@ components:
           type: string
           description: Unique expertise area
           example: "Strategic product vision and team leadership"
-        
+
     SpecializationProfile:
       type: object
       required:
@@ -106,7 +106,7 @@ components:
           description: Technology or business domains
         performance_sla:
           $ref: '#/components/schemas/PerformanceSLA'
-          
+
     PerformanceSLA:
       type: object
       required:
@@ -128,7 +128,7 @@ components:
           minimum: 0.95
           maximum: 1.0
           description: Minimum uptime percentage
-          
+
     WorkflowChain:
       type: object
       required:
@@ -157,7 +157,7 @@ components:
           items:
             type: string
           description: Phrases that activate this chain
-          
+
     ChainAgent:
       type: object
       required:
@@ -178,7 +178,7 @@ components:
         parallel_group:
           type: string
           description: Optional parallel execution group
-          
+
     ValidationFramework:
       type: object
       required:
@@ -225,7 +225,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/TestSuite'
-            
+
     TestSuite:
       type: object
       required:

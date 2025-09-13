@@ -15,7 +15,7 @@ Where:
 
 ### 📧 Data Processing Agents (001-005)
 - `001-data-processing-data-validation-guardian.md`
-- `002-data-processing-file-handling-guardian.md`  
+- `002-data-processing-file-handling-guardian.md`
 - `003-data-processing-database-optimization-guardian.md`
 
 ### 🧪 Development & Quality Agents (006-015)
@@ -30,7 +30,7 @@ Where:
 - `014-development-architecture-design-guardian.md`
 - `015-development-performance-optimization-guardian.md`
 
-### 🔒 Security & Compliance Agents (016-020)  
+### 🔒 Security & Compliance Agents (016-020)
 - `016-security-vulnerability-scanning-guardian.md`
 - `017-security-compliance-regulatory-guardian.md`
 - `018-security-environment-configuration-guardian.md`
@@ -110,7 +110,7 @@ guardians/
 - Easy to understand agent dependencies
 - Clear workflow progression
 
-### 2. Department Organization  
+### 2. Department Organization
 - Logical grouping by function
 - Consistent department names
 - Scalable structure
@@ -122,14 +122,14 @@ guardians/
 
 ### 4. Scalability
 - Easy to add new agents
-- Maintain numbering sequence  
+- Maintain numbering sequence
 - Clear insertion points
 
 ## Implementation Steps
 
 1. **Create new directory structure**
 2. **Map existing agents to new names**
-3. **Update all references in documentation**  
+3. **Update all references in documentation**
 4. **Update AGENTS.md hierarchy diagram**
 5. **Update workflow diagrams**
 6. **Test all agent references**
@@ -145,7 +145,7 @@ guardians/
 ## Approved Departments
 
 - `data-processing`: Data handling and validation
-- `development`: Code writing and quality  
+- `development`: Code writing and quality
 - `security`: Security and compliance
 - `infrastructure`: System operations
 - `workflow`: Process management

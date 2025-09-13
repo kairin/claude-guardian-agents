@@ -24,7 +24,7 @@ This directory contains all Guardian Agents system documentation, organized for 
 ```
 Guardian Agents System (49 Total)
 ├── 1-product/        (11 agents) - Strategic & Product
-├── 2-engineering/    (20 agents) - Technical Development  
+├── 2-engineering/    (20 agents) - Technical Development
 ├── 3-operations/     (10 agents) - Infrastructure & Operations
 └── 4-thinktank/      (8 agents)  - Cognitive Diversity
 ```

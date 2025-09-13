@@ -4,7 +4,7 @@
 
 Your existing organizational structure will be maintained:
 - `1-product/` - Product management and design teams
-- `2-engineering/` - Technical development teams  
+- `2-engineering/` - Technical development teams
 - `3-operations/` - Operations and support teams
 
 ## Mapping Strategy
@@ -97,7 +97,7 @@ Instead of moving files, I'll **rename them in-place** using this mapping:
 ## Numbering System Logic
 
 - **001-020**: Strategic Leadership & Product Strategy
-- **021-040**: Design & User Experience  
+- **021-040**: Design & User Experience
 - **041-060**: Technical Architecture & Leadership
 - **061-080**: Development Teams (Backend, Frontend, Mobile)
 - **081-090**: Infrastructure & DevOps

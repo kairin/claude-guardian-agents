@@ -1,6 +1,6 @@
 # Data Model: Guardian Agent Specialization System
 
-**Date**: 2025-09-09  
+**Date**: 2025-09-09
 **Scope**: Entity definitions and relationships for the Guardian Agent system
 
 ## Core Entities
@@ -13,7 +13,7 @@
 agent_id: string          # Format: NNN (001, 002, etc.)
 name: string              # Format: NNN-department-role-specialization-guardian
 description: string       # When to use this agent and triggers
-department: enum          # Strategy, Design, Architecture, Development, Infrastructure, Operations  
+department: enum          # Strategy, Design, Architecture, Development, Infrastructure, Operations
 role: string             # Leadership, Senior, Junior, Director, etc.
 specialization: string   # Specific expertise area
 model: enum              # claude-3-5-haiku, claude-3-5-sonnet
@@ -36,7 +36,7 @@ active → active (updates allowed)
 deprecated → active (reactivation allowed)
 ```
 
-### Specialization Profile  
+### Specialization Profile
 **Description**: Defines agent's unique expertise area, distinguishing it from other agents.
 
 **Fields**:
@@ -44,7 +44,7 @@ deprecated → active (reactivation allowed)
 profile_id: string           # Unique identifier
 agent_id: string            # Foreign key to Guardian Agent
 primary_responsibilities: array[string]    # Core capabilities
-secondary_responsibilities: array[string]  # Optional capabilities  
+secondary_responsibilities: array[string]  # Optional capabilities
 exclusions: array[string]   # Explicitly forbidden capabilities
 domain_expertise: array[string]  # Technology/business domains
 performance_sla: object     # Response time and quality targets
@@ -60,7 +60,7 @@ performance_sla: object     # Response time and quality targets
 
 **Fields**:
 ```yaml
-chain_id: string            # Unique identifier  
+chain_id: string            # Unique identifier
 name: string               # Descriptive name (e.g., "Feature Development Chain")
 chain_type: enum           # sequential, conditional, parallel, hybrid
 agents: array[object]      # Ordered list of agents in chain
@@ -132,7 +132,7 @@ integration_points: array[string]  # Other Git agents this connects to
 - temporal_format must follow YYYYMMDD-HHMM standard
 - branch_types must be valid Git workflow types
 
-### Model Optimization Profile  
+### Model Optimization Profile
 **Description**: Assignment of appropriate Claude model (Haiku/Sonnet) based on task complexity.
 
 **Fields**:
@@ -140,7 +140,7 @@ integration_points: array[string]  # Other Git agents this connects to
 profile_id: string        # Unique identifier
 complexity_indicators: object
   simple: array[string]   # Keywords indicating simple tasks
-  complex: array[string] # Keywords indicating complex tasks  
+  complex: array[string] # Keywords indicating complex tasks
   hybrid: array[string]  # Keywords indicating mixed complexity
 performance_targets: object
   haiku_sla: integer     # Response time SLA for Haiku (seconds)
@@ -162,7 +162,7 @@ cost_optimization: object
 ```yaml
 matrix_id: string         # Unique identifier
 haiku_agents: array[string]    # Agent IDs optimized for Haiku
-sonnet_agents: array[string]   # Agent IDs requiring Sonnet  
+sonnet_agents: array[string]   # Agent IDs requiring Sonnet
 routing_rules: object     # Automatic assignment rules
 performance_metrics: object   # Success tracking
   cost_savings: float    # Actual cost reduction achieved
@@ -184,7 +184,7 @@ framework_id: string      # Unique identifier
 validation_perspectives: array[string]  # development, testing, code_review, production
 status_symbols: object   # Symbol definitions
   complete: "✓"
-  incomplete: "☐"  
+  incomplete: "☐"
   partial: "~"
   failed: "✗"
   warning: "⚠️"
@@ -208,7 +208,7 @@ reporting_formats: array[string]  # console, json, markdown
 sla_id: string           # Unique identifier
 agent_id: string         # Associated agent
 response_time_target: integer  # Maximum response time (seconds)
-quality_target: float   # Minimum quality score (0-1)  
+quality_target: float   # Minimum quality score (0-1)
 availability_target: float    # Uptime percentage
 escalation_procedure: string  # What to do if SLA violated
 monitoring_metrics: array[string]  # Tracked performance indicators
@@ -229,10 +229,10 @@ erDiagram
     GuardianAgent ||--|| PerformanceSLA : bound_by
     GuardianAgent }|--|| AgentCategory : belongs_to
     GuardianAgent ||--o{ TriggerPattern : activated_by
-    
+
     WorkflowChain ||--o{ GuardianAgent : contains
     AgentCategory ||--o{ GuardianAgent : groups
-    
+
     GitWorkflowAgent ||--|| GuardianAgent : extends
     ValidationFramework ||--o{ GuardianAgent : validates
     PerformanceOptimizationMatrix ||--o{ GuardianAgent : optimizes
@@ -242,7 +242,7 @@ erDiagram
 
 ### Cross-Entity Constraints
 1. **Specialization Uniqueness**: No two agents in the same department can have overlapping primary_responsibilities
-2. **Chain Consistency**: All agent_ids in workflow chains must reference existing Guardian Agents  
+2. **Chain Consistency**: All agent_ids in workflow chains must reference existing Guardian Agents
 3. **Category Boundaries**: Agent numbers must fall within their assigned category range
 4. **Model Assignment**: Agent complexity must match assigned model capabilities
 5. **SLA Alignment**: Performance SLAs must be achievable for assigned model type
@@ -266,7 +266,7 @@ erDiagram
 3-operations/
 templates/
 ├── agent-file-template.md
-├── validation-template.md  
+├── validation-template.md
 └── model-optimization-guide.md
 ```
 

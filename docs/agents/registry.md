@@ -7,7 +7,7 @@ This document defines specialized AI agents for Claude Code subagent system. Eac
 ### Step 1: Use Claude Code's `/agents` Command
 1. Open Claude Code in your project
 2. Run `/agents` command
-3. Choose "Create Project Agent" 
+3. Choose "Create Project Agent"
 4. Use the naming convention: `001-department-role-specialization-guardian`
 5. Copy the agent template from this registry
 
@@ -26,7 +26,7 @@ System prompt defining the agent's role, responsibilities, and chaining behavior
 ### Step 3: Automatic Agent Chaining ✅ VERIFIED
 Claude Code **officially supports** subagent chaining. Agents automatically call other agents when:
 - Task description matches next agent's purpose
-- Agent explicitly requests next agent in chain  
+- Agent explicitly requests next agent in chain
 - "MUST BE USED" triggers are matched
 - Context requires specialized expertise
 
@@ -43,7 +43,7 @@ You are a visionary product leader with deep understanding of markets and custom
 
 ## Your Role
 - Agent ID: 001
-- Department: Strategy  
+- Department: Strategy
 - Role: Product Leadership
 - Specialization: Strategic product vision and team leadership
 
@@ -59,12 +59,12 @@ After completing your analysis, automatically delegate to appropriate next agent
 
 ### Sequential Chain (Primary Flow):
 1. **002-strategy-product-strategy-guardian** - For detailed strategy work
-2. **021-design-product-leadership-guardian** - For design alignment  
+2. **021-design-product-leadership-guardian** - For design alignment
 3. **041-architecture-cto-leadership-guardian** - For technical feasibility
 
 ### Conditional Chains:
 - If security concerns → **092-security-operations-director-guardian**
-- If implementation needed → **061-development-backend-director-guardian** 
+- If implementation needed → **061-development-backend-director-guardian**
 - If documentation required → **029-workflow-documentation-guardian**
 
 ### Auto-Chain Triggers:
@@ -83,42 +83,42 @@ graph TB
         A2[file-guardian]
         A3[database-guardian]
     end
-    
+
     subgraph "🔒 Quality & Security Agents"
         B1[security-guardian]
         B2[compliance-guardian]
         B3[code-guardian]
         B4[dependency-guardian]
     end
-    
+
     subgraph "🧪 Development & Testing Agents"
         C1[test-guardian]
         C2[fix-guardian]
         C3[refactor-guardian]
         C4[ui-guardian]
     end
-    
+
     subgraph "🏗️ Infrastructure Agents"
         D1[backup-guardian]
         D2[migration-guardian]
         D3[env-guardian]
         D4[process-guardian]
     end
-    
+
     subgraph "⚡ Workflow Agents"
         E1[agile-guardian]
         E2[release-guardian]
         E3[git-guardian]
         E4[doc-guardian]
     end
-    
+
     A1 --> B1
     A2 --> B2
     A3 --> D2
     B1 --> C1
     B2 --> E2
     C1 --> E1
-    
+
     style A1 fill:#e1f5e1
     style B1 fill:#ffe1e1
     style D1 fill:#e1e8ff
@@ -471,6 +471,6 @@ RETRY_CONFIG = {
 
 ---
 
-**Document Version:** 2.0.0  
-**Last Updated:** 2025-09-06  
+**Document Version:** 2.0.0
+**Last Updated:** 2025-09-06
 **Repository:** https://github.com/anthropic/claude-guardian-agents

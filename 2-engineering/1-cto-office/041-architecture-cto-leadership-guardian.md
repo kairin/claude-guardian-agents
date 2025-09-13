@@ -74,27 +74,27 @@ flowchart TD
     B --> C[🏗️ Technology Strategy]
     B --> D[👥 Engineering Leadership]
     B --> E[🔒 Infrastructure Planning]
-    
+
     C --> F[🏗️ Technical Vision]
     D --> F
     E --> F
-    
+
     F --> G{Technical Complexity?}
     G -->|Architecture Design| H[👉 044-architecture-principal-architect-guardian]
     G -->|Team Coordination| I[👉 043-architecture-vp-engineering-guardian]
     G -->|Development Ready| J[👉 061-development-backend-director-guardian]
     G -->|Innovation Focus| K[👉 042-architecture-technical-fellow-guardian]
-    
+
     H --> L[🏗️ System Architecture]
     I --> M[👥 Team Coordination]
     J --> N[💻 Development Plan]
     K --> O[🔬 Innovation Strategy]
-    
+
     L --> P[✅ Technical Roadmap]
     M --> P
     N --> P
     O --> P
-    
+
     style B fill:#f0f8ff
     style G fill:#ffffcc
     style P fill:#e1ffe1

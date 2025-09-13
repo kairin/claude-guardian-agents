@@ -7,11 +7,11 @@ This document shows how Security & Compliance Agents protect your project step-b
 ```mermaid
 graph LR
     A[🧪 Tested Code] --> B[security-guardian]
-    B --> C[compliance-guardian]  
+    B --> C[compliance-guardian]
     C --> D[env-guardian]
     D --> E[dependency-guardian]
     E --> F[🛡️ Secure & Compliant]
-    
+
     style B fill:#ffe1e1
     style C fill:#ffe1e1
     style D fill:#ffe1e1
@@ -30,30 +30,30 @@ flowchart TD
     B --> E[🔍 Data Leak Detection]
     B --> F[🔍 Input Validation Check]
     B --> G[🔍 Encryption Analysis]
-    
+
     C --> H{Security Issues?}
     D --> H
     E --> H
     F --> H
     G --> H
-    
+
     H -->|Critical| I[🚨 BLOCK DEPLOYMENT]
     H -->|Medium| J[⚠️ Generate Warning]
     H -->|Low| K[📋 Security Report]
     H -->|None| L[✅ Security Approved]
-    
+
     I --> M[🔧 Fix Critical Issues]
     J --> N[📝 Risk Assessment]
     K --> O[📊 Improvement Suggestions]
-    
+
     M --> B
     N --> P{Accept Risk?}
     P -->|No| M
     P -->|Yes| O
     O --> L
-    
+
     L --> Q[▶️ Send to compliance-guardian]
-    
+
     style B fill:#ffe1e1
     style H fill:#ffffcc
     style I fill:#ff9999
@@ -78,30 +78,30 @@ flowchart TD
     B --> D[📋 HIPAA Requirements]
     B --> E[📋 SOC2 Standards]
     B --> F[📋 Industry Standards]
-    
+
     C --> G{Compliance Met?}
     D --> G
     E --> G
     F --> G
-    
+
     G -->|Non-compliant| H[🚨 COMPLIANCE FAILURE]
     G -->|Partial| I[⚠️ Compliance Gaps]
     G -->|Full| J[✅ Fully Compliant]
-    
+
     H --> K[📝 Audit Report]
     I --> L[📋 Gap Analysis]
-    
+
     K --> M[🔧 Fix Compliance Issues]
     L --> N{Critical Gaps?}
     N -->|Yes| M
     N -->|No| O[📊 Risk Documentation]
-    
+
     M --> B
     O --> J
-    
+
     J --> P[📜 Compliance Certificate]
     P --> Q[▶️ Send to env-guardian]
-    
+
     style B fill:#ffe1e1
     style G fill:#ffffcc
     style H fill:#ff9999
@@ -126,35 +126,35 @@ flowchart TD
     B --> D[🔍 Config Validation]
     B --> E[🔍 Environment Consistency]
     B --> F[🔍 Deployment Readiness]
-    
+
     C --> G{Secrets Exposed?}
     D --> H{Config Issues?}
     E --> I{Env Mismatch?}
     F --> J{Deploy Ready?}
-    
+
     G -->|Yes| K[🚨 SECRETS EXPOSED]
     H -->|Yes| L[⚠️ Config Problems]
-    I -->|Yes| M[⚠️ Environment Issues]  
+    I -->|Yes| M[⚠️ Environment Issues]
     J -->|No| N[⚠️ Not Deploy Ready]
-    
+
     G -->|No| O[✅ No Secrets Found]
     H -->|No| O
     I -->|No| O
     J -->|Yes| O
-    
+
     K --> P[🔒 Secure Secrets]
     L --> Q[🔧 Fix Configuration]
     M --> R[🔄 Sync Environments]
     N --> S[📝 Deployment Checklist]
-    
+
     P --> B
     Q --> B
     R --> B
     S --> T[👨‍💻 Manual Review]
-    
+
     O --> U[✅ Environment Secure]
     U --> V[▶️ Send to dependency-guardian]
-    
+
     style B fill:#ffe1e1
     style K fill:#ff9999
     style O fill:#e1f5e1
@@ -176,39 +176,39 @@ flowchart TD
 flowchart TD
     A[🔒 Secure Environment] --> B{dependency-guardian Audit}
     B --> C[📦 Scan Dependencies]
-    B --> D[🔍 Version Check] 
+    B --> D[🔍 Version Check]
     B --> E[🔍 Vulnerability Scan]
     B --> F[🔍 License Compliance]
-    
+
     C --> G{Issues Found?}
     D --> G
     E --> G
     F --> G
-    
+
     G -->|Critical| H[🚨 CRITICAL VULNERABILITIES]
     G -->|High| I[⚠️ High Risk Issues]
     G -->|Medium| J[📋 Medium Risk Issues]
     G -->|Low/None| K[✅ Dependencies Clean]
-    
+
     H --> L[🔧 Update Critical Deps]
     I --> M[📊 Risk Assessment]
     J --> N[📝 Update Recommendations]
-    
+
     L --> O{Update Success?}
     O -->|No| P[🔄 Alternative Solutions]
     O -->|Yes| Q[✅ Critical Issues Fixed]
     P --> R[👨‍💻 Manual Intervention]
-    
+
     M --> S{Accept Risk?}
     S -->|No| T[🔧 Force Updates]
     S -->|Yes| U[📝 Document Risk]
     T --> O
     U --> Q
-    
+
     N --> Q
     Q --> K
     K --> V[🛡️ Security Complete]
-    
+
     style B fill:#ffe1e1
     style G fill:#ffffcc
     style H fill:#ff9999
@@ -233,34 +233,34 @@ sequenceDiagram
     participant EG as env-guardian
     participant DG as dependency-guardian
     participant Infra as 🏗️ Infrastructure
-    
+
     Dev->>SG: Tested code
     SG->>SG: Security audit
-    
+
     alt Critical Issues
         SG->>Dev: 🚨 Block & fix
     else Security OK
         SG->>CG: Secure code
     end
-    
+
     CG->>CG: Compliance check
-    
-    alt Non-compliant  
+
+    alt Non-compliant
         CG->>Dev: 🚨 Fix compliance
     else Compliant
         CG->>EG: Compliant code
     end
-    
+
     EG->>EG: Environment scan
-    
+
     alt Secrets exposed
         EG->>Dev: 🚨 Secure secrets
     else Environment OK
         EG->>DG: Secure environment
     end
-    
+
     DG->>DG: Dependency audit
-    
+
     alt Critical vulnerabilities
         DG->>Dev: 🚨 Update deps
     else Dependencies OK
@@ -283,7 +283,7 @@ sequenceDiagram
 
 ### Critical (Deployment Blocked)
 - 🔓 Hardcoded passwords/API keys
-- 🕳️ SQL injection vulnerabilities  
+- 🕳️ SQL injection vulnerabilities
 - 🔓 Insecure authentication
 - ⚖️ Non-compliance with regulations
 
