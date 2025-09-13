@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="900" viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Advanced stained glass effects -->
+    <filter id="glassGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="glassShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Rich stained glass gradients matching the reference -->
+    <radialGradient id="deepPurple" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#8B5A96"/>
+      <stop offset="30%" stop-color="#6B4C78"/>
+      <stop offset="70%" stop-color="#4A3B5A"/>
+      <stop offset="100%" stop-color="#2D2440"/>
+    </radialGradient>
+    
+    <radialGradient id="oceanBlue" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#4A90A4"/>
+      <stop offset="30%" stop-color="#2E5B6B"/>
+      <stop offset="70%" stop-color="#1F3A42"/>
+      <stop offset="100%" stop-color="#0F1E26"/>
+    </radialGradient>
+    
+    <radialGradient id="tentacleBlue" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#6BA3B8"/>
+      <stop offset="30%" stop-color="#4B7A8A"/>
+      <stop offset="70%" stop-color="#325159"/>
+      <stop offset="100%" stop-color="#1A2D32"/>
+    </radialGradient>
+    
+    <radialGradient id="warmAmber" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#E8A547"/>
+      <stop offset="30%" stop-color="#C4853A"/>
+      <stop offset="70%" stop-color="#8B5E2A"/>
+      <stop offset="100%" stop-color="#5C3E1C"/>
+    </radialGradient>
+    
+    <radialGradient id="rosePink" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#D4849A"/>
+      <stop offset="30%" stop-color="#A96376"/>
+      <stop offset="70%" stop-color="#7A4552"/>
+      <stop offset="100%" stop-color="#4D2A32"/>
+    </radialGradient>
+    
+    <radialGradient id="deepTeal" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#5B8A7A"/>
+      <stop offset="30%" stop-color="#3E5F56"/>
+      <stop offset="70%" stop-color="#2A3F38"/>
+      <stop offset="100%" stop-color="#18231F"/>
+    </radialGradient>
+    
+    <!-- Glass highlight effect -->
+    <linearGradient id="glassShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Dark cathedral background -->
+  <rect width="600" height="900" fill="#0F0F0F"/>
+  
+  <!-- Soft background glow -->
+  <rect width="600" height="900" fill="url(#warmAmber)" opacity="0.08"/>
+  
+  <!-- Left lancet window -->
+  <g>
+    <!-- Gothic arch frame -->
+    <path d="M30,40 L30,520 Q30,580 85,580 L115,580 Q170,580 170,520 L170,200 Q170,90 130,50 Q100,30 70,50 Q30,90 30,200 Z" 
+          fill="none" stroke="#1A1A1A" stroke-width="10"/>
+    
+    <!-- Upper rose window with organic segments -->
+    <g transform="translate(100,200)">
+      <!-- Outer ring - organic petal shapes -->
+      <path d="M0,-60 Q-15,-75 -30,-60 Q-45,-45 -42,-20 Q-35,-5 -20,-15 Q-5,-25 0,-35 Z" 
+            fill="url(#warmAmber)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      <path d="M30,-42 Q45,-57 60,-42 Q75,-27 70,-5 Q65,10 45,0 Q25,-10 20,-25 Z" 
+            fill="url(#rosePink)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      <path d="M42,30 Q57,45 42,60 Q27,75 5,70 Q-10,65 0,45 Q10,25 25,20 Z" 
+            fill="url(#deepPurple)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      <path d="M-30,42 Q-45,57 -60,42 Q-75,27 -70,5 Q-65,-10 -45,0 Q-25,10 -20,25 Z" 
+            fill="url(#oceanBlue)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      
+      <!-- Middle ring -->
+      <path d="M0,-35 Q-8,-40 -15,-35 Q-20,-28 -18,-18 Q-15,-10 -8,-12 Q-2,-15 0,-20 Z" 
+            fill="url(#deepPurple)" stroke="#000" stroke-width="1.5"/>
+      <path d="M18,-25 Q25,-30 32,-25 Q37,-18 35,-10 Q32,-2 25,-5 Q18,-8 15,-15 Z" 
+            fill="url(#oceanBlue)" stroke="#000" stroke-width="1.5"/>
+      <path d="M25,18 Q30,25 25,32 Q18,37 10,35 Q2,32 5,25 Q8,18 15,15 Z" 
+            fill="url(#rosePink)" stroke="#000" stroke-width="1.5"/>
+      <path d="M-18,25 Q-25,30 -32,25 Q-37,18 -35,10 Q-32,2 -25,5 Q-18,8 -15,15 Z" 
+            fill="url(#warmAmber)" stroke="#000" stroke-width="1.5"/>
+      
+      <!-- Central eye -->
+      <circle cx="0" cy="0" r="18" fill="url(#warmAmber)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      <ellipse cx="0" cy="0" rx="10" ry="14" fill="#1A1A1A"/>
+      
+      <!-- Glass highlights -->
+      <path d="M0,-60 Q-15,-75 -30,-60 Q-45,-45 -42,-20" 
+            fill="none" stroke="url(#glassShine)" stroke-width="3" opacity="0.6"/>
+      <circle cx="0" cy="0" r="18" fill="url(#glassShine)" opacity="0.3"/>
+    </g>
+    
+    <!-- Creature body with organic glass segments -->
+    <g filter="url(#glassGlow)">
+      <!-- Head in flowing segments -->
+      <path d="M70,340 Q55,325 85,325 Q115,325 130,340 Q135,360 125,385 Q115,405 100,410 Q85,415 70,405 Q55,385 60,360 Z" 
+            fill="url(#tentacleBlue)" stroke="#000" stroke-width="2.5" filter="url(#glassShadow)"/>
+      
+      <!-- Eyes as amber glass -->
+      <ellipse cx="85" cy="355" rx="8" ry="6" fill="url(#warmAmber)" stroke="#000" stroke-width="1"/>
+      <ellipse cx="115" cy="355" rx="8" ry="6" fill="url(#warmAmber)" stroke="#000" stroke-width="1"/>
+      <ellipse cx="85" cy="355" rx="4" ry="3" fill="#1A1A1A"/>
+      <ellipse cx="115" cy="355" rx="4" ry="3" fill="#1A1A1A"/>
+      
+      <!-- Tentacles with organic glass segments and sucker details -->
+      <g>
+        <!-- Left major tentacle -->
+        <path d="M70,405 Q40,430 25,470 Q15,510 30,550 Q50,590 35,630 Q15,670 25,710" 
+              fill="none" stroke="url(#tentacleBlue)" stroke-width="18" stroke-linecap="round" filter="url(#glassGlow)"/>
+        
+        <!-- Tentacle segments with suckers -->
+        <ellipse cx="55" cy="440" rx="12" ry="8" fill="url(#deepPurple)" stroke="#000" stroke-width="1.5" transform="rotate(-20 55 440)"/>
+        <ellipse cx="35" cy="480" rx="10" ry="6" fill="url(#deepPurple)" stroke="#000" stroke-width="1.5" transform="rotate(-30 35 480)"/>
+        <ellipse cx="25" cy="520" rx="8" ry="5" fill="url(#rosePink)" stroke="#000" stroke-width="1.5" transform="rotate(-40 25 520)"/>
+        <ellipse cx="40" cy="560" rx="9" ry="6" fill="url(#rosePink)" stroke="#000" stroke-width="1.5" transform="rotate(10 40 560)"/>
+        
+        <!-- Right major tentacle -->
+        <path d="M130,405 Q160,430 175,470 Q185,510 170,550 Q150,590 165,630 Q185,670 175,710" 
+              fill="none" stroke="url(#tentacleBlue)" stroke-width="18" stroke-linecap="round" filter="url(#glassGlow)"/>
+        
+        <!-- Right tentacle segments -->
+        <ellipse cx="145" cy="440" rx="12" ry="8" fill="url(#deepPurple)" stroke="#000" stroke-width="1.5" transform="rotate(20 145 440)"/>
+        <ellipse cx="165" cy="480" rx="10" ry="6" fill="url(#deepPurple)" stroke="#000" stroke-width="1.5" transform="rotate(30 165 480)"/>
+        <ellipse cx="175" cy="520" rx="8" ry="5" fill="url(#rosePink)" stroke="#000" stroke-width="1.5" transform="rotate(40 175 520)"/>
+        <ellipse cx="160" cy="560" rx="9" ry="6" fill="url(#rosePink)" stroke="#000" stroke-width="1.5" transform="rotate(-10 160 560)"/>
+        
+        <!-- Lead lines over tentacles -->
+        <path d="M70,405 Q40,430 25,470 Q15,510 30,550 Q50,590 35,630 Q15,670 25,710" 
+              fill="none" stroke="#000" stroke-width="2.5"/>
+        <path d="M130,405 Q160,430 175,470 Q185,510 170,550 Q150,590 165,630 Q185,670 175,710" 
+              fill="none" stroke="#000" stroke-width="2.5"/>
+      </g>
+      
+      <!-- Glass highlights on tentacles -->
+      <path d="M70,405 Q40,430 25,470" fill="none" stroke="url(#glassShine)" stroke-width="4" opacity="0.4"/>
+      <path d="M130,405 Q160,430 175,470" fill="none" stroke="url(#glassShine)" stroke-width="4" opacity="0.4"/>
+    </g>
+  </g>
+  
+  <!-- Central lancet - The Great One -->
+  <g>
+    <!-- Large Gothic arch -->
+    <path d="M190,25 L190,680 Q190,750 250,750 L350,750 Q410,750 410,680 L410,150 Q410,60 360,25 Q300,0 240,25 Q190,60 190,150 Z" 
+          fill="none" stroke="#1A1A1A" stroke-width="12"/>
+    
+    <!-- Great rose window with complex organic patterns -->
+    <g transform="translate(300,170)">
+      <!-- Outer ring with flowing organic segments -->
+      <path d="M0,-80 Q-20,-95 -45,-80 Q-70,-65 -65,-30 Q-55,-5 -30,-20 Q-10,-35 0,-50 Z" 
+            fill="url(#deepPurple)" stroke="#000" stroke-width="3" filter="url(#glassShadow)"/>
+      <path d="M45,-65 Q70,-80 80,-45 Q90,-10 70,15 Q50,30 25,15 Q15,-10 25,-35 Z" 
+            fill="url(#rosePink)" stroke="#000" stroke-width="3" filter="url(#glassShadow)"/>
+      <path d="M65,45 Q80,70 45,80 Q10,90 -15,70 Q-30,50 -15,25 Q10,15 35,25 Z" 
+            fill="url(#oceanBlue)" stroke="#000" stroke-width="3" filter="url(#glassShadow)"/>
+      <path d="M-45,65 Q-70,80 -80,45 Q-90,10 -70,-15 Q-50,-30 -25,-15 Q-15,10 -25,35 Z" 
+            fill="url(#deepTeal)" stroke="#000" stroke-width="3" filter="url(#glassShadow)"/>
+      
+      <!-- Middle complex ring -->
+      <path d="M0,-50 Q-12,-58 -25,-50 Q-35,-38 -32,-22 Q-28,-8 -18,-12 Q-8,-18 0,-28 Z" 
+            fill="url(#warmAmber)" stroke="#000" stroke-width="2.5" filter="url(#glassShadow)"/>
+      <path d="M28,-35 Q40,-43 50,-35 Q58,-23 55,-10 Q52,3 42,0 Q32,-5 28,-18 Z" 
+            fill="url(#tentacleBlue)" stroke="#000" stroke-width="2.5" filter="url(#glassShadow)"/>
+      <path d="M35,28 Q43,40 35,50 Q23,58 10,55 Q-3,52 0,42 Q5,32 18,28 Z" 
+            fill="url(#rosePink)" stroke="#000" stroke-width="2.5" filter="url(#glassShadow)"/>
+      <path d="M-28,35 Q-40,43 -50,35 Q-58,23 -55,10 Q-52,-3 -42,0 Q-32,5 -28,18 Z" 
+            fill="url(#deepPurple)" stroke="#000" stroke-width="2.5" filter="url(#glassShadow)"/>
+      
+      <!-- Central eye with complex iris -->
+      <circle cx="0" cy="0" r="22" fill="url(#warmAmber)" stroke="#000" stroke-width="3" filter="url(#glassShadow)"/>
+      <circle cx="0" cy="0" r="15" fill="url(#oceanBlue)" stroke="#000" stroke-width="2"/>
+      <ellipse cx="0" cy="0" rx="8" ry="12" fill="#1A1A1A"/>
+      
+      <!-- Radiating spokes with organic curves -->
+      <path d="M0,-80 Q-3,-65 0,-50" stroke="#000" stroke-width="3"/>
+      <path d="M56,-56 Q42,-42 28,-35" stroke="#000" stroke-width="3"/>
+      <path d="M80,0 Q58,0 50,0" stroke="#000" stroke-width="3"/>
+      <path d="M56,56 Q42,42 28,35" stroke="#000" stroke-width="3"/>
+      <path d="M0,80 Q3,65 0,50" stroke="#000" stroke-width="3"/>
+      <path d="M-56,56 Q-42,42 -28,35" stroke="#000" stroke-width="3"/>
+      <path d="M-80,0 Q-58,0 -50,0" stroke="#000" stroke-width="3"/>
+      <path d="M-56,-56 Q-42,-42 -28,-35" stroke="#000" stroke-width="3"/>
+      
+      <!-- Glass highlights -->
+      <path d="M0,-80 Q-20,-95 -45,-80 Q-70,-65 -65,-30" 
+            fill="none" stroke="url(#glassShine)" stroke-width="4" opacity="0.5"/>
+      <circle cx="0" cy="0" r="22" fill="url(#glassShine)" opacity="0.25"/>
+    </g>
+    
+    <!-- Massive creature with detailed anatomy -->
+    <g filter="url(#glassGlow)">
+      <!-- Main body with organic segments -->
+      <path d="M230,370 Q210,350 300,350 Q390,350 370,370 Q380,420 360,470 Q340,510 300,520 Q260,510 240,470 Q220,420 230,370 Z" 
+            fill="url(#tentacleBlue)" stroke="#000" stroke-width="4" filter="url(#glassShadow)"/>
+      
+      <!-- Multiple eyes with glass detail -->
+      <ellipse cx="270" cy="390" rx="15" ry="12" fill="url(#warmAmber)" stroke="#000" stroke-width="2"/>
+      <ellipse cx="330" cy="390" rx="15" ry="12" fill="url(#warmAmber)" stroke="#000" stroke-width="2"/>
+      <ellipse cx="300" cy="420" rx="12" ry="10" fill="url(#rosePink)" stroke="#000" stroke-width="2"/>
+      <!-- Pupils -->
+      <ellipse cx="270" cy="390" rx="8" ry="6" fill="#1A1A1A"/>
+      <ellipse cx="330" cy="390" rx="8" ry="6" fill="#1A1A1A"/>
+      <ellipse cx="300" cy="420" rx="6" ry="4" fill="#1A1A1A"/>
+      
+      <!-- Massive tentacles with detailed sucker anatomy -->
+      <g>
+        <!-- Left major tentacle with organic flow -->
+        <path d="M240,470 Q180,510 160,580 Q145,650 180,720 Q220,790 180,860 Q140,930 160,1000" 
+              fill="none" stroke="url(#tentacleBlue)" stroke-width="30" stroke-linecap="round" filter="url(#glassGlow)"/>
+        
+        <!-- Left tentacle sucker segments -->
+        <ellipse cx="210" cy="520" rx="18" ry="12" fill="url(#deepPurple)" stroke="#000" stroke-width="2" transform="rotate(-25 210 520)"/>
+        <ellipse cx="175" cy="580" rx="16" ry="10" fill="url(#rosePink)" stroke="#000" stroke-width="2" transform="rotate(-35 175 580)"/>
+        <ellipse cx="165" cy="640" rx="15" ry="9" fill="url(#deepPurple)" stroke="#000" stroke-width="2" transform="rotate(-40 165 640)"/>
+        <ellipse cx="190" cy="700" rx="17" ry="11" fill="url(#rosePink)" stroke="#000" stroke-width="2" transform="rotate(15 190 700)"/>
+        <ellipse cx="200" cy="760" rx="16" ry="10" fill="url(#deepPurple)" stroke="#000" stroke-width="2" transform="rotate(25 200 760)"/>
+        
+        <!-- Right major tentacle -->
+        <path d="M360,470 Q420,510 440,580 Q455,650 420,720 Q380,790 420,860 Q460,930 440,1000" 
+              fill="none" stroke="url(#tentacleBlue)" stroke-width="30" stroke-linecap="round" filter="url(#glassGlow)"/>
+        
+        <!-- Right tentacle suckers -->
+        <ellipse cx="390" cy="520" rx="18" ry="12" fill="url(#deepPurple)" stroke="#000" stroke-width="2" transform="rotate(25 390 520)"/>
+        <ellipse cx="425" cy="580" rx="16" ry="10" fill="url(#rosePink)" stroke="#000" stroke-width="2" transform="rotate(35 425 580)"/>
+        <ellipse cx="435" cy="640" rx="15" ry="9" fill="url(#deepPurple)" stroke="#000" stroke-width="2" transform="rotate(40 435 640)"/>
+        <ellipse cx="410" cy="700" rx="17" ry="11" fill="url(#rosePink)" stroke="#000" stroke-width="2" transform="rotate(-15 410 700)"/>
+        <ellipse cx="400" cy="760" rx="16" ry="10" fill="url(#deepPurple)" stroke="#000" stroke-width="2" transform="rotate(-25 400 760)"/>
+        
+        <!-- Central smaller tentacles -->
+        <path d="M300,520 Q270,560 280,620 Q300,680 275,740 Q250,800 270,860" 
+              fill="none" stroke="url(#oceanBlue)" stroke-width="22" stroke-linecap="round" filter="url(#glassGlow)"/>
+        <path d="M300,520 Q330,560 320,620 Q300,680 325,740 Q350,800 330,860" 
+              fill="none" stroke="url(#oceanBlue)" stroke-width="22" stroke-linecap="round" filter="url(#glassGlow)"/>
+        
+        <!-- Lead lines over all tentacles -->
+        <path d="M240,470 Q180,510 160,580 Q145,650 180,720 Q220,790 180,860" 
+              fill="none" stroke="#000" stroke-width="4"/>
+        <path d="M360,470 Q420,510 440,580 Q455,650 420,720 Q380,790 420,860" 
+              fill="none" stroke="#000" stroke-width="4"/>
+        <path d="M300,520 Q270,560 280,620 Q300,680 275,740" 
+              fill="none" stroke="#000" stroke-width="3"/>
+        <path d="M300,520 Q330,560 320,620 Q300,680 325,740" 
+              fill="none" stroke="#000" stroke-width="3"/>
+      </g>
+      
+      <!-- Glass highlights on major tentacles -->
+      <path d="M240,470 Q180,510 160,580" fill="none" stroke="url(#glassShine)" stroke-width="8" opacity="0.4"/>
+      <path d="M360,470 Q420,510 440,580" fill="none" stroke="url(#glassShine)" stroke-width="8" opacity="0.4"/>
+      
+      <!-- Eye highlights -->
+      <ellipse cx="270" cy="390" rx="15" ry="12" fill="url(#glassShine)" opacity="0.3"/>
+      <ellipse cx="330" cy="390" rx="15" ry="12" fill="url(#glassShine)" opacity="0.3"/>
+    </g>
+  </g>
+  
+  <!-- Right lancet window (mirror of left) -->
+  <g>
+    <!-- Gothic arch frame -->
+    <path d="M430,40 L430,520 Q430,580 485,580 L515,580 Q570,580 570,520 L570,200 Q570,90 530,50 Q500,30 470,50 Q430,90 430,200 Z" 
+          fill="none" stroke="#1A1A1A" stroke-width="10"/>
+    
+    <!-- Rose window -->
+    <g transform="translate(500,200)">
+      <!-- Outer organic segments -->
+      <path d="M0,-60 Q15,-75 30,-60 Q45,-45 42,-20 Q35,-5 20,-15 Q5,-25 0,-35 Z" 
+            fill="url(#deepTeal)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      <path d="M-30,-42 Q-45,-57 -60,-42 Q-75,-27 -70,-5 Q-65,10 -45,0 Q-25,-10 -20,-25 Z" 
+            fill="url(#oceanBlue)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      <path d="M-42,30 Q-57,45 -42,60 Q-27,75 -5,70 Q10,65 0,45 Q-10,25 -25,20 Z" 
+            fill="url(#rosePink)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      <path d="M30,42 Q45,57 60,42 Q75,27 70,5 Q65,-10 45,0 Q25,10 20,25 Z" 
+            fill="url(#deepPurple)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      
+      <!-- Central eye -->
+      <circle cx="0" cy="0" r="18" fill="url(#warmAmber)" stroke="#000" stroke-width="2" filter="url(#glassShadow)"/>
+      <ellipse cx="0" cy="0" rx="10" ry="14" fill="#1A1A1A"/>
+    </g>
+    
+    <!-- Creature (mirrored) -->
+    <g filter="url(#glassGlow)">
+      <path d="M470,340 Q455,325 485,325 Q515,325 530,340 Q535,360 525,385 Q515,405 500,410 Q485,415 470,405 Q455,385 460,360 Z" 
+            fill="url(#tentacleBlue)" stroke="#000" stroke-width="2.5" filter="url(#glassShadow)"/>
+      
+      <!-- Mirrored tentacles -->
+      <path d="M470,405 Q440,430 425,470 Q415,510 430,550 Q450,590 435,630 Q415,670 425,710" 
+            fill="none" stroke="url(#tentacleBlue)" stroke-width="18" stroke-linecap="round" filter="url(#glassGlow)"/>
+      <path d="M530,405 Q560,430 575,470 Q585,510 570,550 Q550,590 565,630 Q585,670 575,710" 
+            fill="none" stroke="url(#tentacleBlue)" stroke-width="18" stroke-linecap="round" filter="url(#glassGlow)"/>
+      
+      <!-- Lead lines -->
+      <path d="M470,405 Q440,430 425,470 Q415,510 430,550 Q450,590 435,630" 
+            fill="none" stroke="#000" stroke-width="2.5"/>
+      <path d="M530,405 Q560,430 575,470 Q585,510 570,550 Q550,590 565,630" 
+            fill="none" stroke="#000" stroke-width="2.5"/>
+    </g>
+  </g>
+  
+  <!-- Stone mullions -->
+  <rect x="175" y="25" width="12" height="725" fill="#1A1A1A"/>
+  <rect x="413" y="25" width="12" height="725" fill="#1A1A1A"/>
+  
+  <!-- Stone base -->
+  <rect x="30" y="780" width="540" height="100" fill="#1A1A1A"/>
+  
+  <!-- Additional organic glass segments at bottom -->
+  <g transform="translate(0,800)" filter="url(#glassGlow)">
+    <ellipse cx="150" cy="40" rx="25" ry="15" fill="url(#deepPurple)" stroke="#000" stroke-width="2"/>
+    <ellipse cx="300" cy="35" rx="30" ry="18" fill="url(#oceanBlue)" stroke="#000" stroke-width="2"/>
+    <ellipse cx="450" cy="40" rx="25" ry="15" fill="url(#rosePink)" stroke="#000" stroke-width="2"/>
+  </g>
+</svg>

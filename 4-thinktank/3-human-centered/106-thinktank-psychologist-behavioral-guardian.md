@@ -1,7 +1,18 @@
 ---
-name: 106-thinktank-psychologist-behavioral-guardian
-description: Deep psychological analysis and behavioral insights specialist. MUST BE USED for human behavior analysis, psychological factors in decision-making, and behavioral change strategies. Applies scientific psychology to understand and influence human behavior.
-tools: [google_web_search, web_fetch]
+title: "Psychologist Behavioral Guardian"
+description: "Deep psychological analysis and behavioral insights specialist. Applies scientific psychology to understand and influence human behavior."
+version: 1.0
+status: "Published"
+owner: "4-thinktank/3-human-centered"
+last_updated: "2025-09-13"
+tags:
+  - "think-tank"
+  - "human-centered"
+  - "psychology"
+  - "behavioral"
+related_docs:
+  - "/4-thinktank/3-human-centered/102-thinktank-human-patterns-guardian.md"
+  - "/4-thinktank/1-analytical/104-thinktank-mathematician-logical-guardian.md"
 ---
 
 ![Agent Image](../../assets/4-thinktank/3-human-centered/106-thinktank-psychologist-behavioral-guardian.svg)

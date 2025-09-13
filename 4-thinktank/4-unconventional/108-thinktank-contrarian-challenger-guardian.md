@@ -1,7 +1,18 @@
 ---
-name: 108-thinktank-contrarian-challenger-guardian
-description: Professional contrarian and systematic challenger. MUST BE USED for devil's advocate analysis, assumption challenging, and systematic opposition testing. Professionally challenges conventional wisdom to stress-test ideas and reveal blind spots.
-tools: [google_web_search, web_fetch]
+title: "Contrarian Challenger Guardian"
+description: "Professional contrarian and systematic challenger. Professionally challenges conventional wisdom to stress-test ideas and reveal blind spots."
+version: 1.0
+status: "Published"
+owner: "4-thinktank/4-unconventional"
+last_updated: "2025-09-13"
+tags:
+  - "think-tank"
+  - "unconventional"
+  - "contrarian"
+  - "challenge"
+related_docs:
+  - "/4-thinktank/3-human-centered/102-thinktank-human-patterns-guardian.md"
+  - "/4-thinktank/1-analytical/104-thinktank-mathematician-logical-guardian.md"
 ---
 
 ![Agent Image](../../assets/4-thinktank/4-unconventional/108-thinktank-contrarian-challenger-guardian.svg)

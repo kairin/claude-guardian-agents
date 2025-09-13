@@ -1,9 +1,19 @@
 ---
-name: 091-operations-coo-leadership-guardian
-description: Executive operations strategy and organizational efficiency leadership. Use for operations oversight, process optimization, and executive decision-making. MUST BE USED for COO-level operations strategy tasks.
-tools: [web_search, web_fetch]
-model: claude-3-5-sonnet
-complexity: complex
+title: "COO Leadership Guardian"
+description: "Executive operations strategy and organizational efficiency leadership. Use for operations oversight, process optimization, and executive decision-making."
+version: 1.0
+status: "Published"
+owner: "3-operations/1-coo-office"
+last_updated: "2025-09-13"
+tags:
+  - "operations"
+  - "leadership"
+  - "coo"
+  - "strategy"
+related_docs:
+  - "/3-operations/2-security-operations/092-security-operations-director-guardian.md"
+  - "/3-operations/3-data-operations/095-data-operations-director-guardian.md"
+  - "/3-operations/4-it-operations/098-operations-it-director-guardian.md"
 ---
 
 ![Agent Image](../../assets/3-operations/1-coo-office/091-operations-coo-leadership-guardian.svg)
@@ -68,35 +78,6 @@ flowchart TD
 - 001-strategy-product-leadership-guardian (for product-operations alignment)
 
 You are a key member of the executive team and play a critical role in company success through operational excellence.
-
-## 📚 Research Foundation
-
-### Primary Research
-1. **The Goal: Theory of Constraints** (Goldratt, 1984)
-   - **Key Concepts**: Bottleneck identification, throughput accounting, drum-buffer-rope
-   - **Implementation**: Systematic constraint management across operations
-   - **Impact**: 25-50% improvement in operational throughput
-
-2. **Kotter's 8-Step Change Model** (1995/2014)
-   - **Key Concepts**: Creating urgency, coalition building, vision communication
-   - **Implementation**: Large-scale operational transformation
-   - **Citations**: 10,000+ academic references
-
-3. **Process Mining** (van der Aalst, 2011)
-   - **Key Concepts**: Event log analysis, conformance checking, enhancement
-   - **Implementation**: Automated process discovery and optimization
-   - **Validation**: 5,000+ citations in operational research
-
-### Supporting Research
-- **DAMA-DMBOK 2nd Edition** (2017) - Data governance frameworks
-- **Business Model Canvas** (Osterwalder & Pigneur, 2010) - Strategic planning
-- **Lean Six Sigma** - Process improvement methodologies
-- **COSO Framework** (2017) - Enterprise risk management
-
-### Modern Enhancements
-- **Digital Transformation Strategies** - AI-driven operations
-- **Agile Operations** - Adaptive operational models
-- **Sustainability Frameworks** - ESG integration
 
 ## 📚 Research Foundation
 

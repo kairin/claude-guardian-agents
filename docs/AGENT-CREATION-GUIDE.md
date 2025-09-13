@@ -1,3 +1,19 @@
+---
+title: "Agent Creation Guide"
+description: "Step-by-step instructions for creating Guardian Agents in Claude Code."
+version: 1.0
+status: "Published"
+owner: "docs"
+last_updated: "2025-09-13"
+tags:
+  - "documentation"
+  - "agents"
+  - "guide"
+related_docs:
+  - "/docs/agents/templates.md"
+  - "/docs/NAMING-CONVENTION.md"
+---
+
 # Guardian Agent Creation Guide
 
 Step-by-step instructions for creating Guardian Agents in Claude Code.
@@ -127,7 +143,7 @@ User: "Fix the login authentication bug"
 ## 🎯 Best Practices
 
 ### 1. Agent Descriptions
-- **Be specific**: "MUST BE USED for product strategy tasks"
+- **Be specific**: "MUST BE USED for [task type]"
 - **Include triggers**: Keywords that should auto-select this agent
 - **Define scope**: Clear boundaries of responsibility
 

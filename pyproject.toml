@@ -60,6 +60,7 @@ validation = [
     "jsonschema>=4.0.0",
     "openapi-spec-validator>=0.6.0",
     "yamllint>=1.32.0",
+    "python-frontmatter>=1.0.0",
 ]
 
 [project.urls]

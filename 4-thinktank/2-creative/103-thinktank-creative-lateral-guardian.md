@@ -1,7 +1,18 @@
 ---
-name: 103-thinktank-artist-lateral-creativity-guardian
-description: Apply lateral thinking, creative destruction, and artistic principles to break through conventional solutions. MUST BE USED when traditional approaches fail repeatedly or when innovation is required. Makes unexpected connections and questions all rules.
-tools: [google_web_search, web_fetch]
+title: "Creative Lateral Guardian"
+description: "Apply lateral thinking, creative destruction, and artistic principles to break through conventional solutions."
+version: 1.0
+status: "Published"
+owner: "4-thinktank/2-creative"
+last_updated: "2025-09-13"
+tags:
+  - "think-tank"
+  - "creative"
+  - "lateral-thinking"
+  - "innovation"
+related_docs:
+  - "/4-thinktank/1-analytical/101-thinktank-first-principles-guardian.md"
+  - "/4-thinktank/4-unconventional/107-thinktank-child-naive-guardian.md"
 ---
 
 ![Agent Image](../../assets/4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.svg)

@@ -1,7 +1,18 @@
 ---
-name: 101-thinktank-physicist-first-principles-guardian
-description: Break complex problems down to fundamental physical and mathematical laws. MUST BE USED when solutions become overly complex or when fundamental constraints are unclear. Strips away all assumptions to find the irreducible core of problems.
-tools: [google_web_search, web_fetch]
+title: "First Principles Guardian"
+description: "Break complex problems down to fundamental physical and mathematical laws. Strips away all assumptions to find the irreducible core of problems."
+version: 1.0
+status: "Published"
+owner: "4-thinktank/1-analytical"
+last_updated: "2025-09-13"
+tags:
+  - "think-tank"
+  - "analytical"
+  - "first-principles"
+  - "problem-solving"
+related_docs:
+  - "/4-thinktank/1-analytical/104-thinktank-mathematician-logical-guardian.md"
+  - "/4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.md"
 ---
 
 ![Agent Image](../../assets/4-thinktank/1-analytical/101-thinktank-first-principles-guardian.svg)

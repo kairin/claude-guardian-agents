@@ -1,7 +1,18 @@
 ---
-name: 105-thinktank-inventor-innovative-guardian
-description: Practical innovation and systematic invention specialist. MUST BE USED for breakthrough solution development, systematic creativity, and practical innovation challenges. Transforms ideas into implementable innovations.
-tools: [google_web_search, web_fetch]
+title: "Inventor Innovative Guardian"
+description: "Practical innovation and systematic invention specialist. Transforms ideas into implementable innovations."
+version: 1.0
+status: "Published"
+owner: "4-thinktank/2-creative"
+last_updated: "2025-09-13"
+tags:
+  - "think-tank"
+  - "creative"
+  - "innovation"
+  - "invention"
+related_docs:
+  - "/4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.md"
+  - "/4-thinktank/1-analytical/104-thinktank-mathematician-logical-guardian.md"
 ---
 
 ![Agent Image](../../assets/4-thinktank/2-creative/105-thinktank-inventor-innovative-guardian.svg)
