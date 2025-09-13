@@ -1,3 +1,21 @@
+---
+title: "Think Tank Design Principles"
+description: "Outlines the design principles and operational philosophy for the Think Tank agents."
+version: 1.0
+status: "Published"
+owner: "4-thinktank"
+last_updated: "2025-09-13"
+tags:
+  - "think-tank"
+  - "design"
+  - "principles"
+related_docs:
+  - "/4-thinktank/1-analytical/101-thinktank-first-principles-guardian.md"
+  - "/4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.md"
+  - "/4-thinktank/3-human-centered/102-thinktank-human-patterns-guardian.md"
+  - "/4-thinktank/4-unconventional/107-thinktank-child-naive-guardian.md"
+---
+
 # 🧠 Think-Tank Guardian Agents Design
 
 ## 📚 Research Foundation
@@ -98,7 +116,7 @@ Based on the ParaThinker research, these agents implement **parallel reasoning p
 ### 110-thinktank-economist-resource-optimization-guardian
 **Background**: Behavioral Economics
 **Thinking Style**: Cost-benefit, incentive alignment
-**Approach**: "What's the cheapest way? What are the hidden costs?"
+**Approach**: "What's the cheapest way? What are the hidden costs??"
 **Unsticking Method**: Reframes as resource allocation problem
 **Example**: "The computational cost exceeds the value delivered"
 
@@ -230,7 +248,7 @@ graph TD
 - **Child**: "Why do we need passwords? Can't the computer just know it's me?"
 - **Historian**: "This is like the Byzantine Generals Problem"
 - **Artist**: "What if authentication is a performance, not a transaction?"
-- **Economist**: "The cost of false negatives exceeds false positives here"
+- **Economist**: "The computational cost exceeds the value delivered"
 
 **Synthesis**: "The token is fine, but we're checking it too many times (physicist + economist). Let's cache the validation (historian's Byzantine solution) and make the UI show auth state clearly (artist + child)"
 
