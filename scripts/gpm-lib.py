@@ -50,7 +50,6 @@ class GuardianUpdater:
         self.claude_dir = self.project_root / ".claude" / "agents"
         self.cache_dir = self.guardian_dir / "cache"
 
-        # Ensure directories exist
         self.guardian_dir.mkdir(exist_ok=True)
         self.cache_dir.mkdir(exist_ok=True)
 
@@ -101,7 +100,6 @@ class GuardianUpdater:
             response.raise_for_status()
             self.remote_manifest = response.json()
 
-            # Cache manifest locally
             with open(self.cache_dir / "remote-manifest.json", "w") as f:
                 json.dump(self.remote_manifest, f, indent=2)
 
@@ -110,7 +108,6 @@ class GuardianUpdater:
         except requests.RequestException as e:
             print(f"❌ Failed to fetch remote manifest: {e}")
 
-            # Try to use cached version
             cached_manifest = self.cache_dir / "remote-manifest.json"
             if cached_manifest.exists():
                 print("📋 Using cached manifest...")
@@ -144,7 +141,6 @@ class GuardianUpdater:
             local_info = local_agents.get(agent_id, {})
 
             if not local_info:
-                # New agent
                 changes.append(
                     UpdateChange(
                         agent_id=agent_id,
@@ -154,7 +150,6 @@ class GuardianUpdater:
                     )
                 )
             elif local_info.get("checksum") != remote_info.get("checksum"):
-                # Changed agent
                 change_type = (
                     "conflict" if local_info.get("customized", False) else "updated"
                 )
@@ -167,7 +162,6 @@ class GuardianUpdater:
                     )
                 )
 
-        # Check for deprecated agents
         for agent_id in local_agents:
             if agent_id not in remote_agents:
                 changes.append(
@@ -225,7 +219,6 @@ class GuardianUpdater:
         with open(local_path, "w") as f:
             f.write(change.remote_content)
 
-        # Update metadata
         checksum = self.calculate_file_checksum(local_path)
         self.metadata["agents"][change.agent_id] = {
             "name": local_path.stem,
@@ -241,7 +234,6 @@ class GuardianUpdater:
         with open(change.local_path, "w") as f:
             f.write(change.remote_content)
 
-        # Update metadata
         checksum = self.calculate_file_checksum(Path(change.local_path))
         self.metadata["agents"][change.agent_id]["checksum"] = checksum
         self.metadata["agents"][change.agent_id][
@@ -258,17 +250,14 @@ class GuardianUpdater:
             self._apply_new_agent(change)
             return
 
-        # Load three versions
         with open(local_path) as f:
             local_content = f.read()
 
         remote_content = change.remote_content
 
-        # Try to get original version from cache/backup
         original_content = self._get_original_version(change.agent_id)
 
         if original_content:
-            # Perform 3-way merge
             merged_content = self._three_way_merge(
                 original_content, local_content, remote_content
             )
@@ -278,13 +267,10 @@ class GuardianUpdater:
                 with open(local_path, "w") as f:
                     f.write(merged_content)
             else:
-                # Fall back to interactive resolution
                 self._interactive_resolve(change, local_content, remote_content)
         else:
-            # No original version, fall back to interactive
             self._interactive_resolve(change, local_content, remote_content)
 
-        # Update metadata
         checksum = self.calculate_file_checksum(local_path)
         self.metadata["agents"][change.agent_id]["checksum"] = checksum
         self.metadata["agents"][change.agent_id][
@@ -294,20 +280,14 @@ class GuardianUpdater:
     def _three_way_merge(self, original: str, local: str, remote: str) -> str | None:
         """Attempt automatic 3-way merge"""
         try:
-            # Simple line-based merge using difflib
             original_lines = original.splitlines(keepends=True)
             local_lines = local.splitlines(keepends=True)
             remote_lines = remote.splitlines(keepends=True)
 
-            # Calculate diffs
             local_diff = list(difflib.unified_diff(original_lines, local_lines, n=0))
             remote_diff = list(difflib.unified_diff(original_lines, remote_lines, n=0))
 
-            # If no conflicts in the same sections, merge is possible
-            # This is a simplified implementation - real 3-way merge is more complex
-
             if not self._have_conflicting_changes(local_diff, remote_diff):
-                # This is simplified - proper merge would be more sophisticated
                 return "".join(remote_lines)
 
             return None
@@ -318,8 +298,7 @@ class GuardianUpdater:
 
     def _have_conflicting_changes(self, local_diff: list, remote_diff: list) -> bool:
         """Check if two diffs have conflicting changes"""
-        # Simplified conflict detection
-        # Real implementation would analyze line ranges and types of changes
+
         return False
 
     def _interactive_resolve(
@@ -328,7 +307,6 @@ class GuardianUpdater:
         """Interactive conflict resolution"""
         print(f"🔧 Interactive resolution needed for {change.agent_id}")
 
-        # Create temporary files for diff viewing
         with tempfile.NamedTemporaryFile(
             mode="w", suffix=".md", delete=False
         ) as local_temp:
@@ -352,7 +330,7 @@ class GuardianUpdater:
 
             if choice == "1":
                 print("✅ Keeping local version")
-                # Keep local, just update timestamp
+
                 self.metadata["agents"][change.agent_id][
                     "last_updated"
                 ] = self._current_timestamp()
@@ -369,7 +347,6 @@ class GuardianUpdater:
         except KeyboardInterrupt:
             print("\n⏭️ Skipping agent due to user interrupt")
         finally:
-            # Clean up temp files
             os.unlink(local_temp_path)
             os.unlink(remote_temp_path)
 
@@ -414,7 +391,6 @@ class GuardianUpdater:
         elif choice == "3":
             print(f"📝 Please edit {change.local_path} manually")
             input("Press Enter when finished editing...")
-        # Otherwise keep local version (choice == "1" or invalid)
 
     def _handle_deprecated_agent(self, change: UpdateChange) -> None:
         """Handle deprecated agents"""
@@ -422,7 +398,6 @@ class GuardianUpdater:
 
         local_path = Path(change.local_path)
         if local_path.exists():
-            # Move to archive instead of deleting
             archive_dir = self.guardian_dir / "archived"
             archive_dir.mkdir(exist_ok=True)
 
@@ -431,13 +406,12 @@ class GuardianUpdater:
 
             print(f"📦 Moved to archive: {archive_path}")
 
-        # Remove from metadata
         if change.agent_id in self.metadata["agents"]:
             del self.metadata["agents"][change.agent_id]
 
     def _get_original_version(self, agent_id: str) -> str | None:
         """Get original version of agent for 3-way merge"""
-        # Check if we have a backup of the original
+
         backup_path = self.guardian_dir / "originals" / f"{agent_id}.md"
         if backup_path.exists():
             with open(backup_path) as f:
@@ -500,7 +474,6 @@ class GuardianUpdater:
         """Generate agent index for LLM consumption"""
         manifest = self.remote_manifest or self.fetch_remote_manifest()
 
-        # Generate simplified index for Claude Code
         index = {
             "system": "claude-guardian-agents",
             "version": manifest.get("version", "unknown"),
@@ -510,14 +483,12 @@ class GuardianUpdater:
             "selection_hints": {},
         }
 
-        # Populate categories and selection hints
         for category_name, category_info in manifest.get("categories", {}).items():
             index["agents_by_category"][category_name] = {
                 "description": category_info["description"],
                 "agents": [f"{aid:03d}-guardian" for aid in category_info["agents"]],
             }
 
-        # Add selection hints from agent triggers
         for agent_info in manifest.get("agents", {}).values():
             agent_name = agent_info["name"]
             for trigger in agent_info.get("triggers", []):
@@ -525,7 +496,6 @@ class GuardianUpdater:
                     index["selection_hints"][trigger] = []
                 index["selection_hints"][trigger].append(agent_name)
 
-        # Save index
         index_path = self.claude_dir / "agent-index.json"
         index_path.parent.mkdir(parents=True, exist_ok=True)
 

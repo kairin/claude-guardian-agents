@@ -1,261 +1,121 @@
-# 🧪 Development Agents Workflow
+# 🧪 Three-Tier Guardian System Workflow
 
-This document shows how Development & Testing Agents work with **verified Claude Code subagent chaining** support.
+This document shows how the Three-Tier Guardian Agent System works to maintain project quality and prevent scope creep.
 
 ## Agent Overview
 
 ```mermaid
 graph LR
-    A[👨‍💻 Developer] --> B[code-guardian]
-    B --> C[fix-guardian]
-    C --> D[refactor-guardian]
-    D --> E[test-guardian]
-    E --> F[ui-guardian]
-    F --> G[✅ Quality Code]
+    A[👨‍💻 Developer] --> B[architectural-orchestrator]
+    B --> C[codebase-complexity-analyzer]
+    C --> D[minimal-todo-fixer]
+    D --> B
 
-    style B fill:#fff4e1
+    style B fill:#e1f5e1
     style C fill:#fff4e1
-    style D fill:#fff4e1
-    style E fill:#fff4e1
-    style F fill:#fff4e1
+    style D fill:#e1e8ff
 ```
 
-## 1. Code Guardian Workflow
+## 1. Orchestrator Workflow
 
-**Purpose**: Audit code quality without making changes
+**Purpose**: High-level review and delegation.
 
 ```mermaid
 flowchart TD
-    A[📁 Code Submitted] --> B{code-guardian Analysis}
-    B --> C[🔍 Scan Formatting]
-    B --> D[🔍 Check Linting Rules]
-    B --> E[🔍 Type Safety Check]
-    B --> F[🔍 Security Scan]
+    A[📁 Code Submitted] --> B{architectural-orchestrator Analysis}
+    B --> C{In Requirements?}
+    C -->|No| D[REJECT]
+    C -->|Yes| E{Simplest Solution?}
+    E -->|No| F[Delegate to codebase-complexity-analyzer]
+    E -->|Yes| G{Creates Issues?}
+    G -->|Yes| F
+    G -->|No| H[APPROVE]
 
-    C --> G{Issues Found?}
-    D --> G
-    E --> G
-    F --> G
+    F --> I[Generate new todos for minimal-todo-fixer]
 
-    G -->|Yes| H[📋 Generate Report]
-    G -->|No| I[✅ Code Quality Approved]
-
-    H --> J[🚨 Send to fix-guardian]
-    I --> K[▶️ Continue Pipeline]
-
-    style B fill:#fff4e1
+    style B fill:#e1f5e1
+    style C fill:#ffffcc
+    style E fill:#ffffcc
     style G fill:#ffffcc
-    style H fill:#ffe1e1
-    style I fill:#e1f5e1
+    style D fill:#ffe1e1
+    style H fill:#e1f5e1
 ```
 
-**What you see**:
-- ✅ **Green**: Code passes quality checks
-- 🚨 **Red**: Issues found, needs fixing
-- 📋 **Report**: Detailed list of problems
+## 2. Analyzer Workflow
 
-## 2. Fix Guardian Workflow
-
-**Purpose**: Automatically fix code formatting and issues
+**Purpose**: Codebase analysis and todo generation.
 
 ```mermaid
 flowchart TD
-    A[🚨 Issues from code-guardian] --> B{fix-guardian Action}
-    B --> C[🔧 Auto-format Code]
-    B --> D[🔧 Fix Linting Issues]
-    B --> E[🔧 Standardize Style]
-    B --> F[🔧 Fix Simple Bugs]
+    A[🚨 Analysis Request from architectural-orchestrator] --> B{codebase-complexity-analyzer Action}
+    B --> C[🔍 Scan for Complexity]
+    B --> D[🔍 Identify Scope Creep]
+    B --> E[🔍 Find Potential Conflicts]
 
-    C --> G[🔍 Verify Fixes]
-    D --> G
-    E --> G
-    F --> G
-
-    G --> H{All Fixed?}
-    H -->|Yes| I[✅ Code Fixed]
-    H -->|No| J[📋 Report Remaining Issues]
-
-    I --> K[▶️ Send to refactor-guardian]
-    J --> L[👨‍💻 Manual Review Needed]
-
-    style B fill:#fff4e1
-    style G fill:#ffffcc
-    style H fill:#ffffcc
-    style I fill:#e1f5e1
-    style J fill:#ffe1e1
-```
-
-**What happens**:
-- 🔧 **Auto-fixes**: Format, style, simple errors
-- 📋 **Complex issues**: Flagged for human review
-- ✅ **Success**: Code ready for refactoring
-
-## 3. Refactor Guardian Workflow
-
-**Purpose**: Improve code architecture and reduce technical debt
-
-```mermaid
-flowchart TD
-    A[✅ Fixed Code] --> B{refactor-guardian Analysis}
-    B --> C[🔍 Identify Code Smells]
-    B --> D[🔍 Find Duplicate Code]
-    B --> E[🔍 Check Architecture]
-    B --> F[🔍 Dependency Analysis]
-
-    C --> G{Improvements Needed?}
-    D --> G
-    E --> G
-    F --> G
-
-    G -->|Yes| H[🛠️ Suggest Refactoring]
-    G -->|No| I[✅ Architecture Approved]
-
-    H --> J[📊 Impact Analysis]
-    J --> K[👨‍💻 Review Suggestions]
-    K --> L{Approve Changes?}
-    L -->|Yes| M[🔄 Apply Refactoring]
-    L -->|No| I
-    M --> I
-
-    I --> N[▶️ Send to test-guardian]
-
-    style B fill:#fff4e1
-    style G fill:#ffffcc
-    style L fill:#ffffcc
-    style I fill:#e1f5e1
-```
-
-**What it does**:
-- 🔍 **Analyzes**: Code structure and patterns
-- 🛠️ **Suggests**: Architecture improvements
-- 📊 **Impact**: Shows what changes affect
-- 🔄 **Refactors**: Improves code quality
-
-## 4. Test Guardian Workflow
-
-**Purpose**: Generate and execute comprehensive tests
-
-```mermaid
-flowchart TD
-    A[🔄 Refactored Code] --> B{test-guardian Action}
-    B --> C[📝 Generate Unit Tests]
-    B --> D[📝 Generate Integration Tests]
-    B --> E[🔧 Setup Test Environment]
-
-    C --> F[🧪 Run Tests]
+    C --> F{Issues Found?}
     D --> F
     E --> F
 
-    F --> G{All Tests Pass?}
-    G -->|Yes| H[✅ Tests Passed]
-    G -->|No| I[❌ Test Failures]
+    F -->|Yes| G[📋 Generate issues_to_fix.md]
+    F -->|No| H[✅ No Issues Found]
 
-    I --> J[📋 Analyze Failures]
-    J --> K[🔧 Fix Test Issues]
-    K --> F
-
-    H --> L[📊 Coverage Report]
-    L --> M{Coverage OK?}
-    M -->|Yes| N[✅ Testing Complete]
-    M -->|No| O[📝 Add More Tests]
-    O --> F
-
-    N --> P[▶️ Send to ui-guardian]
+    G --> I[▶️ Send to minimal-todo-fixer]
+    H --> J[▶️ Report to architectural-orchestrator]
 
     style B fill:#fff4e1
     style F fill:#ffffcc
-    style G fill:#ffffcc
-    style M fill:#ffffcc
-    style N fill:#e1f5e1
+    style G fill:#ffe1e1
+    style H fill:#e1f5e1
 ```
 
-**What happens**:
-- 📝 **Creates**: Unit and integration tests
-- 🧪 **Runs**: All test suites
-- 📊 **Coverage**: Ensures adequate test coverage
-- ✅ **Reports**: Test results and recommendations
+## 3. Fixer Workflow
 
-## 5. UI Guardian Workflow
-
-**Purpose**: Test user interfaces across browsers and devices
+**Purpose**: Automatically fix code formatting and issues.
 
 ```mermaid
 flowchart TD
-    A[✅ Tested Code] --> B{ui-guardian Testing}
-    B --> C[🌐 Cross-browser Testing]
-    B --> D[📱 Mobile Device Testing]
-    B --> E[♿ Accessibility Testing]
-    B --> F[👁️ Visual Regression Testing]
+    A[📋 issues_to_fix.md] --> B{minimal-todo-fixer Action}
+    B --> C[🔧 Fix Issue 1]
+    B --> D[🔧 Fix Issue 2]
+    B --> E[🔧 ...]
 
-    C --> G[🔍 Analyze Results]
-    D --> G
-    E --> G
-    F --> G
+    C --> F[🔍 Verify Fix]
+    D --> F
+    E --> F
 
-    G --> H{UI Issues Found?}
-    H -->|Yes| I[📋 Generate UI Report]
-    H -->|No| J[✅ UI Testing Complete]
+    F --> G{All Fixed?}
+    G -->|Yes| H[✅ All Issues Fixed]
+    G -->|No| I[📋 Report Remaining Issues]
 
-    I --> K[🎨 Flag UI Problems]
-    K --> L[👨‍🎨 Designer Review]
-    L --> M{Fix UI Issues?}
-    M -->|Yes| N[🔧 Update UI]
-    M -->|No| O[📝 Document Known Issues]
-    N --> B
-    O --> J
+    H --> J[▶️ Report to architectural-orchestrator]
+    I --> J
 
-    J --> P[🎯 Ready for Security Review]
-
-    style B fill:#fff4e1
+    style B fill:#e1e8ff
+    style F fill:#ffffcc
     style G fill:#ffffcc
-    style H fill:#ffffcc
-    style M fill:#ffffcc
-    style J fill:#e1f5e1
+    style H fill:#e1f5e1
+    style I fill:#ffe1e1
 ```
-
-**What it tests**:
-- 🌐 **Browsers**: Chrome, Firefox, Safari, Edge
-- 📱 **Devices**: Mobile, tablet, desktop
-- ♿ **Accessibility**: Screen readers, keyboard navigation
-- 👁️ **Visual**: Layout and appearance consistency
 
 ## Complete Development Pipeline
 
 ```mermaid
 sequenceDiagram
     participant Dev as 👨‍💻 Developer
-    participant CG as code-guardian
-    participant FG as fix-guardian
-    participant RG as refactor-guardian
-    participant TG as test-guardian
-    participant UG as ui-guardian
-    participant Sec as 🔒 Security Review
+    participant Orchestrator as architectural-orchestrator
+    participant Analyzer as codebase-complexity-analyzer
+    participant Fixer as minimal-todo-fixer
 
-    Dev->>CG: Submit code
-    CG->>CG: Quality audit
-    CG->>FG: Issues found
-    FG->>FG: Auto-fix problems
-    FG->>RG: Clean code
-    RG->>RG: Architecture review
-    RG->>TG: Improved code
-    TG->>TG: Generate & run tests
-    TG->>UG: Tested code
-    UG->>UG: UI testing
-    UG->>Sec: Ready for security
-    Sec->>Dev: ✅ Complete!
+    Dev->>Orchestrator: Submit code
+    Orchestrator->>Orchestrator: Review changes
+    Orchestrator->>Analyzer: Delegate analysis
+    Analyzer->>Analyzer: Scan codebase
+    Analyzer->>Fixer: Generate issues_to_fix.md
+    Fixer->>Fixer: Fix all issues
+    Fixer->>Orchestrator: Report completion
+    Orchestrator->>Orchestrator: Verify fixes
+    Orchestrator->>Dev: ✅ Complete!
 ```
-
-## 🎯 Quick Reference
-
-| Agent | Input | Output | Time |
-|-------|-------|--------|------|
-| code-guardian | Raw code | Quality report | 2-5 min |
-| fix-guardian | Issues list | Fixed code | 1-3 min |
-| refactor-guardian | Fixed code | Improved architecture | 5-10 min |
-| test-guardian | Clean code | Test suite + results | 5-15 min |
-| ui-guardian | Tested code | UI validation | 10-20 min |
-
-**Total Pipeline Time**: 23-53 minutes (varies by code complexity)
 
 ---
 

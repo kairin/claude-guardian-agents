@@ -6,6 +6,10 @@
 
 Guardian Agents is a production-ready AI agent orchestration system with **49 specialized agents** across 4 cognitive layers. Ubuntu 25.04 + Python 3.13 + UV package manager ONLY.
 
+In addition to the 49 specialized agents, this project also includes a **Three-Tier Guardian Agent System** designed to maintain project quality and prevent scope creep. This system consists of three "meta" agents that work together to analyze, simplify, and fix code.
+
+📖 **[Learn more about the Three-Tier Guardian Agent System](docs/three-tier-guardian-system.md)**
+
 ## ⚡ Critical Requirements - NO EXCEPTIONS
 
 ### **Branch Management - MANDATORY WORKFLOW**

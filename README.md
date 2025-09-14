@@ -20,6 +20,14 @@ This system is built on solid academic research. Each agent design is informed b
 
 ## 🏗️ System Architecture
 
+### The Three-Tier Guardian Agent System
+
+This project includes a lightweight, three-tier system of "meta" agents designed to maintain project quality and prevent scope creep. This system can be used as a standalone quality control mechanism or as a meta-layer on top of the 49-agent system.
+
+📖 **[Learn more about the Three-Tier Guardian Agent System](docs/three-tier-guardian-system.md)**
+
+### The 49 Guardian Agents
+
 ```mermaid
 graph TB
     subgraph "🧠 Think-Tank Layer"

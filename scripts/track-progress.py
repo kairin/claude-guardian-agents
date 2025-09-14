@@ -54,7 +54,6 @@ class ProgressTracker:
                 {"timestamp": datetime.now().isoformat(), "note": notes}
             )
 
-        # Update completion percentage based on checklist
         self._calculate_feature_completion(progress, feature_id)
 
         self.save_progress(progress)
@@ -84,7 +83,6 @@ class ProgressTracker:
         """Calculate overall and per-epic completion rates"""
         progress = self.load_progress()
 
-        # Calculate overall completion
         total_features = len(progress["features"])
         completed_features = sum(
             1 for f in progress["features"].values() if f["status"] == "completed"
@@ -94,7 +92,6 @@ class ProgressTracker:
             (completed_features / total_features * 100) if total_features > 0 else 0
         )
 
-        # Calculate per-epic completion
         epic_completion = {}
         for epic_id, epic in progress["epics"].items():
             epic_features = epic.get("features", [])
@@ -108,7 +105,6 @@ class ProgressTracker:
             else:
                 epic_completion[epic_id] = 0
 
-        # Update progress data
         progress["project_status"]["overall_completion"] = int(overall_completion)
         for epic_id, completion in epic_completion.items():
             progress["epics"][epic_id]["completion_percentage"] = int(completion)
@@ -127,7 +123,6 @@ class ProgressTracker:
         progress = self.load_progress()
         blockers = []
 
-        # Check for blocked features
         for feature_id, feature in progress["features"].items():
             if feature["status"] == "blocked":
                 blockers.append(
@@ -141,7 +136,6 @@ class ProgressTracker:
                     }
                 )
 
-        # Check dependencies
         for epic_id, epic in progress["epics"].items():
             for dep in epic.get("dependencies", []):
                 if not self._check_dependency_satisfied(dep):
@@ -154,7 +148,6 @@ class ProgressTracker:
                         }
                     )
 
-        # Add to progress data
         progress["blockers"] = blockers
         self.save_progress(progress)
 
@@ -176,10 +169,8 @@ class ProgressTracker:
             "overall_status": "unknown",
         }
 
-        # Check validation criteria
         criteria = feature.get("validation_criteria", [])
         for criterion in criteria:
-            # This would contain actual validation logic
             result = self._validate_criterion(feature_id, criterion)
             validation_list = validation_results["validation_criteria"]
         if isinstance(validation_list, list):
@@ -191,11 +182,9 @@ class ProgressTracker:
                 }
             )
 
-        # Run tests if implementation exists
         test_results = self._run_feature_tests(feature_id)
         validation_results["test_results"] = test_results
 
-        # Determine overall status
         criteria_results = validation_results["validation_criteria"]
         if isinstance(criteria_results, list):
             all_criteria_passed = all(
@@ -212,7 +201,6 @@ class ProgressTracker:
         else:
             validation_results["overall_status"] = "tests_failed"
 
-        # Save validation results
         results_file = (
             self.tracking_dir / "validation-results" / f"{feature_id}_validation.json"
         )
@@ -246,7 +234,6 @@ class ProgressTracker:
             ),
         }
 
-        # Add to epic's feature list
         epic_id = feature_data.get("epic_id")
         if epic_id and epic_id in progress["epics"]:
             if "features" not in progress["epics"][epic_id]:
@@ -290,7 +277,6 @@ class ProgressTracker:
             completion = (completed_tasks / total_tasks) * 100 if total_tasks > 0 else 0
             feature["completion_percentage"] = int(completion)
 
-            # Auto-update status based on completion
             if completion == 100 and feature["status"] != "completed":
                 feature["status"] = "ready_for_review"
             elif completion > 0 and feature["status"] == "not_started":
@@ -298,13 +284,11 @@ class ProgressTracker:
 
     def _validate_criterion(self, feature_id: str, criterion: str) -> bool:
         """Validate a specific criterion (placeholder implementation)"""
-        # This would contain actual validation logic
-        # For now, return False to indicate not yet implemented
+
         return False
 
     def _run_feature_tests(self, feature_id: str) -> dict[str, Any]:
         """Run tests for a specific feature"""
-        # Placeholder implementation
         return {
             "unit_tests": {"passed": 0, "failed": 0, "total": 0},
             "integration_tests": {"passed": 0, "failed": 0, "total": 0},
@@ -313,7 +297,6 @@ class ProgressTracker:
 
     def _check_dependency_satisfied(self, dependency: str) -> bool:
         """Check if a dependency is satisfied"""
-        # Placeholder implementation
         dependency_status = {
             "GPM_VALIDATION_COMPLETE": True,  # We completed this
             "AGENT_METADATA_ENRICHMENT": False,
