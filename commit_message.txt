@@ -1,13 +1,17 @@
-docs: Consolidate installation instructions into README.md
+feat: Consolidate agent management scripts and update README
 
 DETAILED CHANGES:
-- Merged the content of `README-INSTALLATION.md` into `README.md`.
-- Replaced existing installation and agent category sections in `README.md` with more detailed versions from `README-INSTALLATION.md`.
-- Appended unique sections like "Keeping Updated", "Usage in Claude Code", "Customization", "What This Doesn't Affect", "Requirements", "Uninstallation", and "Troubleshooting" from `README-INSTALLATION.md` to `README.md`.
-- Deleted the redundant `README-INSTALLATION.md` file.
+- Combined `install-guardian-agents.sh` and `update-guardian-agents.sh` into a single `guardian-manager.sh` script.
+- Implemented a simple TUI in `guardian-manager.sh` for interactive installation, update, and uninstallation.
+- Deleted the old `install-guardian-agents.sh` and `update-guardian-agents.sh` scripts.
+- Updated `README.md` to reflect the new `guardian-manager.sh` script, including:
+    - Replacing references to old scripts with `guardian-manager.sh`.
+    - Updating installation, update, uninstallation, and troubleshooting instructions.
+    - Adjusting the "What Gets Installed" section.
 
 Impact on system:
-- Centralizes all essential project documentation into a single `README.md` for easier access and maintenance.
+- Simplifies agent management with a single, interactive script in the root folder.
+- Improves documentation clarity by centralizing management instructions.
 
 VALIDATION:
 - Pre-commit: ✅ Passed (ruff and mypy checks passed)

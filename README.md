@@ -199,15 +199,15 @@ Claude Code **automatically selects agents** based on:
 Run this command from your project root:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/install-guardian-agents.sh | bash
+curl -sSL https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/guardian-manager.sh | bash
 ```
 
 Or download and run manually:
 
 ```bash
-wget https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/install-guardian-agents.sh
-chmod +x install-guardian-agents.sh
-./install-guardian-agents.sh
+wget https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/guardian-manager.sh
+chmod +x guardian-manager.sh
+./guardian-manager.sh
 ```
 
 ## 📁 What Gets Installed
@@ -222,7 +222,6 @@ your-project/
 │   └── scripts/                 # Management scripts
 ├── .claude/agents/              # Claude Code integration
 │   └── agent-index.json         # Auto-generated agent index
-├── update-guardian-agents.sh    # Update script
 └── .gitignore                   # Updated to ignore .guardian/
 ```
 
@@ -305,7 +304,7 @@ Create agents in the correct directory structure:
 Update to the latest Guardian Agents version:
 
 ```bash
-./update-guardian-agents.sh
+./guardian-manager.sh update
 ```
 
 This will:
@@ -348,9 +347,7 @@ Modify agent behavior by editing files in `.guardian/` directory (changes will b
 Remove Guardian Agents from your project:
 
 ```bash
-rm -rf .guardian/
-rm -rf .claude/agents/
-rm update-guardian-agents.sh
+./guardian-manager.sh uninstall
 # Remove .guardian/ line from .gitignore if desired
 ```
 
@@ -362,12 +359,12 @@ rm update-guardian-agents.sh
 - Verify Python 3.8+ is available
 
 ### Agents not appearing in Claude Code
-- Run `./update-guardian-agents.sh` to refresh integration
+- Run `./guardian-manager.sh update` to refresh integration
 - Check that `.claude/agents/agent-index.json` exists
 - Restart Claude Code if necessary
 
 ### Update fails
-- Delete `.guardian/` directory and run installation script again
+- Delete `.guardian/` directory and run `./guardian-manager.sh install` again
 - This will give you a fresh copy without losing your project files
 
 ## 📈 Version & Changes
