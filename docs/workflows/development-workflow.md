@@ -122,4 +122,5 @@ sequenceDiagram
 **Need Help?**
 - 📞 [Contact Support](../support.md)
 - 📚 [Agent Configuration](../technical/agent-config.md)
-- 🔧 [Troubleshooting](../troubleshooting.md)
+- � [Monitoring & Observability](../tools/monitoring.md)
+- �🔧 [Troubleshooting](../troubleshooting.md)
