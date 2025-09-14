@@ -5,6 +5,19 @@ All notable changes to the Claude Guardian Agents system will be documented in t
 The format is based on [Keep a Changelog](https://keepachanglog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.0] - 2025-09-14
+
+### ✨ Features
+- Updated Python version to 3.13.3 across the project.
+
+### 🐛 Bug Fixes
+- Resolved `pre-commit` environment issues by enforcing `uv` for hook dependencies.
+- `bandit` pre-commit hook is now passing successfully.
+
+### ⚠️ Known Issues
+- Persistent loop with `fix end of files` and `update-progress` pre-commit hooks modifying `tracking/progress.json`.
+- Existing `mypy` code quality issues in Python scripts.
+
 ## [2.4.0] - 2025-09-14
 
 ### ✨ Features

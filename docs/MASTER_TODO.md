@@ -9,16 +9,18 @@ This section outlines the recommended phased approach for tackling the identifie
 ### Phase 1: Core Stability & Environment Foundation (Highest Priority)
 - [ ] **Objective**: Ensure the development environment is stable, reliable, and consistent, and address critical workflow blockers.
 - [ ] **Tasks**:
-    - [ ] **Address Makefile Python Path Resolution (Issue #1)**: Fix the `Makefile` commands to reliably use the `uv`-managed Python interpreter.
-    - [ ] **Enforce `uv` for `pre-commit` Hook Dependencies**: Remove `additional_dependencies` from `.pre-commit-config.yaml` and manage them via the main `uv`-managed virtual environment.
+    - [x] **Address Makefile Python Path Resolution (Issue #1)**: Fix the `Makefile` commands to reliably use the `uv`-managed Python interpreter.
+    - [x] **Enforce `uv` for `pre-commit` Hook Dependencies**: Remove `additional_dependencies` from `.pre-commit-config.yaml` and manage them via the main `uv`-managed virtual environment.
+    - [ ] **Investigate and fix `fix end of files` / `update-progress` loop**: Resolve the persistent loop caused by these pre-commit hooks modifying `tracking/progress.json`.
     - [ ] **Address GPM Error Handling (Issue #2) & Rich Library Detection (Issue #3)**: Resolve these lower-severity issues for a cleaner system.
 
 ### Phase 2: Foundational Documentation Quality (High Priority)
 - [ ] **Objective**: Establish a baseline for documentation quality and ensure existing validation tools are effective.
 - [ ] **Tasks**:
-    - [ ] **Run `scripts/validate_docs.py`**: Execute the existing validation script to identify issues with YAML front matter and SVG embedding.
+    - [x] **Run `scripts/validate_docs.py`**: Execute the existing validation script to identify issues with YAML front matter and SVG embedding.
     - [ ] **Address `TODO: Add date format validation for 'last_updated'` in `scripts/validate_docs.py`**: Improve the existing validation tool.
     - [ ] **Implement Markdown Linting, Spell Checks, Link Validation**: Research, integrate, and run tools for comprehensive documentation quality.
+    - [ ] **Address `mypy` code quality issues**: Resolve type hinting and code quality errors reported by `mypy` in Python scripts.
 
 ### Phase 3: Structured Documentation Enhancement (Medium Priority)
 - [ ] **Objective**: Systematically improve the structure and content of the documentation.
@@ -35,13 +37,13 @@ This section outlines the recommended phased approach for tackling the identifie
 ## 🔍 Issue Investigation & Resolution
 
 ### Issue #1: Makefile Python Path Resolution
-- [ ] **Investigation**
-    - [ ] Analyze Makefile python path resolution
-    - [ ] Test different PATH scenarios
-    - [ ] Document current behavior patterns
-    - [ ] Design improved Makefile approach
-- [ ] **Solution Implementation**
-    - [ ] Update Makefile with smart python detection
+- [x] **Investigation**
+    - [x] Analyze Makefile python path resolution
+    - [x] Test different PATH scenarios
+    - [x] Document current behavior patterns
+    - [x] Design improved Makefile approach
+- [x] **Solution Implementation**
+    - [x] Update Makefile with smart python detection
     - [ ] Test all make commands with and without activation
     - [ ] Update documentation with new behavior
     - [ ] Validate cross-platform compatibility
@@ -97,20 +99,20 @@ This section outlines the recommended phased approach for tackling the identifie
 
 ### Enforce uv for pre-commit Hook Dependencies
 
-- [ ] **Objective**: Ensure `uv` is the sole manager for all Python requirements, including those for `pre-commit` hooks, by removing `pip`-managed `additional_dependencies`.
-- [ ] **Impact**:
-    - [ ] Eliminates `pre-commit` environment errors.
-    - [ ] Unified Dependency Management.
-    - [ ] Improved Reproducibility.
-- [ ] **Phase 1: Assessment & Preparation**
-    - [ ] **Step 1.1: Identify Affected Hooks and Dependencies**: Review `.pre-commit-config.yaml` to pinpoint all Python-based hooks that currently use `additional_dependencies`.
-    - [ ] **Step 1.2: Backup Current Configuration**: Create a backup of `.pre-commit-config.yaml` and any relevant dependency files.
-- [ ] **Phase 2: Configuration Modification**
-    - [ ] **Step 2.1: Remove `additional_dependencies` from `.pre-commit-config.yaml`**: For each identified hook, delete the `additional_dependencies` key and its associated list of packages.
-    - [ ] **Step 2.2: Integrate Dependencies into Main Project Requirements**: Add the identified dependencies to the project's primary dependency management file (e.g., `pyproject.toml` or ensure they are covered by `Makefile` install commands).
-- [ ] **Phase 3: Environment & Hook Re-initialization**
-    - [ ] **Step 3.1: Re-create `uv` Virtual Environment**: Perform a clean re-creation of the `uv` virtual environment (`make env-reset`).
-    - [ ] **Step 3.2: Re-install `pre-commit` Hooks**: Re-install `pre-commit` hooks (`pre-commit install`).
+- [x] **Objective**: Ensure `uv` is the sole manager for all Python requirements, including those for `pre-commit` hooks, by removing `pip`-managed `additional_dependencies`.
+- [x] **Impact**:
+    - [x] Eliminates `pre-commit` environment errors.
+    - [x] Unified Dependency Management.
+    - [x] Improved Reproducibility.
+- [x] **Phase 1: Assessment & Preparation**
+    - [x] **Step 1.1: Identify Affected Hooks and Dependencies**: Review `.pre-commit-config.yaml` to pinpoint all Python-based hooks that currently use `additional_dependencies`.
+    - [x] **Step 1.2: Backup Current Configuration**: Create a backup of `.pre-commit-config.yaml` and any relevant dependency files.
+- [x] **Phase 2: Configuration Modification**
+    - [x] **Step 2.1: Remove `additional_dependencies` from `.pre-commit-config.yaml`**: For each identified hook, delete the `additional_dependencies` key and its associated list of packages.
+    - [x] **Step 2.2: Integrate Dependencies into Main Project Requirements**: Add the identified dependencies to the project's primary dependency management file (e.g., `pyproject.toml` or ensure they are covered by `Makefile` install commands).
+- [x] **Phase 3: Environment & Hook Re-initialization**
+    - [x] **Step 3.1: Re-create `uv` Virtual Environment**: Perform a clean re-creation of the `uv` virtual environment (`make env-reset`).
+    - [x] **Step 3.2: Re-install `pre-commit` Hooks**: Re-install `pre-commit` hooks (`pre-commit install`).
 - [ ] **Phase 4: Validation & Documentation**
     - [ ] **Step 4.1: Validate `pre-commit` Hook Functionality**: Run all `pre-commit` hooks against the codebase (`make check` or `pre-commit run --all-files`).
     - [ ] **Step 4.2: Document the Change**: Update relevant project documentation (e.g., `docs/getting-started/installation.md`, `README.md`).
@@ -118,7 +120,7 @@ This section outlines the recommended phased approach for tackling the identifie
 ## 📝 Documentation Refactoring
 
 ### Documentation Verification
-- [ ] Run `scripts/validate_docs.py`
+- [x] Run `scripts/validate_docs.py`
 - [ ] Implement and run Markdown linting
 - [ ] Implement and run spell checks
 - [ ] Implement and run link validation

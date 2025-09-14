@@ -78,7 +78,7 @@ update-deps:
 
 # Environment management
 env-create:
-	uv venv .venv --python 3.11
+	uv venv .venv --python 3.13
 
 env-activate:
 	@echo "Run: source .venv/bin/activate"
@@ -138,7 +138,7 @@ update-deps:
 
 # Environment management
 env-create:
-	uv venv .venv --python 3.11
+	uv venv .venv --python 3.13
 
 env-activate:
 	@echo "Run: source .venv/bin/activate"

@@ -45,7 +45,7 @@ setup_environment() {
 
     # Create virtual environment using uv
     echo -e "${BLUE}🏗️  Creating virtual environment...${NC}"
-    uv venv .venv --python 3.11
+    uv venv .venv --python 3.13
 
     # Activate virtual environment
     source .venv/bin/activate
@@ -191,7 +191,7 @@ update-deps:
 
 # Environment management
 env-create:
-	uv venv .venv --python 3.11
+	uv venv .venv --python 3.13
 
 env-activate:
 	@echo "Run: source .venv/bin/activate"

@@ -7,7 +7,7 @@ name = "claude-guardian-agents"
 version = "0.1.0"
 description = "Guardian Agents - Intelligent agent orchestration and project management system"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.13"
 license = { text = "MIT" }
 authors = [
     { name = "Guardian Agents Team" },
@@ -136,7 +136,7 @@ ignore = [
 "__init__.py" = ["F401"]
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.13"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
