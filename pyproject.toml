@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "claude-guardian-agents"
-version = "0.1.0"
+version = "3.0.0"
 description = "Guardian Agents - Intelligent agent orchestration and project management system"
 readme = "README.md"
 requires-python = ">=3.13"
@@ -25,11 +25,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: System :: Systems Administration",
 ]
@@ -101,7 +97,7 @@ extend-exclude = '''
 '''
 
 [tool.ruff]
-target-version = "py38"
+target-version = "py312"
 line-length = 88
 extend-exclude = [
     "docs",

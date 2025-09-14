@@ -8,7 +8,7 @@ ensures that all required fields are present and correctly formatted.
 import re
 import sys
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 import frontmatter
 import yaml
@@ -50,7 +50,7 @@ REQUIRED_FIELDS = {
 ALLOWED_STATUS_VALUES = {"Draft", "In Review", "Published", "Deprecated"}
 
 
-def validate_file(path: Path) -> List[str]:
+def validate_file(path: Path) -> list[str]:
     """Validates a single documentation file and returns a list of errors."""
     errors = []
     try:
@@ -61,7 +61,7 @@ def validate_file(path: Path) -> List[str]:
     if not post.metadata:
         return ["No YAML front matter found."]
 
-    metadata: Dict[str, Any] = post.metadata
+    metadata: dict[str, Any] = post.metadata
 
     # Check for required fields and correct types
     for field, expected_type in REQUIRED_FIELDS.items():

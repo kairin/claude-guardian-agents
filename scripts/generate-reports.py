@@ -9,7 +9,6 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict
 
 
 class ReportGenerator:
@@ -21,7 +20,7 @@ class ReportGenerator:
         self.reports_dir = self.tracking_dir / "reports"
         self.reports_dir.mkdir(parents=True, exist_ok=True)
 
-    def load_progress(self) -> Dict:
+    def load_progress(self) -> dict:
         """Load current progress data"""
         progress_file = self.tracking_dir / "progress.json"
         if progress_file.exists():

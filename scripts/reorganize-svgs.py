@@ -12,14 +12,13 @@ import os
 import re
 import shutil
 from pathlib import Path
-from typing import Dict, List, Tuple
 
 # Project root
 PROJECT_ROOT = Path("/home/kkk/Apps/claude-guardian-agents")
 ASSETS_DIR = PROJECT_ROOT / "assets"
 
 
-def extract_inline_svg(content: str) -> Tuple[str, str]:
+def extract_inline_svg(content: str) -> tuple[str, str]:
     """Extract inline SVG from markdown content."""
     # Check if content starts with SVG
     if content.strip().startswith("<svg"):
@@ -62,7 +61,7 @@ def get_relative_svg_reference(doc_path: Path, svg_path: Path) -> str:
         return str(svg_path)
 
 
-def process_guardian_file(file_path: Path, dry_run: bool = False) -> Dict:
+def process_guardian_file(file_path: Path, dry_run: bool = False) -> dict:
     """Process a single guardian markdown file."""
     result = {
         "file": str(file_path),
@@ -156,7 +155,7 @@ def process_guardian_file(file_path: Path, dry_run: bool = False) -> Dict:
     return result
 
 
-def reorganize_existing_svgs(dry_run: bool = False) -> List[Dict]:
+def reorganize_existing_svgs(dry_run: bool = False) -> list[dict]:
     """Reorganize existing SVG files to mirror document structure."""
     results = []
 
@@ -255,7 +254,7 @@ def main(dry_run: bool = False) -> None:
 
     # Step 1: Process all guardian markdown files
     print("\n1. Processing guardian files...")
-    guardian_files: List[Path] = []
+    guardian_files: list[Path] = []
     for pattern in [
         "1-product/**/*.md",
         "2-engineering/**/*.md",

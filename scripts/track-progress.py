@@ -9,33 +9,33 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 
 class ProgressTracker:
     """Main progress tracking system"""
 
-    def __init__(self, project_root: Optional[str] = None):
+    def __init__(self, project_root: str | None = None):
         self.project_root = Path(project_root or os.getcwd())
         self.tracking_dir = self.project_root / "tracking"
         self.progress_file = self.tracking_dir / "progress.json"
         self.specs_dir = self.project_root / "specs"
 
-    def load_progress(self) -> Dict[str, Any]:
+    def load_progress(self) -> dict[str, Any]:
         """Load current progress data"""
         if self.progress_file.exists():
             with open(self.progress_file) as f:
                 return json.load(f)
         return self._initialize_progress()
 
-    def save_progress(self, progress_data: Dict) -> None:
+    def save_progress(self, progress_data: dict) -> None:
         """Save progress data with timestamp"""
         progress_data["project_status"]["last_updated"] = datetime.now().isoformat()
         with open(self.progress_file, "w") as f:
             json.dump(progress_data, f, indent=2)
 
     def update_feature_status(
-        self, feature_id: str, status: str, notes: Optional[str] = None
+        self, feature_id: str, status: str, notes: str | None = None
     ) -> None:
         """Update feature status with timestamp and notes"""
         progress = self.load_progress()
@@ -80,7 +80,7 @@ class ProgressTracker:
         else:
             print(f"Feature {feature_id} not found")
 
-    def calculate_completion_percentage(self) -> Dict:
+    def calculate_completion_percentage(self) -> dict:
         """Calculate overall and per-epic completion rates"""
         progress = self.load_progress()
 
@@ -122,7 +122,7 @@ class ProgressTracker:
             "completed_features": completed_features,
         }
 
-    def generate_blockers_report(self) -> List[Dict]:
+    def generate_blockers_report(self) -> list[dict]:
         """Identify blocked tasks and their dependencies"""
         progress = self.load_progress()
         blockers = []
@@ -160,7 +160,7 @@ class ProgressTracker:
 
         return blockers
 
-    def validate_implementation(self, feature_id: str) -> Dict:
+    def validate_implementation(self, feature_id: str) -> dict:
         """Run automated tests and validation for a feature"""
         progress = self.load_progress()
 
@@ -216,7 +216,7 @@ class ProgressTracker:
 
         return validation_results
 
-    def add_feature(self, feature_data: Dict) -> None:
+    def add_feature(self, feature_data: dict) -> None:
         """Add a new feature to tracking"""
         progress = self.load_progress()
 
@@ -251,7 +251,7 @@ class ProgressTracker:
         self.save_progress(progress)
         print(f"Added feature {feature_id}: {feature_data.get('title', 'Untitled')}")
 
-    def _initialize_progress(self) -> Dict:
+    def _initialize_progress(self) -> dict:
         """Initialize default progress structure"""
         return {
             "project_status": {
@@ -272,7 +272,7 @@ class ProgressTracker:
         }
 
     def _calculate_feature_completion(
-        self, progress: Dict[str, Any], feature_id: str
+        self, progress: dict[str, Any], feature_id: str
     ) -> None:
         """Calculate feature completion based on implementation checklist"""
         feature = progress["features"][feature_id]
@@ -296,7 +296,7 @@ class ProgressTracker:
         # For now, return False to indicate not yet implemented
         return False
 
-    def _run_feature_tests(self, feature_id: str) -> Dict[str, Any]:
+    def _run_feature_tests(self, feature_id: str) -> dict[str, Any]:
         """Run tests for a specific feature"""
         # Placeholder implementation
         return {

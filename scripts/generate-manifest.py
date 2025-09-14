@@ -7,7 +7,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 
 class ManifestGenerator:
@@ -85,7 +85,7 @@ class ManifestGenerator:
         print(f"✅ Found {len(self.agent_files)} agent files")
         return self.agent_files
 
-    def extract_agent_info(self, file_path: Path) -> Dict:
+    def extract_agent_info(self, file_path: Path) -> dict:
         """Extract agent information from file"""
         try:
             # Extract agent ID from filename
@@ -244,7 +244,7 @@ class ManifestGenerator:
 
         return tools, list(set(triggers))  # Remove duplicates
 
-    def determine_complexity(self, name: str, triggers: List[str]) -> str:
+    def determine_complexity(self, name: str, triggers: list[str]) -> str:
         """Determine agent complexity based on name and role"""
         if "director" in name or "leadership" in name or "principal" in name:
             return "complex"
@@ -274,7 +274,7 @@ class ManifestGenerator:
         except OSError:
             return 0
 
-    def generate_workflows(self, agents: Dict) -> Dict:
+    def generate_workflows(self, agents: dict) -> dict:
         """Generate workflow definitions based on available agents"""
         workflows = {
             "feature_development": {
@@ -333,7 +333,7 @@ class ManifestGenerator:
 
         return workflows
 
-    def generate_manifest(self) -> Dict:
+    def generate_manifest(self) -> dict:
         """Generate complete manifest from repository scan"""
         print("🔧 Generating complete manifest...")
 
@@ -442,7 +442,7 @@ class ManifestGenerator:
         return manifest
 
     def save_manifest(
-        self, manifest: Dict[str, Any], output_path: str = "manifest.json"
+        self, manifest: dict[str, Any], output_path: str = "manifest.json"
     ) -> None:
         """Save manifest to file"""
         output_file = self.repo_root / output_path

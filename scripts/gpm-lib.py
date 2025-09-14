@@ -12,7 +12,6 @@ import sys
 import tempfile
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional
 
 import requests
 
@@ -27,7 +26,7 @@ class AgentInfo:
     checksum: str
     version: str
     customized: bool = False
-    last_updated: Optional[str] = None
+    last_updated: str | None = None
 
 
 @dataclass
@@ -38,7 +37,7 @@ class UpdateChange:
     change_type: str  # 'new', 'updated', 'conflict', 'deprecated'
     local_path: str
     remote_content: str
-    conflict_resolution: Optional[str] = None
+    conflict_resolution: str | None = None
 
 
 class GuardianUpdater:
@@ -57,7 +56,7 @@ class GuardianUpdater:
         self.metadata = self.load_metadata()
         self.remote_manifest = None
 
-    def load_metadata(self) -> Dict:
+    def load_metadata(self) -> dict:
         """Load local metadata file"""
         metadata_file = self.guardian_dir / "metadata.json"
         if metadata_file.exists():
@@ -70,7 +69,7 @@ class GuardianUpdater:
         else:
             return self._create_empty_metadata()
 
-    def _create_empty_metadata(self) -> Dict:
+    def _create_empty_metadata(self) -> dict:
         """Create empty metadata structure"""
         return {
             "guardian_version": None,
@@ -87,7 +86,7 @@ class GuardianUpdater:
         with open(metadata_file, "w") as f:
             json.dump(self.metadata, f, indent=2)
 
-    def fetch_remote_manifest(self) -> Dict:
+    def fetch_remote_manifest(self) -> dict:
         """Fetch remote manifest with agent information"""
         if self.remote_manifest:
             return self.remote_manifest
@@ -130,7 +129,7 @@ class GuardianUpdater:
         except FileNotFoundError:
             return ""
 
-    def identify_changes(self) -> List[UpdateChange]:
+    def identify_changes(self) -> list[UpdateChange]:
         """Identify what needs to be updated"""
         manifest = self.fetch_remote_manifest()
         changes = []
@@ -190,7 +189,7 @@ class GuardianUpdater:
             print(f"⚠️ Failed to fetch agent content from {url}: {e}")
             return ""
 
-    def apply_updates(self, changes: List[UpdateChange]) -> bool:
+    def apply_updates(self, changes: list[UpdateChange]) -> bool:
         """Apply updates with intelligent conflict resolution"""
         success = True
 
@@ -289,7 +288,7 @@ class GuardianUpdater:
             "last_updated"
         ] = self._current_timestamp()
 
-    def _three_way_merge(self, original: str, local: str, remote: str) -> Optional[str]:
+    def _three_way_merge(self, original: str, local: str, remote: str) -> str | None:
         """Attempt automatic 3-way merge"""
         try:
             # Simple line-based merge using difflib
@@ -314,7 +313,7 @@ class GuardianUpdater:
             print(f"⚠️ Merge failed: {e}")
             return None
 
-    def _have_conflicting_changes(self, local_diff: List, remote_diff: List) -> bool:
+    def _have_conflicting_changes(self, local_diff: list, remote_diff: list) -> bool:
         """Check if two diffs have conflicting changes"""
         # Simplified conflict detection
         # Real implementation would analyze line ranges and types of changes
@@ -433,7 +432,7 @@ class GuardianUpdater:
         if change.agent_id in self.metadata["agents"]:
             del self.metadata["agents"][change.agent_id]
 
-    def _get_original_version(self, agent_id: str) -> Optional[str]:
+    def _get_original_version(self, agent_id: str) -> str | None:
         """Get original version of agent for 3-way merge"""
         # Check if we have a backup of the original
         backup_path = self.guardian_dir / "originals" / f"{agent_id}.md"
