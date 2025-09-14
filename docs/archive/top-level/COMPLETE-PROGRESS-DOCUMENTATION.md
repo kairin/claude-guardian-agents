@@ -1,16 +1,4 @@
 ---
-title: "Complete Progress Documentation (Stub)"
-description: "Short summary. Full document archived in `docs/archive/top-level/COMPLETE-PROGRESS-DOCUMENTATION.md`."
----
-
-# Project Progress — Summary (Stub)
-
-This is a concise stub. Full historical and detailed progress documentation has been moved to:
-
-`docs/archive/top-level/COMPLETE-PROGRESS-DOCUMENTATION.md`
-
-See `docs/ROLES_SUMMARY.md` and `CHANGELOG.md` for high-level notes.
----
 title: "Complete Progress Documentation (Consolidated)"
 description: "High-level project status. Detailed history is in `CHANGELOG.md` and archived docs."
 ---

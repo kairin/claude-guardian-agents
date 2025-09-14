@@ -1,16 +1,4 @@
 ---
-title: "Agent Creation Guide (Stub)"
-description: "Short summary. Full guide archived in `docs/archive/top-level/AGENT-CREATION-GUIDE.md`."
----
-
-# Agent Creation — Summary (Stub)
-
-This is a short guide summarizing how to create agent role files. Full original is archived at:
-
-`docs/archive/top-level/AGENT-CREATION-GUIDE.md`
-
-For compact role guidance see `docs/ROLES_SUMMARY.md`.
----
 title: "Agent Creation Guide (Consolidated)"
 description: "Short guidance for creating and registering agent roles. Full originals are in `docs/archive/`."
 version: 1.0
