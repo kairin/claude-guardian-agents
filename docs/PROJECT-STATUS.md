@@ -81,7 +81,7 @@ docs/
 - [Research Papers](RESEARCH-PAPERS.md)
 - [Project Management System](PROJECT-MANAGEMENT-SYSTEM.md)
 - [Implementation Validation](IMPLEMENTATION-VALIDATION.md)
-- [Script Reference](tools/script-reference.md)
+- [Script Reference](tools/README.md#script-reference)
 - [Common Issues](troubleshooting/common-issues.md)
 - [Progress Tracking Guide](project-management/progress-tracking.md)
 

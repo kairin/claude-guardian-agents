@@ -197,7 +197,7 @@ graph LR
 
 ### **Technical Documentation**:
 - **[Project Management System](PROJECT-MANAGEMENT-SYSTEM.md)** - Accountability framework
- - **[Guardian Package Manager](tools/guardian-package-manager.md)** - Agent distribution system
+ - **[Guardian Package Manager (GPM)](tools/README.md#guardian-package-manager-gpm---implementation-design)** - Agent distribution system (see consolidated tools README)
 - **[Implementation Validation](IMPLEMENTATION-VALIDATION.md)** - Testing framework
 
 ### **Agent Documentation**:

@@ -121,6 +121,6 @@ sequenceDiagram
 
 **Need Help?**
 - 📞 [Contact Support](../support.md)
-- 📚 [Agent Configuration](../technical/agent-config.md)
-- � [Monitoring & Observability](../tools/monitoring.md)
+- 📚 [Agent Configuration](../technical/README.md#agent-configuration)
+- 🔭 [Monitoring & Observability](../tools/README.md#monitoring)
 - �🔧 [Troubleshooting](../troubleshooting.md)

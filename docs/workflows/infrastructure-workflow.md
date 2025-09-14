@@ -212,32 +212,13 @@ flowchart TD
     style H fill:#ff9999
     style J fill:#e1f5e1
     style U fill:#e1f5e1
-```
-
-**Monitoring Areas**:
 - 🔍 **Services**: Application health status
 - 🔍 **Resources**: CPU, memory, disk usage
-- 🔍 **Network**: Connectivity and performance
-- 🔍 **Processes**: Running services validation
-- 🔍 **Dependencies**: External service health
-
 ## Complete Infrastructure Pipeline
 
-```mermaid
-sequenceDiagram
-    participant Sec as 🔒 Security
-    participant MG as migration-guardian
     participant DG as deploy-guardian
-    participant BG as backup-guardian
     participant PG as process-guardian
     participant Ops as 👥 Operations
-
-    Sec->>MG: Secure & compliant code
-    MG->>MG: Analyze migration risks
-
-    alt High Risk
-        MG->>Ops: 🚨 Manual review required
-        Ops->>MG: Approved
     end
 
     MG->>DG: Migration plan approved
@@ -299,25 +280,11 @@ sequenceDiagram
 ## 📊 Monitoring Dashboards
 
 ### System Health
-- 🟢 **Green**: All systems operational
-- 🟡 **Yellow**: Performance warnings
-- 🔴 **Red**: Critical issues detected
 
 ### Deployment Status
-- 🧪 **Staging**: Testing in progress
-- 🕯️ **Canary**: Limited production release
-- 🚀 **Production**: Full deployment
-- 🔄 **Rollback**: Recovery in progress
 
 ### Backup Status
-- 💾 **Last Backup**: Timestamp and status
-- 🧪 **Recovery Test**: Last successful test
-- 📊 **Backup Size**: Storage usage
-- ⏰ **Next Backup**: Scheduled time
 
----
 
 **Infrastructure Support**:
-- 🚨 [Emergency Contacts](../support/emergency.md)
-- 📊 [Monitoring Dashboard](../tools/monitoring.md)
-- 🔧 [Troubleshooting Guide](../support/troubleshooting.md)
+- 🚀 **Production**: Full deployment
