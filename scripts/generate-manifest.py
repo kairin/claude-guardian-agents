@@ -15,8 +15,8 @@ class ManifestGenerator:
 
     def __init__(self, repo_root: str = "."):
         self.repo_root = Path(repo_root)
-        self.agent_files: list[Path] = []
-        self.categories: dict[str, dict[str, Any]] = {
+        self.agent_files: list = []
+        self.categories: dict = {
             "strategy": {
                 "name": "Strategic & Product",
                 "description": "Product strategy, planning, and design agents",
@@ -78,41 +78,32 @@ class ManifestGenerator:
         """Scan repository for all guardian agent files"""
         print("🔍 Scanning repository for Guardian agent files...")
 
-        # Find all guardian.md files
         agent_pattern = "*guardian.md"
         self.agent_files = list(self.repo_root.glob(f"**/{agent_pattern}"))
 
         print(f"✅ Found {len(self.agent_files)} agent files")
         return self.agent_files
 
-    def extract_agent_info(self, file_path: Path) -> dict[str, Any] | None:
+    def extract_agent_info(self, file_path: Path) -> dict | None:
         """Extract agent information from file"""
         try:
-            # Extract agent ID from filename
             filename = file_path.name
             id_match = re.match(r"(\d+)-", filename)
             agent_id = id_match.group(1) if id_match else "unknown"
 
-            # Determine category from ID
             agent_num = int(agent_id)
             category = self.categorize_agent(agent_num)
 
-            # Calculate checksum
             checksum = self.calculate_checksum(file_path)
 
-            # Extract agent name (remove .md extension)
             name = filename.replace(".md", "")
 
-            # Generate title from name
             title = self.generate_title(name)
 
-            # Get relative path from repo root
             rel_path = file_path.relative_to(self.repo_root)
 
-            # Extract tools and triggers from file content
             tools, triggers = self.parse_agent_file(file_path)
 
-            # Determine complexity
             complexity = self.determine_complexity(name, triggers)
 
             return {
@@ -182,14 +173,12 @@ class ManifestGenerator:
 
     def generate_title(self, name: str) -> str:
         """Generate human-readable title from agent name"""
-        # Remove number prefix and guardian suffix
+
         title = re.sub(r"^\d+-", "", name)
         title = re.sub(r"-guardian$", "", title)
 
-        # Convert dashes to spaces and title case
         title = title.replace("-", " ").title()
 
-        # Add "Guardian" suffix
         return f"{title} Guardian"
 
     def parse_agent_file(self, file_path: Path) -> tuple:
@@ -201,17 +190,15 @@ class ManifestGenerator:
             with open(file_path, encoding="utf-8") as f:
                 content = f.read()
 
-                # Extract tools from frontmatter
                 tools_match = re.search(r"tools:\s*\[(.*?)\]", content, re.MULTILINE)
                 if tools_match:
                     tools_str = tools_match.group(1)
-                    tools = [tool.strip().strip("\"'") for tool in tools_str.split(",")]
+                    tools = [tool.strip().strip("'\"") for tool in tools_str.split(",")]
 
-                # Extract triggers from description
                 desc_match = re.search(r"description:\s*([^\n]+)", content)
                 if desc_match:
                     description = desc_match.group(1)
-                    # Extract key phrases that could be triggers
+
                     trigger_patterns = [
                         r"(\w+\s+\w+)\s+tasks",
                         r"Use for\s+([^.]+)",
@@ -222,7 +209,6 @@ class ManifestGenerator:
                         matches = re.findall(pattern, description, re.IGNORECASE)
                         triggers.extend([match.strip().lower() for match in matches])
 
-                # Add some default triggers based on agent name
                 if "backend" in file_path.name:
                     triggers.extend(
                         ["backend development", "api development", "database design"]
@@ -245,7 +231,7 @@ class ManifestGenerator:
         except Exception as e:
             print(f"⚠️ Could not parse {file_path}: {e}")
 
-        return tools, list(set(triggers))  # Remove duplicates
+        return tools, list(set(triggers))
 
     def determine_complexity(self, name: str, triggers: list[str]) -> str:
         """Determine agent complexity based on name and role"""
@@ -264,12 +250,10 @@ class ManifestGenerator:
             with open(file_path, encoding="utf-8") as f:
                 content = f.read()
 
-                # Count research sections
                 research_count = len(
                     re.findall(r"##\s*📚\s*Research Foundation", content)
                 )
                 if research_count > 0:
-                    # Count primary research items
                     primary_count = len(re.findall(r"###\s*Primary Research", content))
                     return max(3, primary_count)  # Minimum 3 if research section exists
                 else:
@@ -277,11 +261,9 @@ class ManifestGenerator:
         except OSError:
             return 0
 
-    def generate_workflows(
-        self, agents: dict[str, dict[str, Any]]
-    ) -> dict[str, dict[str, Any]]:
+    def generate_workflows(self, agents: dict) -> dict:
         """Generate workflow definitions based on available agents"""
-        workflows: dict[str, dict[str, Any]] = {
+        workflows: dict = {
             "feature_development": {
                 "name": "Complete Feature Development",
                 "description": "End-to-end feature development workflow",
@@ -314,7 +296,6 @@ class ManifestGenerator:
             },
         }
 
-        # Build chains from available agents
         for agent_id, agent_info in agents.items():
             category = agent_info["category"]
 
@@ -350,12 +331,10 @@ class ManifestGenerator:
         """Generate complete manifest from repository scan"""
         print("🔧 Generating complete manifest...")
 
-        # Scan repository
         agent_files = self.scan_repository()
 
         agents = {}
 
-        # Process each agent file
         for file_path in agent_files:
             agent_info = self.extract_agent_info(file_path)
             if agent_info:
@@ -366,15 +345,12 @@ class ManifestGenerator:
                 else:
                     continue
 
-                # Add to category
                 category = agent_info["category"]
                 if category in self.categories:
                     self.categories[category]["agents"].append(agent_id)
 
-        # Generate workflows
         workflows = self.generate_workflows(agents)
 
-        # Create complete manifest
         manifest = {
             "name": "claude-guardian-agents",
             "version": "2.3.0",
@@ -475,13 +451,11 @@ def main() -> None:
     manifest = generator.generate_manifest()
     generator.save_manifest(manifest)
 
-    # Validate the manifest
     print("\n📋 Manifest Summary:")
     print(f"  Total Agents: {manifest['metadata']['total_agents']}")
     print(f"  Categories: {len(manifest['categories'])}")
     print(f"  Workflows: {len(manifest['workflows'])}")
 
-    # Show category breakdown
     print("\n📊 Category Breakdown:")
     for cat_info in manifest["categories"].values():
         print(f"  {cat_info['name']}: {len(cat_info['agents'])} agents")
