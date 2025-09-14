@@ -1,6 +1,6 @@
 # Guardian Agents - Project Installation
 
-Install Guardian Agents into any of your GitHub projects to get access to 100+ specialized AI agents.
+Install Guardian Agents into any of your GitHub projects to get access to 49 specialized AI agents.
 
 ## 🚀 Quick Installation
 

@@ -1,179 +1,165 @@
-# AGENTS.md
+# LLM Instructions - Guardian Agents Development
 
-> **Instructions for AI coding agents working on the Guardian Agents system**
+> **Consolidated instructions for ALL AI coding agents (Claude, Gemini, etc.) working on Guardian Agents**
 
 ## 🎯 Project Overview
 
-Guardian Agents is a comprehensive AI agent orchestration system with 49 specialized agents across 4 cognitive layers. This project follows spec-driven development with extensive research foundations.
+Guardian Agents is a production-ready AI agent orchestration system with **49 specialized agents** across 4 cognitive layers. Ubuntu 25.04 + Python 3.13 + UV package manager ONLY.
 
-## 🛠️ Development Environment Setup
+## ⚡ Critical Requirements - NO EXCEPTIONS
 
-### **Dependencies & Installation**
+### **Environment & Dependencies**
+- **Python 3.13+ ONLY** (Ubuntu 25.04 built-in)
+- **UV package manager ONLY** - NO pip, conda, poetry, or other package managers
+- **Cross-project installation**: System installs into any GitHub project via `install-guardian-agents.sh`
+- **Version**: Currently 2.5.1 - keep ALL files synchronized
+
+### **System Specifications**
+- **Agent Count**: Exactly 49 agents (not 100+)
+- **Architecture**: 4 layers (1-product, 2-engineering, 3-operations, 4-thinktank)
+- **Installation Method**: Single script (`install-guardian-agents.sh`) only
+- **Progress Tracking**: Single file (`issues_to_fix.md`) only
+
+## 🛠️ Development Commands
+
 ```bash
-# Setup Python environment (uses uv exclusively)
-./scripts/setup-python-env.sh
+# Environment setup (UV only)
+uv venv .venv && source .venv/bin/activate
+uv pip install -e .
 
-# Activate environment
-source .venv/bin/activate
+# Quality checks (must pass before commit)
+.venv/bin/python -m ruff check scripts/
+.venv/bin/python -m mypy scripts/ --ignore-missing-imports
 
-# Verify installation
-make validate
+# Installation testing
+./install-guardian-agents.sh
 ```
 
-### **Key Commands**
-```bash
-# Run validation suite (target: 100% pass rate)
-./scripts/validate-gpm.sh
+## 📝 Code Style - MANDATORY
 
-# Generate progress reports
-make reports
+### **File Naming Convention**
+- Agents: `[ID]-[department]-[role]-[specialization]-guardian.md`
+- IDs: 3-digit sequential (001, 002, 003...)
+- NO file renaming without explicit approval
 
-# Track implementation progress
-make track
-
-# Run quality checks
-make check
-```
-
-## 📝 Code Style & Standards
-
-### **Agent File Structure**
-All agent files must follow this exact format:
+### **Agent File Structure - EXACT FORMAT**
 ```markdown
 ---
 name: [ID]-[department]-[role]-[specialization]-guardian
-description: Clear description with "MUST BE USED" triggers for auto-selection
-tools: [google_web_search, web_fetch]
+description: [Clear description]. MUST BE USED for [specific trigger].
+tools: [list]
 ---
 
-You are a [role] specialist in the [department] layer...
+You are a [role] specialist...
 
 ## Your Role
 - Agent ID: [ID]
 - Department: [Department]
-- Specialization: [Specific expertise]
+- Specialization: [Specific area]
 
 ## Core Responsibilities
-[List of key responsibilities]
+[List key responsibilities]
 
 ## Agent Relationships
 ### Next Agents (Auto-chain to):
-- [List of agents this can call]
-
-### Escalate To:
-- [When to escalate to human or other agents]
+- [Specific agent IDs and conditions]
 ```
 
-### **Naming Conventions**
-- **Agent IDs**: 3-digit sequential (001, 002, etc.)
-- **File Names**: `[ID]-[department]-[role]-[specialization]-guardian.md`
-- **Directories**: Numbered by layer (1-product/, 2-engineering/, 3-operations/, 4-thinktank/)
+### **Modern Python Requirements**
+- Type annotations: `X | Y` (not `Union[X, Y]`)
+- Target version: py312 (Ruff/Black compatible)
+- Requirements-python: ">=3.13"
 
-### **Research Integration Requirements**
-Each agent must integrate **4-6 academic research papers** with:
-- Citation format: `**Paper Title** (Author, Year)`
-- Implementation section showing how research applies
-- Methodology descriptions with practical applications
+## 🚫 Branch Management Rules
 
-## 🧪 Testing & Validation
+### **Branch Naming - MANDATORY SCHEMA**
+**Format**: `YYYYMMDD-HHMMSS-type-short-description`
 
-### **Required Tests**
-All changes must pass:
-```bash
-# GPM validation (target: 43/43 tests passing)
-./scripts/validate-gpm.sh
+Examples:
+- `20250914-143000-feat-user-profile-management`
+- `20250914-143515-fix-login-bug-authentication`
+- `20250914-144030-docs-api-endpoint-updates`
 
-# Agent discovery and classification
-# URL accessibility validation
-# JSON structure validation
-# Manifest integrity checks
-```
+### **Branch Preservation**
+- **NEVER delete branches** without explicit user permission
+- All branches contain valuable historical information
+- **NO** automatic cleanup with `git branch -d`
 
-### **Quality Gates**
-- **Agent Count**: Must maintain 49 total agents
-- **Think-Tank**: Must have 8 personality archetypes
-- **Research Papers**: 35+ integrated across system
-- **Validation Rate**: 100% (43/43 tests passing)
-
-## 🚀 Agent System Workflow
-
-### **Agent Categories & Structure**
-```
-4-Layer Architecture:
-├── 1-product/ (11 agents)     - Strategic & Product
-├── 2-engineering/ (20 agents) - Technical Development
-├── 3-operations/ (10 agents)  - Infrastructure & Operations
-└── 4-thinktank/ (8 agents)    - Cognitive Diversity
-```
-
-### **Auto-Chaining Patterns**
-Agents automatically chain based on:
-- Task description content analysis
-- "MUST BE USED" triggers in descriptions
-- Agent relationship definitions
-- Context-aware intelligent routing
-
-## 📚 Key Documentation
-
-### **Agent System Docs**
-- **[Agent Registry](docs/agents/registry.md)** - Complete agent catalog
-- **[Agent Relationships](docs/agents/relationships.md)** - Chaining patterns
-- **[Agent Templates](docs/agents/templates.md)** - Creation templates
-
-### **Development Guides**
-- **[Research Papers](docs/RESEARCH-PAPERS.md)** - Academic foundations
-- **[Progress Documentation](docs/COMPLETE-PROGRESS-DOCUMENTATION.md)** - Project status
-- **[Think-Tank System](docs/THINK-TANK-COMPLETION-SUMMARY.md)** - Cognitive diversity
-
-## ⚠️ Critical Requirements
+## ⚠️ ABSOLUTE PROHIBITIONS
 
 ### **DO NOT**
-- Modify the 4-layer architecture without approval
-- Reduce agent count below 49 total
-- Break the 8-agent think-tank personality system
-- Remove research paper integrations
-- Change agent ID numbering system
+- Use any package manager except UV
+- Change agent count from 49
+- Break the 4-layer architecture
+- Create additional installation methods
+- Modify version numbers without synchronizing ALL files
+- Add complex validation or automation not explicitly requested
+- Create multiple progress tracking systems
 
-### **ALWAYS**
-- Run validation tests before committing
-- Maintain 100% GPM test pass rate
-- Follow semantic versioning for releases
-- Include research foundations in new agents
-- Test agent auto-chaining functionality
+### **DO NOT BYPASS**
+- Pre-commit hooks (fix issues, don't skip)
+- Version consistency checks across files
+- Agent count accuracy requirements
+- UV-only package management compliance
+
+## ✅ MANDATORY ACTIONS
+
+### **Before Every Commit**
+1. **Version Check**: All files must show same version (currently 2.5.1)
+2. **Agent Count**: Exactly 49 agents, not "100+"
+3. **Pre-commit**: Must pass without loops or conflicts
+4. **Installation Test**: `install-guardian-agents.sh` must work
+
+### **Quality Gates**
+- Pre-commit hooks pass without infinite loops
+- Version consistency across pyproject.toml, manifest.json, README files
+- Agent count claims match reality (49, not 100+)
+- Single installation method only
 
 ## 🔧 Commit Guidelines
 
-### **Commit Message Format**
+### **Commit Message Format - MANDATORY**
 ```
 type: brief description
 
-- Detailed changes
-- Impact on agent system
-- Validation results
+DETAILED CHANGES:
+- Specific change 1
+- Specific change 2
+- Impact on system
+
+VALIDATION:
+- Pre-commit: ✅ Passed
+- Version sync: ✅ All files 2.5.1
+- Agent count: ✅ 49 agents
 
 🤖 Generated with [Claude Code](https://claude.ai/code)
+
 Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
-### **Pre-commit Checks**
-- GPM validation passing (43/43 tests)
-- JSON structure validation
-- Agent discovery verification
-- Link integrity checks
+## 📊 System Status Requirements
 
-## 📊 Success Metrics
+**Production Ready Status:**
+- ✅ Ubuntu 25.04 + Python 3.13 + UV compliance
+- ✅ Pre-commit hooks without loops
+- ✅ Version consistency (2.5.1) across all files
+- ✅ Single installation method
+- ✅ 49 agents accurately documented
+- ✅ Cross-project installation functional
 
-| Metric | Target | Current |
-|--------|--------|---------|
-| Agent Count | 49+ | 49 ✅ |
-| Validation Rate | 100% | 100% ✅ |
-| Think-Tank Agents | 8 | 8 ✅ |
-| Research Papers | 35+ | 35+ ✅ |
+## 🎯 Current Focus Areas
+
+**From issues_to_fix.md (consolidated todo list):**
+1. Maintain production readiness
+2. Further complexity reduction if requested
+3. Phase 2 research implementation for agents 002-006, 021-025
+4. Environment setup time validation (< 2 minutes)
+5. Cross-platform compatibility testing
 
 ---
 
-**Version**: 2.1.0
-**Last Updated**: September 12, 2025
-**Status**: 100% Validation Success
+**Version**: 2.5.1
+**Status**: Production Ready
+**Last Updated**: 2025-09-14
 
-*This file follows the [agents.md](https://agents.md/) standard for AI coding agent instructions.*
+**CRITICAL**: These instructions override all previous guidelines. Follow exactly as written.

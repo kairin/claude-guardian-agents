@@ -171,7 +171,38 @@ Claude Code **automatically selects agents** based on:
 
 ## 🚀 Getting Started
 
-### Step 1: Create Your First Guardian Agent
+### Installation for Any GitHub Project
+
+Run this command from your project root to install Guardian Agents:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/install-guardian-agents.sh | bash
+```
+
+Or download and run manually:
+
+```bash
+wget https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/install-guardian-agents.sh
+chmod +x install-guardian-agents.sh
+./install-guardian-agents.sh
+```
+
+#### What Gets Installed:
+```
+your-project/
+├── .guardian/                    # Complete Guardian Agents system (git-ignored)
+│   ├── 1-product/               # Strategy & Product agents (001-025)
+│   ├── 2-engineering/           # Technical & Development agents (041-083)
+│   ├── 3-operations/            # Operations & Security agents (091-100)
+│   ├── 4-thinktank/            # Think-Tank reasoning agents (101-108)
+│   └── scripts/                 # Management scripts
+├── .claude/agents/              # Claude Code integration
+│   └── agent-index.json         # Auto-generated agent index
+├── update-guardian-agents.sh    # Update script
+└── .gitignore                   # Updated to ignore .guardian/
+```
+
+### Create Your First Guardian Agent
 
 #### Using Claude Code's `/agents` Command:
 1. **Open Claude Code** in your project directory
