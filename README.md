@@ -1,6 +1,6 @@
 # Claude Guardian Agents
 
-A comprehensive system of specialized AI agents designed to handle various aspects of software development, project management, and operations across any project type.
+A comprehensive system of 49 specialized AI agents designed to handle various aspects of software development, project management, and operations across any project type.
 
 ## 🎯 What Are Guardian Agents?
 
@@ -246,7 +246,7 @@ Create agents in the correct directory structure:
 ```
 
 ## 📈 Version & Changes
-- **Current Version**: 3.1.0
+- **Current Version**: 2.5.0
 - [📋 View Changelog](CHANGELOG.md)
 - [🔄 Version History](docs/versions/)
 

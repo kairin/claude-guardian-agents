@@ -30,8 +30,7 @@ class ProgressTracker:
         return self._initialize_progress()
 
     def save_progress(self, progress_data: dict) -> None:
-        """Save progress data with timestamp"""
-        progress_data["project_status"]["last_updated"] = datetime.now().isoformat()
+        """Save progress data"""
         with open(self.progress_file, "w") as f:
             json.dump(progress_data, f, indent=2)
 

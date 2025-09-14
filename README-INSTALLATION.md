@@ -139,5 +139,5 @@ rm update-guardian-agents.sh
 ---
 
 **Repository**: https://github.com/kairin/claude-guardian-agents
-**Version**: 3.1.0
+**Version**: 2.5.0
 **Last Updated**: 2025-09-14
