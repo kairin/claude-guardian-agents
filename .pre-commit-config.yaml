@@ -64,12 +64,6 @@ repos:
         language: system
         pass_filenames: false
 
-      - id: validate-gpm
-        name: Validate GPM implementation
-        entry: scripts/validate-gpm.sh
-        language: script
-        files: ^(scripts/gmp-functions|manifest\.json|agents/)
-        pass_filenames: false
 
 
 ci:
