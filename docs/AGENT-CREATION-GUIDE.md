@@ -1,4 +1,30 @@
 ---
+title: "Agent Creation Guide (Consolidated)"
+description: "Short guidance for creating and registering agent roles. Full originals are in `docs/archive/`."
+version: 1.0
+status: "Published"
+owner: "docs"
+last_updated: "2025-09-13"
+tags:
+  - "documentation"
+  - "agents"
+  - "guide"
+related_docs:
+  - "/docs/agents/templates.md"
+  - "/docs/NAMING-CONVENTION.md"
+---
+
+# Agent Creation — Summary
+
+This file provides a minimal summary of how to create agent role files. For full templates and historical versions, see `docs/archive/agents/AGENT-CREATION-GUIDE.md` and `docs/ROLES_SUMMARY.md`.
+
+Key steps:
+- Create a new agent file in `.claude/agents/` following naming conventions.
+- Keep descriptions concise and include trigger phrases.
+- Prefer one-line role summaries; avoid duplicating runtime instructions.
+
+For detailed templates and examples, consult the archived guide in `docs/archive/`.
+---
 title: "Agent Creation Guide"
 description: "Step-by-step instructions for creating Guardian Agents in Claude Code."
 version: 1.0

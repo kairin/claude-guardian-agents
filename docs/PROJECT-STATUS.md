@@ -1,4 +1,12 @@
 ---
+title: "Project Status (Consolidated)"
+description: "High-level project status. Operational details and timelines live in `CHANGELOG.md` and archived docs."
+---
+
+# Project Status — Summary
+
+This page gives a brief status snapshot. For detailed timelines and historical changes, see `CHANGELOG.md` and `docs/archive/`.
+---
 title: "Project Status & Documentation Metrics"
 description: "Comprehensive status, achievements, validation, and documentation coverage for the Claude Guardian Agents project."
 version: 2.1
