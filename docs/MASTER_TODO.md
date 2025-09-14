@@ -2,6 +2,36 @@
 
 This document consolidates all identified tasks and action items across the project.
 
+## 🎯 Overall Project Strategy & Prioritization
+
+This section outlines the recommended phased approach for tackling the identified issues, prioritizing core stability and foundational improvements.
+
+### Phase 1: Core Stability & Environment Foundation (Highest Priority)
+- [ ] **Objective**: Ensure the development environment is stable, reliable, and consistent, and address critical workflow blockers.
+- [ ] **Tasks**:
+    - [ ] **Address Makefile Python Path Resolution (Issue #1)**: Fix the `Makefile` commands to reliably use the `uv`-managed Python interpreter.
+    - [ ] **Enforce `uv` for `pre-commit` Hook Dependencies**: Remove `additional_dependencies` from `.pre-commit-config.yaml` and manage them via the main `uv`-managed virtual environment.
+    - [ ] **Address GPM Error Handling (Issue #2) & Rich Library Detection (Issue #3)**: Resolve these lower-severity issues for a cleaner system.
+
+### Phase 2: Foundational Documentation Quality (High Priority)
+- [ ] **Objective**: Establish a baseline for documentation quality and ensure existing validation tools are effective.
+- [ ] **Tasks**:
+    - [ ] **Run `scripts/validate_docs.py`**: Execute the existing validation script to identify issues with YAML front matter and SVG embedding.
+    - [ ] **Address `TODO: Add date format validation for 'last_updated'` in `scripts/validate_docs.py`**: Improve the existing validation tool.
+    - [ ] **Implement Markdown Linting, Spell Checks, Link Validation**: Research, integrate, and run tools for comprehensive documentation quality.
+
+### Phase 3: Structured Documentation Enhancement (Medium Priority)
+- [ ] **Objective**: Systematically improve the structure and content of the documentation.
+- [ ] **Tasks**:
+    - [ ] **Continue Documentation Refactoring (Batch 5 & 6)**: Progress through the remaining files to conform to the standard YAML front matter format.
+    - [ ] **Continue Research Documentation**: Systematically document research papers and academic foundations for each Guardian agent, adding citations and updating relevant sections.
+
+### Phase 4: Continuous Improvement & Maintenance (Ongoing)
+- [ ] **Objective**: Maintain project health and ensure long-term stability.
+- [ ] **Tasks**:
+    - [ ] **General Testing (Regression, Integration)**: Regularly run these tests after any significant changes.
+    - [ ] **Backup & Version Control**: Continue to adhere to good practices for backups and version control.
+
 ## 🔍 Issue Investigation & Resolution
 
 ### Issue #1: Makefile Python Path Resolution
@@ -62,6 +92,19 @@ This document consolidates all identified tasks and action items across the proj
 - [ ] Commit fixes with detailed messages
 - [ ] Create feature branch for fixes
 - [ ] Test deployment in clean environment
+
+## 🛠️ Development Environment & Tooling
+
+### Enforce uv for pre-commit Hook Dependencies
+
+- [ ] **Objective**: Ensure `uv` is the sole manager for all Python requirements, including those for `pre-commit` hooks, by removing `pip`-managed `additional_dependencies`.
+- [ ] **Steps**:
+    - [ ] Identify all `additional_dependencies` in `.pre-commit-config.yaml` for Python-based hooks (e.g., `mypy`, `bandit`).
+    - [ ] Remove `additional_dependencies` from the respective hook configurations in `.pre-commit-config.yaml`.
+    - [ ] Add these identified dependencies to the project's main `uv`-managed dependency list (e.g., `pyproject.toml` or `requirements.txt`).
+    - [ ] Ensure these dependencies are installed as part of the main project setup (e.g., via `uv pip install` commands in the `Makefile`'s `install` or `dev-install` targets).
+    - [ ] Test `pre-commit` hooks (e.g., `make check` or `pre-commit run --all-files`) to verify they still function correctly and use the `uv`-managed installations.
+    - [ ] Document the change in dependency management for `pre-commit` hooks in relevant project documentation (e.g., `docs/getting-started/installation.md`).
 
 ## 📝 Documentation Refactoring
 
