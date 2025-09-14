@@ -1,6 +1,6 @@
 # Claude Guardian Agents
 
-A comprehensive system of 49 specialized AI agents designed to handle various aspects of software development, project management, and operations across any project type.
+A comprehensive system of 52 AI agents (49 specialized + 3 meta-agents) designed to handle various aspects of software development, project management, and operations across any project type.
 
 ## 🎯 What Are Guardian Agents?
 
@@ -22,11 +22,11 @@ This system is built on solid academic research. Each agent design is informed b
 
 ### The Three-Tier Guardian Agent System
 
-This project includes a lightweight, three-tier system of "meta" agents designed to maintain project quality and prevent scope creep. This system can be used as a standalone quality control mechanism or as a meta-layer on top of the 49-agent system.
+This project includes a lightweight, three-tier system of "meta" agents specifically designed to prevent code creep and over-engineering at the earliest stages of development, maintaining project quality and preventing scope creep. This system can be used as a standalone quality control mechanism or as a meta-layer on top of the 49-agent system.
 
 📖 **[Learn more about the Three-Tier Guardian Agent System](docs/three-tier-guardian-system.md)**
 
-### The 49 Guardian Agents
+### The 52 Guardian Agents
 
 ```mermaid
 graph TB
@@ -53,6 +53,12 @@ graph TB
         C3[Workflow Guardians]
     end
 
+    subgraph "👑 Meta-Agent Layer"
+        M1[Architectural Orchestrator]
+        M2[Codebase Complexity Analyzer]
+        M3[Minimal Todo Fixer]
+    end
+
     T1 -.->|unstick| A1
     T2 -.->|unstick| B1
     T3 -.->|unstick| C1
@@ -64,10 +70,17 @@ graph TB
     B3 --> C1
     C1 --> C3
 
+    M1 --> A1
+    M2 --> B1
+    M3 --> C1
+
     style T1 fill:#fff2e1
     style A1 fill:#e1f5e1
     style B2 fill:#ffe1e1
     style C1 fill:#e1e8ff
+    style M1 fill:#f0e68c
+    style M2 fill:#f0e68c
+    style M3 fill:#f0e68c
 ```
 
 ## 📋 Quick Start Guide
@@ -111,6 +124,13 @@ graph TB
 - **Creative Guardians**: Lateral thinking and rule-breaking innovation
 - **Simplicity Guardians**: Child-like questioning to cut through complexity
 - [📁 View All Think-Tank Agents](4-thinktank/)
+
+### 5. 👑 Meta-Agents (NEW)
+**Purpose**: Orchestrate, analyze, and fix code to prevent complexity and scope creep
+- **Architectural Orchestrator**: Oversees overall system design and agent interactions
+- **Codebase Complexity Analyzer**: Identifies over-engineering and potential issues
+- **Minimal Todo Fixer**: Executes precise, minimal fixes based on analysis
+- [📁 View All Meta-Agents](5-meta-agents/)
 
 ## 🔄 How Agents Work Together
 
@@ -203,6 +223,7 @@ your-project/
 │   ├── 2-engineering/           # Technical & Development agents (041-083)
 │   ├── 3-operations/            # Operations & Security agents (091-100)
 │   ├── 4-thinktank/            # Think-Tank reasoning agents (101-108)
+├── 5-meta-agents/            # Meta-agents for preventing code creep
 │   └── scripts/                 # Management scripts
 ├── .claude/agents/              # Claude Code integration
 │   └── agent-index.json         # Auto-generated agent index

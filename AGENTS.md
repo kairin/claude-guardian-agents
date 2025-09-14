@@ -4,9 +4,7 @@
 
 ## 🎯 Project Overview
 
-Guardian Agents is a production-ready AI agent orchestration system with **49 specialized agents** across 4 cognitive layers. Ubuntu 25.04 + Python 3.13 + UV package manager ONLY.
-
-In addition to the 49 specialized agents, this project also includes a **Three-Tier Guardian Agent System** designed to maintain project quality and prevent scope creep. This system consists of three "meta" agents that work together to analyze, simplify, and fix code.
+Guardian Agents is a production-ready AI agent orchestration system with **52 agents** (49 specialized + 3 meta-agents) across 5 cognitive layers. The 3 meta-agents are specifically designed to prevent code creep and over-engineering at the earliest stages of development. Ubuntu 25.04 + Python 3.13 + UV package manager ONLY.
 
 📖 **[Learn more about the Three-Tier Guardian Agent System](docs/three-tier-guardian-system.md)**
 
@@ -34,8 +32,8 @@ In addition to the 49 specialized agents, this project also includes a **Three-T
 - **Version**: Currently 2.5.1 - keep ALL files synchronized
 
 ### **System Specifications**
-- **Agent Count**: 49 specialized agents currently, another concise 3-layer agents recently added for purpose of ensuring prevention of code creep. new agents will be added.
-- **Architecture**: 4 layers (1-product, 2-engineering, 3-operations, 4-thinktank)
+- **Agent Count**: 52 agents (49 specialized + 3 meta-agents). The 3 meta-agents are specifically designed to prevent code creep and over-engineering at the earliest stages of development. New agents will be added.
+- **Architecture**: 5 layers (1-product, 2-engineering, 3-operations, 4-thinktank, 5-meta-agents)
 - **Installation Method**: Single script (`install-guardian-agents.sh`) only
 - **Progress Tracking**: Single file (`issues_to_fix.md`) only
 
@@ -136,7 +134,7 @@ DETAILED CHANGES:
 VALIDATION:
 - Pre-commit: ✅ Passed
 - Version sync: ✅ All files 2.5.1
-- Agent count: ✅ 49 agents
+- Agent count: ✅ 52 agents
 
 🤖 Generated with [Claude Code](https://claude.ai/code)
 
@@ -150,7 +148,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 - ✅ Pre-commit hooks without loops
 - ✅ Version consistency (2.5.1) across all files
 - ✅ Single installation method
-- ✅ 49 agents accurately documented
+- ✅ 52 agents accurately documented
 - ✅ Cross-project installation functional
 
 ## 🎯 Current Focus Areas
