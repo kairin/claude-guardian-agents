@@ -25,12 +25,9 @@ Guardian Agents System (49 Total)
 
 ### **🔗 Quick Links**
 
-- **[Main Repository](../../README.md)** - System overview
-- **[Research Papers](../RESEARCH-PAPERS.md)** - Academic foundations
-- **[Complete Progress](../COMPLETE-PROGRESS-DOCUMENTATION.md)** - Project status
-- **[Think-Tank System](../THINK-TANK-COMPLETION-SUMMARY.md)** - Cognitive diversity framework
- - **[Agent Creation](AGENT-CREATION-GUIDE.md)** - How to create new agents
- - **[Testing & Validation](../docs/validation/IMPLEMENTATION-VALIDATION.md)** - Quality assurance (moved)
+- **[Think-Tank System](../validation/THINK-TANK-COMPLETION-SUMMARY.md)** - Cognitive diversity framework
+- **[Testing & Validation](../validation/IMPLEMENTATION-VALIDATION.md)** - Quality assurance (moved)
+
 
 ---
 
