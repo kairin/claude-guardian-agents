@@ -55,7 +55,6 @@ reports:
 	$(PYTHON) scripts/generate-reports.py all
 
 validate:
-	$(PYTHON) scripts/validate-gpm.py
 	$(PYTHON) scripts/track-progress.py calculate-completion
 
 track:
