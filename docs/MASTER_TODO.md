@@ -98,13 +98,22 @@ This section outlines the recommended phased approach for tackling the identifie
 ### Enforce uv for pre-commit Hook Dependencies
 
 - [ ] **Objective**: Ensure `uv` is the sole manager for all Python requirements, including those for `pre-commit` hooks, by removing `pip`-managed `additional_dependencies`.
-- [ ] **Steps**:
-    - [ ] Identify all `additional_dependencies` in `.pre-commit-config.yaml` for Python-based hooks (e.g., `mypy`, `bandit`).
-    - [ ] Remove `additional_dependencies` from the respective hook configurations in `.pre-commit-config.yaml`.
-    - [ ] Add these identified dependencies to the project's main `uv`-managed dependency list (e.g., `pyproject.toml` or `requirements.txt`).
-    - [ ] Ensure these dependencies are installed as part of the main project setup (e.g., via `uv pip install` commands in the `Makefile`'s `install` or `dev-install` targets).
-    - [ ] Test `pre-commit` hooks (e.g., `make check` or `pre-commit run --all-files`) to verify they still function correctly and use the `uv`-managed installations.
-    - [ ] Document the change in dependency management for `pre-commit` hooks in relevant project documentation (e.g., `docs/getting-started/installation.md`).
+- [ ] **Impact**:
+    - [ ] Eliminates `pre-commit` environment errors.
+    - [ ] Unified Dependency Management.
+    - [ ] Improved Reproducibility.
+- [ ] **Phase 1: Assessment & Preparation**
+    - [ ] **Step 1.1: Identify Affected Hooks and Dependencies**: Review `.pre-commit-config.yaml` to pinpoint all Python-based hooks that currently use `additional_dependencies`.
+    - [ ] **Step 1.2: Backup Current Configuration**: Create a backup of `.pre-commit-config.yaml` and any relevant dependency files.
+- [ ] **Phase 2: Configuration Modification**
+    - [ ] **Step 2.1: Remove `additional_dependencies` from `.pre-commit-config.yaml`**: For each identified hook, delete the `additional_dependencies` key and its associated list of packages.
+    - [ ] **Step 2.2: Integrate Dependencies into Main Project Requirements**: Add the identified dependencies to the project's primary dependency management file (e.g., `pyproject.toml` or ensure they are covered by `Makefile` install commands).
+- [ ] **Phase 3: Environment & Hook Re-initialization**
+    - [ ] **Step 3.1: Re-create `uv` Virtual Environment**: Perform a clean re-creation of the `uv` virtual environment (`make env-reset`).
+    - [ ] **Step 3.2: Re-install `pre-commit` Hooks**: Re-install `pre-commit` hooks (`pre-commit install`).
+- [ ] **Phase 4: Validation & Documentation**
+    - [ ] **Step 4.1: Validate `pre-commit` Hook Functionality**: Run all `pre-commit` hooks against the codebase (`make check` or `pre-commit run --all-files`).
+    - [ ] **Step 4.2: Document the Change**: Update relevant project documentation (e.g., `docs/getting-started/installation.md`, `README.md`).
 
 ## 📝 Documentation Refactoring
 
