@@ -11,6 +11,7 @@ Guardian Agents includes powerful automation scripts for project management, pro
 - [`generate-reports.py`](#generate-reportspy) - Automated report generation
 - [`validate-gpm.py`](#validate-gpmpy) - GPM system validation
 - [`setup-python-env.sh`](#setup-python-envsh) - Environment setup
+ - [Guardian Package Manager](guardian-package-manager.md) - Design and usage for GPM
 
 ### **Utility Scripts**
 - [`generate-manifest.py`](#generate-manifestpy) - Manifest generation
