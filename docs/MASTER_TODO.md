@@ -291,3 +291,55 @@ This section outlines the recommended phased approach for tackling the identifie
 - [ ] Document top 5 most-used agents
 - [ ] Add "Research" badge to documented agents
 - [ ] Create research paper submission process
+
+## 🤖 Gemini Agent Recommendations (2025-09-14)
+
+This section outlines recommendations from the Gemini agent for improving project structure, documentation, and overall maintainability.
+
+### A. Version Inconsistency (Critical Correctness Issue)
+- [ ] **TASK: Verify `manifest.json` version and update if necessary.**
+  - **Details**: Ensure `manifest.json`'s version aligns with `pyproject.toml` (currently 3.1.0). If `scripts/generate-manifest.py` is not updating it correctly, investigate and fix the script.
+  - **Priority**: Critical
+- [ ] **TASK: Establish a single source of truth for project version.**
+  - **Details**: Centralize the project version definition (e.g., in `pyproject.toml`) and ensure all other files (like `manifest.json`, `README.md`) either reference it or are automatically updated.
+  - **Priority**: High
+
+### B. Agent Documentation Structure (Consolidation/Correctness)
+- [ ] **TASK: Standardize frontmatter across all agent Markdown files.**
+  - **Details**: Implement a consistent frontmatter structure (like the one seen in Think-Tank agents) for all agent Markdown files (e.g., Product/Design agents).
+  - **Priority**: High
+- [ ] **TASK: Automate frontmatter generation/validation.**
+  - **Details**: Develop a pre-commit hook or script to ensure all new/modified agent files adhere to the standardized frontmatter.
+  - **Priority**: Medium
+
+### C. Redundant Agent Image Links (Simplification/Correctness)
+- [ ] **TASK: Consolidate agent image paths.**
+  - **Details**: Choose a single, consistent method for referencing agent images (e.g., always relative to the project root's `assets` directory).
+  - **Priority**: Medium
+- [ ] **TASK: Update all agent Markdown files with consolidated image paths.**
+  - **Details**: Modify existing agent files to use the new, consistent image referencing method. This can be automated.
+  - **Priority**: Medium
+
+### D. Research Documentation (Consolidation/Simplification)
+- [ ] **TASK: Centralize or reference research documentation.**
+  - **Details**: Decide whether to centralize all detailed research in `docs/RESEARCH-PAPERS.md` (with agent files linking to sections) or keep details in agent files and make `docs/RESEARCH-PAPERS.md` an index.
+  - **Priority**: High
+- [ ] **TASK: Remove redundant detailed research content.**
+  - **Details**: Ensure no duplication of detailed research information across multiple files once a strategy is decided.
+  - **Priority**: Medium
+
+### E. UV-Only Compliance (Correctness/Simplification)
+- [ ] **TASK: Audit and remove non-UV package manager references.**
+  - **Details**: Go through all documentation and installation scripts to eliminate references to `pip`, `conda`, `poetry`, etc., as per the "UV-Only Violations" identified.
+  - **Priority**: High
+- [ ] **TASK: Automate UV-only compliance validation.**
+  - **Details**: Implement a pre-commit hook or CI/CD check to automatically detect and flag non-UV references.
+  - **Priority**: Medium
+
+### F. Pre-commit Hooks (Correctness/Simplification)
+- [ ] **TASK: Verify and resolve problematic pre-commit hooks.**
+  - **Details**: Confirm that `end-of-file-fixer` and `update-progress` (if still present or re-introduced) are correctly configured or removed to prevent commit failures. Follow the `issues_to_fix.md` roadmap.
+  - **Priority**: Critical
+- [ ] **TASK: Redesign problematic hooks if necessary.**
+  - **Details**: If `update-progress` or similar functionality is desired, redesign it to avoid modifying staged files or creating infinite loops.
+  - **Priority**: High
