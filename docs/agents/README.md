@@ -9,16 +9,10 @@ This directory contains all Guardian Agents system documentation, organized for 
 ### **📋 Core Documentation**
 
 #### **Agent System Overview**
-- **[Agent Registry](registry.md)** - Complete catalog of all 49 Guardian agents
-- **[Agent Relationships](relationships.md)** - How agents chain and communicate
-- **[Agent Templates](templates.md)** - Templates for creating new agents
-- **[Agent Mapping](mapping.md)** - Directory structure and naming conventions
 
 #### **Development Workflows**
-- **[Development Guide](../getting-started/gpm-installation.md)** - Setting up Guardian agents
-- **[Agent Creation](../AGENT-CREATION-GUIDE.md)** - How to create new agents
-- **[Testing & Validation](../IMPLEMENTATION-VALIDATION.md)** - Quality assurance
-
+ **[Testing & Validation](../validation/IMPLEMENTATION-VALIDATION.md)** - Quality assurance
+ **[Think-Tank System](../validation/THINK-TANK-COMPLETION-SUMMARY.md)** - Cognitive diversity framework
 ### **🏗️ Agent Structure**
 
 ```

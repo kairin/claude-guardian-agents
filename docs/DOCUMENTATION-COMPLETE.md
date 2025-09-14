@@ -33,7 +33,7 @@ The Guardian Agents project is now **fully documented** with comprehensive guide
 - **[README.md](README.md)** - Main documentation index and project overview
 - **[Quick Start Guide](getting-started/quick-start.md)** - 5-minute setup guide
 - **[Installation Guide](getting-started/installation.md)** - Complete installation instructions
-- **[First Steps Tutorial](getting-started/first-steps.md)** - Guided walkthrough *(placeholder)*
+- **[First Steps Tutorial](getting-started/quick-start.md)** - Guided walkthrough *(placeholder)*
 
 #### **💼 Project Management System**
 - **[PROJECT-MANAGEMENT-SYSTEM.md](PROJECT-MANAGEMENT-SYSTEM.md)** - Complete system architecture

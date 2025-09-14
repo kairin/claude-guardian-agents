@@ -196,4 +196,4 @@ tools: []                               # Restricted agents
 
 ---
 
-**For more examples, see the [AGENTS-registry.md](../AGENTS-registry.md) file with all agent templates.**
+**For more examples, see the [Agent Registry](../agents/registry.md) file with all agent templates.**

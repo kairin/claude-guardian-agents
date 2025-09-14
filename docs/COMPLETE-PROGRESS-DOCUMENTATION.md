@@ -193,7 +193,7 @@ graph LR
 ### **Core Documentation**:
 - **[Main README](../README.md)** - System overview and getting started
 - **[Research Papers](RESEARCH-PAPERS.md)** - Academic foundations
-- **[Think-Tank Completion](THINK-TANK-COMPLETION-SUMMARY.md)** - Detailed implementation
+- **[Think-Tank Completion](validation/THINK-TANK-COMPLETION-SUMMARY.md)** - Detailed implementation
 
 ### **Technical Documentation**:
 - **[Project Management System](PROJECT-MANAGEMENT-SYSTEM.md)** - Accountability framework
