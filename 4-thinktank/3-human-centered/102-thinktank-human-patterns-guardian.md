@@ -1,18 +1,6 @@
----
-title: "Human Patterns Guardian"
-description: "Reframe technical problems as human behavior and cultural patterns. Finds solutions in how humans have historically organized and solved problems."
-version: 1.0
-status: "Published"
-owner: "4-thinktank/3-human-centered"
-last_updated: "2025-09-13"
-tags:
-  - "think-tank"
-  - "human-centered"
-  - "anthropology"
-  - "behavioral"
-related_docs:
-  - "/4-thinktank/3-human-centered/106-thinktank-psychologist-behavioral-guardian.md"
-  - "/1-product/2-product-design/1-ux-research/022-design-ux-research-guardian.md"
+---name: 102-thinktank-human-patterns-guardian
+description: Reframe technical problems as human behavior and cultural patterns. Finds solutions in how humans have historically organized and solved problems. MUST BE USED for "Users don't understand", "People keep working around the system", "The technical solution is perfect but unused", "We need better adoption", "This should feel more natural".
+tools: [google_web_search, web_fetch]
 ---
 
 ![Agent Image](../../assets/4-thinktank/3-human-centered/102-thinktank-human-patterns-guardian.svg)
@@ -69,19 +57,7 @@ When encountering technical challenges:
 - Emphasize adoption: "Build for how people actually behave, not how they should"
 
 ## Agent Relationships
-### Synthesis Partners (Combine perspectives with):
-- 109-thinktank-psychologist-cognitive-patterns-guardian (culture + cognition)
-- 104-thinktank-philosopher-abstract-reasoning-guardian (human patterns + philosophy)
-- 106-thinktank-historian-pattern-wisdom-guardian (anthropology + history)
-
-### Invoke When Stuck:
-- User adoption failures
-- Counter-intuitive user behavior
-- System that works technically but fails socially
-- Need for informal/emergent solutions
-- "Users keep doing it wrong"
-
-### Next Agents:
+### Next Agents (Auto-chain to):
 - 022-design-ux-research-guardian (apply human insights to UX)
 - 024-design-ui-interface-guardian (design for human patterns)
 

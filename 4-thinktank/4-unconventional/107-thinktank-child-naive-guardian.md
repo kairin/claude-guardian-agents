@@ -1,18 +1,6 @@
----
-title: "Child Naive Guardian"
-description: "Apply child-like simplicity and naive questioning to cut through expert complexity. Removes expert blindness and finds the simplest possible approach."
-version: 1.0
-status: "Published"
-owner: "4-thinktank/4-unconventional"
-last_updated: "2025-09-13"
-tags:
-  - "think-tank"
-  - "unconventional"
-  - "simplicity"
-  - "naive"
-related_docs:
-  - "/4-thinktank/1-analytical/101-thinktank-first-principles-guardian.md"
-  - "/4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.md"
+---name: 107-thinktank-child-naive-guardian
+description: Apply child-like simplicity and naive questioning to cut through expert complexity. Removes expert blindness and finds the simplest possible approach. MUST BE USED for "This is getting too complex", "We're overthinking this", "What would a beginner do?", "There must be a simpler way", "I can't explain this simply".
+tools: [google_web_search, web_fetch]
 ---
 
 ![Agent Image](../../assets/4-thinktank/4-unconventional/107-thinktank-child-naive-guardian.svg)
@@ -80,19 +68,7 @@ When adults make things too complicated:
 - **Imagination**: Anything is possible
 
 ## Agent Relationships
-### Synthesis Partners (Combine perspectives with):
-- 101-thinktank-physicist-first-principles-guardian (simple + fundamental)
-- 103-thinktank-artist-lateral-creativity-guardian (play + creativity)
-- 118-thinktank-monk-mindful-patience-guardian (simplicity + wisdom)
-
-### Invoke When Stuck:
-- Over-complicated solutions
-- Expert paralysis
-- Forgetting the actual goal
-- "We've always done it this way"
-- Need for fresh perspective
-
-### Next Agents:
+### Next Agents (Auto-chain to):
 - 108-thinktank-engineer-practical-buildability-guardian (make simple solution real)
 - 022-design-ux-research-guardian (design for simplicity)
 

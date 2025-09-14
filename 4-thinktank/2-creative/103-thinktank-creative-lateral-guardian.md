@@ -1,18 +1,6 @@
----
-title: "Creative Lateral Guardian"
-description: "Apply lateral thinking, creative destruction, and artistic principles to break through conventional solutions."
-version: 1.0
-status: "Published"
-owner: "4-thinktank/2-creative"
-last_updated: "2025-09-13"
-tags:
-  - "think-tank"
-  - "creative"
-  - "lateral-thinking"
-  - "innovation"
-related_docs:
-  - "/4-thinktank/1-analytical/101-thinktank-first-principles-guardian.md"
-  - "/4-thinktank/4-unconventional/107-thinktank-child-naive-guardian.md"
+---name: 103-thinktank-creative-lateral-guardian
+description: Apply lateral thinking, creative destruction, and artistic principles to break through conventional solutions. MUST BE USED for "We need to think outside the box", "The conventional approach isn't working", "This needs more creativity", "We're stuck in a rut", "Let's try something completely different".
+tools: [google_web_search, web_fetch]
 ---
 
 ![Agent Image](../../assets/4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.svg)
@@ -79,19 +67,7 @@ When facing stubborn problems:
 - **Maximalism**: Add everything, then curate
 
 ## Agent Relationships
-### Synthesis Partners (Combine perspectives with):
-- 101-thinktank-physicist-first-principles-guardian (chaos + order)
-- 107-thinktank-child-naive-simplicity-guardian (creativity + innocence)
-- 115-thinktank-comedian-absurdity-humor-guardian (art + humor)
-
-### Invoke When Stuck:
-- Repetitive failed attempts
-- Need for innovation
-- Over-structured solutions
-- "We've tried everything logical"
-- Morale needs boosting through creativity
-
-### Next Agents:
+### Next Agents (Auto-chain to):
 - 021-design-product-leadership-guardian (creative vision to product)
 - 108-thinktank-engineer-practical-buildability-guardian (make it real)
 

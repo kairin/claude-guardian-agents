@@ -24,6 +24,7 @@ Guardian Agents is a production-ready AI agent orchestration system with **52 ag
   - All branches contain valuable historical information
   - **NO** automatic cleanup with `git branch -d`
   - **YES** automatic merge to main branch and ensure dedicated branch has preserved all new changes.
+  - **YES** use gh cli if avaialable. use git otherwise.
 
 ### **Environment & Dependencies**
 - **Python 3.13+ ONLY** (Ubuntu 25.04 built-in)
