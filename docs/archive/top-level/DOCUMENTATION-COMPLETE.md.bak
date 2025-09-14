@@ -1,8 +1,3 @@
----
-archived: true
-note: "This file is archived. For canonical docs, see docs//docs/README.md and relevant subfolders. Full original retained here for historical reference."
----
-
 title: "Documentation Complete"
 description: "Summarizes the completion status of the Guardian Agents project documentation, detailing coverage, metrics, and quality."
 version: 1.0
@@ -49,7 +44,7 @@ The Guardian Agents project is now **fully documented** with comprehensive guide
 ### **Information Hierarchy**
 ```
 docs/
-├── /docs/README.md                           # 🏠 Main entry point
+├── README.md                           # 🏠 Main entry point
 ├── PROJECT-MANAGEMENT-SYSTEM.md        # 💼 Core system design
 ├── getting-started/                    # 🚀 New user onboarding
 │   ├── quick-start.md                 # ⚡ 5-minute setup
@@ -138,11 +133,11 @@ This file confirms that documentation coverage exists. Full, verbose documentati
 - ✅ **Maintenance Guide**: Clear update and maintenance procedures
 
 ### **User Onboarding Path**
-1. **Start Here**: [/docs/README.md](/docs/README.md) for project overview
+1. **Start Here**: [README.md](README.md) for project overview
 2. **Get Running**: [Quick Start Guide](getting-started/quick-start.md) for 5-minute setup
 3. **Deep Dive**: [Installation Guide](getting-started/installation.md) for detailed setup
 4. **Learn System**: [Progress Tracking Guide](project-management/progress-tracking.md) for system mastery
-5. **Automation**: [Script Reference](tools//docs/README.md#script-reference) for automation mastery
+5. **Automation**: [Script Reference](tools/README.md#script-reference) for automation mastery
 6. **Issues**: [Common Issues](troubleshooting/common-issues.md) for problem resolution
 
 ### **Maintainer Resources**

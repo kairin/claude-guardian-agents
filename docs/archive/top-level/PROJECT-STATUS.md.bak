@@ -1,5 +1,4 @@
 ---
-archived: true
 title: "Project Status (Consolidated)"
 description: "High-level project status. Operational details and timelines live in `CHANGELOG.md` and archived docs."
 ---
@@ -56,7 +55,7 @@ tags:
 ### Information Hierarchy
 ```
 docs/
-├── /docs/README.md
+├── README.md
 ├── PROJECT-MANAGEMENT-SYSTEM.md
 ├── getting-started/
 ├── project-management/
@@ -86,11 +85,11 @@ docs/
   - Monthly: Completeness/accuracy review
 
 ## 🔗 Key Documentation Links
-- [Main README](..//docs/README.md)
+- [Main README](../README.md)
 - [Research Papers](RESEARCH-PAPERS.md)
 - [Project Management System](PROJECT-MANAGEMENT-SYSTEM.md)
 - [Implementation Validation](IMPLEMENTATION-VALIDATION.md)
-- [Script Reference](tools//docs/README.md#script-reference)
+- [Script Reference](tools/README.md#script-reference)
 - [Common Issues](troubleshooting/common-issues.md)
 - [Progress Tracking Guide](project-management/progress-tracking.md)
 

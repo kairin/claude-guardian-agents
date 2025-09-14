@@ -1,8 +1,3 @@
----
-archived: true
-note: "This file is archived. For canonical docs, see docs//docs/README.md and relevant subfolders. Full original retained here for historical reference."
----
-
 # 📚 Research Papers & Academic Foundations
 
 ---
@@ -162,7 +157,7 @@ The Guardian Agents system is built on solid academic research in AI, cognitive 
 
 #### Agile Development
 - **Paper**: "Agile Manifesto" (2001)
-- **<external-link-placeholder>**: https://agilemanifesto.org/
+- **URL**: https://agilemanifesto.org/
 - **Concepts**: Iterative development, Continuous delivery
 - **Implementation**: Agents 061-069 (Development Guardians)
 
@@ -175,7 +170,7 @@ The Guardian Agents system is built on solid academic research in AI, cognitive 
 
 #### Security Operations
 - **Framework**: NIST Cybersecurity Framework
-- **<external-link-placeholder>**: https://www.nist.gov/cyberframework
+- **URL**: https://www.nist.gov/cyberframework
 - **Concepts**: Identify, Protect, Detect, Respond, Recover
 - **Implementation**: Agents 092-094 (Security Operations)
 
@@ -279,7 +274,7 @@ The Guardian Agents system is built on solid academic research in AI, cognitive 
 When adding new research:
 ```markdown
 #### Paper Title (Year)
-- **Paper**: [arxiv:ID](<external-link-placeholder>) or DOI
+- **Paper**: [arxiv:ID](URL) or DOI
 - **Authors**: Last, First; Last, First
 - **Key Concepts**: Brief summary
 - **Implementation**: Which agents/features
