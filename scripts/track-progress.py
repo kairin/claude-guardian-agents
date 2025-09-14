@@ -25,7 +25,8 @@ class ProgressTracker:
         """Load current progress data"""
         if self.progress_file.exists():
             with open(self.progress_file) as f:
-                return json.load(f)
+                data: dict[str, Any] = json.load(f)
+                return data
         return self._initialize_progress()
 
     def save_progress(self, progress_data: dict) -> None:
@@ -181,7 +182,9 @@ class ProgressTracker:
         for criterion in criteria:
             # This would contain actual validation logic
             result = self._validate_criterion(feature_id, criterion)
-            validation_results["validation_criteria"].append(
+            validation_list = validation_results["validation_criteria"]
+        if isinstance(validation_list, list):
+            validation_list.append(
                 {
                     "criterion": criterion,
                     "passed": result,
@@ -194,9 +197,13 @@ class ProgressTracker:
         validation_results["test_results"] = test_results
 
         # Determine overall status
-        all_criteria_passed = all(
-            vc["passed"] for vc in validation_results["validation_criteria"]
-        )
+        criteria_results = validation_results["validation_criteria"]
+        if isinstance(criteria_results, list):
+            all_criteria_passed = all(
+                vc["passed"] for vc in criteria_results if isinstance(vc, dict)
+            )
+        else:
+            all_criteria_passed = False
         tests_passed = test_results.get("all_passed", False)
 
         if all_criteria_passed and tests_passed:

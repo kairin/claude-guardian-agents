@@ -15,8 +15,8 @@ class ManifestGenerator:
 
     def __init__(self, repo_root: str = "."):
         self.repo_root = Path(repo_root)
-        self.agent_files = []
-        self.categories = {
+        self.agent_files: list[Path] = []
+        self.categories: dict[str, dict[str, Any]] = {
             "strategy": {
                 "name": "Strategic & Product",
                 "description": "Product strategy, planning, and design agents",
@@ -74,7 +74,7 @@ class ManifestGenerator:
             },
         }
 
-    def scan_repository(self):
+    def scan_repository(self) -> list[Path]:
         """Scan repository for all guardian agent files"""
         print("🔍 Scanning repository for Guardian agent files...")
 
@@ -85,7 +85,7 @@ class ManifestGenerator:
         print(f"✅ Found {len(self.agent_files)} agent files")
         return self.agent_files
 
-    def extract_agent_info(self, file_path: Path) -> dict:
+    def extract_agent_info(self, file_path: Path) -> dict[str, Any] | None:
         """Extract agent information from file"""
         try:
             # Extract agent ID from filename
@@ -129,7 +129,8 @@ class ManifestGenerator:
 
         except Exception as e:
             print(f"⚠️ Error processing {file_path}: {e}")
-            return None
+
+        return None  # Add explicit return for type safety
 
     def categorize_agent(self, agent_num: int) -> str:
         """Categorize agent based on ID number"""
@@ -149,6 +150,8 @@ class ManifestGenerator:
                 return "frontend"
             elif 67 <= agent_num <= 69:
                 return "mobile"
+            else:
+                return "development"
         elif 71 <= agent_num <= 73:
             return "quality"
         elif 81 <= agent_num <= 83:
@@ -274,9 +277,11 @@ class ManifestGenerator:
         except OSError:
             return 0
 
-    def generate_workflows(self, agents: dict) -> dict:
+    def generate_workflows(
+        self, agents: dict[str, dict[str, Any]]
+    ) -> dict[str, dict[str, Any]]:
         """Generate workflow definitions based on available agents"""
-        workflows = {
+        workflows: dict[str, dict[str, Any]] = {
             "feature_development": {
                 "name": "Complete Feature Development",
                 "description": "End-to-end feature development workflow",
@@ -314,22 +319,30 @@ class ManifestGenerator:
             category = agent_info["category"]
 
             if category == "strategy" and agent_id == "002":
-                workflows["feature_development"]["chain"].insert(0, agent_id)
+                feature_chain = workflows["feature_development"]["chain"]
+                feature_chain.insert(0, agent_id)
             elif category == "architecture" and "principal" in agent_info["name"]:
-                if agent_id not in workflows["feature_development"]["chain"]:
-                    workflows["feature_development"]["chain"].append(agent_id)
+                feature_chain = workflows["feature_development"]["chain"]
+                if agent_id not in feature_chain:
+                    feature_chain.append(agent_id)
             elif category == "backend" and "senior" in agent_info["name"]:
-                workflows["api_development"]["chain"].append(agent_id)
-                if agent_id not in workflows["feature_development"]["chain"]:
-                    workflows["feature_development"]["chain"].append(agent_id)
+                api_chain = workflows["api_development"]["chain"]
+                api_chain.append(agent_id)
+                feature_chain = workflows["feature_development"]["chain"]
+                if agent_id not in feature_chain:
+                    feature_chain.append(agent_id)
             elif category == "quality" and "senior" in agent_info["name"]:
-                workflows["api_development"]["chain"].append(agent_id)
-                if agent_id not in workflows["feature_development"]["chain"]:
-                    workflows["feature_development"]["chain"].append(agent_id)
+                api_chain = workflows["api_development"]["chain"]
+                api_chain.append(agent_id)
+                feature_chain = workflows["feature_development"]["chain"]
+                if agent_id not in feature_chain:
+                    feature_chain.append(agent_id)
             elif category == "devops" and "director" in agent_info["name"]:
-                workflows["deployment_pipeline"]["chain"].append(agent_id)
-                if agent_id not in workflows["feature_development"]["chain"]:
-                    workflows["feature_development"]["chain"].append(agent_id)
+                deploy_chain = workflows["deployment_pipeline"]["chain"]
+                deploy_chain.append(agent_id)
+                feature_chain = workflows["feature_development"]["chain"]
+                if agent_id not in feature_chain:
+                    feature_chain.append(agent_id)
 
         return workflows
 
@@ -346,8 +359,12 @@ class ManifestGenerator:
         for file_path in agent_files:
             agent_info = self.extract_agent_info(file_path)
             if agent_info:
-                agent_id = re.match(r"(\d+)-", file_path.name).group(1)
-                agents[agent_id] = agent_info
+                match = re.match(r"(\d+)-", file_path.name)
+                if match:
+                    agent_id = match.group(1)
+                    agents[agent_id] = agent_info
+                else:
+                    continue
 
                 # Add to category
                 category = agent_info["category"]
@@ -430,7 +447,7 @@ class ManifestGenerator:
             "metadata": {
                 "total_agents": len(agents),
                 "research_papers": sum(
-                    info["research_foundations"] for info in agents.values()
+                    [info["research_foundations"] for info in agents.values()]
                 ),
                 "workflow_chains": len(workflows),
                 "supported_languages": 7,

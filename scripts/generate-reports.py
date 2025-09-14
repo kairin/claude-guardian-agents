@@ -9,23 +9,25 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 
 class ReportGenerator:
     """Automated report generation system"""
 
-    def __init__(self, project_root: str = None):
+    def __init__(self, project_root: str | None = None):
         self.project_root = Path(project_root or os.getcwd())
         self.tracking_dir = self.project_root / "tracking"
         self.reports_dir = self.tracking_dir / "reports"
         self.reports_dir.mkdir(parents=True, exist_ok=True)
 
-    def load_progress(self) -> dict:
+    def load_progress(self) -> dict[str, Any]:
         """Load current progress data"""
         progress_file = self.tracking_dir / "progress.json"
         if progress_file.exists():
             with open(progress_file) as f:
-                return json.load(f)
+                data: dict[str, Any] = json.load(f)
+                return data
         return {}
 
     def generate_weekly_report(self) -> str:
@@ -122,7 +124,7 @@ class ReportGenerator:
 
         return str(report_file)
 
-    def generate_milestone_report(self, milestone_name: str = None) -> str:
+    def generate_milestone_report(self, milestone_name: str | None = None) -> str:
         """Generate comprehensive milestone completion report"""
         progress = self.load_progress()
         report_date = datetime.now()
@@ -153,7 +155,7 @@ class ReportGenerator:
 
             # Calculate feature breakdown
             features = epic.get("features", [])
-            feature_statuses = {}
+            feature_statuses: dict[str, int] = {}
             for fid in features:
                 feature = progress.get("features", {}).get(fid, {})
                 fstatus = feature.get("status", "unknown")
@@ -479,7 +481,7 @@ class ReportGenerator:
         return html
 
 
-def main():
+def main() -> None:
     """CLI interface for report generation"""
     if len(sys.argv) < 2:
         print("Usage: python generate-reports.py <command> [args...]")

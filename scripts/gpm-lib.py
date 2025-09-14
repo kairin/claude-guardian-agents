@@ -12,6 +12,7 @@ import sys
 import tempfile
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 import requests
 
@@ -54,22 +55,23 @@ class GuardianUpdater:
         self.cache_dir.mkdir(exist_ok=True)
 
         self.metadata = self.load_metadata()
-        self.remote_manifest = None
+        self.remote_manifest: dict[str, Any] | None = None
 
-    def load_metadata(self) -> dict:
+    def load_metadata(self) -> dict[str, Any]:
         """Load local metadata file"""
         metadata_file = self.guardian_dir / "metadata.json"
         if metadata_file.exists():
             try:
                 with open(metadata_file) as f:
-                    return json.load(f)
+                    data: dict[str, Any] = json.load(f)
+                    return data
             except json.JSONDecodeError:
                 print("⚠️ Corrupted metadata file, reinitializing...")
                 return self._create_empty_metadata()
         else:
             return self._create_empty_metadata()
 
-    def _create_empty_metadata(self) -> dict:
+    def _create_empty_metadata(self) -> dict[str, Any]:
         """Create empty metadata structure"""
         return {
             "guardian_version": None,
@@ -80,15 +82,15 @@ class GuardianUpdater:
             "spec_integration": False,
         }
 
-    def save_metadata(self):
+    def save_metadata(self) -> None:
         """Save metadata to file"""
         metadata_file = self.guardian_dir / "metadata.json"
         with open(metadata_file, "w") as f:
             json.dump(self.metadata, f, indent=2)
 
-    def fetch_remote_manifest(self) -> dict:
+    def fetch_remote_manifest(self) -> dict[str, Any]:
         """Fetch remote manifest with agent information"""
-        if self.remote_manifest:
+        if self.remote_manifest is not None:
             return self.remote_manifest
 
         manifest_url = "https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/manifest.json"
@@ -113,7 +115,8 @@ class GuardianUpdater:
             if cached_manifest.exists():
                 print("📋 Using cached manifest...")
                 with open(cached_manifest) as f:
-                    self.remote_manifest = json.load(f)
+                    data: dict[str, Any] = json.load(f)
+                    self.remote_manifest = data
                 return self.remote_manifest
 
             raise Exception("Unable to fetch or find cached manifest") from e
@@ -212,7 +215,7 @@ class GuardianUpdater:
 
         return success
 
-    def _apply_new_agent(self, change: UpdateChange):
+    def _apply_new_agent(self, change: UpdateChange) -> None:
         """Install new agent"""
         print(f"➕ Installing new agent: {change.agent_id}")
 
@@ -231,7 +234,7 @@ class GuardianUpdater:
             "installed_at": self._current_timestamp(),
         }
 
-    def _apply_updated_agent(self, change: UpdateChange):
+    def _apply_updated_agent(self, change: UpdateChange) -> None:
         """Update existing agent"""
         print(f"🔄 Updating agent: {change.agent_id}")
 
@@ -245,7 +248,7 @@ class GuardianUpdater:
             "last_updated"
         ] = self._current_timestamp()
 
-    def _resolve_conflict(self, change: UpdateChange):
+    def _resolve_conflict(self, change: UpdateChange) -> None:
         """Resolve conflicts in customized agents"""
         print(f"🔀 Resolving conflict for customized agent: {change.agent_id}")
 
@@ -321,7 +324,7 @@ class GuardianUpdater:
 
     def _interactive_resolve(
         self, change: UpdateChange, local_content: str, remote_content: str
-    ):
+    ) -> None:
         """Interactive conflict resolution"""
         print(f"🔧 Interactive resolution needed for {change.agent_id}")
 
@@ -372,7 +375,7 @@ class GuardianUpdater:
 
     def _show_diff_and_resolve(
         self, change: UpdateChange, local_content: str, remote_content: str
-    ):
+    ) -> None:
         """Show diff and allow manual resolution"""
         print(f"\n📋 Differences in {change.agent_id}:")
 

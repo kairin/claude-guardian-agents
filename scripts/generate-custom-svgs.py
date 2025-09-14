@@ -11,7 +11,7 @@ PROJECT_ROOT = Path("/home/kkk/Apps/claude-guardian-agents")
 ASSETS_DIR = PROJECT_ROOT / "assets"
 
 
-def create_cto_leadership_svg():
+def create_cto_leadership_svg() -> str:
     """Create CTO Leadership Guardian SVG with tech leadership symbolism."""
     return """<?xml version="1.0" encoding="UTF-8"?>
 <svg width="100%" height="220px" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="background-color: #0a0a0a;">
