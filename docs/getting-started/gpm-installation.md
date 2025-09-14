@@ -20,12 +20,12 @@ Transform any project into an AI-enhanced development environment with specializ
 
 ## 🚀 Quick Installation (pointer)
 
-The detailed installation and design notes for the Guardian Package Manager are maintained in the canonical tools doc: `../tools/guardian-package-manager.md`.
+The detailed installation and design notes for the Guardian Package Manager are maintained in the canonical tools doc: `../tools/README.md#guardian-package-manager-gpm---implementation-design`.
 
 For a minimal quick start:
 
 ```bash
-# Bootstrap installer (see tools/guardian-package-manager.md for full details)
+# Bootstrap installer (see tools/README.md#guardian-package-manager-gpm---implementation-design for full details)
 curl -sSL https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/install.sh | bash
 
 # Initialize and install agents
@@ -397,11 +397,11 @@ After installation, you can:
 
 ## 📚 Additional Resources
 
-- **[Guardian Agents Documentation](README.md)** - Complete system overview
-- **[Agent Reference Guide](docs/agent-reference.md)** - Detailed agent descriptions
-- **[Workflow Examples](docs/workflows/)** - Real-world usage examples
-- **[Spec-Kit Integration Guide](docs/spec-kit-integration.md)** - Spec-driven development
-- **[Contributing Guide](docs/contributing.md)** - Help improve the system
+- **[Guardian Agents Documentation](../README.md)** - Complete system overview
+- **[Agent Reference Guide](../agents/registry.md)** - Detailed agent descriptions
+- **[Workflow Examples](../workflows/)** - Real-world usage examples
+- **[Spec-Kit Integration Guide](../spec-kit-integration.md)** - Spec-driven development
+- **[Contributing Guide](../contributing.md)** - Help improve the system
 
 ## 💬 Support & Community
 

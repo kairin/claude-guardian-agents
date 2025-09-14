@@ -42,21 +42,13 @@ The Guardian Agents project is now **fully documented** with comprehensive guide
 - **[Validation Framework](project-management/validation.md)** - Quality gates and validation *(placeholder)*
 
 #### **🔧 Technical Documentation**
-- **[System Architecture](technical/system-architecture.md)** - Overall system design *(placeholder)*
-- **[Python Environment Spec](technical/python-environment-spec.md)** - uv-based Python management
-- **[Agent Specifications](technical/agent-specs.md)** - Guardian agent details *(placeholder)*
-- **[API Reference](technical/api-reference.md)** - Complete API documentation *(placeholder)*
+- **[Technical Overview](technical/README.md)** - Consolidated technical documentation (system architecture, env spec, API, agent specs)
 
 #### **🧪 Development & Testing**
-- **[Development Workflow](workflows/development-workflow.md)** - Complete development process
-- **[Testing Strategy](development/testing-strategy.md)** - Testing framework *(placeholder)*
-- **[Code Quality Standards](development/code-quality.md)** - Quality gates *(placeholder)*
-- **[Contributing Guidelines](development/contributing.md)** - How to contribute *(placeholder)*
+- **[Development Overview](development/README.md)** - Consolidated development docs (testing, code quality, contributing)
 
 #### **🛠️ Tools & Scripts**
-- **[Script Reference](tools/script-reference.md)** - Complete automation scripts documentation
-- **[Makefile Commands](tools/makefile-commands.md)** - Development commands *(placeholder)*
-- **[Environment Management](tools/environment-management.md)** - uv and Python tools *(placeholder)*
+- **[Tools Overview](tools/README.md)** - Consolidated tools documentation (GPM, environment, makefile targets, monitoring, scripts)
 
 #### **🚨 Troubleshooting & Support**
 - **[Common Issues](troubleshooting/common-issues.md)** - Complete troubleshooting guide
@@ -167,7 +159,7 @@ docs/
 2. **Get Running**: [Quick Start Guide](getting-started/quick-start.md) for 5-minute setup
 3. **Deep Dive**: [Installation Guide](getting-started/installation.md) for detailed setup
 4. **Learn System**: [Progress Tracking Guide](project-management/progress-tracking.md) for system mastery
-5. **Automation**: [Script Reference](tools/script-reference.md) for automation mastery
+5. **Automation**: [Script Reference](tools/README.md#script-reference) for automation mastery
 6. **Issues**: [Common Issues](troubleshooting/common-issues.md) for problem resolution
 
 ### **Maintainer Resources**

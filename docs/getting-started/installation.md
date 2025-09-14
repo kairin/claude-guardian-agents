@@ -411,7 +411,7 @@ After successful installation:
 1. **[First Steps Tutorial](first-steps.md)** - Learn basic operations
 2. **[Project Management Guide](../project-management/progress-tracking.md)** - Understand tracking system
 3. **[Development Workflow](../workflows/development-workflow.md)** - Contribute to project
-4. **[Script Reference](../tools/script-reference.md)** - Master automation tools
+4. **[Script Reference](../tools/README.md#script-reference)** - Master automation tools
 
 ---
 

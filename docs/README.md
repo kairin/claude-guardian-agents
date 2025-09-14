@@ -16,10 +16,10 @@ Top-level folders
 - `system-design/` - Architecture and system design documents
 - `workflows/` - Development and security workflow guidance
 
-Quick links
-- Guardian Package Manager (GPM): `tools/guardian-package-manager.md`
-- GPM installation quick start: `getting-started/gpm-installation.md`
-- Script reference and automation: `tools/script-reference.md`
+ Quick links
+ - Guardian Package Manager (GPM): `tools/README.md#guardian-package-manager-gpm---implementation-design`
+ - GPM installation quick start: `getting-started/gpm-installation.md`
+ - Script reference and automation: `tools/README.md#script-reference`
 
 Purpose
 - Keep documentation centralized under `docs/` to avoid duplicate files in the repository root.
