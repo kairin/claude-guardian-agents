@@ -18,40 +18,21 @@ Transform any project into an AI-enhanced development environment with specializ
 - **Python 3.13+**: For advanced features (Ubuntu 25.04 compatibility)
 - **Git**: For version tracking (recommended)
 
-## 🚀 Quick Installation
+## 🚀 Quick Installation (pointer)
 
-### 1. Install Guardian Package Manager
+The detailed installation and design notes for the Guardian Package Manager are maintained in the canonical tools doc: `../tools/guardian-package-manager.md`.
+
+For a minimal quick start:
 
 ```bash
-# One-line installation
+# Bootstrap installer (see tools/guardian-package-manager.md for full details)
 curl -sSL https://raw.githubusercontent.com/kairin/claude-guardian-agents/main/install.sh | bash
 
-# Restart terminal or reload profile
-source ~/.bashrc  # or ~/.zshrc
-```
-
-### 2. Initialize Your Project
-
-```bash
-# Navigate to your project
+# Initialize and install agents
 cd your-awesome-project/
-
-# Initialize Guardian system
 gpm init
-
-# Install all Guardian agents
 gpm install
 ```
-
-### 3. Start Using with Claude Code
-
-```bash
-# Claude Code will now automatically see your agents
-# Just start Claude Code in your project directory
-claude-code .
-```
-
-That's it! 🎉 Your project now has 45+ specialized AI agents ready to assist with development.
 
 ## 🔧 Advanced Installation Options
 

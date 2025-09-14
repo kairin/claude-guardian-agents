@@ -19,7 +19,7 @@
 - [ ] Move research docs to research/
 	- Create docs/research/ and move RESEARCH-PAPERS.md and related files there. Add README.md for context.
 - [ ] Consolidate getting started and installation docs
-	- Ensure all onboarding docs (gpm-installation.md, installation.md, quick-start.md, USAGE_AND_WORKFLOW.md) are in docs/getting-started/. Add or update README.md.
+	- Ensure all onboarding docs (`getting-started/gpm-installation.md`, `getting-started/installation.md`, `getting-started/quick-start.md`, `getting-started/USAGE_AND_WORKFLOW.md`) are in `docs/getting-started/`. Add or update `docs/getting-started/README.md`.
 - [ ] Organize project management and workflows
 	- Move PROJECT-MANAGEMENT-SYSTEM.md, progress-tracking.md, and all workflow docs into docs/project-management/ and docs/workflows/. Add README.md to each as needed.
 - [ ] Organize project management and workflows
