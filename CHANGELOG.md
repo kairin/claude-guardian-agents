@@ -2,8 +2,42 @@
 
 All notable changes to the Claude Guardian Agents system will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+The format is based on [Keep a Changelog](https://keepachanglog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [2.4.0] - 2025-09-14
+
+### ✨ Features
+- Update pre-commit hook and SVG generation script
+- Add animations and responsive sizing to all SVG images
+- Complete SVG reorganization and custom image generation
+- Complete think-tank layer with 8-agent personality archetype system
+- Complete Guardian Agents project management system with comprehensive documentation
+- Complete Phase 4 research documentation - Operations agents updated
+- Complete Phase 3 research documentation - 100% technical agents coverage
+- Complete Phase 4 research documentation for 15 Operations agents
+- Complete Phase 3 research documentation for 20 technical agents
+- Add Think-Tank Guardian Agents for parallel reasoning and unsticking
+
+### 🐛 Bug Fixes
+- Resolve some pre-commit hooks
+- Final system formatting and cleanup
+- Final formatting updates for data and IT operations agents
+- Final end-of-file formatting for security operations agents
+
+### 📚 Documentation
+- Reorganize agent documentation to follow agents.md standard
+- Reorganize installation documentation structure
+- Complete progress documentation and link fixes
+
+### ♻️ Refactor
+- Apply formatting fixes and system updates across all agents
+
+### ⚙️ Other
+- Initial plan (from copilot-swe-agent[bot])
+- Merge pull request #9 from kairin:copilot/fix-0eb8b5e9-81e9-4892-9e96-35ee69143e9e
+- Merge pull request #8 from kairin/2025-09-11-22-08-07-phase4-operations-research-documentation
+- Merge pull request #7 from kairin/2025-09-11-09-01-41-add-think-tank-guardian-agents
 
 ## [2.3.0] - 2025-09-11
 
