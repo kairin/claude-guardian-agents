@@ -1,3 +1,13 @@
+---
+title: "Implementation Validation (Consolidated)"
+description: "Short validation summary. Full validation reports are in `validation/` and `docs/archive/`."
+---
+
+# Implementation Validation — Summary
+
+This document is a short confirmation that implementation validation artifacts exist. Full test outputs and verification reports are stored in the `validation/` folder and archived documents.
+
+For in-depth results, see `validation/IMPLEMENTATION-VALIDATION.md` and `docs/archive/`.
 # GPM Implementation Validation Report
 
 ## ✅ **Validation Summary**

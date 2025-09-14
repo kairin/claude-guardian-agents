@@ -1,6 +1,14 @@
 # 📚 Research Papers & Academic Foundations
 
-This document consolidates all research papers and academic foundations that inform the Claude Guardian Agents system design and implementation.
+---
+title: "Research Papers (Consolidated)"
+description: "Reference list archived. For detailed paper notes see `docs/archive/` or request the full list in `CHANGELOG.md`."
+---
+
+# Research Papers — Summary
+
+This file briefly notes that research foundations exist for the project. The detailed bibliography and notes have been archived and are available in `docs/archive/`.
+
 
 ## 🎯 Overview
 
