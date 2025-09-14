@@ -8,6 +8,21 @@ Guardian Agents is a production-ready AI agent orchestration system with **49 sp
 
 ## ⚡ Critical Requirements - NO EXCEPTIONS
 
+### **Branch Management - MANDATORY WORKFLOW**
+- **ALL changes MUST be made on a dedicated branch** following the "Branch Naming - MANDATORY SCHEMA".
+- **Direct commits to `main` are ABSOLUTELY PROHIBITED.**
+- **Branch Naming - MANDATORY SCHEMA**
+  **Format**: `YYYYMMDD-HHMMSS-type-short-description`
+  Examples:
+  - `20250914-143000-feat-user-profile-management`
+  - `20250914-143515-fix-login-bug-authentication`
+  - `20250914-144030-docs-api-endpoint-updates`
+- **Branch Preservation**
+  - **NEVER delete branches** without explicit user permission
+  - All branches contain valuable historical information
+  - **NO** automatic cleanup with `git branch -d`
+  - **YES** automatic merge to main branch and ensure dedicated branch has preserved all new changes.
+
 ### **Environment & Dependencies**
 - **Python 3.13+ ONLY** (Ubuntu 25.04 built-in)
 - **UV package manager ONLY** - NO pip, conda, poetry, or other package managers
@@ -15,7 +30,7 @@ Guardian Agents is a production-ready AI agent orchestration system with **49 sp
 - **Version**: Currently 2.5.1 - keep ALL files synchronized
 
 ### **System Specifications**
-- **Agent Count**: Exactly 49 agents (not 100+)
+- **Agent Count**: 49 specialized agents currently, another concise 3-layer agents recently added for purpose of ensuring prevention of code creep. new agents will be added.
 - **Architecture**: 4 layers (1-product, 2-engineering, 3-operations, 4-thinktank)
 - **Installation Method**: Single script (`install-guardian-agents.sh`) only
 - **Progress Tracking**: Single file (`issues_to_fix.md`) only
@@ -70,26 +85,13 @@ You are a [role] specialist...
 - Target version: py312 (Ruff/Black compatible)
 - Requirements-python: ">=3.13"
 
-## 🚫 Branch Management Rules
 
-### **Branch Naming - MANDATORY SCHEMA**
-**Format**: `YYYYMMDD-HHMMSS-type-short-description`
-
-Examples:
-- `20250914-143000-feat-user-profile-management`
-- `20250914-143515-fix-login-bug-authentication`
-- `20250914-144030-docs-api-endpoint-updates`
-
-### **Branch Preservation**
-- **NEVER delete branches** without explicit user permission
-- All branches contain valuable historical information
-- **NO** automatic cleanup with `git branch -d`
 
 ## ⚠️ ABSOLUTE PROHIBITIONS
 
 ### **DO NOT**
 - Use any package manager except UV
-- Change agent count from 49
+- Change agent count from the documented total
 - Break the 4-layer architecture
 - Create additional installation methods
 - Modify version numbers without synchronizing ALL files
@@ -106,14 +108,14 @@ Examples:
 
 ### **Before Every Commit**
 1. **Version Check**: All files must show same version (currently 2.5.1)
-2. **Agent Count**: Exactly 49 agents, not "100+"
+2. **Agent Count**: Reflects the documented total.
 3. **Pre-commit**: Must pass without loops or conflicts
 4. **Installation Test**: `install-guardian-agents.sh` must work
 
 ### **Quality Gates**
 - Pre-commit hooks pass without infinite loops
 - Version consistency across pyproject.toml, manifest.json, README files
-- Agent count claims match reality (49, not 100+)
+- Agent count claims match reality (documented total).
 - Single installation method only
 
 ## 🔧 Commit Guidelines
