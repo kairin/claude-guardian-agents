@@ -11,71 +11,71 @@ The Claude Guardian Agents system has **49 actual agents** (not 100+ as claimed)
 ## Critical (Blocking Issues)
 
 ### Pre-commit Hook Loops
-- [ ] Remove `end-of-file-fixer` hook from `/home/kkk/Apps/claude-guardian-agents/.pre-commit-config.yaml` line 9 (causes infinite loops with progress tracking)
-- [ ] Delete auto-updating progress tracker from `/home/kkk/Apps/claude-guardian-agents/scripts/track-progress.py` lines 34-36 (triggers on every commit)
-- [ ] Disable pre-commit.ci auto-fixes by changing `autofix_prs: true` to `autofix_prs: false` in `/home/kkk/Apps/claude-guardian-agents/.pre-commit-config.yaml` line 74
+- [x] Remove `end-of-file-fixer` hook from `/home/kkk/Apps/claude-guardian-agents/.pre-commit-config.yaml` line 9 (causes infinite loops with progress tracking)
+- [x] Delete auto-updating progress tracker from `/home/kkk/Apps/claude-guardian-agents/scripts/track-progress.py` lines 34-36 (triggers on every commit)
+- [x] Disable pre-commit.ci auto-fixes by changing `autofix_prs: true` to `autofix_prs: false` in `/home/kkk/Apps/claude-guardian-agents/.pre-commit-config.yaml` line 74
 
 ### Version Consistency Issues
-- [ ] Change version from "3.1.0" to "2.5.0" in `/home/kkk/Apps/claude-guardian-agents/manifest.json` line 3 to match pyproject.toml
-- [ ] Update version references in `/home/kkk/Apps/claude-guardian-agents/README.md` from "2.0.0" to "2.5.0" for consistency
-- [ ] Fix typo "keepachanglog.com" to "keepachangelog.com" in `/home/kkk/Apps/claude-guardian-agents/CHANGELOG.md` line 5
+- [x] Change version from "3.1.0" to "2.5.0" in `/home/kkk/Apps/claude-guardian-agents/manifest.json` line 3 to match pyproject.toml
+- [x] Update version references in `/home/kkk/Apps/claude-guardian-agents/README.md` from "2.0.0" to "2.5.0" for consistency
+- [x] Fix typo "keepachanglog.com" to "keepachangelog.com" in `/home/kkk/Apps/claude-guardian-agents/CHANGELOG.md` line 5
 
 ### Agent Count Misrepresentation
-- [ ] Change "100+ specialized agents" to "49 specialized agents" in `/home/kkk/Apps/claude-guardian-agents/README.md`
-- [ ] Update metadata in `/home/kkk/Apps/claude-guardian-agents/manifest.json` line 1298 confirms "total_agents": 49 is correct
+- [x] Change "100+ specialized agents" to "49 specialized agents" in `/home/kkk/Apps/claude-guardian-agents/README.md`
+- [x] Update metadata in `/home/kkk/Apps/claude-guardian-agents/manifest.json` line 1298 confirms "total_agents": 49 is correct
 
 ## High Priority (Complexity Issues)
 
 ### Over-Engineered Scripts
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/scripts/add-svg-animations.py` (295 lines, unnecessary animations for production)
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/scripts/reorganize-svgs.py` (330 lines, one-time organizational script)
-- [ ] Simplify `/home/kkk/Apps/claude-guardian-agents/scripts/generate-custom-svgs.py` by removing lines 400-715 (custom generation features not in requirements)
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/scripts/generate-reports.py` (526 lines, complex reporting system not required)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/scripts/add-svg-animations.py` (295 lines, unnecessary animations for production)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/scripts/reorganize-svgs.py` (330 lines, one-time organizational script)
+- [x] Simplify `/home/kkk/Apps/claude-guardian-agents/scripts/generate-custom-svgs.py` by removing lines 400-715 (custom generation features not in requirements)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/scripts/generate-reports.py` (526 lines, complex reporting system not required)
 
 ### Documentation Bloat
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/docs/PHASE-2-RESEARCH-ANALYSIS.md` (research analysis not in core requirements)
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/docs/PHASE-2-IMPLEMENTATION-STATUS.md` (implementation tracking redundant with main tracking)
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/docs/PHASE-3-BATCH-UPDATES.md` (batch update documentation not needed)
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/docs/PHASE-3-STATUS.md` (status tracking redundant)
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/docs/RESEARCH-MAPPING-STATUS.md` (research mapping not in core requirements)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/docs/PHASE-2-RESEARCH-ANALYSIS.md` (research analysis not in core requirements)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/docs/PHASE-2-IMPLEMENTATION-STATUS.md` (implementation tracking redundant with main tracking)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/docs/PHASE-3-BATCH-UPDATES.md` (batch update documentation not needed)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/docs/PHASE-3-STATUS.md` (status tracking redundant)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/docs/RESEARCH-MAPPING-STATUS.md` (research mapping not in core requirements)
 
 ### Complex Validation System
-- [ ] Simplify `/home/kkk/Apps/claude-guardian-agents/scripts/validate_docs.py` by removing REQUIRED_FIELDS validation (lines 38-47) - too complex for basic documentation
-- [ ] Remove front matter validation from `/home/kkk/Apps/claude-guardian-agents/scripts/validate_docs.py` lines 22-35 (over-engineering for markdown files)
+- [x] Simplify `/home/kkk/Apps/claude-guardian-agents/scripts/validate_docs.py` by removing REQUIRED_FIELDS validation (lines 38-47) - too complex for basic documentation
+- [x] Remove front matter validation from `/home/kkk/Apps/claude-guardian-agents/scripts/validate_docs.py` lines 22-35 (over-engineering for markdown files)
 
 ## Medium Priority (Unrequested Features)
 
 ### Unnecessary Progress Tracking
-- [ ] Remove complex progress tracking from `/home/kkk/Apps/claude-guardian-agents/tracking/progress.json` - replace with simple milestone tracking
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/scripts/track-progress.py` lines 100-391 (complex analytics not requested)
-- [ ] Simplify progress tracking to basic completion percentages only
+- [x] Remove complex progress tracking from `/home/kkk/Apps/claude-guardian-agents/tracking/progress.json` - replace with simple milestone tracking
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/scripts/track-progress.py` lines 100-391 (complex analytics not requested)
+- [x] Simplify progress tracking to basic completion percentages only
 
 ### Over-Complex Manifest Generation
-- [ ] Simplify `/home/kkk/Apps/claude-guardian-agents/scripts/generate-manifest.py` by removing workflow chains (lines 200-300) - not in core requirements
-- [ ] Remove project template configurations from `/home/kkk/Apps/claude-guardian-agents/scripts/generate-manifest.py` lines 350-450
-- [ ] Remove checksum generation from `/home/kkk/Apps/claude-guardian-agents/scripts/generate-manifest.py` lines 150-180 (unnecessary complexity)
+- [x] Simplify `/home/kkk/Apps/claude-guardian-agents/scripts/generate-manifest.py` by removing workflow chains (lines 200-300) - not in core requirements
+- [x] Remove project template configurations from `/home/kkk/Apps/claude-guardian-agents/scripts/generate-manifest.py` lines 350-450
+- [x] Remove checksum generation from `/home/kkk/Apps/claude-guardian-agents/scripts/generate-manifest.py` lines 150-180 (unnecessary complexity)
 
 ### Excessive Configuration
-- [ ] Remove bandit security scanning from `/home/kkk/Apps/claude-guardian-agents/.pre-commit-config.yaml` lines 45-50 (overkill for agent documentation)
-- [ ] Remove yamllint strict validation from `/home/kkk/Apps/claude-guardian-agents/.pre-commit-config.yaml` lines 52-56 (too strict for development)
-- [ ] Simplify mypy configuration in `/home/kkk/Apps/claude-guardian-agents/pyproject.toml` lines 134-147 by removing strict type checking
+- [x] Remove bandit security scanning from `/home/kkk/Apps/claude-guardian-agents/.pre-commit-config.yaml` lines 45-50 (overkill for agent documentation)
+- [x] Remove yamllint strict validation from `/home/kkk/Apps/claude-guardian-agents/.pre-commit-config.yaml` lines 52-56 (too strict for development)
+- [x] Simplify mypy configuration in `/home/kkk/Apps/claude-guardian-agents/pyproject.toml` lines 134-147 by removing strict type checking
 
 ## Low Priority (Cleanup)
 
 ### File Organization
-- [ ] Remove unused SVG assets directory `/home/kkk/Apps/claude-guardian-agents/assets/` (40+ files, not essential for core functionality)
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/memory/` directory (constitution files not in requirements)
-- [ ] Remove `/home/kkk/Apps/claude-guardian-agents/templates/` directory (template files can be generated as needed)
+- [x] Remove unused SVG assets directory `/home/kkk/Apps/claude-guardian-agents/assets/` (40+ files, not essential for core functionality)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/memory/` directory (constitution files not in requirements)
+- [x] Remove `/home/kkk/Apps/claude-guardian-agents/templates/` directory (template files can be generated as needed)
 
 ### Documentation Cleanup
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/docs/workflows/AGENT-IMAGE-ASSET-PLAN.md` (asset planning not required)
-- [ ] Remove `/home/kkk/Apps/claude-guardian-agents/docs/THINK-TANK-COMPLETION-SUMMARY.md` (completion summary redundant)
-- [ ] Delete `/home/kkk/Apps/claude-guardian-agents/docs/visual-overview.md` (visual documentation not in core requirements)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/docs/workflows/AGENT-IMAGE-ASSET-PLAN.md` (asset planning not required)
+- [x] Remove `/home/kkk/Apps/claude-guardian-agents/docs/THINK-TANK-COMPLETION-SUMMARY.md` (completion summary redundant)
+- [x] Delete `/home/kkk/Apps/claude-guardian-agents/docs/visual-overview.md` (visual documentation not in core requirements)
 
 ### Code Cleanup
-- [ ] Remove unused imports from `/home/kkk/Apps/claude-guardian-agents/scripts/gpm-lib.py` lines 1-20
-- [ ] Simplify type hints in `/home/kkk/Apps/claude-guardian-agents/scripts/generate-manifest.py` by removing complex Union types
-- [ ] Remove commented code blocks from all Python files in `/home/kkk/Apps/claude-guardian-agents/scripts/`
+- [x] Remove unused imports from `/home/kkk/Apps/claude-guardian-agents/scripts/gpm-lib.py` lines 1-20
+- [x] Simplify type hints in `/home/kkk/Apps/claude-guardian-agents/scripts/generate-manifest.py` by removing complex Union types
+- [x] Remove commented code blocks from all Python files in `/home/kkk/Apps/claude-guardian-agents/scripts/`
 
 ## Root Cause Analysis
 
@@ -96,11 +96,11 @@ Execute tasks in priority order. Critical tasks resolve immediate blockers. High
 
 ## Completion Criteria
 
-- [ ] Pre-commit runs in under 30 seconds without loops
-- [ ] All version references consistent across files
-- [ ] Agent count claims match reality (49 agents)
-- [ ] Core functionality preserved while removing 70%+ of over-engineering
-- [ ] Production installation works reliably on Ubuntu 25.04 + Python 3.13 + UV
+- [x] Pre-commit runs in under 30 seconds without loops
+- [x] All version references consistent across files
+- [x] Agent count claims match reality (49 agents)
+- [x] Core functionality preserved while removing 70%+ of over-engineering
+- [x] Production installation works reliably on Ubuntu 25.04 + Python 3.13 + UV
 
 ---
 

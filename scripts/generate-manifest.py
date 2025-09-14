@@ -3,7 +3,7 @@
 Generate Correct Manifest - Creates accurate manifest.json from actual repository structure
 """
 
-import hashlib
+
 import json
 import re
 from pathlib import Path
@@ -94,8 +94,6 @@ class ManifestGenerator:
             agent_num = int(agent_id)
             category = self.categorize_agent(agent_num)
 
-            checksum = self.calculate_checksum(file_path)
-
             name = filename.replace(".md", "")
 
             title = self.generate_title(name)
@@ -112,7 +110,6 @@ class ManifestGenerator:
                 "category": category,
                 "complexity": complexity,
                 "path": str(rel_path),
-                "checksum": checksum,
                 "research_foundations": self.count_research_foundations(file_path),
                 "tools": tools,
                 "triggers": triggers,
@@ -159,17 +156,6 @@ class ManifestGenerator:
             return "thinktank"
         else:
             return "generic"
-
-    def calculate_checksum(self, file_path: Path) -> str:
-        """Calculate SHA256 checksum of file"""
-        sha256_hash = hashlib.sha256()
-        try:
-            with open(file_path, "rb") as f:
-                for chunk in iter(lambda: f.read(4096), b""):
-                    sha256_hash.update(chunk)
-            return sha256_hash.hexdigest()[:16]  # Shortened for readability
-        except OSError:
-            return "unknown"
 
     def generate_title(self, name: str) -> str:
         """Generate human-readable title from agent name"""
@@ -261,72 +247,6 @@ class ManifestGenerator:
         except OSError:
             return 0
 
-    def generate_workflows(self, agents: dict) -> dict:
-        """Generate workflow definitions based on available agents"""
-        workflows: dict = {
-            "feature_development": {
-                "name": "Complete Feature Development",
-                "description": "End-to-end feature development workflow",
-                "chain": [],
-                "estimated_duration": "2-5 days",
-                "triggers": [
-                    "build feature",
-                    "implement feature",
-                    "new feature development",
-                ],
-            },
-            "api_development": {
-                "name": "API Development & Testing",
-                "description": "Backend API development with quality assurance",
-                "chain": [],
-                "estimated_duration": "1-3 days",
-                "triggers": [
-                    "api development",
-                    "backend api",
-                    "rest api",
-                    "graphql api",
-                ],
-            },
-            "deployment_pipeline": {
-                "name": "Production Deployment",
-                "description": "Secure production deployment workflow",
-                "chain": [],
-                "estimated_duration": "4-8 hours",
-                "triggers": ["deploy", "deployment", "production release", "go live"],
-            },
-        }
-
-        for agent_id, agent_info in agents.items():
-            category = agent_info["category"]
-
-            if category == "strategy" and agent_id == "002":
-                feature_chain = workflows["feature_development"]["chain"]
-                feature_chain.insert(0, agent_id)
-            elif category == "architecture" and "principal" in agent_info["name"]:
-                feature_chain = workflows["feature_development"]["chain"]
-                if agent_id not in feature_chain:
-                    feature_chain.append(agent_id)
-            elif category == "backend" and "senior" in agent_info["name"]:
-                api_chain = workflows["api_development"]["chain"]
-                api_chain.append(agent_id)
-                feature_chain = workflows["feature_development"]["chain"]
-                if agent_id not in feature_chain:
-                    feature_chain.append(agent_id)
-            elif category == "quality" and "senior" in agent_info["name"]:
-                api_chain = workflows["api_development"]["chain"]
-                api_chain.append(agent_id)
-                feature_chain = workflows["feature_development"]["chain"]
-                if agent_id not in feature_chain:
-                    feature_chain.append(agent_id)
-            elif category == "devops" and "director" in agent_info["name"]:
-                deploy_chain = workflows["deployment_pipeline"]["chain"]
-                deploy_chain.append(agent_id)
-                feature_chain = workflows["feature_development"]["chain"]
-                if agent_id not in feature_chain:
-                    feature_chain.append(agent_id)
-
-        return workflows
-
     def generate_manifest(self) -> dict:
         """Generate complete manifest from repository scan"""
         print("🔧 Generating complete manifest...")
@@ -349,8 +269,6 @@ class ManifestGenerator:
                 if category in self.categories:
                     self.categories[category]["agents"].append(agent_id)
 
-        workflows = self.generate_workflows(agents)
-
         manifest = {
             "name": "claude-guardian-agents",
             "version": "2.3.0",
@@ -360,52 +278,6 @@ class ManifestGenerator:
             "updated_at": "2025-09-11T10:30:00Z",
             "categories": self.categories,
             "agents": agents,
-            "workflows": workflows,
-            "project_templates": {
-                "nodejs": {
-                    "recommended_agents": [
-                        aid
-                        for aid, info in agents.items()
-                        if info["category"]
-                        in [
-                            "strategy",
-                            "architecture",
-                            "backend",
-                            "frontend",
-                            "quality",
-                            "devops",
-                        ]
-                    ],
-                    "common_workflows": ["api_development", "feature_development"],
-                    "spec_integration": True,
-                },
-                "python": {
-                    "recommended_agents": [
-                        aid
-                        for aid, info in agents.items()
-                        if info["category"]
-                        in [
-                            "strategy",
-                            "architecture",
-                            "backend",
-                            "quality",
-                            "devops",
-                            "data",
-                        ]
-                    ],
-                    "common_workflows": ["api_development", "data_processing"],
-                    "spec_integration": True,
-                },
-                "generic": {
-                    "recommended_agents": [
-                        aid
-                        for aid, info in agents.items()
-                        if info["category"] in ["strategy", "operations"]
-                    ],
-                    "common_workflows": ["feature_development"],
-                    "spec_integration": False,
-                },
-            },
             "integration": {
                 "claude_code": {
                     "supported": True,
@@ -425,7 +297,6 @@ class ManifestGenerator:
                 "research_papers": sum(
                     [info["research_foundations"] for info in agents.values()]
                 ),
-                "workflow_chains": len(workflows),
                 "supported_languages": 7,
                 "min_gpm_version": "1.0.0",
             },
