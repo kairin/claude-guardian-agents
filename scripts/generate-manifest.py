@@ -79,7 +79,9 @@ class ManifestGenerator:
         print("🔍 Scanning repository for Guardian agent files...")
 
         agent_pattern = "*guardian.md"
-        self.agent_files = list(self.repo_root.glob(f"**/{agent_pattern}"))
+        specialized_agents = list(self.repo_root.glob(f"**/{agent_pattern}"))
+        meta_agents = list(self.repo_root.glob("5-meta-agents/*.md"))
+        self.agent_files = specialized_agents + meta_agents
 
         print(f"✅ Found {len(self.agent_files)} agent files")
         return self.agent_files
@@ -89,10 +91,30 @@ class ManifestGenerator:
         try:
             filename = file_path.name
             id_match = re.match(r"(\d+)-", filename)
-            agent_id = id_match.group(1) if id_match else "unknown"
-
-            agent_num = int(agent_id)
-            category = self.categorize_agent(agent_num)
+            if id_match:
+                agent_id = id_match.group(1)
+                agent_num = int(agent_id)
+                category = self.categorize_agent(agent_num)
+            else:
+                # Handle meta-agents which do not have numerical IDs
+                if "5-meta-agents" in str(file_path):
+                    agent_id = filename.replace(
+                        ".md", ""
+                    )  # Use filename as ID for meta-agents
+                    agent_num = (
+                        0  # Assign a dummy number or handle categorization differently
+                    )
+                    category = "meta-agents"
+                    if category not in self.categories:
+                        self.categories[category] = {
+                            "name": "Meta Agents",
+                            "description": "Agents for orchestration and codebase analysis",
+                            "agents": [],
+                        }
+                else:
+                    agent_id = "unknown"
+                    agent_num = 0  # Default to 0 or handle as error
+                    category = "generic"  # Or a specific error category
 
             name = filename.replace(".md", "")
 
@@ -258,12 +280,10 @@ class ManifestGenerator:
         for file_path in agent_files:
             agent_info = self.extract_agent_info(file_path)
             if agent_info:
-                match = re.match(r"(\d+)-", file_path.name)
-                if match:
-                    agent_id = match.group(1)
-                    agents[agent_id] = agent_info
-                else:
-                    continue
+                agent_id = agent_info[
+                    "name"
+                ]  # Use the full name as ID for all agents for consistency
+                agents[agent_id] = agent_info
 
                 category = agent_info["category"]
                 if category in self.categories:
@@ -325,7 +345,7 @@ def main() -> None:
     print("\n📋 Manifest Summary:")
     print(f"  Total Agents: {manifest['metadata']['total_agents']}")
     print(f"  Categories: {len(manifest['categories'])}")
-    print(f"  Workflows: {len(manifest['workflows'])}")
+    #    print(f"  Workflows: {len(manifest['workflows'])}")
 
     print("\n📊 Category Breakdown:")
     for cat_info in manifest["categories"].values():

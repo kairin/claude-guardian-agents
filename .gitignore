@@ -12,3 +12,6 @@ Thumbs.db
 # IDE files
 .vscode/
 .idea/
+
+# Guardian Agents (managed separately)
+.guardian/

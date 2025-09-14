@@ -1,0 +1,19 @@
+docs: Consolidate installation instructions into README.md
+
+DETAILED CHANGES:
+- Merged the content of `README-INSTALLATION.md` into `README.md`.
+- Replaced existing installation and agent category sections in `README.md` with more detailed versions from `README-INSTALLATION.md`.
+- Appended unique sections like "Keeping Updated", "Usage in Claude Code", "Customization", "What This Doesn't Affect", "Requirements", "Uninstallation", and "Troubleshooting" from `README-INSTALLATION.md` to `README.md`.
+- Deleted the redundant `README-INSTALLATION.md` file.
+
+Impact on system:
+- Centralizes all essential project documentation into a single `README.md` for easier access and maintenance.
+
+VALIDATION:
+- Pre-commit: ✅ Passed (ruff and mypy checks passed)
+- Version sync: ✅ All files 2.5.1
+- Agent count: ✅ 52 agents (verified by running install-guardian-agents.sh)
+
+🤖 Generated with Gemini
+
+Co-Authored-By: Gemini <noreply@google.com>

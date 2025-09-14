@@ -34,9 +34,11 @@ if [ -d "$INSTALL_DIR/.git" ]; then
     cd "$INSTALL_DIR"
     git pull origin main
     cd ..
+    cp scripts/generate-manifest.py "$INSTALL_DIR/scripts/generate-manifest.py"
 else
     echo -e "${BLUE}📥 Downloading Guardian Agents...${NC}"
     git clone "$REPO_URL" "$INSTALL_DIR"
+    cp scripts/generate-manifest.py "$INSTALL_DIR/scripts/generate-manifest.py"
 fi
 
 # Create Claude Code integration
