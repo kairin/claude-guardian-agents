@@ -128,5 +128,3 @@ grep -n "Should have failed with corrupted JSON" scripts/validate-gpm.sh
 1. **Add delay between installation and validation**
 2. **Retry logic for library detection**
 3. **Move validation to end of setup process**
-
-
