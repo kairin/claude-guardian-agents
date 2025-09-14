@@ -31,10 +31,23 @@ repos:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
 
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0
+    hooks:
+      - id: mypy
+        additional_dependencies: [
+          types-PyYAML,
+          types-requests,
+          types-python-dateutil
+        ]
+        args: [--ignore-missing-imports]
 
-
-
-
+  - repo: https://github.com/pycqa/bandit
+    rev: 1.7.5
+    hooks:
+      - id: bandit
+        args: [-c, pyproject.toml]
+        additional_dependencies: ["bandit[toml]", "pbr"]
 
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.35.1
@@ -58,27 +71,14 @@ repos:
         files: ^(scripts/gmp-functions|manifest\.json|agents/)
         pass_filenames: false
 
-      - id: update-progress
-        name: Update project progress
-        entry: scripts/track-progress.py
-        args: [calculate-completion]
-        language: script
-        files: ^(specs/|tracking/)
-        pass_filenames: false
-
-      - id: mypy
-        name: mypy
-        entry: .venv/bin/mypy
-        language: system
-        args: [--ignore-missing-imports]
-        files: \.py$
-
-      - id: bandit
-        name: bandit
-        entry: .venv/bin/bandit
-        language: system
-        args: [-c, pyproject.toml]
-        files: \.py$
+      # Temporarily disabled to prevent hook loop
+      # - id: update-progress
+      #   name: Update project progress
+      #   entry: scripts/track-progress.py
+      #   args: [calculate-completion]
+      #   language: script
+      #   files: ^specs/
+      #   pass_filenames: false
 
 ci:
   autofix_commit_msg: |

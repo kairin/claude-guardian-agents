@@ -752,10 +752,10 @@ class TestContextAnalyzer:
 
 ### **Development Environment Setup**
 ```bash
-# Setup development environment
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements-dev.txt
+# Setup development environment using uv
+uv venv .venv --python 3.13
+source .venv/bin/activate
+uv pip install -e ".[dev,docs,validation]"
 
 # Initialize ML models
 python scripts/setup_ml_models.py
