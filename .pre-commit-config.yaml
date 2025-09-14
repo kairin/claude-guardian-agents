@@ -71,14 +71,6 @@ repos:
         files: ^(scripts/gmp-functions|manifest\.json|agents/)
         pass_filenames: false
 
-      # Temporarily disabled to prevent hook loop
-      # - id: update-progress
-      #   name: Update project progress
-      #   entry: scripts/track-progress.py
-      #   args: [calculate-completion]
-      #   language: script
-      #   files: ^specs/
-      #   pass_filenames: false
 
 ci:
   autofix_commit_msg: |
