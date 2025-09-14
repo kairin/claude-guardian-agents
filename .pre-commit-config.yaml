@@ -73,7 +73,7 @@ repos:
 
       - id: update-progress
         name: Update project progress
-        entry: scripts/track-progress.py
+        entry: set -x; scripts/track-progress.py
         args: [calculate-completion]
         language: script
         files: ^(specs/|tracking/)

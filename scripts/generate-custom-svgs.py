@@ -145,7 +145,7 @@ def create_coo_leadership_svg() -> str:
 </svg>"""
 
 
-def create_first_principles_svg():
+def create_first_principles_svg() -> str:
     """Create First Principles Guardian SVG with physics/fundamental laws symbolism."""
     return """<?xml version="1.0" encoding="UTF-8"?>
 <svg width="100%" height="220px" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="background-color: #0a0a0a;">
