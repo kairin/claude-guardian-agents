@@ -246,7 +246,7 @@ Create agents in the correct directory structure:
 ```
 
 ## 📈 Version & Changes
-- **Current Version**: 2.5.0
+- **Current Version**: 2.5.1
 - [📋 View Changelog](CHANGELOG.md)
 - [🔄 Version History](docs/versions/)
 

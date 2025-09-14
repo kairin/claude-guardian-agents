@@ -1,6 +1,6 @@
 {
   "name": "claude-guardian-agents",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Comprehensive system of specialized AI agents for software development and project management",
   "repository": "https://github.com/kairin/claude-guardian-agents",
   "license": "MIT",

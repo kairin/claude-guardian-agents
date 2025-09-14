@@ -5,6 +5,27 @@ All notable changes to the Claude Guardian Agents system will be documented in t
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.1] - 2025-09-14
+
+### 🚨 Critical Production Fixes
+- **Pre-commit Loop Resolution**: Removed `end-of-file-fixer` hook causing infinite loops with progress tracking
+- **Hook Conflict Prevention**: Disabled pre-commit.ci auto-fixes to prevent automated conflicts
+- **Progress Tracker Cleanup**: Removed auto-updating progress tracker that triggered on every commit
+- **Version Synchronization**: Aligned all version references to 2.5.0 across project files (pyproject.toml, manifest.json, README)
+- **Agent Count Accuracy**: Updated claims from "100+ specialized agents" to accurate "49 specialized agents"
+- **Ruff/Black Compatibility**: Fixed target version to py312 (py313 not supported by current tools)
+
+### 🎯 Production Readiness Improvements
+- **Commit Reliability**: Pre-commit hooks now run cleanly without loops or conflicts
+- **Installation Consistency**: Version mismatches resolved for reliable cross-project installation
+- **Agent Transparency**: Agent count claims now match actual system capabilities
+- **Tool Compatibility**: Modern Python 3.13 support with compatible linting configurations
+
+### 📊 System Analysis
+- **Codebase Assessment**: Comprehensive complexity analysis completed identifying over-engineering
+- **Issue Documentation**: Created `issues_to_fix.md` with prioritized cleanup tasks
+- **Production Blockers**: All critical blockers resolved, system ready for deployment
+
 ## [3.1.0] - 2025-09-14
 
 ### 🔍 Implementation Verification & Quality Assurance
