@@ -22,6 +22,9 @@
 	- Ensure all onboarding docs (gpm-installation.md, installation.md, quick-start.md, USAGE_AND_WORKFLOW.md) are in docs/getting-started/. Add or update README.md.
 - [ ] Organize project management and workflows
 	- Move PROJECT-MANAGEMENT-SYSTEM.md, progress-tracking.md, and all workflow docs into docs/project-management/ and docs/workflows/. Add README.md to each as needed.
+- [ ] Organize project management and workflows
+	- Move PROJECT-MANAGEMENT-SYSTEM.md, progress-tracking.md, and all workflow docs into docs/project-management/ and docs/workflows/. Add README.md to each as needed.
+	- `ISSUE-INVESTIGATION-PLAN.md` moved to `docs/project-management/ISSUE-INVESTIGATION-PLAN.md`
 - [ ] Move troubleshooting and tools docs
 	- Ensure common-issues.md is in docs/troubleshooting/ and script-reference.md is in docs/tools/. Add README.md if missing.
 - [ ] Clean up docs root folder
