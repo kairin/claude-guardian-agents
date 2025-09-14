@@ -1,11 +1,3 @@
----
-title: "Research Papers (Stub)"
-description: "Bibliography stub. Full list archived in `docs/archive/top-level/RESEARCH-PAPERS.md`."
----
-
-# Research Papers — Summary (Stub)
-
-The detailed bibliography and paper notes are archived at `docs/archive/top-level/RESEARCH-PAPERS.md`.
 # 📚 Research Papers & Academic Foundations
 
 ---
