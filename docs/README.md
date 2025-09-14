@@ -83,8 +83,8 @@ Guardian Agents provides:
 ## 🚀 Quick Start
 
 ### **Prerequisites**
-- Python 3.8+ (recommended 3.11)
-- [uv](https://docs.astral.sh/uv/) - Python package manager
+- Python 3.13+ (Ubuntu 25.04 built-in, required for compatibility)
+- [uv](https://docs.astral.sh/uv/) - Python package manager (UV only)
 - Git for version control
 
 ### **Installation**

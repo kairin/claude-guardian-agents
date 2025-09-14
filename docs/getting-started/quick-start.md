@@ -5,8 +5,8 @@ Get Guardian Agents running in under 5 minutes!
 ## 🎯 Prerequisites
 
 Before starting, ensure you have:
-- **Python 3.8+** (recommended: Python 3.11)
-- **[uv](https://docs.astral.sh/uv/)** - Modern Python package manager
+- **Python 3.13+** (Ubuntu 25.04 built-in, required for compatibility)
+- **[uv](https://docs.astral.sh/uv/)** - Modern Python package manager (UV only)
 - **Git** - For repository cloning
 
 ### Install uv (if not already installed)
@@ -85,7 +85,7 @@ claude-guardian-agents/
 ```
 
 ### **Key Files Created**
-- **`.venv/`** - Virtual environment (Python 3.11)
+- **`.venv/`** - Virtual environment (Python 3.13)
 - **`Makefile`** - Development commands
 - **`tracking/progress.json`** - Project status data
 - **`activate-env.sh`** - Environment activation helper

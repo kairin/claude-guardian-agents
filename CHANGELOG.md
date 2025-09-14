@@ -5,6 +5,27 @@ All notable changes to the Claude Guardian Agents system will be documented in t
 The format is based on [Keep a Changelog](https://keepachanglog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2025-09-14
+
+### ✨ Major Features
+- **Ubuntu 25.04 Compatibility**: Full support for Ubuntu 25.04 with Python 3.13+ requirement
+- **Modern Type Annotations**: Updated to use Python 3.12+ union syntax (`X | Y` instead of `Union[X, Y]`)
+- **Enhanced Ruff Integration**: Updated target version to py312 for latest Python features
+
+### ⚠️ Breaking Changes
+- **Python Version**: Minimum required Python version updated from 3.8+ to 3.13+
+- **Ubuntu Compatibility**: Optimized for Ubuntu 25.04 built-in Python 3.13
+- **Package Classifiers**: Removed support indicators for Python 3.8-3.12
+
+### 🔧 Technical Improvements
+- Updated Ruff target-version from py38 to py312
+- Applied modern type annotation fixes throughout codebase
+- Enhanced pre-commit hook compatibility with Python 3.13
+
+### 📝 Documentation
+- Updated version references to 3.0.0
+- Aligned documentation with Ubuntu 25.04 requirements
+
 ## [2.5.0] - 2025-09-14
 
 ### ✨ Features

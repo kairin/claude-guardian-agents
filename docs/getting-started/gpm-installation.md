@@ -15,7 +15,7 @@ Transform any project into an AI-enhanced development environment with specializ
 
 - **Claude Code**: Latest version with agent support
 - **curl**: For installation (usually pre-installed)
-- **Python 3.7+**: For advanced features (optional)
+- **Python 3.13+**: For advanced features (Ubuntu 25.04 compatibility)
 - **Git**: For version tracking (recommended)
 
 ## 🚀 Quick Installation
