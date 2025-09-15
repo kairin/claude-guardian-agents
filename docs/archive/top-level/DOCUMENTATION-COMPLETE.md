@@ -1,6 +1,6 @@
 ---
 archived: true
-note: "This file is archived. For canonical docs, see docs//docs/README.md and relevant subfolders. Full original retained here for historical reference."
+note: "This file is archived. For canonical docs, see /docs/README.md and relevant subfolders. Full original retained here for historical reference."
 ---
 
 title: "Documentation Complete"
@@ -16,7 +16,7 @@ tags:
   - "metrics"
 related_docs:
   - "/docs/COMPLETE-PROGRESS-DOCUMENTATION.md"
-  - "/docs//docs/PROJECT-MANAGEMENT-SYSTEM.md"
+  - "/docs/project-management/README.md"
 
 # 📚 Documentation Complete - Guardian Agents
 
@@ -49,8 +49,8 @@ The Guardian Agents project is now **fully documented** with comprehensive guide
 ### **Information Hierarchy**
 ```
 docs/
-├── /docs/README.md                           # 🏠 Main entry point
-├── /docs/PROJECT-MANAGEMENT-SYSTEM.md        # 💼 Core system design
+  ├── /docs/README.md                           # 🏠 Main entry point
+  ├── /docs/project-management/README.md        # 💼 Core system design
 ├── getting-started/                    # 🚀 New user onboarding
 │   ├── quick-start.md                 # ⚡ 5-minute setup
 │   └── installation.md               # 📦 Detailed installation
@@ -141,7 +141,7 @@ This file confirms that documentation coverage exists. Full, verbose documentati
 1. **Start Here**: [/docs/README.md](/docs/README.md) for project overview
 2. **Get Running**: [Quick Start Guide](/docs/getting-started/quick-start.md) for 5-minute setup
 3. **Deep Dive**: [Installation Guide](/docs/getting-started/installation.md) for detailed setup
-4. **Learn System**: [Progress Tracking Guide](/docs//docs/project-management/progress-tracking.md) for system mastery
+4. **Learn System**: [Progress Tracking Guide](/docs/project-management/progress-tracking.md) for system mastery
 5. **Automation**: [Script Reference](/docs/README.md#script-reference) for automation mastery
 6. **Issues**: [Common Issues](/docs/troubleshooting/common-issues.md) for problem resolution
 

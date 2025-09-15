@@ -11,18 +11,14 @@ This document is a concise summary of project progress and milestones. Detailed 
 For operational status and release notes, see `CHANGELOG.md`.
 
 ### **Agent Documentation**:
-- **[4-thinktank/](../4-thinktank/)** - Think-tank personality archetypes
-- **[1-product/](../1-product/)** - Strategic and product agents
-- **[2-engineering/](../2-engineering/)** - Technical development agents
-- **[3-operations/](../3-operations/)** - Infrastructure and operations agents
 
 ## 🎯 Success Metrics Summary
 
 | Metric | Target | Achieved | Status |
-|--------|---------|----------|---------|
-| Agent Count | 45+ | 49 | ✅ 109% |
-| Think-Tank Agents | 4+ | 8 | ✅ 200% |
-| Validation Success | 95%+ | 100% | ✅ 105% |
+/docs/4-thinktank/
+/docs/1-product/
+/docs/2-engineering/
+/docs/3-operations/
 | Research Integration | 20+ | 35+ | ✅ 175% |
 | Documentation Coverage | 90% | 100% | ✅ 111% |
 

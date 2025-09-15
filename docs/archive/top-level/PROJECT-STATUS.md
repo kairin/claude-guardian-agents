@@ -57,7 +57,7 @@ tags:
 ```
 docs/
 ├── /docs/README.md
-├── /docs/PROJECT-MANAGEMENT-SYSTEM.md
+├── /docs/project-management/README.md
 ├── getting-started/
 ├── project-management/
 ├── technical/
@@ -87,9 +87,9 @@ docs/
 
 ## 🔗 Key Documentation Links
 - [Main README](/docs/README.md)
-- [Research Papers](RESEARCH-PAPERS.md)
-- [Project Management System](/docs/PROJECT-MANAGEMENT-SYSTEM.md)
-- [Implementation Validation](IMPLEMENTATION-VALIDATION.md)
+[Research Papers](/docs/research/RESEARCH-PAPERS.md)
+[Project Management System](/docs/project-management/README.md)
+[Implementation Validation](/docs/validation/IMPLEMENTATION-VALIDATION.md)
 - [Script Reference](/docs/README.md#script-reference)
 - [Common Issues](/docs/troubleshooting/common-issues.md)
 - [Progress Tracking Guide](/docs/project-management/progress-tracking.md)

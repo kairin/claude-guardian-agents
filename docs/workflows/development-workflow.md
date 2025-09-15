@@ -120,7 +120,7 @@ sequenceDiagram
 ---
 
 **Need Help?**
-- 📞 [Contact Support](../support.md)
+- 📞 [Contact Support](../support/emergency.md)
 - 📚 [Agent Configuration](../technical/README.md#agent-configuration)
 - 🔭 [Monitoring & Observability](../tools/README.md#monitoring)
-- �🔧 [Troubleshooting](../troubleshooting.md)
+- �️ [Troubleshooting](../troubleshooting/common-issues.md)

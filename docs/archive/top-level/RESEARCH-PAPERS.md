@@ -162,7 +162,7 @@ The Guardian Agents system is built on solid academic research in AI, cognitive 
 
 #### Agile Development
 - **Paper**: "Agile Manifesto" (2001)
-- **[external link removed — original link archived]**: https://agilemanifesto.org/
+-- **Agile Manifesto**: https://agilemanifesto.org/
 - **Concepts**: Iterative development, Continuous delivery
 - **Implementation**: Agents 061-069 (Development Guardians)
 
@@ -175,7 +175,7 @@ The Guardian Agents system is built on solid academic research in AI, cognitive 
 
 #### Security Operations
 - **Framework**: NIST Cybersecurity Framework
-- **[external link removed — original link archived]**: https://www.nist.gov/cyberframework
+-- **NIST Cybersecurity Framework**: https://www.nist.gov/cyberframework
 - **Concepts**: Identify, Protect, Detect, Respond, Recover
 - **Implementation**: Agents 092-094 (Security Operations)
 
