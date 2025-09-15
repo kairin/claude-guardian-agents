@@ -86,13 +86,13 @@ docs/
   - Monthly: Completeness/accuracy review
 
 ## 🔗 Key Documentation Links
-[Main README](../README.md)
-[Research Papers](../research/RESEARCH-PAPERS.md)
-[Project Management System](../project-management/README.md)
-[Implementation Validation](../validation/IMPLEMENTATION-VALIDATION.md)
-[Script Reference](../README.md#script-reference)
-[Common Issues](../troubleshooting/common-issues.md)
-[Progress Tracking Guide](../project-management/progress-tracking.md)
+[Main README](../../README.md)
+[Research Papers](../../research/RESEARCH-PAPERS.md)
+[Project Management System](../../project-management/README.md)
+[Implementation Validation](../../validation/IMPLEMENTATION-VALIDATION.md)
+[Script Reference](../../README.md#script-reference)
+[Common Issues](../../troubleshooting/common-issues.md)
+[Progress Tracking Guide](../../project-management/progress-tracking.md)
 
 ---
 
