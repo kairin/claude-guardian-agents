@@ -397,11 +397,6 @@ After installation, you can:
 
 ## 📚 Additional Resources
 
-- **[Guardian Agents Documentation](../README.md)** - Complete system overview
-- **[Agent Reference Guide](../agents/registry.md)** - Detailed agent descriptions
-- **[Workflow Examples](../workflows/)** - Real-world usage examples
-- **[Spec-Kit Integration Guide](../tools/README.md#spec-kit-integration)** - Spec-driven development
-- **[Contributing Guide](../contributing.md)** - Help improve the system
 
 ## 💬 Support & Community
 
