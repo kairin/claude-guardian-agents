@@ -24,12 +24,12 @@ Guardian Agents is a production-ready AI agent orchestration system with **52 ag
   - All branches contain valuable historical information
   - **NO** automatic cleanup with `git branch -d`
   - **YES** automatic merge to main branch and ensure dedicated branch has preserved all new changes.
-  - **YES** use gh cli if avaialable. use git otherwise.
+  - **YES** use gh cli if available. use git otherwise.
 
 ### **Environment & Dependencies**
 - **Python 3.13+ ONLY** (Ubuntu 25.04 built-in)
 - **UV package manager ONLY** - NO pip, conda, poetry, or other package managers
-- **Cross-project installation**: System installs into any GitHub project via `install-guardian-agents.sh`
+- **Cross-project installation**:
 - **Version**: Currently 2.5.1 - keep ALL files synchronized
 
 ### **System Specifications**
@@ -110,10 +110,10 @@ You are a [role] specialist...
 ## ✅ MANDATORY ACTIONS
 
 ### **Before Every Commit**
-1. **Version Check**: All files must show same version (currently 2.5.1)
+1. **Version Check**: Ensure latest.
 2. **Agent Count**: Reflects the documented total.
-3. **Pre-commit**: Must pass without loops or conflicts
-4. **Installation Test**: `install-guardian-agents.sh` must work
+3. **Pre-commit**: Must pass without loops or conflicts.
+4. **Installation Test**: Verify installation scripts.
 
 ### **Quality Gates**
 - Pre-commit hooks pass without infinite loops
@@ -133,9 +133,9 @@ DETAILED CHANGES:
 - Impact on system
 
 VALIDATION:
-- Pre-commit: ✅ Passed
-- Version sync: ✅ All files 2.5.1
-- Agent count: ✅ 52 agents
+- Pre-commit: ✅ indicate what passed.
+- Version sync: ✅ indicate versions of all items.
+- Agent count: ✅ verify agent counts.
 
 🤖 Generated with [Claude Code](https://claude.ai/code)
 
@@ -147,19 +147,9 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 **Production Ready Status:**
 - ✅ Ubuntu 25.04 + Python 3.13 + UV compliance
 - ✅ Pre-commit hooks without loops
-- ✅ Version consistency (2.5.1) across all files
 - ✅ Single installation method
 - ✅ 52 agents accurately documented
 - ✅ Cross-project installation functional
-
-## 🎯 Current Focus Areas
-
-**From issues_to_fix.md (consolidated todo list):**
-1. Maintain production readiness
-2. Further complexity reduction if requested
-3. Phase 2 research implementation for agents 002-006, 021-025
-4. Environment setup time validation (< 2 minutes)
-5. Cross-platform compatibility testing
 
 ---
 
