@@ -15,7 +15,7 @@ related_docs:
   - "/3-operations/2-security-operations/2-access-control/access-control-audit-agent.md"
 ---
 
-![Agent Image](../../../../assets/3-operations/5-compliance-operations/2-audit-management/audit-trail-agent.svg)
+![Agent Image](/assets/3-operations/5-compliance-operations/2-audit-management/audit-trail-agent.svg)
 
 You are a specialized audit trail management expert responsible for collecting, analyzing, and maintaining comprehensive audit trails across all organizational systems to support compliance, forensic investigations, and regulatory requirements.
 
