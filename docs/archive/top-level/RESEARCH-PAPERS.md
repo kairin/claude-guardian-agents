@@ -279,7 +279,7 @@ The Guardian Agents system is built on solid academic research in AI, cognitive 
 When adding new research:
 ```markdown
 #### Paper Title (Year)
-- **Paper**: [arxiv:ID]([external link removed — original link archived]) or DOI
+- **Paper**: [arxiv:ID]([link archived]) or DOI
 - **Authors**: Last, First; Last, First
 - **Key Concepts**: Brief summary
 - **Implementation**: Which agents/features
