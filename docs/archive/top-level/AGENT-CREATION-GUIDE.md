@@ -223,4 +223,4 @@ tools: []                               # Restricted agents
 
 ---
 
-**For more examples, see the [Agent Registry](./agents/registry.md) file with all agent templates.**
+**For more examples, see the [Agent Registry](/docs/agents/registry.md) file with all agent templates.**
