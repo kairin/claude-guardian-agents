@@ -190,7 +190,7 @@ Now that you're set up, explore:
 
 1. **[Installation Guide](installation.md)** - Detailed setup options
 2. **[First Steps Tutorial](first-steps.md)** - Guided walkthrough
-3. **[Project Management System](../PROJECT-MANAGEMENT-SYSTEM.md)** - Core framework
+3. **[Project Management System](../project-management/README.md)** - Core framework
 4. **[Development Workflow](../workflows/development-workflow.md)** - How we work
 
 ## 💡 Pro Tips
