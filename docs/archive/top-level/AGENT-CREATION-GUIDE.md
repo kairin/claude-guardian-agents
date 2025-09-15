@@ -11,8 +11,8 @@ tags:
   - "agents"
   - "guide"
 related_docs:
-  - "/docs/agents/templates.md"
-  - "/docs/NAMING-CONVENTION.md"
+  - "../../agents/templates.md"
+  - "../../NAMING-CONVENTION.md"
 ---
 
 # Agent Creation — Summary
@@ -223,4 +223,4 @@ tools: []                               # Restricted agents
 
 ---
 
-**For more examples, see the [Agent Registry](/docs/agents/registry.md) file with all agent templates.**
+**For more examples, see the [Agent Registry](../../agents/registry.md) file with all agent templates.**

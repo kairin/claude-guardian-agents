@@ -56,8 +56,8 @@ tags:
 ### Information Hierarchy
 ```
 docs/
-├── /docs/README.md
-├── /docs/project-management/README.md
+├── ../README.md
+├── ../project-management/README.md
 ├── getting-started/
 ├── project-management/
 ├── technical/
@@ -86,13 +86,13 @@ docs/
   - Monthly: Completeness/accuracy review
 
 ## 🔗 Key Documentation Links
-- [Main README](/docs/README.md)
-[Research Papers](/docs/research/RESEARCH-PAPERS.md)
-[Project Management System](/docs/project-management/README.md)
-[Implementation Validation](/docs/validation/IMPLEMENTATION-VALIDATION.md)
-- [Script Reference](/docs/README.md#script-reference)
-- [Common Issues](/docs/troubleshooting/common-issues.md)
-- [Progress Tracking Guide](/docs/project-management/progress-tracking.md)
+[Main README](../README.md)
+[Research Papers](../research/RESEARCH-PAPERS.md)
+[Project Management System](../project-management/README.md)
+[Implementation Validation](../validation/IMPLEMENTATION-VALIDATION.md)
+[Script Reference](../README.md#script-reference)
+[Common Issues](../troubleshooting/common-issues.md)
+[Progress Tracking Guide](../project-management/progress-tracking.md)
 
 ---
 
