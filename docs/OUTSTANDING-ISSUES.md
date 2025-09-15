@@ -100,3 +100,177 @@
 - -   **Role:** Codebase analysis and todo generation.
 - -   **Agent Name:** `minimal-todo-fixer`
 - -   **Purpose:** To execute fixes from a todo list with minimal changes and no additional complexity.
+
+## Auto-created missing doc stubs
+- Created stub: `../AGENTS-registry.md`
+- Created stub: `../THINK-TANK-COMPLETION-SUMMARY.md`
+- Created stub: `../security/contacts.md`
+- Created stub: `../security/incident-response.md`
+- Created stub: `../security/quick-fixes.md`
+- Created stub: `../support.md`
+- Created stub: `../support/emergency.md`
+- Created stub: `../support/troubleshooting.md`
+- Created stub: `../technical/agent-config.md`
+- Created stub: `../tools/monitoring.md`
+- Created stub: `../troubleshooting.md`
+- Created stub: `THINK-TANK-COMPLETION-SUMMARY.md`
+- Created stub: `development/code-quality.md`
+- Created stub: `development/contributing.md`
+- Created stub: `development/testing-strategy.md`
+- Created stub: `docs/RESEARCH-PAPERS.md`
+- Created stub: `docs/agent-finder.md`
+- Created stub: `docs/agent-reference.md`
+- Created stub: `docs/contributing.md`
+- Created stub: `docs/contributing/documentation.md`
+- Created stub: `docs/contributing/modifications.md`
+- Created stub: `docs/contributing/new-agents.md`
+- Created stub: `docs/spec-kit-integration.md`
+- Created stub: `docs/support/contact.md`
+- Created stub: `docs/three-tier-guardian-system.md`
+- Created stub: `docs/use-cases.md`
+- Created stub: `docs/visual-overview.md`
+- Created stub: `first-steps.md`
+- Created stub: `getting-started/first-steps.md`
+- Created stub: `project-management/report-generation.md`
+- Created stub: `project-management/validation.md`
+- Created stub: `support.md`
+- Created stub: `technical/agent-specs.md`
+- Created stub: `technical/api-reference.md`
+- Created stub: `technical/python-environment-spec.md`
+- Created stub: `technical/system-architecture.md`
+- Created stub: `tools/environment-management.md`
+- Created stub: `tools/makefile-commands.md`
+- Created stub: `troubleshooting/error-codes.md`
+- Created stub: `troubleshooting/faq.md`
+
+## Missing referenced docs not found in repo
+- `../AGENTS-registry.md`
+- `../support.md`
+- `docs/agent-finder.md`
+- `docs/agent-reference.md`
+- `docs/contributing/documentation.md`
+- `docs/contributing/modifications.md`
+- `docs/contributing/new-agents.md`
+- `docs/spec-kit-integration.md`
+- `docs/support/contact.md`
+- `docs/use-cases.md`
+- `docs/visual-overview.md`
+- `support.md`
+
+## Auto-created placeholders (inside repo)
+- Created placeholder: `assets/3-operations/2-security-operations/1-vulnerability-management/vulnerability-assessment-agent.svg`
+- Created placeholder: `assets/3-operations/2-security-operations/2-access-control/access-control-audit-agent.svg`
+- Created placeholder: `assets/3-operations/2-security-operations/3-threat-intelligence/threat-intelligence-agent.svg`
+- Created placeholder: `assets/3-operations/5-compliance-operations/1-policy-enforcement/policy-enforcement-agent.svg`
+- Created placeholder: `assets/3-operations/5-compliance-operations/2-audit-management/audit-trail-agent.svg`
+- Created placeholder: `.guardian/assets/1-product/1-product-management/1-product-strategy/002-strategy-product-strategy-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/1-product-management/1-product-strategy/003-strategy-product-management-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/1-product-management/2-product-ownership/004-strategy-product-ownership-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/1-product-management/2-product-ownership/005-strategy-product-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/1-product-management/2-product-ownership/006-strategy-product-associate-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/2-product-design/1-ux-research/022-design-ux-research-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/2-product-design/1-ux-research/023-design-ux-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/2-product-design/2-ui-design/024-design-ui-interface-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/2-product-design/2-ui-design/025-design-ui-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/1-architecture/044-architecture-principal-architect-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/1-architecture/045-architecture-senior-architect-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/2-backend-engineering/061-development-backend-director-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/2-backend-engineering/062-development-backend-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/2-backend-engineering/063-development-backend-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/3-frontend-engineering/064-development-frontend-director-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/3-frontend-engineering/065-development-frontend-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/3-frontend-engineering/066-development-frontend-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/4-mobile-engineering/067-development-mobile-director-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/4-mobile-engineering/068-development-mobile-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/4-mobile-engineering/069-development-mobile-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/1-product-management/001-strategy-product-leadership-guardian.svg`
+- Created placeholder: `.guardian/assets/1-product/2-product-design/021-design-product-leadership-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/1-cto-office/041-architecture-cto-leadership-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/1-cto-office/042-architecture-technical-fellow-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/2-software-engineering/043-architecture-vp-engineering-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/3-quality-engineering/071-development-quality-director-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/3-quality-engineering/072-development-quality-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/3-quality-engineering/073-development-quality-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/4-devops-engineering/081-infrastructure-devops-director-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/4-devops-engineering/082-infrastructure-devops-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/2-engineering/4-devops-engineering/083-infrastructure-devops-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/1-coo-office/091-operations-coo-leadership-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/2-security-operations/092-security-operations-director-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/2-security-operations/093-security-operations-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/2-security-operations/094-security-operations-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/3-data-operations/095-data-operations-director-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/3-data-operations/096-data-operations-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/3-data-operations/097-data-operations-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/4-it-operations/098-operations-it-director-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/4-it-operations/099-operations-it-senior-guardian.svg`
+- Created placeholder: `.guardian/assets/3-operations/4-it-operations/100-operations-it-junior-guardian.svg`
+- Created placeholder: `.guardian/assets/4-thinktank/1-analytical/101-thinktank-first-principles-guardian.svg`
+- Created placeholder: `assets/4-thinktank/1-analytical/101-thinktank-first-principles-guardian.svg`
+- Created placeholder: `.guardian/assets/4-thinktank/1-analytical/104-thinktank-mathematician-logical-guardian.svg`
+- Created placeholder: `assets/4-thinktank/1-analytical/104-thinktank-mathematician-logical-guardian.svg`
+- Created placeholder: `.guardian/assets/4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.svg`
+- Created placeholder: `assets/4-thinktank/2-creative/103-thinktank-creative-lateral-guardian.svg`
+- Created placeholder: `.guardian/assets/4-thinktank/2-creative/105-thinktank-inventor-innovative-guardian.svg`
+- Created placeholder: `assets/4-thinktank/2-creative/105-thinktank-inventor-innovative-guardian.svg`
+- Created placeholder: `assets/4-thinktank/3-human-centered/102-thinktank-human-patterns-guardian.svg`
+- Created placeholder: `.guardian/assets/4-thinktank/3-human-centered/102-thinktank-human-patterns-guardian.svg`
+- Created placeholder: `.guardian/assets/4-thinktank/3-human-centered/106-thinktank-psychologist-behavioral-guardian.svg`
+- Created placeholder: `assets/4-thinktank/3-human-centered/106-thinktank-psychologist-behavioral-guardian.svg`
+- Created placeholder: `assets/4-thinktank/4-unconventional/107-thinktank-child-naive-guardian.svg`
+- Created placeholder: `.guardian/assets/4-thinktank/4-unconventional/107-thinktank-child-naive-guardian.svg`
+- Created placeholder: `assets/4-thinktank/4-unconventional/108-thinktank-contrarian-challenger-guardian.svg`
+- Created placeholder: `.guardian/assets/4-thinktank/4-unconventional/108-thinktank-contrarian-challenger-guardian.svg`
+- Created placeholder: `.guardian/AGENTS-registry.md`
+- Created placeholder: `.guardian/docs/THINK-TANK-COMPLETION-SUMMARY.md`
+- Created placeholder: `.guardian/docs/security/contacts.md`
+- Created placeholder: `.guardian/docs/security/incident-response.md`
+- Created placeholder: `.guardian/docs/security/quick-fixes.md`
+- Created placeholder: `.guardian/docs/support.md`
+- Created placeholder: `.guardian/docs/support/emergency.md`
+- Created placeholder: `.guardian/docs/support/troubleshooting.md`
+- Created placeholder: `.guardian/docs/technical/agent-config.md`
+- Created placeholder: `.guardian/docs/tools/monitoring.md`
+- Created placeholder: `.guardian/docs/troubleshooting.md`
+- Created placeholder: `.guardian/docs/README.md`
+- Created placeholder: `.guardian/docs/getting-started/README.md`
+- Created placeholder: `.guardian/docs/URL`
+- Created placeholder: `.guardian/docs/development/code-quality.md`
+- Created placeholder: `.guardian/docs/development/contributing.md`
+- Created placeholder: `.guardian/docs/development/testing-strategy.md`
+- Created placeholder: `.guardian/docs/agent-finder.md`
+- Created placeholder: `.guardian/docs/getting-started/docs/agent-reference.md`
+- Created placeholder: `.guardian/docs/api`
+- Created placeholder: `docs/api`
+- Created placeholder: `.guardian/docs/config`
+- Created placeholder: `docs/config`
+- Created placeholder: `.guardian/docs/getting-started/docs/contributing.md`
+- Created placeholder: `.guardian/docs/contributing/documentation.md`
+- Created placeholder: `.guardian/docs/contributing/modifications.md`
+- Created placeholder: `.guardian/docs/contributing/new-agents.md`
+- Created placeholder: `.guardian/docs/getting-started/docs/spec-kit-integration.md`
+- Created placeholder: `.guardian/docs/support/contact.md`
+- Created placeholder: `.guardian/docs/use-cases.md`
+- Created placeholder: `docs/versions`
+- Created placeholder: `.guardian/docs/versions`
+- Created placeholder: `.guardian/docs/visual-overview.md`
+- Created placeholder: `.guardian/docs/getting-started/docs/workflows`
+- Created placeholder: `.guardian/docs/getting-started/first-steps.md`
+- Created placeholder: `.guardian/docs/project-management/report-generation.md`
+- Created placeholder: `.guardian/docs/project-management/validation.md`
+- Created placeholder: `.guardian/docs/technical/agent-specs.md`
+- Created placeholder: `.guardian/docs/technical/api-reference.md`
+- Created placeholder: `.guardian/docs/technical/python-environment-spec.md`
+- Created placeholder: `.guardian/docs/technical/system-architecture.md`
+- Created placeholder: `.guardian/docs/tools/environment-management.md`
+- Created placeholder: `.guardian/docs/tools/makefile-commands.md`
+- Created placeholder: `.guardian/docs/troubleshooting/error-codes.md`
+- Created placeholder: `.guardian/docs/troubleshooting/faq.md`
+
+## Links pointing outside repository (not created)
+- `/home/kkk/Apps/claude-guardian-agents/.guardian/2-engineering/4-devops-engineering/1-infrastructure-management/configuration-management-agent.md` links to `../../../../../assets/2-engineering/configuration-management-agent.svg` -> outside repo resolved at `/home/kkk/Apps/assets/2-engineering/configuration-management-agent.svg`
+- `/home/kkk/Apps/claude-guardian-agents/2-engineering/4-devops-engineering/1-infrastructure-management/configuration-management-agent.md` links to `../../../../../assets/2-engineering/configuration-management-agent.svg` -> outside repo resolved at `/home/kkk/assets/2-engineering/configuration-management-agent.svg`
+- `/home/kkk/Apps/claude-guardian-agents/3-operations/2-security-operations/1-vulnerability-management/vulnerability-assessment-agent.md` links to `../../../../assets/3-operations/2-security-operations/1-vulnerability-management/vulnerability-assessment-agent.svg` -> outside repo resolved at `/home/kkk/Apps/assets/3-operations/2-security-operations/1-vulnerability-management/vulnerability-assessment-agent.svg`
+- `/home/kkk/Apps/claude-guardian-agents/3-operations/2-security-operations/2-access-control/access-control-audit-agent.md` links to `../../../../assets/3-operations/2-security-operations/2-access-control/access-control-audit-agent.svg` -> outside repo resolved at `/home/kkk/Apps/assets/3-operations/2-security-operations/2-access-control/access-control-audit-agent.svg`
+- `/home/kkk/Apps/claude-guardian-agents/3-operations/2-security-operations/3-threat-intelligence/threat-intelligence-agent.md` links to `../../../../assets/3-operations/2-security-operations/3-threat-intelligence/threat-intelligence-agent.svg` -> outside repo resolved at `/home/kkk/Apps/assets/3-operations/2-security-operations/3-threat-intelligence/threat-intelligence-agent.svg`
+- `/home/kkk/Apps/claude-guardian-agents/3-operations/5-compliance-operations/1-policy-enforcement/policy-enforcement-agent.md` links to `../../../../assets/3-operations/5-compliance-operations/1-policy-enforcement/policy-enforcement-agent.svg` -> outside repo resolved at `/home/kkk/Apps/assets/3-operations/5-compliance-operations/1-policy-enforcement/policy-enforcement-agent.svg`
+- `/home/kkk/Apps/claude-guardian-agents/3-operations/5-compliance-operations/2-audit-management/audit-trail-agent.md` links to `../../../../assets/3-operations/5-compliance-operations/2-audit-management/audit-trail-agent.svg` -> outside repo resolved at `/home/kkk/Apps/assets/3-operations/5-compliance-operations/2-audit-management/audit-trail-agent.svg`
