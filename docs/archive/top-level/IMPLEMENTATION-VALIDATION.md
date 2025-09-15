@@ -21,7 +21,7 @@ The Guardian Package Manager (GPM) implementation has been thoroughly reviewed, 
 |-----------|---------|------------|---------------|
 | **Manifest System** | ✅ **Complete** | 100% | ✅ Validated |
 | **Agent Discovery** | ✅ **Complete** | 100% | ✅ Validated |
-| **<external-link-placeholder> Construction** | ✅ **Complete** | 100% | ✅ Validated |
+| **[external link removed — original link archived] Construction** | ✅ **Complete** | 100% | ✅ Validated |
 | **Download System** | ✅ **Complete** | 100% | ✅ Validated |
 | **Category System** | ✅ **Complete** | 100% | ✅ Validated |
 | **Agent Index Gen** | ✅ **Complete** | 100% | ✅ Validated |
@@ -63,7 +63,7 @@ find_agent_file() {
 }
 ```
 
-### **3. <external-link-placeholder> Validation Results**
+### **3. [external link removed — original link archived] Validation Results**
 ```bash
 # All tested URLs are now accessible:
 ✅ https://github.com/kairin/claude-guardian-agents/raw/main/1-product/1-product-management/001-strategy-product-leadership-guardian.md
@@ -83,7 +83,7 @@ find_agent_file() {
 2. **`scripts/gmp-functions-fixed.sh`** - ✅ **Functional replacement**
    - Working `find_agent_file()` function
    - Functional `download_single_agent()` logic
-   - Proper <external-link-placeholder> construction
+   - Proper [external link removed — original link archived] construction
    - Real manifest parsing
 
 3. **`scripts/generate-manifest.py`** - ✅ **Validation tool**
@@ -93,7 +93,7 @@ find_agent_file() {
 
 4. **`scripts/validate-gpm.sh`** - ✅ **Test suite**
    - Comprehensive 8-test validation
-   - Real <external-link-placeholder> testing
+   - Real [external link removed — original link archived] testing
    - End-to-end workflow validation
 
 ## 🧪 **Validation Test Results**
@@ -102,7 +102,7 @@ find_agent_file() {
 ```bash
 🧪 TEST 1: Manifest Loading           ✅ PASS (4/4 checks)
 🧪 TEST 2: Agent File Discovery       ✅ PASS (11/11 checks)
-🧪 TEST 3: <external-link-placeholder> Construction           ✅ PASS (4/4 checks)
+🧪 TEST 3: [external link removed — original link archived] Construction           ✅ PASS (4/4 checks)
 🧪 TEST 4: Category Classification    ✅ PASS (11/11 checks)
 🧪 TEST 5: Simulated Download         ✅ PASS (6/6 checks)
 🧪 TEST 6: Agent Index Generation     ✅ PASS (4/4 checks)
@@ -152,7 +152,7 @@ gpm install
 
 ### **Accuracy Metrics**
 - **Agent Discovery**: 100% (45/45 agents found)
-- **<external-link-placeholder> Validity**: 100% (all tested URLs accessible)
+- **[external link removed — original link archived] Validity**: 100% (all tested URLs accessible)
 - **Path Resolution**: 100% (all paths resolve correctly)
 - **JSON Validity**: 100% (all generated JSON is valid)
 - **Category Mapping**: 100% (all categories work correctly)

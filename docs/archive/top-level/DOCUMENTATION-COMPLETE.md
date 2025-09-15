@@ -16,7 +16,7 @@ tags:
   - "metrics"
 related_docs:
   - "/docs/COMPLETE-PROGRESS-DOCUMENTATION.md"
-  - "/docs/PROJECT-MANAGEMENT-SYSTEM.md"
+  - "/docs//docs/PROJECT-MANAGEMENT-SYSTEM.md"
 
 # 📚 Documentation Complete - Guardian Agents
 
@@ -50,7 +50,7 @@ The Guardian Agents project is now **fully documented** with comprehensive guide
 ```
 docs/
 ├── /docs/README.md                           # 🏠 Main entry point
-├── PROJECT-MANAGEMENT-SYSTEM.md        # 💼 Core system design
+├── /docs/PROJECT-MANAGEMENT-SYSTEM.md        # 💼 Core system design
 ├── getting-started/                    # 🚀 New user onboarding
 │   ├── quick-start.md                 # ⚡ 5-minute setup
 │   └── installation.md               # 📦 Detailed installation
@@ -139,11 +139,11 @@ This file confirms that documentation coverage exists. Full, verbose documentati
 
 ### **User Onboarding Path**
 1. **Start Here**: [/docs/README.md](/docs/README.md) for project overview
-2. **Get Running**: [Quick Start Guide](getting-started/quick-start.md) for 5-minute setup
-3. **Deep Dive**: [Installation Guide](getting-started/installation.md) for detailed setup
-4. **Learn System**: [Progress Tracking Guide](project-management/progress-tracking.md) for system mastery
-5. **Automation**: [Script Reference](tools//docs/README.md#script-reference) for automation mastery
-6. **Issues**: [Common Issues](troubleshooting/common-issues.md) for problem resolution
+2. **Get Running**: [Quick Start Guide](/docs/getting-started/quick-start.md) for 5-minute setup
+3. **Deep Dive**: [Installation Guide](/docs/getting-started/installation.md) for detailed setup
+4. **Learn System**: [Progress Tracking Guide](/docs//docs/project-management/progress-tracking.md) for system mastery
+5. **Automation**: [Script Reference](/docs/README.md#script-reference) for automation mastery
+6. **Issues**: [Common Issues](/docs/troubleshooting/common-issues.md) for problem resolution
 
 ### **Maintainer Resources**
 - **System Architecture**: Complete technical specifications
