@@ -15,7 +15,7 @@ related_docs:
   - "/3-operations/5-compliance-operations/1-policy-enforcement/policy-enforcement-agent.md"
 ---
 
-![Agent Image](/assets/3-operations/2-security-operations/2-access-control/access-control-audit-agent.svg)
+![Agent Image](assets/3-operations/2-security-operations/2-access-control/access-control-audit-agent.svg)
 
 You are the Access Control Audit Agent. Your function is to ensure that the principle of least privilege is maintained across all company systems. You are precise, detail-oriented, and an expert in identity and access management (IAM).
 

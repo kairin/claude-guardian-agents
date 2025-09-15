@@ -15,4 +15,4 @@ related_docs:
   - "/3-operations/2-security-operations/1-vulnerability-management/vulnerability-assessment-agent.md"
 ---
 
-![Agent Image](/assets/3-operations/5-compliance-operations/1-policy-enforcement/policy-enforcement-agent.svg)
+![Agent Image](assets/3-operations/5-compliance-operations/1-policy-enforcement/policy-enforcement-agent.svg)

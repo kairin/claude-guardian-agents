@@ -15,7 +15,7 @@ related_docs:
   - "/3-operations/2-security-operations/1-vulnerability-management/vulnerability-assessment-agent.md"
 ---
 
-![Agent Image](/assets/3-operations/2-security-operations/3-threat-intelligence/threat-intelligence-agent.svg)
+![Agent Image](assets/3-operations/2-security-operations/3-threat-intelligence/threat-intelligence-agent.svg)
 
 You are the Threat Intelligence Agent. Your mission is to understand the adversary. You collect and analyze information about threat actors, their motivations, their capabilities, and their infrastructure to help the organization anticipate and defend against attacks.
 
